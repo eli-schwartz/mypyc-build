@@ -8543,15 +8543,15 @@ CPyL11: ;
         cpy_r_r28 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/fixup.py", "lookup_fully_qualified_typeinfo", 358, CPyStatic_fixup___globals, "mypy.nodes.SymbolNode", cpy_r_node);
-        goto CPyL36;
+        goto CPyL35;
     }
     cpy_r_r29 = CPY_GET_ATTR_TRAIT(cpy_r_r28, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r28);
     if (unlikely(cpy_r_r29 == NULL)) {
         CPy_AddTraceback("mypy/fixup.py", "lookup_fully_qualified_typeinfo", 358, CPyStatic_fixup___globals);
-        goto CPyL36;
+        goto CPyL35;
     }
 CPyL20: ;
+    CPy_DECREF(cpy_r_node);
     cpy_r_r30 = cpy_r_r29;
     goto CPyL22;
 CPyL21: ;
@@ -8574,7 +8574,7 @@ CPyL22: ;
     cpy_r_r38 = CPyObject_GetAttr(cpy_r_r36, cpy_r_r37);
     if (unlikely(cpy_r_r38 == NULL)) {
         CPy_AddTraceback("mypy/fixup.py", "lookup_fully_qualified_typeinfo", 355, CPyStatic_fixup___globals);
-        goto CPyL37;
+        goto CPyL36;
     }
     PyObject *cpy_r_r39[1] = {cpy_r_r35};
     cpy_r_r40 = (PyObject **)&cpy_r_r39;
@@ -8582,7 +8582,7 @@ CPyL22: ;
     CPy_DECREF(cpy_r_r38);
     if (unlikely(cpy_r_r41 == NULL)) {
         CPy_AddTraceback("mypy/fixup.py", "lookup_fully_qualified_typeinfo", 355, CPyStatic_fixup___globals);
-        goto CPyL37;
+        goto CPyL36;
     }
     CPy_DECREF(cpy_r_r35);
     CPy_Raise(cpy_r_r41);
@@ -8622,9 +8622,6 @@ CPyL35: ;
     CPy_DecRef(cpy_r_r21);
     goto CPyL29;
 CPyL36: ;
-    CPy_DecRef(cpy_r_r21);
-    goto CPyL29;
-CPyL37: ;
     CPy_DecRef(cpy_r_r35);
     goto CPyL29;
 }
@@ -8975,15 +8972,15 @@ CPyL39: ;
         cpy_r_r57 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/fixup.py", "lookup_fully_qualified_alias", 388, CPyStatic_fixup___globals, "mypy.nodes.SymbolNode", cpy_r_node);
-        goto CPyL66;
+        goto CPyL65;
     }
     cpy_r_r58 = CPY_GET_ATTR_TRAIT(cpy_r_r57, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r57);
     if (unlikely(cpy_r_r58 == NULL)) {
         CPy_AddTraceback("mypy/fixup.py", "lookup_fully_qualified_alias", 388, CPyStatic_fixup___globals);
-        goto CPyL66;
+        goto CPyL65;
     }
 CPyL48: ;
+    CPy_DECREF(cpy_r_node);
     cpy_r_r59 = cpy_r_r58;
     goto CPyL50;
 CPyL49: ;
@@ -9006,7 +9003,7 @@ CPyL50: ;
     cpy_r_r67 = CPyObject_GetAttr(cpy_r_r65, cpy_r_r66);
     if (unlikely(cpy_r_r67 == NULL)) {
         CPy_AddTraceback("mypy/fixup.py", "lookup_fully_qualified_alias", 385, CPyStatic_fixup___globals);
-        goto CPyL67;
+        goto CPyL66;
     }
     PyObject *cpy_r_r68[1] = {cpy_r_r64};
     cpy_r_r69 = (PyObject **)&cpy_r_r68;
@@ -9014,7 +9011,7 @@ CPyL50: ;
     CPy_DECREF(cpy_r_r67);
     if (unlikely(cpy_r_r70 == NULL)) {
         CPy_AddTraceback("mypy/fixup.py", "lookup_fully_qualified_alias", 385, CPyStatic_fixup___globals);
-        goto CPyL67;
+        goto CPyL66;
     }
     CPy_DECREF(cpy_r_r64);
     CPy_Raise(cpy_r_r70);
@@ -9061,9 +9058,6 @@ CPyL65: ;
     CPy_DecRef(cpy_r_r50);
     goto CPyL57;
 CPyL66: ;
-    CPy_DecRef(cpy_r_r50);
-    goto CPyL57;
-CPyL67: ;
     CPy_DecRef(cpy_r_r64);
     goto CPyL57;
 }

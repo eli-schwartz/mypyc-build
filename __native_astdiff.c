@@ -1290,7 +1290,6 @@ CPyL2: ;
     }
     cpy_r_r18 = cpy_r_r16;
     if (!cpy_r_r18) goto CPyL12;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r19 = cpy_r_node;
     else {
@@ -1298,7 +1297,6 @@ CPyL2: ;
         goto CPyL80;
     }
     cpy_r_r20 = CPY_GET_ATTR_TRAIT(cpy_r_r19, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r19);
     if (unlikely(cpy_r_r20 == NULL)) {
         CPy_AddTraceback("mypy/server/astdiff.py", "snapshot_symbol_table", 179, CPyStatic_astdiff___globals);
         goto CPyL80;
@@ -1786,7 +1784,6 @@ CPyL58: ;
     }
     cpy_r_r133 = cpy_r_r131;
     if (!cpy_r_r133) goto CPyL70;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r134 = cpy_r_node;
     else {
@@ -1794,7 +1791,6 @@ CPyL58: ;
         goto CPyL104;
     }
     cpy_r_r135 = CPY_GET_ATTR_TRAIT(cpy_r_r134, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r134);
     if (unlikely(cpy_r_r135 == NULL)) {
         CPy_AddTraceback("mypy/server/astdiff.py", "snapshot_symbol_table", 219, CPyStatic_astdiff___globals);
         goto CPyL104;
@@ -3710,7 +3706,6 @@ CPyL199: ;
     CPy_DECREF(cpy_r_r301);
     CPy_DECREF(cpy_r_r316);
     cpy_r_attrs = cpy_r_r318;
-    CPy_INCREF(cpy_r_node);
     if (likely((Py_TYPE(cpy_r_node) == CPyType_nodes___FakeInfo) || (Py_TYPE(cpy_r_node) == CPyType_nodes___TypeInfo)))
         cpy_r_r319 = cpy_r_node;
     else {
@@ -3718,7 +3713,6 @@ CPyL199: ;
         goto CPyL257;
     }
     cpy_r_r320 = CPY_GET_ATTR(cpy_r_r319, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r319);
     if (unlikely(cpy_r_r320 == NULL)) {
         CPy_AddTraceback("mypy/server/astdiff.py", "snapshot_definition", 303, CPyStatic_astdiff___globals);
         goto CPyL257;
@@ -5109,9 +5103,7 @@ PyObject *CPyDef_astdiff___SnapshotTypeVisitor___visit_instance(PyObject *cpy_r_
     PyObject *cpy_r_r18;
     cpy_r_r0 = CPyStatics[37]; /* 'Instance' */
     cpy_r_r1 = ((mypy___types___InstanceObject *)cpy_r_typ)->_type;
-    CPy_INCREF(cpy_r_r1);
     cpy_r_r2 = CPY_GET_ATTR(cpy_r_r1, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r1);
     if (unlikely(cpy_r_r2 == NULL)) {
         CPy_AddTraceback("mypy/server/astdiff.py", "visit_instance", 382, CPyStatic_astdiff___globals);
         goto CPyL9;
@@ -7941,7 +7933,6 @@ PyObject *CPyDef_astdiff___SnapshotTypeVisitor___visit_type_alias_type(PyObject 
 CPyL3: ;
     cpy_r_r4 = CPyStatics[1066]; /* 'TypeAliasType' */
     cpy_r_r5 = ((mypy___types___TypeAliasTypeObject *)cpy_r_typ)->_alias;
-    CPy_INCREF(cpy_r_r5);
     if (likely(cpy_r_r5 != Py_None))
         cpy_r_r6 = cpy_r_r5;
     else {
@@ -7949,7 +7940,6 @@ CPyL3: ;
         goto CPyL7;
     }
     cpy_r_r7 = CPY_GET_ATTR(cpy_r_r6, CPyType_nodes___TypeAlias, 9, mypy___nodes___TypeAliasObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r6);
     if (unlikely(cpy_r_r7 == NULL)) {
         CPy_AddTraceback("mypy/server/astdiff.py", "visit_type_alias_type", 492, CPyStatic_astdiff___globals);
         goto CPyL7;

@@ -2102,7 +2102,9 @@ CPyL21: ;
     if (cpy_r_r44) goto CPyL27;
 CPyL25: ;
     cpy_r_r45 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r45);
     cpy_r_r46 = CPY_GET_ATTR(cpy_r_r45, CPyType_context___FuncInfo, 2, mypyc___irbuild___context___FuncInfoObject, char); /* is_generator */
+    CPy_DECREF(cpy_r_r45);
     if (unlikely(cpy_r_r46 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 252, CPyStatic_function___globals);
         goto CPyL126;
@@ -2132,7 +2134,9 @@ CPyL30: ;
     }
 CPyL31: ;
     cpy_r_r53 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r53);
     cpy_r_r54 = CPY_GET_ATTR(cpy_r_r53, CPyType_context___FuncInfo, 2, mypyc___irbuild___context___FuncInfoObject, char); /* is_generator */
+    CPy_DECREF(cpy_r_r53);
     if (unlikely(cpy_r_r54 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 258, CPyStatic_function___globals);
         goto CPyL126;
@@ -2202,7 +2206,9 @@ CPyL33: ;
         goto CPyL135;
     }
     cpy_r_r67 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r67);
     cpy_r_r68 = CPY_GET_ATTR(cpy_r_r67, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r67);
     if (unlikely(cpy_r_r68 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 269, CPyStatic_function___globals);
         goto CPyL135;
@@ -2231,7 +2237,9 @@ CPyL41: ;
         goto CPyL135;
     }
     cpy_r_r77 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r77);
     cpy_r_r78 = CPY_GET_ATTR(cpy_r_r77, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r77);
     if (unlikely(cpy_r_r78 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 271, CPyStatic_function___globals);
         goto CPyL136;
@@ -2276,7 +2284,9 @@ CPyL49: ;
     if (!cpy_r_r86) goto CPyL53;
 CPyL50: ;
     cpy_r_r87 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r87);
     cpy_r_r88 = CPY_GET_ATTR(cpy_r_r87, CPyType_context___FuncInfo, 2, mypyc___irbuild___context___FuncInfoObject, char); /* is_generator */
+    CPy_DECREF(cpy_r_r87);
     if (unlikely(cpy_r_r88 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 278, CPyStatic_function___globals);
         goto CPyL126;
@@ -2304,7 +2314,9 @@ CPyL53: ;
     CPy_INCREF(cpy_r_r93);
     cpy_r_env_for_func = cpy_r_r93;
     cpy_r_r94 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r94);
     cpy_r_r95 = CPY_GET_ATTR(cpy_r_r94, CPyType_context___FuncInfo, 2, mypyc___irbuild___context___FuncInfoObject, char); /* is_generator */
+    CPy_DECREF(cpy_r_r94);
     if (unlikely(cpy_r_r95 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 290, CPyStatic_function___globals);
         goto CPyL137;
@@ -2316,7 +2328,9 @@ CPyL55: ;
         goto CPyL58;
 CPyL56: ;
     cpy_r_r96 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r96);
     cpy_r_r97 = CPY_GET_ATTR(cpy_r_r96, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r96);
     if (unlikely(cpy_r_r97 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 291, CPyStatic_function___globals);
         goto CPyL126;
@@ -2337,7 +2351,9 @@ CPyL59: ;
         goto CPyL62;
 CPyL60: ;
     cpy_r_r102 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r102);
     cpy_r_r103 = CPY_GET_ATTR(cpy_r_r102, CPyType_context___FuncInfo, 4, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* callable_class */
+    CPy_DECREF(cpy_r_r102);
     if (unlikely(cpy_r_r103 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 293, CPyStatic_function___globals);
         goto CPyL126;
@@ -2572,7 +2588,9 @@ CPyL95: ;
         goto CPyL156;
     }
     cpy_r_r173 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r173);
     cpy_r_r174 = CPY_GET_ATTR(cpy_r_r173, CPyType_context___FuncInfo, 2, mypyc___irbuild___context___FuncInfoObject, char); /* is_generator */
+    CPy_DECREF(cpy_r_r173);
     if (unlikely(cpy_r_r174 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_func_item", 317, CPyStatic_function___globals);
         goto CPyL156;
@@ -8247,7 +8265,9 @@ __LL10234: ;
     return cpy_r_r6;
 CPyL7: ;
     cpy_r_r7 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r7);
     cpy_r_r8 = CPY_GET_ATTR(cpy_r_r7, CPyType_context___FuncInfo, 2, mypyc___irbuild___context___FuncInfoObject, char); /* is_generator */
+    CPy_DECREF(cpy_r_r7);
     if (unlikely(cpy_r_r8 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "get_func_target", 771, CPyStatic_function___globals);
         goto CPyL17;
@@ -10974,7 +10994,9 @@ tuple_T2OO CPyDef_function___gen_dispatch_func_ir(PyObject *cpy_r_builder, PyObj
     CPy_Unreachable();
 CPyL6: ;
     cpy_r_r11 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r11);
     cpy_r_r12 = CPY_GET_ATTR(cpy_r_r11, CPyType_context___FuncInfo, 4, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* callable_class */
+    CPy_DECREF(cpy_r_r11);
     if (unlikely(cpy_r_r12 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 898, CPyStatic_function___globals);
         goto CPyL27;
@@ -10984,10 +11006,11 @@ CPyL7: ;
     cpy_r_r14 = ((mypyc___ir___class_ir___ClassIRObject *)cpy_r_r13)->_attributes;
     if (unlikely(cpy_r_r14 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/function.py", "gen_dispatch_func_ir", "ClassIR", "attributes", 898, CPyStatic_function___globals);
-        goto CPyL27;
+        goto CPyL28;
     }
     CPy_INCREF(cpy_r_r14);
 CPyL8: ;
+    CPy_DECREF(cpy_r_r12);
     cpy_r_r15 = CPyStatics[8345]; /* 'registry' */
     cpy_r_r16 = CPyDict_SetItem(cpy_r_r14, cpy_r_r15, cpy_r_r9);
     CPy_DECREF(cpy_r_r14);
@@ -11007,7 +11030,9 @@ CPyL8: ;
     CPy_Unreachable();
 CPyL12: ;
     cpy_r_r20 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r20);
     cpy_r_r21 = CPY_GET_ATTR(cpy_r_r20, CPyType_context___FuncInfo, 4, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* callable_class */
+    CPy_DECREF(cpy_r_r20);
     if (unlikely(cpy_r_r21 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 899, CPyStatic_function___globals);
         goto CPyL27;
@@ -11017,10 +11042,11 @@ CPyL13: ;
     cpy_r_r23 = ((mypyc___ir___class_ir___ClassIRObject *)cpy_r_r22)->_attributes;
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/function.py", "gen_dispatch_func_ir", "ClassIR", "attributes", 899, CPyStatic_function___globals);
-        goto CPyL27;
+        goto CPyL29;
     }
     CPy_INCREF(cpy_r_r23);
 CPyL14: ;
+    CPy_DECREF(cpy_r_r21);
     cpy_r_r24 = CPyStatics[8342]; /* 'dispatch_cache' */
     cpy_r_r25 = CPyDict_SetItem(cpy_r_r23, cpy_r_r24, cpy_r_r18);
     CPy_DECREF(cpy_r_r23);
@@ -11030,7 +11056,9 @@ CPyL14: ;
         goto CPyL27;
     }
     cpy_r_r27 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r27);
     cpy_r_r28 = CPY_GET_ATTR(cpy_r_r27, CPyType_context___FuncInfo, 4, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* callable_class */
+    CPy_DECREF(cpy_r_r27);
     if (unlikely(cpy_r_r28 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 900, CPyStatic_function___globals);
         goto CPyL27;
@@ -11038,8 +11066,11 @@ CPyL14: ;
 CPyL16: ;
     cpy_r_r29 = ((mypyc___irbuild___context___ImplicitClassObject *)cpy_r_r28)->_ir;
     ((mypyc___ir___class_ir___ClassIRObject *)cpy_r_r29)->_has_dict = 1;
+    CPy_DECREF(cpy_r_r28);
     cpy_r_r31 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r31);
     cpy_r_r32 = CPY_GET_ATTR(cpy_r_r31, CPyType_context___FuncInfo, 4, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* callable_class */
+    CPy_DECREF(cpy_r_r31);
     if (unlikely(cpy_r_r32 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 901, CPyStatic_function___globals);
         goto CPyL27;
@@ -11047,6 +11078,7 @@ CPyL16: ;
 CPyL17: ;
     cpy_r_r33 = ((mypyc___irbuild___context___ImplicitClassObject *)cpy_r_r32)->_ir;
     ((mypyc___ir___class_ir___ClassIRObject *)cpy_r_r33)->_needs_getseters = 1;
+    CPy_DECREF(cpy_r_r32);
     cpy_r_r35 = CPyDef_function___generate_singledispatch_callable_class_ctor(cpy_r_builder);
     if (unlikely(cpy_r_r35 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 902, CPyStatic_function___globals);
@@ -11089,7 +11121,7 @@ CPyL17: ;
     CPy_DECREF(cpy_r_blocks);
     if (unlikely(cpy_r_r43 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 906, CPyStatic_function___globals);
-        goto CPyL28;
+        goto CPyL30;
     }
     cpy_r_dispatch_callable_class = cpy_r_r43;
     cpy_r_r44 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_functions;
@@ -11099,23 +11131,23 @@ CPyL17: ;
     cpy_r_r46 = cpy_r_r45 >= 0;
     if (unlikely(!cpy_r_r46)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 907, CPyStatic_function___globals);
-        goto CPyL29;
+        goto CPyL31;
     }
     cpy_r_r47 = CPyDef_callable_class___add_get_to_callable_class(cpy_r_builder, cpy_r_fn_info);
     if (unlikely(cpy_r_r47 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 908, CPyStatic_function___globals);
-        goto CPyL29;
+        goto CPyL31;
     }
     cpy_r_r48 = CPyDef_function___add_register_method_to_callable_class(cpy_r_builder, cpy_r_fn_info);
     if (unlikely(cpy_r_r48 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 909, CPyStatic_function___globals);
-        goto CPyL29;
+        goto CPyL31;
     }
     cpy_r_r49 = CPyDef_callable_class___instantiate_callable_class(cpy_r_builder, cpy_r_fn_info);
     CPy_DECREF(cpy_r_fn_info);
     if (unlikely(cpy_r_r49 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 910, CPyStatic_function___globals);
-        goto CPyL30;
+        goto CPyL32;
     }
     cpy_r_func_reg = cpy_r_r49;
     cpy_r_r50 = ((mypyc___ir___func_ir___FuncIRObject *)cpy_r_dispatch_callable_class)->_decl;
@@ -11125,7 +11157,7 @@ CPyL17: ;
     CPy_DECREF(cpy_r_r50);
     if (unlikely(cpy_r_r51 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_dispatch_func_ir", 911, CPyStatic_function___globals);
-        goto CPyL31;
+        goto CPyL33;
     }
     cpy_r_dispatch_func_ir = cpy_r_r51;
     cpy_r_r52.f0 = cpy_r_dispatch_func_ir;
@@ -11140,16 +11172,22 @@ CPyL27: ;
     cpy_r_r53 = __tmp10248;
     return cpy_r_r53;
 CPyL28: ;
-    CPy_DecRef(cpy_r_fn_info);
+    CPy_DecRef(cpy_r_r12);
     goto CPyL27;
 CPyL29: ;
+    CPy_DecRef(cpy_r_r21);
+    goto CPyL27;
+CPyL30: ;
+    CPy_DecRef(cpy_r_fn_info);
+    goto CPyL27;
+CPyL31: ;
     CPy_DecRef(cpy_r_fn_info);
     CPy_DecRef(cpy_r_dispatch_callable_class);
     goto CPyL27;
-CPyL30: ;
+CPyL32: ;
     CPy_DecRef(cpy_r_dispatch_callable_class);
     goto CPyL27;
-CPyL31: ;
+CPyL33: ;
     CPy_DecRef(cpy_r_func_reg);
     goto CPyL27;
 }
@@ -11413,7 +11451,7 @@ CPyL13: ;
         goto CPyL37;
     }
     cpy_r_arg_names = cpy_r_r28;
-    cpy_r_r29 = CPyStatics[729]; /* 'self' */
+    cpy_r_r29 = CPyStatics[730]; /* 'self' */
     cpy_r_r30 = CPyList_Insert(cpy_r_arg_names, 0, cpy_r_r29);
     cpy_r_r31 = cpy_r_r30 >= 0;
     if (unlikely(!cpy_r_r31)) {
@@ -11683,7 +11721,9 @@ char CPyDef_function___generate_singledispatch_callable_class_ctor(PyObject *cpy
     char cpy_r_r73;
     cpy_r_line = -2;
     cpy_r_r0 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_context___FuncInfo, 4, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* callable_class */
+    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/function.py", "generate_singledispatch_callable_class_ctor", 940, CPyStatic_function___globals);
         goto CPyL54;
@@ -11691,6 +11731,7 @@ char CPyDef_function___generate_singledispatch_callable_class_ctor(PyObject *cpy
 CPyL1: ;
     cpy_r_r2 = ((mypyc___irbuild___context___ImplicitClassObject *)cpy_r_r1)->_ir;
     CPy_INCREF(cpy_r_r2);
+    CPy_DECREF(cpy_r_r1);
     cpy_r_class_ir = cpy_r_r2;
     cpy_r_r3 = CPyStatics[288]; /* '__init__' */
     cpy_r_r4 = CPyStatic_rtypes___bool_rprimitive;
@@ -12206,6 +12247,7 @@ char CPyDef_function___add_register_method_to_callable_class(PyObject *cpy_r_bui
 CPyL1: ;
     cpy_r_r1 = ((mypyc___irbuild___context___ImplicitClassObject *)cpy_r_r0)->_ir;
     CPy_INCREF(cpy_r_r1);
+    CPy_DECREF(cpy_r_r0);
     cpy_r_r2 = CPyStatics[8346]; /* 'register' */
     cpy_r_r3 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r3 == NULL)) {
@@ -12255,7 +12297,7 @@ CPyL4: ;
         goto CPyL54;
 CPyL8: ;
     cpy_r_r17 = 1;
-    cpy_r_r18 = CPyStatics[730]; /* 'cls' */
+    cpy_r_r18 = CPyStatics[729]; /* 'cls' */
     cpy_r_r19 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r19 == NULL)) {
         goto CPyL55;
@@ -14050,7 +14092,7 @@ PyObject *CPyDef_function___gen_property_getter_ir(PyObject *cpy_r_builder, PyOb
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_property_getter_ir", 1038, CPyStatic_function___globals);
         goto CPyL14;
     }
-    cpy_r_r2 = CPyStatics[729]; /* 'self' */
+    cpy_r_r2 = CPyStatics[730]; /* 'self' */
     cpy_r_r3 = ((mypyc___ir___func_ir___FuncDeclObject *)cpy_r_func_decl)->_sig;
     cpy_r_r4 = ((mypyc___ir___func_ir___FuncSignatureObject *)cpy_r_r3)->_args;
     CPy_INCREF(cpy_r_r4);
@@ -14283,7 +14325,7 @@ PyObject *CPyDef_function___gen_property_setter_ir(PyObject *cpy_r_builder, PyOb
         CPy_AddTraceback("mypyc/irbuild/function.py", "gen_property_setter_ir", 1057, CPyStatic_function___globals);
         goto CPyL23;
     }
-    cpy_r_r2 = CPyStatics[729]; /* 'self' */
+    cpy_r_r2 = CPyStatics[730]; /* 'self' */
     cpy_r_r3 = ((mypyc___ir___func_ir___FuncDeclObject *)cpy_r_func_decl)->_sig;
     cpy_r_r4 = ((mypyc___ir___func_ir___FuncSignatureObject *)cpy_r_r3)->_args;
     CPy_INCREF(cpy_r_r4);

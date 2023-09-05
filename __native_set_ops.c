@@ -567,7 +567,7 @@ CPyL40: ;
     } else
         goto CPyL124;
 CPyL41: ;
-    cpy_r_r88 = CPyStatics[867]; /* 'in' */
+    cpy_r_r88 = CPyStatics[866]; /* 'in' */
     cpy_r_r89 = CPyStatic_rtypes___object_rprimitive;
     if (likely(cpy_r_r89 != NULL)) goto CPyL44;
     PyErr_SetString(PyExc_NameError, "value for final name \"object_rprimitive\" was not set");

@@ -11645,7 +11645,7 @@ CPyL30: ;
     } else
         goto CPyL33;
 CPyL32: ;
-    cpy_r_r51 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r51 = CPyStatics[1152]; /* 'True' */
     CPy_INCREF(cpy_r_r51);
     cpy_r_value = cpy_r_r51;
 CPyL33: ;

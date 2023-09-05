@@ -243,7 +243,7 @@ CPyL12: ;
     }
     cpy_r_r31 = ((mypy___nodes___NameExprObject *)cpy_r_r30)->_name;
     CPy_INCREF(cpy_r_r31);
-    cpy_r_r32 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r32 = CPyStatics[1152]; /* 'True' */
     cpy_r_r33 = PyUnicode_Compare(cpy_r_r31, cpy_r_r32);
     CPy_DECREF(cpy_r_r31);
     cpy_r_r34 = cpy_r_r33 == -1;
@@ -271,7 +271,7 @@ CPyL19: ;
     }
     cpy_r_r41 = ((mypy___nodes___NameExprObject *)cpy_r_r40)->_name;
     CPy_INCREF(cpy_r_r41);
-    cpy_r_r42 = CPyStatics[1152]; /* 'False' */
+    cpy_r_r42 = CPyStatics[1151]; /* 'False' */
     cpy_r_r43 = PyUnicode_Compare(cpy_r_r41, cpy_r_r42);
     CPy_DECREF(cpy_r_r41);
     cpy_r_r44 = cpy_r_r43 == -1;
@@ -314,7 +314,6 @@ CPyL25: ;
     cpy_r_r57 = ((mypy___nodes___VarObject *)cpy_r_r56)->_is_final;
     if (!cpy_r_r57) goto CPyL65;
 CPyL29: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___Var))
         cpy_r_r58 = cpy_r_node;
     else {
@@ -322,7 +321,6 @@ CPyL29: ;
         goto CPyL66;
     }
     cpy_r_r59 = CPY_GET_ATTR(cpy_r_r58, CPyType_nodes___Var, 7, mypy___nodes___VarObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r58);
     if (unlikely(cpy_r_r59 == NULL)) {
         CPy_AddTraceback("mypy/constant_fold.py", "constant_fold_expr", 62, CPyStatic_mypy___constant_fold___globals);
         goto CPyL66;

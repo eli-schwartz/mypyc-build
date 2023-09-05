@@ -11438,9 +11438,7 @@ char CPyDef_stubgen___ReferenceFinder___visit_instance(PyObject *cpy_r_self, PyO
     char cpy_r_r3;
     char cpy_r_r4;
     cpy_r_r0 = ((mypy___types___InstanceObject *)cpy_r_t)->_type;
-    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypy/stubgen.py", "visit_instance", 595, CPyStatic_stubgen___globals);
         goto CPyL4;
@@ -13341,9 +13339,7 @@ __LL7040: ;
         goto CPyL29;
     }
     cpy_r_r13 = ((mypy___nodes___DecoratorObject *)cpy_r_r12)->_func;
-    CPy_INCREF(cpy_r_r13);
     cpy_r_r14 = CPY_GET_ATTR(cpy_r_r13, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == NULL)) {
         CPy_AddTraceback("mypy/stubgen.py", "visit_overloaded_func_def", 688, CPyStatic_stubgen___globals);
         goto CPyL29;
@@ -13356,9 +13352,7 @@ CPyL6: ;
         goto CPyL30;
     }
     cpy_r_r16 = ((mypy___nodes___DecoratorObject *)cpy_r_r15)->_func;
-    CPy_INCREF(cpy_r_r16);
     cpy_r_r17 = CPY_GET_ATTR(cpy_r_r16, CPyType_nodes___FuncDef, 7, mypy___nodes___FuncDefObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r16);
     if (unlikely(cpy_r_r17 == NULL)) {
         CPy_AddTraceback("mypy/stubgen.py", "visit_overloaded_func_def", 688, CPyStatic_stubgen___globals);
         goto CPyL30;
@@ -14376,7 +14370,7 @@ CPyL76: ;
     cpy_r_r108 = cpy_r_r106;
     goto CPyL82;
 CPyL78: ;
-    cpy_r_r109 = CPyStatics[729]; /* 'self' */
+    cpy_r_r109 = CPyStatics[730]; /* 'self' */
     cpy_r_r110 = PyUnicode_Compare(cpy_r_name, cpy_r_r109);
     cpy_r_r111 = cpy_r_r110 == -1;
     if (!cpy_r_r111) goto CPyL81;
@@ -14409,7 +14403,7 @@ CPyL85: ;
     cpy_r_r121 = cpy_r_r119;
     goto CPyL91;
 CPyL87: ;
-    cpy_r_r122 = CPyStatics[730]; /* 'cls' */
+    cpy_r_r122 = CPyStatics[729]; /* 'cls' */
     cpy_r_r123 = PyUnicode_Compare(cpy_r_name, cpy_r_r122);
     cpy_r_r124 = cpy_r_r123 == -1;
     if (!cpy_r_r124) goto CPyL90;
@@ -15687,18 +15681,14 @@ char CPyDef_stubgen___StubGenerator___visit_decorator(PyObject *cpy_r_self, PyOb
     char cpy_r_r7;
     char cpy_r_r8;
     cpy_r_r0 = ((mypy___nodes___DecoratorObject *)cpy_r_o)->_func;
-    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypy/stubgen.py", "visit_decorator", 817, CPyStatic_stubgen___globals);
         goto CPyL8;
     }
 CPyL1: ;
     cpy_r_r2 = ((mypy___nodes___DecoratorObject *)cpy_r_o)->_func;
-    CPy_INCREF(cpy_r_r2);
     cpy_r_r3 = CPY_GET_ATTR(cpy_r_r2, CPyType_nodes___FuncDef, 7, mypy___nodes___FuncDefObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r2);
     if (unlikely(cpy_r_r3 == NULL)) {
         CPy_AddTraceback("mypy/stubgen.py", "visit_decorator", 817, CPyStatic_stubgen___globals);
         goto CPyL9;
@@ -24042,7 +24032,7 @@ CPyL52: ;
     }
     cpy_r_r79 = ((mypy___nodes___NameExprObject *)cpy_r_r78)->_name;
     CPy_INCREF(cpy_r_r79);
-    cpy_r_r80 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r80 = CPyStatics[1152]; /* 'True' */
     cpy_r_r81 = PyUnicode_Compare(cpy_r_r79, cpy_r_r80);
     CPy_DECREF(cpy_r_r79);
     cpy_r_r82 = cpy_r_r81 == -1;
@@ -24069,7 +24059,7 @@ CPyL59: ;
     }
     cpy_r_r89 = ((mypy___nodes___NameExprObject *)cpy_r_r88)->_name;
     CPy_INCREF(cpy_r_r89);
-    cpy_r_r90 = CPyStatics[1152]; /* 'False' */
+    cpy_r_r90 = CPyStatics[1151]; /* 'False' */
     cpy_r_r91 = PyUnicode_Compare(cpy_r_r89, cpy_r_r90);
     CPy_DECREF(cpy_r_r89);
     cpy_r_r92 = cpy_r_r91 == -1;
@@ -29395,7 +29385,7 @@ CPyL35: ;
     }
     cpy_r_r69 = ((mypy___nodes___NameExprObject *)cpy_r_r68)->_name;
     CPy_INCREF(cpy_r_r69);
-    cpy_r_r70 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r70 = CPyStatics[1152]; /* 'True' */
     cpy_r_r71 = PyUnicode_Compare(cpy_r_r69, cpy_r_r70);
     CPy_DECREF(cpy_r_r69);
     cpy_r_r72 = cpy_r_r71 == -1;
@@ -29422,7 +29412,7 @@ CPyL42: ;
     }
     cpy_r_r79 = ((mypy___nodes___NameExprObject *)cpy_r_r78)->_name;
     CPy_INCREF(cpy_r_r79);
-    cpy_r_r80 = CPyStatics[1152]; /* 'False' */
+    cpy_r_r80 = CPyStatics[1151]; /* 'False' */
     cpy_r_r81 = PyUnicode_Compare(cpy_r_r79, cpy_r_r80);
     CPy_DECREF(cpy_r_r79);
     cpy_r_r82 = cpy_r_r81 == -1;
@@ -30008,7 +29998,7 @@ CPyL40: ;
     }
     cpy_r_r91 = ((mypy___nodes___NameExprObject *)cpy_r_r90)->_name;
     CPy_INCREF(cpy_r_r91);
-    cpy_r_r92 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r92 = CPyStatics[1152]; /* 'True' */
     cpy_r_r93 = PyUnicode_Compare(cpy_r_r91, cpy_r_r92);
     CPy_DECREF(cpy_r_r91);
     cpy_r_r94 = cpy_r_r93 == -1;
@@ -30042,7 +30032,7 @@ CPyL50: ;
     }
     cpy_r_r103 = ((mypy___nodes___NameExprObject *)cpy_r_r102)->_name;
     CPy_INCREF(cpy_r_r103);
-    cpy_r_r104 = CPyStatics[1152]; /* 'False' */
+    cpy_r_r104 = CPyStatics[1151]; /* 'False' */
     cpy_r_r105 = PyUnicode_Compare(cpy_r_r103, cpy_r_r104);
     CPy_DECREF(cpy_r_r103);
     cpy_r_r106 = cpy_r_r105 == -1;
@@ -30503,15 +30493,15 @@ CPyL2: ;
         cpy_r_r12 = cpy_r_defn;
     else {
         CPy_TypeErrorTraceback("mypy/stubgen.py", "find_method_names", 1488, CPyStatic_stubgen___globals, "mypy.nodes.FuncDef", cpy_r_defn);
-        goto CPyL24;
+        goto CPyL25;
     }
     cpy_r_r13 = CPY_GET_ATTR(cpy_r_r12, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r12);
     if (unlikely(cpy_r_r13 == NULL)) {
         CPy_AddTraceback("mypy/stubgen.py", "find_method_names", 1488, CPyStatic_stubgen___globals);
-        goto CPyL24;
+        goto CPyL25;
     }
 CPyL7: ;
+    CPy_DECREF(cpy_r_defn);
     cpy_r_r14 = PySet_Add(cpy_r_result, cpy_r_r13);
     CPy_DECREF(cpy_r_r13);
     cpy_r_r15 = cpy_r_r14 >= 0;
@@ -30533,15 +30523,13 @@ CPyL8: ;
         goto CPyL25;
     }
     cpy_r_r21 = ((mypy___nodes___DecoratorObject *)cpy_r_r20)->_func;
-    CPy_INCREF(cpy_r_r21);
-    CPy_DECREF(cpy_r_defn);
     cpy_r_r22 = CPY_GET_ATTR(cpy_r_r21, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r21);
     if (unlikely(cpy_r_r22 == NULL)) {
         CPy_AddTraceback("mypy/stubgen.py", "find_method_names", 1490, CPyStatic_stubgen___globals);
-        goto CPyL24;
+        goto CPyL25;
     }
 CPyL11: ;
+    CPy_DECREF(cpy_r_defn);
     cpy_r_r23 = PySet_Add(cpy_r_result, cpy_r_r22);
     CPy_DECREF(cpy_r_r22);
     cpy_r_r24 = cpy_r_r23 >= 0;
@@ -30796,7 +30784,7 @@ char CPyDef_stubgen___SelfTraverser___visit_assignment_stmt(PyObject *cpy_r_self
     }
     cpy_r_r16 = ((mypy___nodes___NameExprObject *)cpy_r_r15)->_name;
     CPy_INCREF(cpy_r_r16);
-    cpy_r_r17 = CPyStatics[729]; /* 'self' */
+    cpy_r_r17 = CPyStatics[730]; /* 'self' */
     cpy_r_r18 = PyUnicode_Compare(cpy_r_r16, cpy_r_r17);
     CPy_DECREF(cpy_r_r16);
     cpy_r_r19 = cpy_r_r18 == -1;

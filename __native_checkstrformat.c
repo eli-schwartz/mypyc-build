@@ -10183,9 +10183,7 @@ CPyL12: ;
         goto CPyL96;
     }
     cpy_r_r23 = ((mypy___types___InstanceObject *)cpy_r_r22)->_type;
-    CPy_INCREF(cpy_r_r23);
     cpy_r_r24 = CPY_GET_ATTR(cpy_r_r23, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r23);
     if (unlikely(cpy_r_r24 == NULL)) {
         CPy_AddTraceback("mypy/checkstrformat.py", "check_simple_str_interpolation", 741, CPyStatic_checkstrformat___globals);
         goto CPyL96;

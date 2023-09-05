@@ -1387,21 +1387,21 @@ CPyL7: ;
         cpy_r_r31 = cpy_r_typ;
     else {
         CPy_TypeErrorTraceback("mypy/types_utils.py", "strip_type", 51, CPyStatic_types_utils___globals, "mypy.types.Overloaded", cpy_r_typ);
-        goto CPyL20;
+        goto CPyL25;
     }
     cpy_r_r32 = CPY_GET_ATTR(cpy_r_r31, CPyType_types___Overloaded, 22, mypy___types___OverloadedObject, PyObject *); /* items */
-    CPy_DECREF(cpy_r_r31);
     if (unlikely(cpy_r_r32 == NULL)) {
         CPy_AddTraceback("mypy/types_utils.py", "strip_type", 51, CPyStatic_types_utils___globals);
-        goto CPyL20;
+        goto CPyL25;
     }
 CPyL9: ;
+    CPy_DECREF(cpy_r_typ);
     cpy_r_r33 = (CPyPtr)&((PyVarObject *)cpy_r_r32)->ob_size;
     cpy_r_r34 = *(int64_t *)cpy_r_r33;
     cpy_r_r35 = PyList_New(cpy_r_r34);
     if (unlikely(cpy_r_r35 == NULL)) {
         CPy_AddTraceback("mypy/types_utils.py", "strip_type", 51, CPyStatic_types_utils___globals);
-        goto CPyL25;
+        goto CPyL26;
     }
     cpy_r_r36 = 0;
 CPyL11: ;
@@ -1409,31 +1409,31 @@ CPyL11: ;
     cpy_r_r38 = *(int64_t *)cpy_r_r37;
     cpy_r_r39 = cpy_r_r38 << 1;
     cpy_r_r40 = (Py_ssize_t)cpy_r_r36 < (Py_ssize_t)cpy_r_r39;
-    if (!cpy_r_r40) goto CPyL26;
+    if (!cpy_r_r40) goto CPyL27;
     cpy_r_r41 = CPyList_GetItemUnsafe(cpy_r_r32, cpy_r_r36);
     if (likely(Py_TYPE(cpy_r_r41) == CPyType_types___CallableType))
         cpy_r_r42 = cpy_r_r41;
     else {
         CPy_TypeErrorTraceback("mypy/types_utils.py", "strip_type", 51, CPyStatic_types_utils___globals, "mypy.types.CallableType", cpy_r_r41);
-        goto CPyL27;
+        goto CPyL28;
     }
     cpy_r_item = cpy_r_r42;
     cpy_r_r43 = CPyDef_types_utils___strip_type(cpy_r_item);
     CPy_DECREF(cpy_r_item);
     if (unlikely(cpy_r_r43 == NULL)) {
         CPy_AddTraceback("mypy/types_utils.py", "strip_type", 51, CPyStatic_types_utils___globals);
-        goto CPyL27;
+        goto CPyL28;
     }
     if (likely(Py_TYPE(cpy_r_r43) == CPyType_types___CallableType))
         cpy_r_r44 = cpy_r_r43;
     else {
         CPy_TypeErrorTraceback("mypy/types_utils.py", "strip_type", 51, CPyStatic_types_utils___globals, "mypy.types.CallableType", cpy_r_r43);
-        goto CPyL27;
+        goto CPyL28;
     }
     cpy_r_r45 = CPyList_SetItemUnsafe(cpy_r_r35, cpy_r_r36, cpy_r_r44);
     if (unlikely(!cpy_r_r45)) {
         CPy_AddTraceback("mypy/types_utils.py", "strip_type", 51, CPyStatic_types_utils___globals);
-        goto CPyL27;
+        goto CPyL28;
     }
     cpy_r_r46 = cpy_r_r36 + 2;
     cpy_r_r36 = cpy_r_r46;
@@ -1464,12 +1464,15 @@ CPyL24: ;
     CPy_DECREF(cpy_r_typ);
     goto CPyL19;
 CPyL25: ;
-    CPy_DecRef(cpy_r_r32);
+    CPy_DecRef(cpy_r_typ);
     goto CPyL20;
 CPyL26: ;
+    CPy_DecRef(cpy_r_r32);
+    goto CPyL20;
+CPyL27: ;
     CPy_DECREF(cpy_r_r32);
     goto CPyL17;
-CPyL27: ;
+CPyL28: ;
     CPy_DecRef(cpy_r_r32);
     CPy_DecRef(cpy_r_r35);
     goto CPyL20;
@@ -2864,9 +2867,7 @@ CPyL16: ;
         goto CPyL63;
     }
     cpy_r_r31 = ((mypy___types___InstanceObject *)cpy_r_r30)->_type;
-    CPy_INCREF(cpy_r_r31);
     cpy_r_r32 = CPY_GET_ATTR(cpy_r_r31, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r31);
     if (unlikely(cpy_r_r32 == NULL)) {
         CPy_AddTraceback("mypy/types_utils.py", "store_argument_type", 146, CPyStatic_types_utils___globals);
         goto CPyL63;

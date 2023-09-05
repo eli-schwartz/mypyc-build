@@ -5540,7 +5540,7 @@ CPyL16: ;
     }
     CPy_Unreachable();
 CPyL18: ;
-    cpy_r_r18 = CPyStatics[729]; /* 'self' */
+    cpy_r_r18 = CPyStatics[730]; /* 'self' */
     cpy_r_r19 = CPyStatics[7606]; /* 'exp' */
     cpy_r_r20 = CPyStatics[7607]; /* 'mod' */
     cpy_r_r21 = PyList_New(3);

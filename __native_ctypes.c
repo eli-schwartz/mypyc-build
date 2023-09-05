@@ -667,9 +667,7 @@ CPyL17: ;
     }
     cpy_r_base = cpy_r_r39;
     cpy_r_r40 = ((mypy___types___InstanceObject *)cpy_r_base)->_type;
-    CPy_INCREF(cpy_r_r40);
     cpy_r_r41 = CPY_GET_ATTR(cpy_r_r40, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r40);
     if (unlikely(cpy_r_r41 == NULL)) {
         CPy_AddTraceback("mypy/plugins/ctypes.py", "_autounboxed_cdata", 91, CPyStatic_ctypes___globals);
         goto CPyL42;
@@ -872,9 +870,7 @@ PyObject *CPyDef_ctypes____get_array_element_type(PyObject *cpy_r_tp) {
         goto CPyL22;
     }
     cpy_r_r7 = ((mypy___types___InstanceObject *)cpy_r_r6)->_type;
-    CPy_INCREF(cpy_r_r7);
     cpy_r_r8 = CPY_GET_ATTR(cpy_r_r7, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r7);
     if (unlikely(cpy_r_r8 == NULL)) {
         CPy_AddTraceback("mypy/plugins/ctypes.py", "_get_array_element_type", 105, CPyStatic_ctypes___globals);
         goto CPyL22;
@@ -3279,9 +3275,7 @@ CPyL17: ;
         goto CPyL66;
     }
     cpy_r_r37 = ((mypy___types___InstanceObject *)cpy_r_r36)->_type;
-    CPy_INCREF(cpy_r_r37);
     cpy_r_r38 = CPY_GET_ATTR(cpy_r_r37, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r37);
     if (unlikely(cpy_r_r38 == NULL)) {
         CPy_AddTraceback("mypy/plugins/ctypes.py", "array_value_callback", 209, CPyStatic_ctypes___globals);
         goto CPyL66;
@@ -3352,15 +3346,13 @@ CPyL29: ;
         goto CPyL66;
     }
     cpy_r_r58 = ((mypy___types___InstanceObject *)cpy_r_r57)->_type;
-    CPy_INCREF(cpy_r_r58);
-    CPy_DECREF(cpy_r_tp);
     cpy_r_r59 = CPY_GET_ATTR(cpy_r_r58, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r58);
     if (unlikely(cpy_r_r59 == NULL)) {
         CPy_AddTraceback("mypy/plugins/ctypes.py", "array_value_callback", 211, CPyStatic_ctypes___globals);
-        goto CPyL65;
+        goto CPyL66;
     }
 CPyL32: ;
+    CPy_DECREF(cpy_r_tp);
     cpy_r_r60 = CPyStatics[4489]; /* 'ctypes.c_wchar' */
     cpy_r_r61 = PyUnicode_Compare(cpy_r_r59, cpy_r_r60);
     CPy_DECREF(cpy_r_r59);
@@ -3802,15 +3794,13 @@ CPyL9: ;
         goto CPyL53;
     }
     cpy_r_r30 = ((mypy___types___InstanceObject *)cpy_r_r29)->_type;
-    CPy_INCREF(cpy_r_r30);
-    CPy_DECREF(cpy_r_tp);
     cpy_r_r31 = CPY_GET_ATTR(cpy_r_r30, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r30);
     if (unlikely(cpy_r_r31 == NULL)) {
         CPy_AddTraceback("mypy/plugins/ctypes.py", "array_raw_callback", 235, CPyStatic_ctypes___globals);
-        goto CPyL50;
+        goto CPyL53;
     }
 CPyL17: ;
+    CPy_DECREF(cpy_r_tp);
     cpy_r_r32 = CPyStatics[4488]; /* 'ctypes.c_char' */
     cpy_r_r33 = PyUnicode_Compare(cpy_r_r31, cpy_r_r32);
     CPy_DECREF(cpy_r_r31);

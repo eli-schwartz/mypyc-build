@@ -2253,7 +2253,6 @@ PyObject *CPyDef_indirection___TypeIndirectionVisitor___visit_callable_type(PyOb
     cpy_r_r8 = cpy_r_r6 != cpy_r_r7;
     if (!cpy_r_r8) goto CPyL9;
     cpy_r_r9 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_definition;
-    CPy_INCREF(cpy_r_r9);
     if (likely(cpy_r_r9 != Py_None))
         cpy_r_r10 = cpy_r_r9;
     else {
@@ -2261,7 +2260,6 @@ PyObject *CPyDef_indirection___TypeIndirectionVisitor___visit_callable_type(PyOb
         goto CPyL12;
     }
     cpy_r_r11 = CPY_GET_ATTR_TRAIT(cpy_r_r10, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r10);
     if (unlikely(cpy_r_r11 == NULL)) {
         CPy_AddTraceback("mypy/indirection.py", "visit_callable_type", 96, CPyStatic_indirection___globals);
         goto CPyL12;

@@ -38773,7 +38773,6 @@ CPyL7: ;
     cpy_r_r9 = ((mypy___build___StateObject *)cpy_r_self)->_xpath;
     CPy_INCREF(cpy_r_r9);
     cpy_r_r10 = ((mypy___build___StateObject *)cpy_r_self)->_tree;
-    CPy_INCREF(cpy_r_r10);
     if (likely(cpy_r_r10 != Py_None))
         cpy_r_r11 = cpy_r_r10;
     else {
@@ -38781,7 +38780,6 @@ CPyL7: ;
         goto CPyL31;
     }
     cpy_r_r12 = CPY_GET_ATTR(cpy_r_r11, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r11);
     if (unlikely(cpy_r_r12 == NULL)) {
         CPy_AddTraceback("mypy/build.py", "detect_possibly_undefined_vars", 2351, CPyStatic_mypy___build___globals);
         goto CPyL31;
@@ -39423,7 +39421,6 @@ __LL271: ;
 CPyL28: ;
     cpy_r_r45 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r46 = cpy_r_r44 != cpy_r_r45;
-    CPy_DECREF(cpy_r_r44);
     if (!cpy_r_r46) goto CPyL32;
     cpy_r_r47 = CPY_GET_ATTR(cpy_r_sym, CPyType_nodes___SymbolTableNode, 2, mypy___nodes___SymbolTableNodeObject, PyObject *); /* type */
     if (unlikely(cpy_r_r47 == NULL)) {

@@ -3712,16 +3712,14 @@ CPyL13: ;
     }
     cpy_r_arg = cpy_r_r35;
     cpy_r_r36 = ((mypy___nodes___ArgumentObject *)cpy_r_arg)->_variable;
-    CPy_INCREF(cpy_r_r36);
     cpy_r_r37 = CPY_GET_ATTR(cpy_r_r36, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r36);
     if (unlikely(cpy_r_r37 == NULL)) {
         CPy_AddTraceback("mypy/renaming.py", "visit_func_def", 110, CPyStatic_renaming___globals);
         goto CPyL78;
     }
 CPyL16: ;
     cpy_r_name = cpy_r_r37;
-    cpy_r_r38 = CPyStatics[729]; /* 'self' */
+    cpy_r_r38 = CPyStatics[730]; /* 'self' */
     cpy_r_r39 = PyUnicode_Compare(cpy_r_name, cpy_r_r38);
     cpy_r_r40 = cpy_r_r39 == -1;
     if (!cpy_r_r40) goto CPyL19;
@@ -3737,15 +3735,13 @@ CPyL19: ;
     cpy_r_r44 = cpy_r_r39 != 0;
     cpy_r_can_be_redefined = cpy_r_r44;
     cpy_r_r45 = ((mypy___nodes___ArgumentObject *)cpy_r_arg)->_variable;
-    CPy_INCREF(cpy_r_r45);
-    CPy_DECREF(cpy_r_arg);
     cpy_r_r46 = CPY_GET_ATTR(cpy_r_r45, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r45);
     if (unlikely(cpy_r_r46 == NULL)) {
         CPy_AddTraceback("mypy/renaming.py", "visit_func_def", 114, CPyStatic_renaming___globals);
-        goto CPyL80;
+        goto CPyL79;
     }
 CPyL20: ;
+    CPy_DECREF(cpy_r_arg);
     cpy_r_r47 = CPyDef_renaming___VariableRenameVisitor___record_assignment(cpy_r_self, cpy_r_r46, cpy_r_can_be_redefined);
     CPy_DECREF(cpy_r_r46);
     if (unlikely(cpy_r_r47 == 2)) {
@@ -14152,15 +14148,13 @@ CPyL8: ;
     }
     cpy_r_arg = cpy_r_r21;
     cpy_r_r22 = ((mypy___nodes___ArgumentObject *)cpy_r_arg)->_variable;
-    CPy_INCREF(cpy_r_r22);
-    CPy_DECREF(cpy_r_arg);
     cpy_r_r23 = CPY_GET_ATTR(cpy_r_r22, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypy/renaming.py", "visit_func_def", 467, CPyStatic_renaming___globals);
-        goto CPyL40;
+        goto CPyL41;
     }
 CPyL11: ;
+    CPy_DECREF(cpy_r_arg);
     cpy_r_r24 = CPyDef_renaming___LimitedVariableRenameVisitor___record_skipped(cpy_r_self, cpy_r_r23);
     CPy_DECREF(cpy_r_r23);
     if (unlikely(cpy_r_r24 == 2)) {
@@ -14194,7 +14188,7 @@ CPyL14: ;
     cpy_r_r34 = _PyObject_Vectorcall(cpy_r_r7, cpy_r_r33, 4, 0);
     if (unlikely(cpy_r_r34 == NULL)) {
         CPy_AddTraceback("mypy/renaming.py", "visit_func_def", 465, CPyStatic_renaming___globals);
-        goto CPyL41;
+        goto CPyL42;
     }
     CPy_DecRef(cpy_r_r29);
     CPy_DecRef(cpy_r_r30);
@@ -14212,7 +14206,7 @@ CPyL14: ;
     if (!0) {
         goto CPyL20;
     } else
-        goto CPyL42;
+        goto CPyL43;
 CPyL18: ;
     CPy_Unreachable();
 CPyL19: ;
@@ -14230,7 +14224,7 @@ CPyL20: ;
     if (!cpy_r_r38) {
         goto CPyL23;
     } else
-        goto CPyL43;
+        goto CPyL44;
 CPyL21: ;
     CPy_Unreachable();
 CPyL22: ;
@@ -14242,7 +14236,7 @@ CPyL23: ;
     cpy_r_r41 = CPy_CatchError();
     cpy_r_r40 = cpy_r_r41;
 CPyL24: ;
-    if (!cpy_r_r13) goto CPyL44;
+    if (!cpy_r_r13) goto CPyL45;
     cpy_r_r42 = (PyObject *)&_Py_NoneStruct;
     PyObject *cpy_r_r43[4] = {cpy_r_r4, cpy_r_r42, cpy_r_r42, cpy_r_r42};
     cpy_r_r44 = (PyObject **)&cpy_r_r43;
@@ -14250,9 +14244,9 @@ CPyL24: ;
     CPy_DECREF(cpy_r_r7);
     if (unlikely(cpy_r_r45 == NULL)) {
         CPy_AddTraceback("mypy/renaming.py", "visit_func_def", 465, CPyStatic_renaming___globals);
-        goto CPyL45;
-    } else
         goto CPyL46;
+    } else
+        goto CPyL47;
 CPyL26: ;
     CPy_DECREF(cpy_r_r4);
 CPyL27: ;
@@ -14261,7 +14255,7 @@ CPyL27: ;
     if (!0) {
         goto CPyL30;
     } else
-        goto CPyL47;
+        goto CPyL48;
 CPyL29: ;
     CPy_Unreachable();
 CPyL30: ;
@@ -14297,32 +14291,36 @@ CPyL40: ;
     CPy_DecRef(cpy_r_r14);
     goto CPyL14;
 CPyL41: ;
+    CPy_DecRef(cpy_r_r14);
+    CPy_DecRef(cpy_r_arg);
+    goto CPyL14;
+CPyL42: ;
     CPy_DecRef(cpy_r_r29);
     CPy_DecRef(cpy_r_r30);
     CPy_DecRef(cpy_r_r31);
     goto CPyL20;
-CPyL42: ;
+CPyL43: ;
     CPy_DecRef(cpy_r_r4);
     CPy_DecRef(cpy_r_r7);
     CPy_DecRef(cpy_r_r27.f0);
     CPy_DecRef(cpy_r_r27.f1);
     CPy_DecRef(cpy_r_r27.f2);
     goto CPyL18;
-CPyL43: ;
+CPyL44: ;
     CPy_DecRef(cpy_r_r4);
     CPy_DecRef(cpy_r_r7);
     goto CPyL21;
-CPyL44: ;
+CPyL45: ;
     CPy_DECREF(cpy_r_r4);
     CPy_DECREF(cpy_r_r7);
     goto CPyL27;
-CPyL45: ;
+CPyL46: ;
     CPy_DecRef(cpy_r_r4);
     goto CPyL30;
-CPyL46: ;
+CPyL47: ;
     CPy_DECREF(cpy_r_r45);
     goto CPyL26;
-CPyL47: ;
+CPyL48: ;
     CPy_XDECREF(cpy_r_r40.f0);
     CPy_XDECREF(cpy_r_r40.f1);
     CPy_XDECREF(cpy_r_r40.f2);

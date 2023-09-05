@@ -15666,7 +15666,6 @@ CPyL8: ;
 CPyL9: ;
     if (!cpy_r_r19) goto CPyL28;
     cpy_r_r24 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_node)->_node;
-    CPy_INCREF(cpy_r_r24);
     if (likely((Py_TYPE(cpy_r_r24) == CPyType_nodes___FakeInfo) || (Py_TYPE(cpy_r_r24) == CPyType_nodes___TypeInfo)))
         cpy_r_r25 = cpy_r_r24;
     else {
@@ -15674,7 +15673,6 @@ CPyL9: ;
         goto CPyL29;
     }
     cpy_r_r26 = CPY_GET_ATTR(cpy_r_r25, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r25);
     if (unlikely(cpy_r_r26 == NULL)) {
         CPy_AddTraceback("mypy/server/update.py", "find_symbol_tables_recursive", 1065, CPyStatic_update___globals);
         goto CPyL29;
@@ -17219,7 +17217,6 @@ CPyL85: ;
     }
     CPy_Unreachable();
 CPyL87: ;
-    CPy_INCREF(cpy_r_node);
     if (likely((Py_TYPE(cpy_r_node) == CPyType_nodes___FakeInfo) || (Py_TYPE(cpy_r_node) == CPyType_nodes___TypeInfo)))
         cpy_r_r128 = cpy_r_node;
     else {
@@ -17227,7 +17224,6 @@ CPyL87: ;
         goto CPyL189;
     }
     cpy_r_r129 = CPY_GET_ATTR(cpy_r_r128, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r128);
     if (unlikely(cpy_r_r129 == NULL)) {
         CPy_AddTraceback("mypy/server/update.py", "lookup_target", 1138, CPyStatic_update___globals);
         goto CPyL189;
@@ -18222,7 +18218,6 @@ PyObject *CPyDef_update___target_from_node(PyObject *cpy_r_module, PyObject *cpy
     cpy_r_r2 = *(PyObject * *)cpy_r_r1;
     cpy_r_r3 = cpy_r_r2 == cpy_r_r0;
     if (!cpy_r_r3) goto CPyL9;
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___MypyFile))
         cpy_r_r4 = cpy_r_node;
     else {
@@ -18230,7 +18225,6 @@ PyObject *CPyDef_update___target_from_node(PyObject *cpy_r_module, PyObject *cpy
         goto CPyL44;
     }
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/server/update.py", "target_from_node", 1184, CPyStatic_update___globals);
         goto CPyL44;

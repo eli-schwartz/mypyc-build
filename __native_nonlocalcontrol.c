@@ -2025,13 +2025,16 @@ char CPyDef_nonlocalcontrol___GeneratorNonlocalControl___gen_return(PyObject *cp
     PyObject *cpy_r_r29;
     char cpy_r_r30;
     cpy_r_r0 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/nonlocalcontrol.py", "gen_return", 94, CPyStatic_nonlocalcontrol___globals);
         goto CPyL17;
     }
 CPyL1: ;
     cpy_r_r2 = CPY_GET_ATTR(cpy_r_r1, CPyType_context___GeneratorClass, 10, mypyc___irbuild___context___GeneratorClassObject, PyObject *); /* next_label_target */
+    CPy_DECREF(cpy_r_r1);
     if (unlikely(cpy_r_r2 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/nonlocalcontrol.py", "gen_return", 94, CPyStatic_nonlocalcontrol___globals);
         goto CPyL17;
@@ -2706,7 +2709,9 @@ char CPyDef_nonlocalcontrol___TryFinallyNonlocalControl___gen_return(PyObject *c
     cpy_r_r2 = cpy_r_r0 == cpy_r_r1;
     if (!cpy_r_r2) goto CPyL11;
     cpy_r_r3 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r3);
     cpy_r_r4 = CPY_GET_ATTR(cpy_r_r3, CPyType_context___FuncInfo, 2, mypyc___irbuild___context___FuncInfoObject, char); /* is_generator */
+    CPy_DECREF(cpy_r_r3);
     if (unlikely(cpy_r_r4 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/nonlocalcontrol.py", "gen_return", 154, CPyStatic_nonlocalcontrol___globals);
         goto CPyL22;

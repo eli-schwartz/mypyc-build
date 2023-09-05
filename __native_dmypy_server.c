@@ -4695,7 +4695,7 @@ CPyL4: ;
     }
     return cpy_r_r12;
 CPyL7: ;
-    cpy_r_r13 = CPyStatics[10307]; /* frozenset({'check', 'recheck', 'run'}) */
+    cpy_r_r13 = CPyStatics[10307]; /* frozenset({'check', 'run', 'recheck'}) */
     cpy_r_r14 = PySet_Contains(cpy_r_r13, cpy_r_command);
     cpy_r_r15 = cpy_r_r14 >= 0;
     if (unlikely(!cpy_r_r15)) {

@@ -1299,7 +1299,7 @@ CPyL71: ;
         CPy_AddTraceback("mypyc/primitives/dict_ops.py", "<module>", 84, CPyStatic_dict_ops___globals);
         goto CPyL366;
     }
-    cpy_r_r166 = CPyStatics[867]; /* 'in' */
+    cpy_r_r166 = CPyStatics[866]; /* 'in' */
     cpy_r_r167 = CPyStatic_rtypes___object_rprimitive;
     if (likely(cpy_r_r167 != NULL)) goto CPyL79;
     PyErr_SetString(PyExc_NameError, "value for final name \"object_rprimitive\" was not set");

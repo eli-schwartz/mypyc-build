@@ -12674,7 +12674,7 @@ CPyL254: ;
         goto CPyL348;
     }
     cpy_r_r659 = (PyObject *)CPyType_nodes___ClassDef;
-    cpy_r_r660 = CPyStatics[730]; /* 'cls' */
+    cpy_r_r660 = CPyStatics[729]; /* 'cls' */
     cpy_r_r661 = CPyDict_SetItem(cpy_r_r658, cpy_r_r660, cpy_r_r659);
     cpy_r_r662 = cpy_r_r661 >= 0;
     if (unlikely(!cpy_r_r662)) {

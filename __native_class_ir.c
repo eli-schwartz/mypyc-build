@@ -10975,7 +10975,7 @@ PyObject *CPyDef_class_ir___serialize_vtable_entry(PyObject *cpy_r_entry) {
     PyObject *cpy_r_r26;
     cpy_r_r0 = CPyStatics[3930]; /* '.class' */
     cpy_r_r1 = CPyStatics[7779]; /* 'VTableMethod' */
-    cpy_r_r2 = CPyStatics[730]; /* 'cls' */
+    cpy_r_r2 = CPyStatics[729]; /* 'cls' */
     cpy_r_r3 = CPySequenceTuple_GetItem(cpy_r_entry, 0);
     if (unlikely(cpy_r_r3 == NULL)) {
         CPy_AddTraceback("mypyc/ir/class_ir.py", "serialize_vtable_entry", 466, CPyStatic_class_ir___globals);
@@ -11297,7 +11297,7 @@ PyObject *CPyDef_class_ir___deserialize_vtable_entry(PyObject *cpy_r_data, PyObj
         CPy_TypeErrorTraceback("mypyc/ir/class_ir.py", "deserialize_vtable_entry", 480, CPyStatic_class_ir___globals, "dict", cpy_r_r7);
         goto CPyL38;
     }
-    cpy_r_r9 = CPyStatics[730]; /* 'cls' */
+    cpy_r_r9 = CPyStatics[729]; /* 'cls' */
     cpy_r_r10 = CPyDict_GetItem(cpy_r_data, cpy_r_r9);
     if (unlikely(cpy_r_r10 == NULL)) {
         CPy_AddTraceback("mypyc/ir/class_ir.py", "deserialize_vtable_entry", 480, CPyStatic_class_ir___globals);
@@ -12096,7 +12096,7 @@ CPyL28: ;
         goto CPyL56;
     }
     cpy_r_r66 = CPyStatics[6661]; /* 'ClassIR' */
-    cpy_r_r67 = CPyStatics[730]; /* 'cls' */
+    cpy_r_r67 = CPyStatics[729]; /* 'cls' */
     cpy_r_r68 = CPyDict_SetItem(cpy_r_r65, cpy_r_r67, cpy_r_r66);
     cpy_r_r69 = cpy_r_r68 >= 0;
     if (unlikely(!cpy_r_r69)) {

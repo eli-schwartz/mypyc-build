@@ -4507,9 +4507,7 @@ CPyL40: ;
         goto CPyL82;
     }
     cpy_r_r69 = ((mypy___types___InstanceObject *)cpy_r_r68)->_type;
-    CPy_INCREF(cpy_r_r69);
     cpy_r_r70 = CPY_GET_ATTR(cpy_r_r69, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r69);
     if (unlikely(cpy_r_r70 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "_is_subtype", 308, CPyStatic_subtypes___globals);
         goto CPyL82;
@@ -5706,9 +5704,7 @@ CPyL17: ;
         goto CPyL41;
     }
     cpy_r_r22 = ((mypy___types___InstanceObject *)cpy_r_r21)->_type;
-    CPy_INCREF(cpy_r_r22);
     cpy_r_r23 = CPY_GET_ATTR(cpy_r_r22, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_none_type", 405, CPyStatic_subtypes___globals);
         goto CPyL41;
@@ -6353,9 +6349,7 @@ CPyL2: ;
         goto CPyL42;
     }
     cpy_r_r7 = ((mypy___types___InstanceObject *)cpy_r_r6)->_type;
-    CPy_INCREF(cpy_r_r7);
     cpy_r_r8 = CPY_GET_ATTR(cpy_r_r7, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r7);
     if (unlikely(cpy_r_r8 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "check_mixed", 516, CPyStatic_subtypes___globals);
         goto CPyL42;
@@ -7487,9 +7481,7 @@ CPyL66: ;
         goto CPyL346;
     }
     cpy_r_r82 = ((mypy___types___InstanceObject *)cpy_r_r81)->_type;
-    CPy_INCREF(cpy_r_r82);
     cpy_r_r83 = CPY_GET_ATTR(cpy_r_r82, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r82);
     if (unlikely(cpy_r_r83 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_instance", 457, CPyStatic_subtypes___globals);
         goto CPyL346;
@@ -11046,9 +11038,7 @@ CPyL9: ;
         goto CPyL17;
     }
     cpy_r_r17 = ((mypy___types___InstanceObject *)cpy_r_r16)->_type;
-    CPy_INCREF(cpy_r_r17);
     cpy_r_r18 = CPY_GET_ATTR(cpy_r_r17, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r17);
     if (unlikely(cpy_r_r18 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_unpack_type", 664, CPyStatic_subtypes___globals);
         goto CPyL17;
@@ -11712,15 +11702,15 @@ CPyL31: ;
         cpy_r_r51 = cpy_r_right;
     else {
         CPy_TypeErrorTraceback("mypy/subtypes.py", "visit_callable_type", 702, CPyStatic_subtypes___globals, "mypy.types.Overloaded", cpy_r_right);
-        goto CPyL104;
+        goto CPyL105;
     }
     cpy_r_r52 = CPY_GET_ATTR(cpy_r_r51, CPyType_types___Overloaded, 22, mypy___types___OverloadedObject, PyObject *); /* items */
-    CPy_DECREF(cpy_r_r51);
     if (unlikely(cpy_r_r52 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_callable_type", 702, CPyStatic_subtypes___globals);
-        goto CPyL104;
+        goto CPyL105;
     }
 CPyL34: ;
+    CPy_DECREF(cpy_r_right);
     cpy_r_r53 = 0;
 CPyL35: ;
     cpy_r_r54 = (CPyPtr)&((PyVarObject *)cpy_r_r52)->ob_size;
@@ -11785,9 +11775,7 @@ CPyL46: ;
         goto CPyL105;
     }
     cpy_r_r72 = ((mypy___types___InstanceObject *)cpy_r_r71)->_type;
-    CPy_INCREF(cpy_r_r72);
     cpy_r_r73 = CPY_GET_ATTR(cpy_r_r72, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r72);
     if (unlikely(cpy_r_r73 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_callable_type", 704, CPyStatic_subtypes___globals);
         goto CPyL105;
@@ -11853,9 +11841,7 @@ CPyL55: ;
         goto CPyL105;
     }
     cpy_r_r87 = ((mypy___types___InstanceObject *)cpy_r_r86)->_type;
-    CPy_INCREF(cpy_r_r87);
     cpy_r_r88 = CPY_GET_ATTR(cpy_r_r87, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r87);
     if (unlikely(cpy_r_r88 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_callable_type", 710, CPyStatic_subtypes___globals);
         goto CPyL105;
@@ -11863,7 +11849,6 @@ CPyL55: ;
 CPyL60: ;
     cpy_r_r89 = (CPyPtr)&((PyVarObject *)cpy_r_r88)->ob_size;
     cpy_r_r90 = *(int64_t *)cpy_r_r89;
-    CPy_DECREF(cpy_r_r88);
     cpy_r_r91 = cpy_r_r90 << 1;
     cpy_r_r92 = cpy_r_r91 == 2;
     if (cpy_r_r92) {
@@ -13704,9 +13689,7 @@ CPyL5: ;
         goto CPyL105;
     }
     cpy_r_r10 = ((mypy___types___InstanceObject *)cpy_r_r9)->_type;
-    CPy_INCREF(cpy_r_r10);
     cpy_r_r11 = CPY_GET_ATTR(cpy_r_r10, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r10);
     if (unlikely(cpy_r_r11 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_overloaded", 823, CPyStatic_subtypes___globals);
         goto CPyL105;
@@ -13772,9 +13755,7 @@ CPyL14: ;
         goto CPyL105;
     }
     cpy_r_r25 = ((mypy___types___InstanceObject *)cpy_r_r24)->_type;
-    CPy_INCREF(cpy_r_r25);
     cpy_r_r26 = CPY_GET_ATTR(cpy_r_r25, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r25);
     if (unlikely(cpy_r_r26 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_overloaded", 828, CPyStatic_subtypes___globals);
         goto CPyL105;
@@ -13782,7 +13763,6 @@ CPyL14: ;
 CPyL19: ;
     cpy_r_r27 = (CPyPtr)&((PyVarObject *)cpy_r_r26)->ob_size;
     cpy_r_r28 = *(int64_t *)cpy_r_r27;
-    CPy_DECREF(cpy_r_r26);
     cpy_r_r29 = cpy_r_r28 << 1;
     cpy_r_r30 = cpy_r_r29 == 2;
     if (cpy_r_r30) {
@@ -13946,12 +13926,12 @@ CPyL46: ;
         goto CPyL118;
     }
     cpy_r_r67 = CPY_GET_ATTR(cpy_r_r66, CPyType_types___Overloaded, 22, mypy___types___OverloadedObject, PyObject *); /* items */
-    CPy_DECREF(cpy_r_r66);
     if (unlikely(cpy_r_r67 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_overloaded", 847, CPyStatic_subtypes___globals);
         goto CPyL118;
     }
 CPyL49: ;
+    CPy_DECREF(cpy_r_right);
     cpy_r_r68 = 0;
 CPyL50: ;
     cpy_r_r69 = (CPyPtr)&((PyVarObject *)cpy_r_r67)->ob_size;
@@ -14200,7 +14180,6 @@ CPyL96: ;
     }
 CPyL97: ;
     cpy_r_r140 = CPyList_GetItemShort(cpy_r_r139, 0);
-    CPy_DECREF(cpy_r_r139);
     if (unlikely(cpy_r_r140 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_overloaded", 897, CPyStatic_subtypes___globals);
         goto CPyL105;
@@ -14282,6 +14261,7 @@ CPyL117: ;
     CPyTagged_DecRef(cpy_r_previous_match_left_index);
     goto CPyL104;
 CPyL118: ;
+    CPy_DecRef(cpy_r_right);
     CPyTagged_DecRef(cpy_r_previous_match_left_index);
     CPy_DecRef(cpy_r_matched_overloads);
     goto CPyL104;
@@ -15481,9 +15461,7 @@ CPyL15: ;
         goto CPyL58;
     }
     cpy_r_r25 = ((mypy___types___InstanceObject *)cpy_r_r24)->_type;
-    CPy_INCREF(cpy_r_r25);
     cpy_r_r26 = CPY_GET_ATTR(cpy_r_r25, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r25);
     if (unlikely(cpy_r_r26 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_type_type", 968, CPyStatic_subtypes___globals);
         goto CPyL58;
@@ -15515,9 +15493,7 @@ CPyL23: ;
         goto CPyL58;
     }
     cpy_r_r36 = ((mypy___types___InstanceObject *)cpy_r_r35)->_type;
-    CPy_INCREF(cpy_r_r36);
     cpy_r_r37 = CPY_GET_ATTR(cpy_r_r36, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r36);
     if (unlikely(cpy_r_r37 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "visit_type_type", 968, CPyStatic_subtypes___globals);
         goto CPyL58;
@@ -17061,9 +17037,7 @@ CPyL23: ;
     if (!cpy_r_r23) goto CPyL36;
 CPyL24: ;
     cpy_r_r24 = ((mypy___types___InstanceObject *)cpy_r_right)->_type;
-    CPy_INCREF(cpy_r_r24);
     cpy_r_r25 = CPY_GET_ATTR(cpy_r_r24, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r24);
     if (unlikely(cpy_r_r25 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "is_protocol_implementation", 1034, CPyStatic_subtypes___globals);
         goto CPyL197;
@@ -17089,9 +17063,7 @@ CPyL25: ;
     }
     cpy_r_members_right = cpy_r_r28;
     cpy_r_r29 = ((mypy___types___InstanceObject *)cpy_r_left)->_type;
-    CPy_INCREF(cpy_r_r29);
     cpy_r_r30 = CPY_GET_ATTR(cpy_r_r29, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r29);
     if (unlikely(cpy_r_r30 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "is_protocol_implementation", 1035, CPyStatic_subtypes___globals);
         goto CPyL198;
@@ -17357,9 +17329,7 @@ CPyL60: ;
 CPyL65: ;
     cpy_r_r94 = 1;
     cpy_r_r95 = ((mypy___types___InstanceObject *)cpy_r_right)->_type;
-    CPy_INCREF(cpy_r_r95);
     cpy_r_r96 = CPY_GET_ATTR(cpy_r_r95, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r95);
     if (unlikely(cpy_r_r96 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "is_protocol_implementation", 1043, CPyStatic_subtypes___globals);
         goto CPyL210;
@@ -17965,9 +17935,7 @@ CPyL174: ;
 CPyL176: ;
     if (cpy_r_proper_subtype) goto CPyL182;
     cpy_r_r280 = ((mypy___types___InstanceObject *)cpy_r_right)->_type;
-    CPy_INCREF(cpy_r_r280);
     cpy_r_r281 = CPY_GET_ATTR(cpy_r_r280, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r280);
     if (unlikely(cpy_r_r281 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "is_protocol_implementation", 1106, CPyStatic_subtypes___globals);
         goto CPyL190;
@@ -27322,15 +27290,13 @@ CPyL22: ;
         goto CPyL60;
     }
     cpy_r_r32 = ((mypy___types___InstanceObject *)cpy_r_r31)->_type;
-    CPy_INCREF(cpy_r_r32);
-    CPy_DECREF(cpy_r_supertype);
     cpy_r_r33 = CPY_GET_ATTR(cpy_r_r32, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r32);
     if (unlikely(cpy_r_r33 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "covers_at_runtime", 1798, CPyStatic_subtypes___globals);
-        goto CPyL51;
+        goto CPyL60;
     }
 CPyL24: ;
+    CPy_DECREF(cpy_r_supertype);
     cpy_r_r34 = CPyStatics[798]; /* 'builtins.dict' */
     cpy_r_r35 = PyUnicode_Compare(cpy_r_r33, cpy_r_r34);
     CPy_DECREF(cpy_r_r33);
@@ -27395,15 +27361,13 @@ CPyL35: ;
         goto CPyL53;
     }
     cpy_r_r58 = ((mypy___types___InstanceObject *)cpy_r_r57)->_type;
-    CPy_INCREF(cpy_r_r58);
-    CPy_DECREF(cpy_r_supertype);
     cpy_r_r59 = CPY_GET_ATTR(cpy_r_r58, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r58);
     if (unlikely(cpy_r_r59 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "covers_at_runtime", 1803, CPyStatic_subtypes___globals);
-        goto CPyL52;
+        goto CPyL53;
     }
 CPyL38: ;
+    CPy_DECREF(cpy_r_supertype);
     cpy_r_r60 = CPyStatics[1178]; /* 'builtins.int' */
     cpy_r_r61 = PyUnicode_Compare(cpy_r_r59, cpy_r_r60);
     CPy_DECREF(cpy_r_r59);
@@ -27427,15 +27391,13 @@ CPyL41: ;
         goto CPyL52;
     }
     cpy_r_r68 = ((mypy___types___InstanceObject *)cpy_r_r67)->_type;
-    CPy_INCREF(cpy_r_r68);
-    CPy_DECREF(cpy_r_item);
     cpy_r_r69 = CPY_GET_ATTR(cpy_r_r68, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r68);
     if (unlikely(cpy_r_r69 == NULL)) {
         CPy_AddTraceback("mypy/subtypes.py", "covers_at_runtime", 1805, CPyStatic_subtypes___globals);
-        goto CPyL51;
+        goto CPyL52;
     }
 CPyL44: ;
+    CPy_DECREF(cpy_r_item);
     cpy_r_r70 = CPyStatic_types___MYPYC_NATIVE_INT_NAMES;
     if (unlikely(cpy_r_r70.f0 == NULL)) {
         goto CPyL63;

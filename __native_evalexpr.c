@@ -944,7 +944,7 @@ PyObject *CPyDef_evalexpr____NodeEvaluator___visit_name_expr(PyObject *cpy_r_sel
     PyObject *cpy_r_r30;
     cpy_r_r0 = ((mypy___nodes___NameExprObject *)cpy_r_o)->_name;
     CPy_INCREF(cpy_r_r0);
-    cpy_r_r1 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r1 = CPyStatics[1152]; /* 'True' */
     cpy_r_r2 = PyUnicode_Compare(cpy_r_r0, cpy_r_r1);
     CPy_DECREF(cpy_r_r0);
     cpy_r_r3 = cpy_r_r2 == -1;
@@ -966,7 +966,7 @@ CPyL3: ;
 CPyL5: ;
     cpy_r_r9 = ((mypy___nodes___NameExprObject *)cpy_r_o)->_name;
     CPy_INCREF(cpy_r_r9);
-    cpy_r_r10 = CPyStatics[1152]; /* 'False' */
+    cpy_r_r10 = CPyStatics[1151]; /* 'False' */
     cpy_r_r11 = PyUnicode_Compare(cpy_r_r9, cpy_r_r10);
     CPy_DECREF(cpy_r_r9);
     cpy_r_r12 = cpy_r_r11 == -1;

@@ -1919,9 +1919,7 @@ CPyL135: ;
         goto CPyL230;
     }
     cpy_r_r236 = ((mypy___types___InstanceObject *)cpy_r_r235)->_type;
-    CPy_INCREF(cpy_r_r236);
     cpy_r_r237 = CPY_GET_ATTR(cpy_r_r236, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r236);
     if (unlikely(cpy_r_r237 == NULL)) {
         CPy_AddTraceback("mypy/applytype.py", "apply_generic_arguments", 158, CPyStatic_applytype___globals);
         goto CPyL230;

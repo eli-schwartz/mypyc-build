@@ -2571,7 +2571,7 @@ CPyL126: ;
         CPy_AddTraceback("mypyc/primitives/generic_ops.py", "<module>", 122, CPyStatic_generic_ops___globals);
         goto CPyL419;
     }
-    cpy_r_r395 = CPyStatics[867]; /* 'in' */
+    cpy_r_r395 = CPyStatics[866]; /* 'in' */
     cpy_r_r396 = CPyStatic_rtypes___object_rprimitive;
     if (likely(cpy_r_r396 != NULL)) goto CPyL130;
     PyErr_SetString(PyExc_NameError, "value for final name \"object_rprimitive\" was not set");

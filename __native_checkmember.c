@@ -4493,9 +4493,7 @@ CPyL38: ;
     }
 CPyL42: ;
     cpy_r_r63 = ((mypy___nodes___FuncBaseObject *)cpy_r_node)->_info;
-    CPy_INCREF(cpy_r_r63);
     cpy_r_r64 = CPY_GET_ATTR(cpy_r_r63, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r63);
     if (unlikely(cpy_r_r64 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "validate_super_call", 358, CPyStatic_checkmember___globals);
         goto CPyL55;
@@ -7301,7 +7299,6 @@ CPyL36: ;
     }
     CPy_INCREF(cpy_r_r65);
 CPyL38: ;
-    CPy_INCREF(cpy_r_v);
     if (likely(Py_TYPE(cpy_r_v) == CPyType_nodes___MypyFile))
         cpy_r_r66 = cpy_r_v;
     else {
@@ -7309,7 +7306,6 @@ CPyL38: ;
         goto CPyL229;
     }
     cpy_r_r67 = CPY_GET_ATTR(cpy_r_r66, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r66);
     if (unlikely(cpy_r_r67 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "analyze_member_var_access", 528, CPyStatic_checkmember___globals);
         goto CPyL229;
@@ -10878,9 +10874,7 @@ CPyL94: ;
     cpy_r_result = cpy_r_r134;
 CPyL96: ;
     cpy_r_r135 = ((mypy___nodes___VarObject *)cpy_r_var)->_info;
-    CPy_INCREF(cpy_r_r135);
     cpy_r_r136 = CPY_GET_ATTR(cpy_r_r135, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r135);
     if (unlikely(cpy_r_r136 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "analyze_var", 815, CPyStatic_checkmember___globals);
         goto CPyL140;
@@ -13030,7 +13024,6 @@ CPyL87: ;
         goto CPyL356;
     }
     cpy_r_r154 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_r153)->_node;
-    CPy_INCREF(cpy_r_r154);
     if (likely(Py_TYPE(cpy_r_r154) == CPyType_nodes___Var))
         cpy_r_r155 = cpy_r_r154;
     else {
@@ -13038,7 +13031,6 @@ CPyL87: ;
         goto CPyL356;
     }
     cpy_r_r156 = CPY_GET_ATTR(cpy_r_r155, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r155);
     if (unlikely(cpy_r_r156 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "analyze_class_attribute_access", 966, CPyStatic_checkmember___globals);
         goto CPyL356;
@@ -13139,7 +13131,6 @@ CPyL104: ;
     }
     return cpy_r_r180;
 CPyL107: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r181 = cpy_r_node;
     else {
@@ -13147,7 +13138,6 @@ CPyL107: ;
         goto CPyL352;
     }
     cpy_r_r182 = CPY_GET_ATTR(cpy_r_r181, CPyType_nodes___SymbolTableNode, 2, mypy___nodes___SymbolTableNodeObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r181);
     if (unlikely(cpy_r_r182 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "analyze_class_attribute_access", 979, CPyStatic_checkmember___globals);
         goto CPyL352;
@@ -14295,7 +14285,6 @@ CPyL289: ;
         goto CPyL393;
     }
     cpy_r_r480 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_r479)->_node;
-    CPy_INCREF(cpy_r_r480);
     if (likely(Py_TYPE(cpy_r_r480) == CPyType_nodes___Decorator))
         cpy_r_r481 = cpy_r_r480;
     else {
@@ -14303,7 +14292,6 @@ CPyL289: ;
         goto CPyL393;
     }
     cpy_r_r482 = CPY_GET_ATTR(cpy_r_r481, CPyType_nodes___Decorator, 10, mypy___nodes___DecoratorObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r481);
     if (unlikely(cpy_r_r482 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "analyze_class_attribute_access", 1071, CPyStatic_checkmember___globals);
         goto CPyL393;
@@ -14320,27 +14308,25 @@ CPyL292: ;
         goto CPyL393;
     }
     cpy_r_r486 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_r485)->_node;
-    CPy_INCREF(cpy_r_r486);
     if (likely(Py_TYPE(cpy_r_r486) == CPyType_nodes___Decorator))
         cpy_r_r487 = cpy_r_r486;
     else {
         CPy_TypeErrorTraceback("mypy/checkmember.py", "analyze_class_attribute_access", 1072, CPyStatic_checkmember___globals, "mypy.nodes.Decorator", cpy_r_r486);
         goto CPyL393;
     }
-    CPy_DECREF(cpy_r_node);
     cpy_r_r488 = CPY_GET_ATTR(cpy_r_r487, CPyType_nodes___Decorator, 10, mypy___nodes___DecoratorObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r487);
     if (unlikely(cpy_r_r488 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "analyze_class_attribute_access", 1072, CPyStatic_checkmember___globals);
-        goto CPyL350;
+        goto CPyL393;
     }
 CPyL296: ;
     if (likely(cpy_r_r488 != Py_None))
         cpy_r_r489 = cpy_r_r488;
     else {
         CPy_TypeErrorTraceback("mypy/checkmember.py", "analyze_class_attribute_access", 1072, CPyStatic_checkmember___globals, "mypy.types.Type", cpy_r_r488);
-        goto CPyL350;
+        goto CPyL393;
     }
+    CPy_DECREF(cpy_r_node);
     cpy_r_r490 = CPyDef_checkmember___apply_class_attr_hook(cpy_r_mx, cpy_r_hook, cpy_r_r489);
     CPy_DECREF(cpy_r_hook);
     CPy_DECREF(cpy_r_r489);
@@ -17486,7 +17472,6 @@ CPyL121: ;
     cpy_r_t = cpy_r_r212;
     goto CPyL142;
 CPyL125: ;
-    CPy_INCREF(cpy_r_method);
     if (likely(Py_TYPE(cpy_r_method) == CPyType_nodes___Decorator))
         cpy_r_r213 = cpy_r_method;
     else {
@@ -17494,7 +17479,6 @@ CPyL125: ;
         goto CPyL184;
     }
     cpy_r_r214 = CPY_GET_ATTR(cpy_r_r213, CPyType_nodes___Decorator, 10, mypy___nodes___DecoratorObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r213);
     if (unlikely(cpy_r_r214 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "type_object_type", 1280, CPyStatic_checkmember___globals);
         goto CPyL184;
@@ -17502,7 +17486,6 @@ CPyL125: ;
 CPyL127: ;
     cpy_r_r215 = (PyObject *)CPyType_types___ProperType;
     cpy_r_r216 = CPy_TypeCheck(cpy_r_r214, cpy_r_r215);
-    CPy_DECREF(cpy_r_r214);
     if (cpy_r_r216) {
         goto CPyL130;
     } else
@@ -17516,7 +17499,6 @@ CPyL128: ;
     }
     CPy_Unreachable();
 CPyL130: ;
-    CPy_INCREF(cpy_r_method);
     if (likely(Py_TYPE(cpy_r_method) == CPyType_nodes___Decorator))
         cpy_r_r218 = cpy_r_method;
     else {
@@ -17524,7 +17506,6 @@ CPyL130: ;
         goto CPyL184;
     }
     cpy_r_r219 = CPY_GET_ATTR(cpy_r_r218, CPyType_nodes___Decorator, 10, mypy___nodes___DecoratorObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r218);
     if (unlikely(cpy_r_r219 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "type_object_type", 1281, CPyStatic_checkmember___globals);
         goto CPyL184;
@@ -17534,25 +17515,20 @@ CPyL132: ;
     cpy_r_r221 = (CPyPtr)&((PyObject *)cpy_r_r219)->ob_type;
     cpy_r_r222 = *(PyObject * *)cpy_r_r221;
     cpy_r_r223 = cpy_r_r222 == cpy_r_r220;
-    if (cpy_r_r223) {
-        goto CPyL186;
-    } else
-        goto CPyL134;
-CPyL133: ;
+    if (!cpy_r_r223) goto CPyL134;
     cpy_r_r224 = cpy_r_r223;
     goto CPyL135;
 CPyL134: ;
     cpy_r_r225 = (PyObject *)CPyType_types___Overloaded;
     cpy_r_r226 = (CPyPtr)&((PyObject *)cpy_r_r219)->ob_type;
     cpy_r_r227 = *(PyObject * *)cpy_r_r226;
-    CPy_DECREF(cpy_r_r219);
     cpy_r_r228 = cpy_r_r227 == cpy_r_r225;
     cpy_r_r224 = cpy_r_r228;
 CPyL135: ;
     if (cpy_r_r224) {
         goto CPyL138;
     } else
-        goto CPyL187;
+        goto CPyL186;
 CPyL136: ;
     PyErr_SetNone(PyExc_AssertionError);
     cpy_r_r229 = 0;
@@ -17562,7 +17538,6 @@ CPyL136: ;
     }
     CPy_Unreachable();
 CPyL138: ;
-    CPy_INCREF(cpy_r_method);
     if (likely(Py_TYPE(cpy_r_method) == CPyType_nodes___Decorator))
         cpy_r_r230 = cpy_r_method;
     else {
@@ -17570,7 +17545,6 @@ CPyL138: ;
         goto CPyL184;
     }
     cpy_r_r231 = CPY_GET_ATTR(cpy_r_r230, CPyType_nodes___Decorator, 10, mypy___nodes___DecoratorObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r230);
     if (unlikely(cpy_r_r231 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "type_object_type", 1282, CPyStatic_checkmember___globals);
         goto CPyL184;
@@ -17613,7 +17587,7 @@ CPyL148: ;
         cpy_r_r247 = cpy_r_method;
     else {
         CPy_TypeErrorTraceback("mypy/checkmember.py", "type_object_type", 1283, CPyStatic_checkmember___globals, "mypy.nodes.FuncBase", cpy_r_method);
-        goto CPyL188;
+        goto CPyL187;
     }
     cpy_r_r248 = ((mypy___nodes___FuncBaseObject *)cpy_r_r247)->_info;
     CPy_INCREF(cpy_r_r248);
@@ -17625,13 +17599,13 @@ CPyL151: ;
         cpy_r_r250 = cpy_r_method;
     else {
         CPy_TypeErrorTraceback("mypy/checkmember.py", "type_object_type", 1283, CPyStatic_checkmember___globals, "mypy.nodes.Decorator", cpy_r_method);
-        goto CPyL188;
+        goto CPyL187;
     }
     cpy_r_r251 = CPY_GET_ATTR(cpy_r_r250, CPyType_nodes___Decorator, 9, mypy___nodes___DecoratorObject, PyObject *); /* info */
     CPy_DECREF(cpy_r_r250);
     if (unlikely(cpy_r_r251 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "type_object_type", 1283, CPyStatic_checkmember___globals);
-        goto CPyL188;
+        goto CPyL187;
     }
 CPyL153: ;
     cpy_r_r249 = cpy_r_r251;
@@ -17775,13 +17749,10 @@ CPyL185: ;
     CPy_DECREF(cpy_r_method);
     goto CPyL128;
 CPyL186: ;
-    CPy_DECREF(cpy_r_r219);
-    goto CPyL133;
-CPyL187: ;
     CPy_DECREF(cpy_r_fallback);
     CPy_DECREF(cpy_r_method);
     goto CPyL136;
-CPyL188: ;
+CPyL187: ;
     CPy_DecRef(cpy_r_fallback);
     CPy_DecRef(cpy_r_t);
     goto CPyL156;
@@ -18042,7 +18013,6 @@ CPyL9: ;
     cpy_r_r18 = *(PyObject * *)cpy_r_r17;
     cpy_r_r19 = cpy_r_r18 == cpy_r_r16;
     if (!cpy_r_r19) goto CPyL17;
-    CPy_INCREF(cpy_r_n);
     if (likely(Py_TYPE(cpy_r_n) == CPyType_nodes___Decorator))
         cpy_r_r20 = cpy_r_n;
     else {
@@ -18050,7 +18020,6 @@ CPyL9: ;
         goto CPyL18;
     }
     cpy_r_r21 = CPY_GET_ATTR(cpy_r_r20, CPyType_nodes___Decorator, 10, mypy___nodes___DecoratorObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r20);
     if (unlikely(cpy_r_r21 == NULL)) {
         CPy_AddTraceback("mypy/checkmember.py", "is_valid_constructor", 1315, CPyStatic_checkmember___globals);
         goto CPyL18;

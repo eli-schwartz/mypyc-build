@@ -5003,9 +5003,7 @@ CPyL14: ;
         goto CPyL68;
     }
     cpy_r_r43 = ((mypy___types___InstanceObject *)cpy_r_r42)->_type;
-    CPy_INCREF(cpy_r_r43);
     cpy_r_r44 = CPY_GET_ATTR(cpy_r_r43, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r43);
     if (unlikely(cpy_r_r44 == NULL)) {
         CPy_AddTraceback("mypy/erasetype.py", "visit_union_type", 215, CPyStatic_erasetype___globals);
         goto CPyL68;
@@ -5114,9 +5112,7 @@ CPyL37: ;
         goto CPyL76;
     }
     cpy_r_r72 = ((mypy___types___InstanceObject *)cpy_r_r71)->_type;
-    CPy_INCREF(cpy_r_r72);
     cpy_r_r73 = CPY_GET_ATTR(cpy_r_r72, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r72);
     if (unlikely(cpy_r_r73 == NULL)) {
         CPy_AddTraceback("mypy/erasetype.py", "visit_union_type", 221, CPyStatic_erasetype___globals);
         goto CPyL76;
@@ -5218,15 +5214,13 @@ CPyL46: ;
         goto CPyL76;
     }
     cpy_r_r99 = ((mypy___types___InstanceObject *)cpy_r_r98)->_type;
-    CPy_INCREF(cpy_r_r99);
-    CPy_DECREF(cpy_r_item_2);
     cpy_r_r100 = CPY_GET_ATTR(cpy_r_r99, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r99);
     if (unlikely(cpy_r_r100 == NULL)) {
         CPy_AddTraceback("mypy/erasetype.py", "visit_union_type", 229, CPyStatic_erasetype___globals);
-        goto CPyL71;
+        goto CPyL76;
     }
 CPyL52: ;
+    CPy_DECREF(cpy_r_item_2);
     cpy_r_r101 = PyObject_DelItem(cpy_r_instances_by_name, cpy_r_r100);
     CPy_DECREF(cpy_r_r100);
     cpy_r_r102 = cpy_r_r101 >= 0;

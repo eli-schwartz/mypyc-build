@@ -3151,7 +3151,7 @@ CPyL53: ;
     cpy_r_r66 = cpy_r_r67;
 CPyL55: ;
     cpy_r_self_type = cpy_r_r66;
-    cpy_r_r68 = CPyStatics[729]; /* 'self' */
+    cpy_r_r68 = CPyStatics[730]; /* 'self' */
     cpy_r_r69 = NULL;
     cpy_r_r70 = CPyDef_nodes___Var(cpy_r_r68, cpy_r_r69);
     if (unlikely(cpy_r_r70 == NULL)) {

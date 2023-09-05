@@ -1248,7 +1248,9 @@ __LL6116: ;
     cpy_r_r150 = ((mypy___semanal_newtype___NewTypeAnalyzerObject *)cpy_r_self)->_options;
     CPy_INCREF(cpy_r_r150);
     cpy_r_r151 = ((mypy___semanal_newtype___NewTypeAnalyzerObject *)cpy_r_self)->_api;
+    CPy_INCREF(cpy_r_r151);
     cpy_r_r152 = CPY_GET_ATTR_TRAIT(cpy_r_r151, CPyType_semanal_shared___SemanticAnalyzerInterface, 14, mypy___semanal_shared___SemanticAnalyzerInterfaceObject, char); /* is_typeshed_stub_file */
+    CPy_DECREF(cpy_r_r151);
     if (unlikely(cpy_r_r152 == 2)) {
         CPy_AddTraceback("mypy/semanal_newtype.py", "process_newtype_declaration", 122, CPyStatic_semanal_newtype___globals);
         goto CPyL155;
@@ -1981,7 +1983,6 @@ CPyL11: ;
         goto CPyL39;
     }
     cpy_r_r39 = ((mypy___nodes___CallExprObject *)cpy_r_r38)->_callee;
-    CPy_INCREF(cpy_r_r39);
     if (likely((Py_TYPE(cpy_r_r39) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r39) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r39) == CPyType_nodes___RefExpr)))
         cpy_r_r40 = cpy_r_r39;
     else {
@@ -1989,7 +1990,6 @@ CPyL11: ;
         goto CPyL39;
     }
     cpy_r_r41 = CPY_GET_ATTR(cpy_r_r40, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r40);
     if (unlikely(cpy_r_r41 == NULL)) {
         CPy_AddTraceback("mypy/semanal_newtype.py", "analyze_newtype_declaration", 150, CPyStatic_semanal_newtype___globals);
         goto CPyL39;
@@ -2530,7 +2530,9 @@ CPyL31: ;
     cpy_r_r55 = ((mypy___semanal_newtype___NewTypeAnalyzerObject *)cpy_r_self)->_options;
     CPy_INCREF(cpy_r_r55);
     cpy_r_r56 = ((mypy___semanal_newtype___NewTypeAnalyzerObject *)cpy_r_self)->_api;
+    CPy_INCREF(cpy_r_r56);
     cpy_r_r57 = CPY_GET_ATTR_TRAIT(cpy_r_r56, CPyType_semanal_shared___SemanticAnalyzerInterface, 27, mypy___semanal_shared___SemanticAnalyzerInterfaceObject, char); /* is_stub_file */
+    CPy_DECREF(cpy_r_r56);
     if (unlikely(cpy_r_r57 == 2)) {
         CPy_AddTraceback("mypy/semanal_newtype.py", "check_newtype_args", 199, CPyStatic_semanal_newtype___globals);
         goto CPyL73;
@@ -3027,7 +3029,7 @@ CPyL8: ;
         CPy_AddTraceback("mypy/semanal_newtype.py", "build_newtype_typeinfo", 238, CPyStatic_semanal_newtype___globals);
         goto CPyL63;
     }
-    cpy_r_r13 = CPyStatics[729]; /* 'self' */
+    cpy_r_r13 = CPyStatics[730]; /* 'self' */
     cpy_r_r14 = NULL;
     cpy_r_r15 = CPyDef_nodes___Var(cpy_r_r13, cpy_r_r14);
     if (unlikely(cpy_r_r15 == NULL)) {
@@ -3141,7 +3143,7 @@ CPyL24: ;
     cpy_r_r43 = cpy_r_r52;
     goto CPyL24;
 CPyL28: ;
-    cpy_r_r53 = CPyStatics[729]; /* 'self' */
+    cpy_r_r53 = CPyStatics[730]; /* 'self' */
     cpy_r_r54 = CPyStatics[1095]; /* 'item' */
     cpy_r_r55 = PyList_New(2);
     if (unlikely(cpy_r_r55 == NULL)) {

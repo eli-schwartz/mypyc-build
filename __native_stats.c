@@ -4470,7 +4470,7 @@ CPyL33: ;
     CPy_TypeErrorTraceback("mypy/stats.py", "visit_func_def", 163, CPyStatic_stats___globals, "str or None", cpy_r_r82);
     goto CPyL97;
 __LL6862: ;
-    cpy_r_r84 = CPyStatics[729]; /* 'self' */
+    cpy_r_r84 = CPyStatics[730]; /* 'self' */
     cpy_r_r85 = PyObject_RichCompare(cpy_r_r83, cpy_r_r84, 2);
     CPy_DECREF(cpy_r_r83);
     if (unlikely(cpy_r_r85 == NULL)) {

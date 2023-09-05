@@ -13253,7 +13253,6 @@ CPyL24: ;
     CPy_DECREF(cpy_r_r45.f0);
     CPy_DECREF(cpy_r_r45.f1);
     cpy_r_node = cpy_r_r47;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r48 = cpy_r_node;
     else {
@@ -13261,7 +13260,6 @@ CPyL24: ;
         goto CPyL72;
     }
     cpy_r_r49 = CPY_GET_ATTR_TRAIT(cpy_r_r48, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r48);
     if (unlikely(cpy_r_r49 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "find_node", 550, CPyStatic_suggestions___globals);
         goto CPyL72;
@@ -15455,28 +15453,28 @@ CPyL43: ;
         cpy_r_r91 = cpy_r_typ;
     else {
         CPy_TypeErrorTraceback("mypy/suggestions.py", "extract_from_decorator", 653, CPyStatic_suggestions___globals, "mypy.types.FunctionLike", cpy_r_typ);
-        goto CPyL62;
+        goto CPyL69;
     }
     cpy_r_r92 = CPY_GET_ATTR(cpy_r_r91, CPyType_types___FunctionLike, 18, mypy___types___FunctionLikeObject, PyObject *); /* items */
-    CPy_DECREF(cpy_r_r91);
     if (unlikely(cpy_r_r92 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "extract_from_decorator", 653, CPyStatic_suggestions___globals);
-        goto CPyL62;
+        goto CPyL69;
     }
 CPyL45: ;
+    CPy_DECREF(cpy_r_typ);
     cpy_r_r93 = 0;
 CPyL46: ;
     cpy_r_r94 = (CPyPtr)&((PyVarObject *)cpy_r_r92)->ob_size;
     cpy_r_r95 = *(int64_t *)cpy_r_r94;
     cpy_r_r96 = cpy_r_r95 << 1;
     cpy_r_r97 = (Py_ssize_t)cpy_r_r93 < (Py_ssize_t)cpy_r_r96;
-    if (!cpy_r_r97) goto CPyL69;
+    if (!cpy_r_r97) goto CPyL70;
     cpy_r_r98 = CPyList_GetItemUnsafe(cpy_r_r92, cpy_r_r93);
     if (likely(Py_TYPE(cpy_r_r98) == CPyType_types___CallableType))
         cpy_r_r99 = cpy_r_r98;
     else {
         CPy_TypeErrorTraceback("mypy/suggestions.py", "extract_from_decorator", 653, CPyStatic_suggestions___globals, "mypy.types.CallableType", cpy_r_r98);
-        goto CPyL70;
+        goto CPyL71;
     }
     cpy_r_ct = cpy_r_r99;
     cpy_r_r100 = ((mypy___types___CallableTypeObject *)cpy_r_ct)->_arg_types;
@@ -15484,29 +15482,29 @@ CPyL46: ;
     cpy_r_r102 = *(int64_t *)cpy_r_r101;
     cpy_r_r103 = cpy_r_r102 << 1;
     cpy_r_r104 = cpy_r_r103 == 2;
-    if (!cpy_r_r104) goto CPyL71;
+    if (!cpy_r_r104) goto CPyL72;
     cpy_r_r105 = ((mypy___types___CallableTypeObject *)cpy_r_ct)->_arg_types;
     cpy_r_r106 = CPyList_GetItemShortBorrow(cpy_r_r105, 0);
     if (unlikely(cpy_r_r106 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "extract_from_decorator", 656, CPyStatic_suggestions___globals);
-        goto CPyL72;
+        goto CPyL73;
     }
     cpy_r_r107 = (PyObject *)CPyType_types___TypeVarType;
     cpy_r_r108 = (CPyPtr)&((PyObject *)cpy_r_r106)->ob_type;
     cpy_r_r109 = *(PyObject * *)cpy_r_r108;
     cpy_r_r110 = cpy_r_r109 == cpy_r_r107;
-    if (!cpy_r_r110) goto CPyL71;
+    if (!cpy_r_r110) goto CPyL72;
     cpy_r_r111 = ((mypy___types___CallableTypeObject *)cpy_r_ct)->_arg_types;
     cpy_r_r112 = CPyList_GetItemShort(cpy_r_r111, 0);
     if (unlikely(cpy_r_r112 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "extract_from_decorator", 657, CPyStatic_suggestions___globals);
-        goto CPyL72;
+        goto CPyL73;
     }
     if (likely(Py_TYPE(cpy_r_r112) == CPyType_types___TypeVarType))
         cpy_r_r113 = cpy_r_r112;
     else {
         CPy_TypeErrorTraceback("mypy/suggestions.py", "extract_from_decorator", 657, CPyStatic_suggestions___globals, "mypy.types.TypeVarType", cpy_r_r112);
-        goto CPyL72;
+        goto CPyL73;
     }
     cpy_r_r114 = ((mypy___types___CallableTypeObject *)cpy_r_ct)->_ret_type;
     CPy_INCREF(cpy_r_r114);
@@ -15516,7 +15514,7 @@ CPyL46: ;
     CPy_DECREF(cpy_r_r114);
     if (unlikely(cpy_r_r115 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "extract_from_decorator", 657, CPyStatic_suggestions___globals);
-        goto CPyL70;
+        goto CPyL71;
     }
     if (unlikely(!PyBool_Check(cpy_r_r115))) {
         CPy_TypeError("bool", cpy_r_r115); cpy_r_r116 = 2;
@@ -15525,12 +15523,12 @@ CPyL46: ;
     CPy_DECREF(cpy_r_r115);
     if (unlikely(cpy_r_r116 == 2)) {
         CPy_AddTraceback("mypy/suggestions.py", "extract_from_decorator", 657, CPyStatic_suggestions___globals);
-        goto CPyL70;
+        goto CPyL71;
     }
     if (cpy_r_r116) {
         goto CPyL57;
     } else
-        goto CPyL73;
+        goto CPyL74;
 CPyL56: ;
     cpy_r_r117 = Py_None;
     CPy_INCREF(cpy_r_r117);
@@ -15579,23 +15577,27 @@ CPyL68: ;
     CPy_DECREF(cpy_r_typ);
     goto CPyL42;
 CPyL69: ;
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_typ);
+    goto CPyL60;
+CPyL70: ;
     CPy_DECREF(cpy_r_r92);
     goto CPyL58;
-CPyL70: ;
+CPyL71: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_r92);
     goto CPyL60;
-CPyL71: ;
+CPyL72: ;
     CPy_DECREF(cpy_r_r0);
     CPy_DECREF(cpy_r_r92);
     CPy_DECREF(cpy_r_ct);
     goto CPyL56;
-CPyL72: ;
+CPyL73: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_r92);
     CPy_DecRef(cpy_r_ct);
     goto CPyL60;
-CPyL73: ;
+CPyL74: ;
     CPy_DECREF(cpy_r_r0);
     CPy_DECREF(cpy_r_r92);
     goto CPyL56;
@@ -18326,9 +18328,7 @@ PyObject *CPyDef_suggestions___TypeFormatter___visit_instance(PyObject *cpy_r_se
     PyObject *cpy_r_r158;
     PyObject *cpy_r_r159;
     cpy_r_r0 = ((mypy___types___InstanceObject *)cpy_r_t)->_type;
-    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "visit_instance", 824, CPyStatic_suggestions___globals);
         goto CPyL106;
@@ -18340,9 +18340,7 @@ CPyL1: ;
     goto CPyL8;
 CPyL3: ;
     cpy_r_r4 = ((mypy___types___InstanceObject *)cpy_r_t)->_type;
-    CPy_INCREF(cpy_r_r4);
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "visit_instance", 824, CPyStatic_suggestions___globals);
         goto CPyL106;
@@ -19305,9 +19303,7 @@ PyObject *CPyDef_suggestions___TypeFormatter___visit_tuple_type(PyObject *cpy_r_
     if (!cpy_r_r6) goto CPyL12;
     cpy_r_r7 = ((mypy___types___TupleTypeObject *)cpy_r_t)->_partial_fallback;
     cpy_r_r8 = ((mypy___types___InstanceObject *)cpy_r_r7)->_type;
-    CPy_INCREF(cpy_r_r8);
     cpy_r_r9 = CPY_GET_ATTR(cpy_r_r8, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r8);
     if (unlikely(cpy_r_r9 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "visit_tuple_type", 858, CPyStatic_suggestions___globals);
         goto CPyL15;
@@ -21693,12 +21689,11 @@ PyObject *CPyDef_suggestions___refine_callable(PyObject *cpy_r_t, PyObject *cpy_
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
-    char cpy_r_r3;
-    char cpy_r_r4;
-    char cpy_r_r5;
-    PyObject *cpy_r_r6;
-    PyObject *cpy_r_r7;
-    PyObject *cpy_r_r8;
+    PyObject **cpy_r_r4;
+    PyObject *cpy_r_r5;
+    char cpy_r_r6;
+    char cpy_r_r7;
+    char cpy_r_r8;
     PyObject *cpy_r_r9;
     PyObject *cpy_r_r10;
     PyObject *cpy_r_r11;
@@ -21706,11 +21701,11 @@ PyObject *CPyDef_suggestions___refine_callable(PyObject *cpy_r_t, PyObject *cpy_
     PyObject *cpy_r_r13;
     PyObject *cpy_r_r14;
     PyObject *cpy_r_r15;
-    CPyTagged cpy_r_r16;
-    CPyTagged cpy_r_r17;
+    PyObject *cpy_r_r16;
+    PyObject *cpy_r_r17;
     PyObject *cpy_r_r18;
-    PyObject *cpy_r_r19;
-    PyObject *cpy_r_r20;
+    CPyTagged cpy_r_r19;
+    CPyTagged cpy_r_r20;
     PyObject *cpy_r_r21;
     PyObject *cpy_r_r22;
     PyObject *cpy_r_r23;
@@ -21718,49 +21713,49 @@ PyObject *CPyDef_suggestions___refine_callable(PyObject *cpy_r_t, PyObject *cpy_
     PyObject *cpy_r_r25;
     PyObject *cpy_r_r26;
     PyObject *cpy_r_r27;
-    char cpy_r_r28;
+    PyObject *cpy_r_r28;
     PyObject *cpy_r_r29;
     PyObject *cpy_r_r30;
-    PyObject *cpy_r_r31;
-    char cpy_r_r32;
+    char cpy_r_r31;
+    PyObject *cpy_r_r32;
     PyObject *cpy_r_r33;
     PyObject *cpy_r_r34;
-    CPyTagged cpy_r_r35;
+    char cpy_r_r35;
     PyObject *cpy_r_r36;
-    CPyTagged cpy_r_r37;
-    CPyPtr cpy_r_r38;
-    int64_t cpy_r_r39;
+    PyObject *cpy_r_r37;
+    CPyTagged cpy_r_r38;
+    PyObject *cpy_r_r39;
     CPyTagged cpy_r_r40;
-    char cpy_r_r41;
-    CPyPtr cpy_r_r42;
-    int64_t cpy_r_r43;
-    CPyTagged cpy_r_r44;
-    char cpy_r_r45;
-    PyObject *cpy_r_r46;
-    PyObject *cpy_r_r47;
-    PyObject *cpy_r_ta;
-    PyObject *cpy_r_r48;
+    CPyPtr cpy_r_r41;
+    int64_t cpy_r_r42;
+    CPyTagged cpy_r_r43;
+    char cpy_r_r44;
+    CPyPtr cpy_r_r45;
+    int64_t cpy_r_r46;
+    CPyTagged cpy_r_r47;
+    char cpy_r_r48;
     PyObject *cpy_r_r49;
-    PyObject *cpy_r_sa;
     PyObject *cpy_r_r50;
-    int32_t cpy_r_r51;
-    char cpy_r_r52;
-    CPyTagged cpy_r_r53;
-    CPyTagged cpy_r_r54;
-    PyObject *cpy_r_r55;
-    PyObject *cpy_r_r56;
-    PyObject *cpy_r_r57;
+    PyObject *cpy_r_ta;
+    PyObject *cpy_r_r51;
+    PyObject *cpy_r_r52;
+    PyObject *cpy_r_sa;
+    PyObject *cpy_r_r53;
+    int32_t cpy_r_r54;
+    char cpy_r_r55;
+    CPyTagged cpy_r_r56;
+    CPyTagged cpy_r_r57;
     PyObject *cpy_r_r58;
     PyObject *cpy_r_r59;
     PyObject *cpy_r_r60;
     PyObject *cpy_r_r61;
     PyObject *cpy_r_r62;
     PyObject *cpy_r_r63;
-    CPyTagged cpy_r_r64;
-    CPyTagged cpy_r_r65;
+    PyObject *cpy_r_r64;
+    PyObject *cpy_r_r65;
     PyObject *cpy_r_r66;
-    PyObject *cpy_r_r67;
-    PyObject *cpy_r_r68;
+    CPyTagged cpy_r_r67;
+    CPyTagged cpy_r_r68;
     PyObject *cpy_r_r69;
     PyObject *cpy_r_r70;
     PyObject *cpy_r_r71;
@@ -21769,221 +21764,231 @@ PyObject *CPyDef_suggestions___refine_callable(PyObject *cpy_r_t, PyObject *cpy_
     PyObject *cpy_r_r74;
     PyObject *cpy_r_r75;
     PyObject *cpy_r_r76;
+    PyObject *cpy_r_r77;
+    PyObject *cpy_r_r78;
+    PyObject *cpy_r_r79;
     cpy_r_r0 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_fallback;
     CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_fallback;
     CPy_INCREF(cpy_r_r1);
-    cpy_r_r2 = CPyDef_types___Instance_____ne__(cpy_r_r0, cpy_r_r1);
-    CPy_DECREF(cpy_r_r1);
+    cpy_r_r2 = CPyStatics[754]; /* '__ne__' */
+    PyObject *cpy_r_r3[2] = {cpy_r_r0, cpy_r_r1};
+    cpy_r_r4 = (PyObject **)&cpy_r_r3;
+    cpy_r_r5 = PyObject_VectorcallMethod(cpy_r_r2, cpy_r_r4, 9223372036854775810ULL, 0);
+    if (unlikely(cpy_r_r5 == NULL)) {
+        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1023, CPyStatic_suggestions___globals);
+        goto CPyL29;
+    }
     CPy_DECREF(cpy_r_r0);
-    if (unlikely(cpy_r_r2 == NULL)) {
-        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1023, CPyStatic_suggestions___globals);
-        goto CPyL28;
-    }
-    if (unlikely(!PyBool_Check(cpy_r_r2))) {
-        CPy_TypeError("bool", cpy_r_r2); cpy_r_r3 = 2;
+    CPy_DECREF(cpy_r_r1);
+    if (unlikely(!PyBool_Check(cpy_r_r5))) {
+        CPy_TypeError("bool", cpy_r_r5); cpy_r_r6 = 2;
     } else
-        cpy_r_r3 = cpy_r_r2 == Py_True;
-    CPy_DECREF(cpy_r_r2);
-    if (unlikely(cpy_r_r3 == 2)) {
+        cpy_r_r6 = cpy_r_r5 == Py_True;
+    CPy_DECREF(cpy_r_r5);
+    if (unlikely(cpy_r_r6 == 2)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1023, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    if (!cpy_r_r3) goto CPyL4;
+    if (!cpy_r_r6) goto CPyL4;
     CPy_INCREF(cpy_r_t);
     return cpy_r_t;
 CPyL4: ;
-    cpy_r_r4 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_is_ellipsis_args;
-    if (!cpy_r_r4) goto CPyL10;
+    cpy_r_r7 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_is_ellipsis_args;
+    if (!cpy_r_r7) goto CPyL10;
 CPyL5: ;
-    cpy_r_r5 = CPyDef_suggestions___is_tricky_callable(cpy_r_s);
-    if (unlikely(cpy_r_r5 == 2)) {
+    cpy_r_r8 = CPyDef_suggestions___is_tricky_callable(cpy_r_s);
+    if (unlikely(cpy_r_r8 == 2)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1026, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    if (cpy_r_r5) goto CPyL10;
-    cpy_r_r6 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_ret_type;
-    CPy_INCREF(cpy_r_r6);
-    cpy_r_r7 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_ret_type;
-    CPy_INCREF(cpy_r_r7);
-    cpy_r_r8 = CPyDef_suggestions___refine_type(cpy_r_r6, cpy_r_r7);
-    CPy_DECREF(cpy_r_r6);
-    CPy_DECREF(cpy_r_r7);
-    if (unlikely(cpy_r_r8 == NULL)) {
+    if (cpy_r_r8) goto CPyL10;
+    cpy_r_r9 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_ret_type;
+    CPy_INCREF(cpy_r_r9);
+    cpy_r_r10 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_ret_type;
+    CPy_INCREF(cpy_r_r10);
+    cpy_r_r11 = CPyDef_suggestions___refine_type(cpy_r_r9, cpy_r_r10);
+    CPy_DECREF(cpy_r_r9);
+    CPy_DECREF(cpy_r_r10);
+    if (unlikely(cpy_r_r11 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1027, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    cpy_r_r9 = NULL;
-    cpy_r_r10 = NULL;
-    cpy_r_r11 = NULL;
     cpy_r_r12 = NULL;
     cpy_r_r13 = NULL;
     cpy_r_r14 = NULL;
     cpy_r_r15 = NULL;
-    cpy_r_r16 = CPY_INT_TAG;
-    cpy_r_r17 = CPY_INT_TAG;
+    cpy_r_r16 = NULL;
+    cpy_r_r17 = NULL;
     cpy_r_r18 = NULL;
-    cpy_r_r19 = NULL;
-    cpy_r_r20 = NULL;
+    cpy_r_r19 = CPY_INT_TAG;
+    cpy_r_r20 = CPY_INT_TAG;
     cpy_r_r21 = NULL;
     cpy_r_r22 = NULL;
     cpy_r_r23 = NULL;
     cpy_r_r24 = NULL;
     cpy_r_r25 = NULL;
     cpy_r_r26 = NULL;
-    cpy_r_r27 = CPyDef_types___CallableType___copy_modified(cpy_r_s, cpy_r_r9, cpy_r_r10, cpy_r_r11, cpy_r_r8, cpy_r_r12, cpy_r_r13, cpy_r_r14, cpy_r_r15, cpy_r_r16, cpy_r_r17, cpy_r_r18, cpy_r_r19, cpy_r_r20, cpy_r_r21, cpy_r_r22, cpy_r_r23, cpy_r_r24, cpy_r_r25, cpy_r_r26);
-    CPy_DECREF(cpy_r_r8);
-    if (unlikely(cpy_r_r27 == NULL)) {
+    cpy_r_r27 = NULL;
+    cpy_r_r28 = NULL;
+    cpy_r_r29 = NULL;
+    cpy_r_r30 = CPyDef_types___CallableType___copy_modified(cpy_r_s, cpy_r_r12, cpy_r_r13, cpy_r_r14, cpy_r_r11, cpy_r_r15, cpy_r_r16, cpy_r_r17, cpy_r_r18, cpy_r_r19, cpy_r_r20, cpy_r_r21, cpy_r_r22, cpy_r_r23, cpy_r_r24, cpy_r_r25, cpy_r_r26, cpy_r_r27, cpy_r_r28, cpy_r_r29);
+    CPy_DECREF(cpy_r_r11);
+    if (unlikely(cpy_r_r30 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1027, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    return cpy_r_r27;
+    return cpy_r_r30;
 CPyL10: ;
-    cpy_r_r28 = CPyDef_suggestions___is_tricky_callable(cpy_r_t);
-    if (unlikely(cpy_r_r28 == 2)) {
+    cpy_r_r31 = CPyDef_suggestions___is_tricky_callable(cpy_r_t);
+    if (unlikely(cpy_r_r31 == 2)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1029, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    if (cpy_r_r28) goto CPyL15;
-    cpy_r_r29 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_arg_kinds;
-    CPy_INCREF(cpy_r_r29);
-    cpy_r_r30 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_arg_kinds;
-    CPy_INCREF(cpy_r_r30);
-    cpy_r_r31 = PyObject_RichCompare(cpy_r_r29, cpy_r_r30, 3);
-    CPy_DECREF(cpy_r_r29);
-    CPy_DECREF(cpy_r_r30);
-    if (unlikely(cpy_r_r31 == NULL)) {
+    if (cpy_r_r31) goto CPyL15;
+    cpy_r_r32 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_arg_kinds;
+    CPy_INCREF(cpy_r_r32);
+    cpy_r_r33 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_arg_kinds;
+    CPy_INCREF(cpy_r_r33);
+    cpy_r_r34 = PyObject_RichCompare(cpy_r_r32, cpy_r_r33, 3);
+    CPy_DECREF(cpy_r_r32);
+    CPy_DECREF(cpy_r_r33);
+    if (unlikely(cpy_r_r34 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1029, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    if (unlikely(!PyBool_Check(cpy_r_r31))) {
-        CPy_TypeError("bool", cpy_r_r31); cpy_r_r32 = 2;
+    if (unlikely(!PyBool_Check(cpy_r_r34))) {
+        CPy_TypeError("bool", cpy_r_r34); cpy_r_r35 = 2;
     } else
-        cpy_r_r32 = cpy_r_r31 == Py_True;
-    CPy_DECREF(cpy_r_r31);
-    if (unlikely(cpy_r_r32 == 2)) {
+        cpy_r_r35 = cpy_r_r34 == Py_True;
+    CPy_DECREF(cpy_r_r34);
+    if (unlikely(cpy_r_r35 == 2)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1029, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    if (!cpy_r_r32) goto CPyL16;
+    if (!cpy_r_r35) goto CPyL16;
 CPyL15: ;
     CPy_INCREF(cpy_r_t);
     return cpy_r_t;
 CPyL16: ;
-    cpy_r_r33 = PyList_New(0);
-    if (unlikely(cpy_r_r33 == NULL)) {
+    cpy_r_r36 = PyList_New(0);
+    if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    cpy_r_r34 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_arg_types;
-    CPy_INCREF(cpy_r_r34);
-    cpy_r_r35 = 0;
-    cpy_r_r36 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_arg_types;
-    CPy_INCREF(cpy_r_r36);
-    cpy_r_r37 = 0;
+    cpy_r_r37 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_arg_types;
+    CPy_INCREF(cpy_r_r37);
+    cpy_r_r38 = 0;
+    cpy_r_r39 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_arg_types;
+    CPy_INCREF(cpy_r_r39);
+    cpy_r_r40 = 0;
 CPyL18: ;
-    cpy_r_r38 = (CPyPtr)&((PyVarObject *)cpy_r_r34)->ob_size;
-    cpy_r_r39 = *(int64_t *)cpy_r_r38;
-    cpy_r_r40 = cpy_r_r39 << 1;
-    cpy_r_r41 = (Py_ssize_t)cpy_r_r35 < (Py_ssize_t)cpy_r_r40;
-    if (!cpy_r_r41) goto CPyL29;
-    cpy_r_r42 = (CPyPtr)&((PyVarObject *)cpy_r_r36)->ob_size;
-    cpy_r_r43 = *(int64_t *)cpy_r_r42;
-    cpy_r_r44 = cpy_r_r43 << 1;
-    cpy_r_r45 = (Py_ssize_t)cpy_r_r37 < (Py_ssize_t)cpy_r_r44;
-    if (!cpy_r_r45) goto CPyL29;
-    cpy_r_r46 = CPyList_GetItemUnsafe(cpy_r_r34, cpy_r_r35);
-    if (likely(PyObject_TypeCheck(cpy_r_r46, CPyType_types___Type)))
-        cpy_r_r47 = cpy_r_r46;
+    cpy_r_r41 = (CPyPtr)&((PyVarObject *)cpy_r_r37)->ob_size;
+    cpy_r_r42 = *(int64_t *)cpy_r_r41;
+    cpy_r_r43 = cpy_r_r42 << 1;
+    cpy_r_r44 = (Py_ssize_t)cpy_r_r38 < (Py_ssize_t)cpy_r_r43;
+    if (!cpy_r_r44) goto CPyL30;
+    cpy_r_r45 = (CPyPtr)&((PyVarObject *)cpy_r_r39)->ob_size;
+    cpy_r_r46 = *(int64_t *)cpy_r_r45;
+    cpy_r_r47 = cpy_r_r46 << 1;
+    cpy_r_r48 = (Py_ssize_t)cpy_r_r40 < (Py_ssize_t)cpy_r_r47;
+    if (!cpy_r_r48) goto CPyL30;
+    cpy_r_r49 = CPyList_GetItemUnsafe(cpy_r_r37, cpy_r_r38);
+    if (likely(PyObject_TypeCheck(cpy_r_r49, CPyType_types___Type)))
+        cpy_r_r50 = cpy_r_r49;
     else {
-        CPy_TypeErrorTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals, "mypy.types.Type", cpy_r_r46);
-        goto CPyL30;
-    }
-    cpy_r_ta = cpy_r_r47;
-    cpy_r_r48 = CPyList_GetItemUnsafe(cpy_r_r36, cpy_r_r37);
-    if (likely(PyObject_TypeCheck(cpy_r_r48, CPyType_types___Type)))
-        cpy_r_r49 = cpy_r_r48;
-    else {
-        CPy_TypeErrorTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals, "mypy.types.Type", cpy_r_r48);
+        CPy_TypeErrorTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals, "mypy.types.Type", cpy_r_r49);
         goto CPyL31;
     }
-    cpy_r_sa = cpy_r_r49;
-    cpy_r_r50 = CPyDef_suggestions___refine_type(cpy_r_ta, cpy_r_sa);
-    CPy_DECREF(cpy_r_ta);
-    CPy_DECREF(cpy_r_sa);
-    if (unlikely(cpy_r_r50 == NULL)) {
-        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals);
-        goto CPyL30;
-    }
-    cpy_r_r51 = PyList_Append(cpy_r_r33, cpy_r_r50);
-    CPy_DECREF(cpy_r_r50);
-    cpy_r_r52 = cpy_r_r51 >= 0;
-    if (unlikely(!cpy_r_r52)) {
-        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals);
-        goto CPyL30;
-    }
-    cpy_r_r53 = cpy_r_r35 + 2;
-    cpy_r_r35 = cpy_r_r53;
-    cpy_r_r54 = cpy_r_r37 + 2;
-    cpy_r_r37 = cpy_r_r54;
-    goto CPyL18;
-CPyL25: ;
-    cpy_r_r55 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_ret_type;
-    CPy_INCREF(cpy_r_r55);
-    cpy_r_r56 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_ret_type;
-    CPy_INCREF(cpy_r_r56);
-    cpy_r_r57 = CPyDef_suggestions___refine_type(cpy_r_r55, cpy_r_r56);
-    CPy_DECREF(cpy_r_r55);
-    CPy_DECREF(cpy_r_r56);
-    if (unlikely(cpy_r_r57 == NULL)) {
-        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1034, CPyStatic_suggestions___globals);
+    cpy_r_ta = cpy_r_r50;
+    cpy_r_r51 = CPyList_GetItemUnsafe(cpy_r_r39, cpy_r_r40);
+    if (likely(PyObject_TypeCheck(cpy_r_r51, CPyType_types___Type)))
+        cpy_r_r52 = cpy_r_r51;
+    else {
+        CPy_TypeErrorTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals, "mypy.types.Type", cpy_r_r51);
         goto CPyL32;
     }
-    cpy_r_r58 = NULL;
-    cpy_r_r59 = NULL;
-    cpy_r_r60 = NULL;
+    cpy_r_sa = cpy_r_r52;
+    cpy_r_r53 = CPyDef_suggestions___refine_type(cpy_r_ta, cpy_r_sa);
+    CPy_DECREF(cpy_r_ta);
+    CPy_DECREF(cpy_r_sa);
+    if (unlikely(cpy_r_r53 == NULL)) {
+        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals);
+        goto CPyL31;
+    }
+    cpy_r_r54 = PyList_Append(cpy_r_r36, cpy_r_r53);
+    CPy_DECREF(cpy_r_r53);
+    cpy_r_r55 = cpy_r_r54 >= 0;
+    if (unlikely(!cpy_r_r55)) {
+        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1033, CPyStatic_suggestions___globals);
+        goto CPyL31;
+    }
+    cpy_r_r56 = cpy_r_r38 + 2;
+    cpy_r_r38 = cpy_r_r56;
+    cpy_r_r57 = cpy_r_r40 + 2;
+    cpy_r_r40 = cpy_r_r57;
+    goto CPyL18;
+CPyL25: ;
+    cpy_r_r58 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_ret_type;
+    CPy_INCREF(cpy_r_r58);
+    cpy_r_r59 = ((mypy___types___CallableTypeObject *)cpy_r_s)->_ret_type;
+    CPy_INCREF(cpy_r_r59);
+    cpy_r_r60 = CPyDef_suggestions___refine_type(cpy_r_r58, cpy_r_r59);
+    CPy_DECREF(cpy_r_r58);
+    CPy_DECREF(cpy_r_r59);
+    if (unlikely(cpy_r_r60 == NULL)) {
+        CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1034, CPyStatic_suggestions___globals);
+        goto CPyL33;
+    }
     cpy_r_r61 = NULL;
     cpy_r_r62 = NULL;
     cpy_r_r63 = NULL;
-    cpy_r_r64 = CPY_INT_TAG;
-    cpy_r_r65 = CPY_INT_TAG;
+    cpy_r_r64 = NULL;
+    cpy_r_r65 = NULL;
     cpy_r_r66 = NULL;
-    cpy_r_r67 = NULL;
-    cpy_r_r68 = NULL;
+    cpy_r_r67 = CPY_INT_TAG;
+    cpy_r_r68 = CPY_INT_TAG;
     cpy_r_r69 = NULL;
     cpy_r_r70 = NULL;
     cpy_r_r71 = NULL;
     cpy_r_r72 = NULL;
     cpy_r_r73 = NULL;
     cpy_r_r74 = NULL;
-    cpy_r_r75 = CPyDef_types___CallableType___copy_modified(cpy_r_t, cpy_r_r33, cpy_r_r58, cpy_r_r59, cpy_r_r57, cpy_r_r60, cpy_r_r61, cpy_r_r62, cpy_r_r63, cpy_r_r64, cpy_r_r65, cpy_r_r66, cpy_r_r67, cpy_r_r68, cpy_r_r69, cpy_r_r70, cpy_r_r71, cpy_r_r72, cpy_r_r73, cpy_r_r74);
-    CPy_DECREF(cpy_r_r33);
-    CPy_DECREF(cpy_r_r57);
-    if (unlikely(cpy_r_r75 == NULL)) {
+    cpy_r_r75 = NULL;
+    cpy_r_r76 = NULL;
+    cpy_r_r77 = NULL;
+    cpy_r_r78 = CPyDef_types___CallableType___copy_modified(cpy_r_t, cpy_r_r36, cpy_r_r61, cpy_r_r62, cpy_r_r60, cpy_r_r63, cpy_r_r64, cpy_r_r65, cpy_r_r66, cpy_r_r67, cpy_r_r68, cpy_r_r69, cpy_r_r70, cpy_r_r71, cpy_r_r72, cpy_r_r73, cpy_r_r74, cpy_r_r75, cpy_r_r76, cpy_r_r77);
+    CPy_DECREF(cpy_r_r36);
+    CPy_DECREF(cpy_r_r60);
+    if (unlikely(cpy_r_r78 == NULL)) {
         CPy_AddTraceback("mypy/suggestions.py", "refine_callable", 1032, CPyStatic_suggestions___globals);
         goto CPyL28;
     }
-    return cpy_r_r75;
+    return cpy_r_r78;
 CPyL28: ;
-    cpy_r_r76 = NULL;
-    return cpy_r_r76;
+    cpy_r_r79 = NULL;
+    return cpy_r_r79;
 CPyL29: ;
-    CPy_DECREF(cpy_r_r34);
-    CPy_DECREF(cpy_r_r36);
-    goto CPyL25;
-CPyL30: ;
-    CPy_DecRef(cpy_r_r33);
-    CPy_DecRef(cpy_r_r34);
-    CPy_DecRef(cpy_r_r36);
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_r1);
     goto CPyL28;
+CPyL30: ;
+    CPy_DECREF(cpy_r_r37);
+    CPy_DECREF(cpy_r_r39);
+    goto CPyL25;
 CPyL31: ;
-    CPy_DecRef(cpy_r_r33);
-    CPy_DecRef(cpy_r_r34);
     CPy_DecRef(cpy_r_r36);
-    CPy_DecRef(cpy_r_ta);
+    CPy_DecRef(cpy_r_r37);
+    CPy_DecRef(cpy_r_r39);
     goto CPyL28;
 CPyL32: ;
-    CPy_DecRef(cpy_r_r33);
+    CPy_DecRef(cpy_r_r36);
+    CPy_DecRef(cpy_r_r37);
+    CPy_DecRef(cpy_r_r39);
+    CPy_DecRef(cpy_r_ta);
+    goto CPyL28;
+CPyL33: ;
+    CPy_DecRef(cpy_r_r36);
     goto CPyL28;
 }
 

@@ -696,7 +696,7 @@ CPyL7: ;
         CPy_TypeErrorTraceback("mypy/exprtotype.py", "expr_to_unanalyzed_type", 73, CPyStatic_exprtotype___globals, "str", cpy_r_name);
         goto CPyL279;
     }
-    cpy_r_r10 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r10 = CPyStatics[1152]; /* 'True' */
     cpy_r_r11 = PyUnicode_Compare(cpy_r_r9, cpy_r_r10);
     CPy_DECREF(cpy_r_r9);
     cpy_r_r12 = cpy_r_r11 == -1;
@@ -751,7 +751,7 @@ CPyL17: ;
         CPy_TypeErrorTraceback("mypy/exprtotype.py", "expr_to_unanalyzed_type", 75, CPyStatic_exprtotype___globals, "str", cpy_r_name);
         goto CPyL279;
     }
-    cpy_r_r26 = CPyStatics[1152]; /* 'False' */
+    cpy_r_r26 = CPyStatics[1151]; /* 'False' */
     cpy_r_r27 = PyUnicode_Compare(cpy_r_r25, cpy_r_r26);
     CPy_DECREF(cpy_r_r25);
     cpy_r_r28 = cpy_r_r27 == -1;
@@ -1094,7 +1094,6 @@ CPyL73: ;
         goto CPyL298;
     }
     cpy_r_r128 = ((mypy___nodes___IndexExprObject *)cpy_r_r127)->_base;
-    CPy_INCREF(cpy_r_r128);
     if (likely((Py_TYPE(cpy_r_r128) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r128) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r128) == CPyType_nodes___RefExpr)))
         cpy_r_r129 = cpy_r_r128;
     else {
@@ -1102,7 +1101,6 @@ CPyL73: ;
         goto CPyL298;
     }
     cpy_r_r130 = CPY_GET_ATTR(cpy_r_r129, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r129);
     if (unlikely(cpy_r_r130 == NULL)) {
         CPy_AddTraceback("mypy/exprtotype.py", "expr_to_unanalyzed_type", 95, CPyStatic_exprtotype___globals);
         goto CPyL298;

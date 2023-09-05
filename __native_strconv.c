@@ -4464,9 +4464,7 @@ CPyL9: ;
         goto CPyL61;
     }
     cpy_r_r30 = ((mypy___types___InstanceObject *)cpy_r_r29)->_type;
-    CPy_INCREF(cpy_r_r30);
     cpy_r_r31 = CPY_GET_ATTR(cpy_r_r30, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r30);
     if (unlikely(cpy_r_r31 == NULL)) {
         CPy_AddTraceback("mypy/strconv.py", "visit_class_def", 174, CPyStatic_strconv___globals);
         goto CPyL61;
@@ -16088,9 +16086,7 @@ PyObject *CPyDef_strconv___StrConv___visit_namedtuple_expr(PyObject *cpy_r_self,
     }
     cpy_r_r3 = CPyStatics[2381]; /* '(' */
     cpy_r_r4 = ((mypy___nodes___NamedTupleExprObject *)cpy_r_o)->_info;
-    CPy_INCREF(cpy_r_r4);
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/strconv.py", "visit_namedtuple_expr", 517, CPyStatic_strconv___globals);
         goto CPyL13;
@@ -16295,9 +16291,7 @@ PyObject *CPyDef_strconv___StrConv___visit_enum_call_expr(PyObject *cpy_r_self, 
     }
     cpy_r_r3 = CPyStatics[2381]; /* '(' */
     cpy_r_r4 = ((mypy___nodes___EnumCallExprObject *)cpy_r_o)->_info;
-    CPy_INCREF(cpy_r_r4);
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/strconv.py", "visit_enum_call_expr", 520, CPyStatic_strconv___globals);
         goto CPyL6;
@@ -16464,9 +16458,7 @@ PyObject *CPyDef_strconv___StrConv___visit_typeddict_expr(PyObject *cpy_r_self, 
     }
     cpy_r_r3 = CPyStatics[2381]; /* '(' */
     cpy_r_r4 = ((mypy___nodes___TypedDictExprObject *)cpy_r_o)->_info;
-    CPy_INCREF(cpy_r_r4);
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/strconv.py", "visit_typeddict_expr", 523, CPyStatic_strconv___globals);
         goto CPyL5;

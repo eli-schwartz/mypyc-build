@@ -1415,15 +1415,15 @@ CPyL9: ;
         cpy_r_r25 = cpy_r_base_expr;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "analyze_namedtuple_classdef", 110, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.RefExpr", cpy_r_base_expr);
-        goto CPyL42;
+        goto CPyL45;
     }
     cpy_r_r26 = CPY_GET_ATTR(cpy_r_r25, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r25);
     if (unlikely(cpy_r_r26 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "analyze_namedtuple_classdef", 110, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL42;
+        goto CPyL45;
     }
 CPyL14: ;
+    CPy_DECREF(cpy_r_base_expr);
     cpy_r_r27 = CPyStatic_types___TYPED_NAMEDTUPLE_NAMES;
     if (unlikely(cpy_r_r27.f0 == NULL)) {
         goto CPyL46;
@@ -3115,12 +3115,12 @@ CPyL13: ;
         goto CPyL116;
     }
     cpy_r_r31 = CPY_GET_ATTR(cpy_r_r30, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r30);
     if (unlikely(cpy_r_r31 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 235, CPyStatic_semanal_namedtuple___globals);
         goto CPyL116;
     }
 CPyL15: ;
+    CPy_DECREF(cpy_r_callee);
     cpy_r_fullname = cpy_r_r31;
     cpy_r_r32 = CPyStatics[4928]; /* 'collections.namedtuple' */
     cpy_r_r33 = PyUnicode_Compare(cpy_r_fullname, cpy_r_r32);
@@ -3200,12 +3200,12 @@ CPyL28: ;
     CPy_DECREF(cpy_r_fullname);
     if (unlikely(cpy_r_r50 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 242, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL116;
+        goto CPyL120;
     }
     cpy_r_result = cpy_r_r50;
     cpy_r_r51 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r52 = cpy_r_result != cpy_r_r51;
-    if (!cpy_r_r52) goto CPyL120;
+    if (!cpy_r_r52) goto CPyL121;
     PyObject *__tmp5995;
     if (unlikely(!(PyTuple_Check(cpy_r_result) && PyTuple_GET_SIZE(cpy_r_result) == 6))) {
         __tmp5995 = NULL;
@@ -3312,7 +3312,7 @@ __LL5996: ;
     }
     if (unlikely(cpy_r_r53.f0 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 242, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL121;
+        goto CPyL122;
     }
     cpy_r_r54 = PyTuple_New(6);
     if (unlikely(cpy_r_r54 == NULL))
@@ -3335,10 +3335,10 @@ __LL5996: ;
     cpy_r_r56 = cpy_r_r55 >= 0;
     if (unlikely(!cpy_r_r56)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 242, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL121;
+        goto CPyL122;
     }
     cpy_r_r57 = cpy_r_r55;
-    if (!cpy_r_r57) goto CPyL120;
+    if (!cpy_r_r57) goto CPyL121;
     PyObject *__tmp6015;
     if (unlikely(!(PyTuple_Check(cpy_r_result) && PyTuple_GET_SIZE(cpy_r_result) == 6))) {
         __tmp6015 = NULL;
@@ -3446,7 +3446,7 @@ __LL6016: ;
     CPy_DECREF(cpy_r_result);
     if (unlikely(cpy_r_r58.f0 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 244, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL116;
+        goto CPyL120;
     }
     cpy_r_r59 = cpy_r_r58.f0;
     CPy_INCREF(cpy_r_r59);
@@ -3480,7 +3480,7 @@ CPyL35: ;
         cpy_r_r67 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 214, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL116;
+        goto CPyL120;
     }
     cpy_r_r68 = CPyStr_IsTrue(cpy_r_r67);
     CPy_DECREF(cpy_r_r67);
@@ -3490,10 +3490,10 @@ CPyL35: ;
         cpy_r_r69 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 248, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL116;
+        goto CPyL120;
     }
     cpy_r_name = cpy_r_r69;
-    if (!cpy_r_is_func_scope) goto CPyL122;
+    if (!cpy_r_is_func_scope) goto CPyL123;
     cpy_r_r70 = CPyStatics[1784]; /* '@' */
     cpy_r_r71 = ((mypy___nodes___CallExprObject *)cpy_r_call)->_line;
     CPyTagged_INCREF(cpy_r_r71);
@@ -3501,22 +3501,22 @@ CPyL35: ;
     CPyTagged_DECREF(cpy_r_r71);
     if (unlikely(cpy_r_r72 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 250, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL123;
+        goto CPyL124;
     }
     cpy_r_r73 = PyUnicode_Concat(cpy_r_r70, cpy_r_r72);
     CPy_DECREF(cpy_r_r72);
     if (unlikely(cpy_r_r73 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 250, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL123;
+        goto CPyL124;
     }
     cpy_r_r74 = CPyStr_Append(cpy_r_name, cpy_r_r73);
     CPy_DECREF(cpy_r_r73);
     if (unlikely(cpy_r_r74 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 250, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL116;
+        goto CPyL120;
     }
     cpy_r_name = cpy_r_r74;
-    goto CPyL122;
+    goto CPyL123;
 CPyL44: ;
     cpy_r_r75 = CPyStatics[5203]; /* 'namedtuple@' */
     cpy_r_r76 = ((mypy___nodes___CallExprObject *)cpy_r_call)->_line;
@@ -3525,13 +3525,13 @@ CPyL44: ;
     CPyTagged_DECREF(cpy_r_r76);
     if (unlikely(cpy_r_r77 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 252, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL116;
+        goto CPyL120;
     }
     cpy_r_r78 = PyUnicode_Concat(cpy_r_r75, cpy_r_r77);
     CPy_DECREF(cpy_r_r77);
     if (unlikely(cpy_r_r78 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 252, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL116;
+        goto CPyL120;
     }
     CPy_INCREF(cpy_r_r78);
     cpy_r_name = cpy_r_r78;
@@ -3540,23 +3540,23 @@ CPyL47: ;
     cpy_r_r79 = PyList_New(0);
     if (unlikely(cpy_r_r79 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 253, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL124;
+        goto CPyL125;
     }
     cpy_r_r80 = PyList_New(0);
     if (unlikely(cpy_r_r80 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 253, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL125;
+        goto CPyL126;
     }
     cpy_r_r81 = PyDict_New();
     if (unlikely(cpy_r_r81 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 253, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL126;
+        goto CPyL127;
     }
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___CallExpr))
         cpy_r_r82 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 253, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL127;
+        goto CPyL128;
     }
     cpy_r_r83 = ((mypy___nodes___CallExprObject *)cpy_r_r82)->_line;
     CPyTagged_INCREF(cpy_r_r83);
@@ -3568,7 +3568,7 @@ CPyL47: ;
     CPyTagged_DECREF(cpy_r_r83);
     if (unlikely(cpy_r_r85 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 253, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL124;
+        goto CPyL125;
     }
     cpy_r_info = cpy_r_r85;
     CPy_INCREF(cpy_r_var_name);
@@ -3576,21 +3576,21 @@ CPyL47: ;
         cpy_r_r86 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 254, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL128;
+        goto CPyL129;
     }
     cpy_r_r87 = CPyDef_semanal_namedtuple___NamedTupleAnalyzer___store_namedtuple_info(cpy_r_self, cpy_r_info, cpy_r_r86, cpy_r_call, cpy_r_is_typed);
     CPy_DECREF(cpy_r_r86);
     CPy_DECREF(cpy_r_call);
     if (unlikely(cpy_r_r87 == 2)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 254, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL129;
+        goto CPyL130;
     }
     CPy_INCREF(cpy_r_var_name);
     if (likely(cpy_r_var_name != Py_None))
         cpy_r_r88 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 255, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL129;
+        goto CPyL130;
     }
     cpy_r_r89 = PyUnicode_Compare(cpy_r_name, cpy_r_r88);
     CPy_DECREF(cpy_r_r88);
@@ -3602,12 +3602,12 @@ CPyL47: ;
     cpy_r_r93 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r93)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 255, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL129;
+        goto CPyL130;
     }
 CPyL58: ;
     cpy_r_r94 = cpy_r_r89 != 0;
     if (cpy_r_r94) goto CPyL60;
-    if (!cpy_r_is_func_scope) goto CPyL130;
+    if (!cpy_r_is_func_scope) goto CPyL131;
 CPyL60: ;
     cpy_r_r95 = ((mypy___semanal_namedtuple___NamedTupleAnalyzerObject *)cpy_r_self)->_api;
     CPy_INCREF(cpy_r_r95);
@@ -3616,19 +3616,19 @@ CPyL60: ;
     CPy_DECREF(cpy_r_r95);
     if (unlikely(cpy_r_r96 == 2)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 257, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL131;
+        goto CPyL132;
     }
 CPyL61: ;
     if (likely(cpy_r_var_name != Py_None))
         cpy_r_r97 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 258, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL132;
+        goto CPyL133;
     }
     cpy_r_r98 = PyList_New(0);
     if (unlikely(cpy_r_r98 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 258, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL133;
+        goto CPyL134;
     }
     cpy_r_r99.f0 = cpy_r_r97;
     cpy_r_r99.f1 = cpy_r_info;
@@ -3656,12 +3656,12 @@ CPyL64: ;
     if (cpy_r_ok) {
         goto CPyL67;
     } else
-        goto CPyL134;
+        goto CPyL135;
 CPyL65: ;
     cpy_r_r102 = PyList_New(0);
     if (unlikely(cpy_r_r102 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 261, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL135;
+        goto CPyL136;
     }
     cpy_r_r103.f0 = cpy_r_typename;
     cpy_r_r103.f1 = 1;
@@ -3692,7 +3692,7 @@ CPyL67: ;
         cpy_r_r109 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 214, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL136;
+        goto CPyL137;
     }
     cpy_r_r110 = CPyStr_IsTrue(cpy_r_r109);
     CPy_DECREF(cpy_r_r109);
@@ -3702,7 +3702,7 @@ CPyL67: ;
         cpy_r_r111 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 269, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL136;
+        goto CPyL137;
     }
     cpy_r_name = cpy_r_r111;
     goto CPyL73;
@@ -3722,19 +3722,19 @@ CPyL75: ;
     CPyTagged_DECREF(cpy_r_r115);
     if (unlikely(cpy_r_r116 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 282, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL137;
+        goto CPyL138;
     }
     cpy_r_r117 = PyUnicode_Concat(cpy_r_r114, cpy_r_r116);
     CPy_DECREF(cpy_r_r116);
     if (unlikely(cpy_r_r117 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 282, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL137;
+        goto CPyL138;
     }
     cpy_r_r118 = CPyStr_Append(cpy_r_name, cpy_r_r117);
     CPy_DECREF(cpy_r_r117);
     if (unlikely(cpy_r_r118 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 282, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL136;
+        goto CPyL137;
     }
     cpy_r_name = cpy_r_r118;
 CPyL79: ;
@@ -3742,11 +3742,11 @@ CPyL79: ;
     cpy_r_r120 = *(int64_t *)cpy_r_r119;
     cpy_r_r121 = cpy_r_r120 << 1;
     cpy_r_r122 = cpy_r_r121 != 0;
-    if (!cpy_r_r122) goto CPyL138;
+    if (!cpy_r_r122) goto CPyL139;
     cpy_r_r123 = PyDict_New();
     if (unlikely(cpy_r_r123 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 284, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL137;
+        goto CPyL138;
     }
     cpy_r_r124 = (CPyPtr)&((PyVarObject *)cpy_r_defaults)->ob_size;
     cpy_r_r125 = *(int64_t *)cpy_r_r124;
@@ -3756,13 +3756,13 @@ CPyL79: ;
     CPyTagged_DECREF(cpy_r_r127);
     if (unlikely(cpy_r_r128 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 285, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL139;
+        goto CPyL140;
     }
     if (likely(PyList_Check(cpy_r_r128)))
         cpy_r_r129 = cpy_r_r128;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 285, CPyStatic_semanal_namedtuple___globals, "list", cpy_r_r128);
-        goto CPyL139;
+        goto CPyL140;
     }
     cpy_r_r130 = 0;
     cpy_r_r131 = 0;
@@ -3771,18 +3771,18 @@ CPyL84: ;
     cpy_r_r133 = *(int64_t *)cpy_r_r132;
     cpy_r_r134 = cpy_r_r133 << 1;
     cpy_r_r135 = (Py_ssize_t)cpy_r_r130 < (Py_ssize_t)cpy_r_r134;
-    if (!cpy_r_r135) goto CPyL140;
+    if (!cpy_r_r135) goto CPyL141;
     cpy_r_r136 = (CPyPtr)&((PyVarObject *)cpy_r_defaults)->ob_size;
     cpy_r_r137 = *(int64_t *)cpy_r_r136;
     cpy_r_r138 = cpy_r_r137 << 1;
     cpy_r_r139 = (Py_ssize_t)cpy_r_r131 < (Py_ssize_t)cpy_r_r138;
-    if (!cpy_r_r139) goto CPyL140;
+    if (!cpy_r_r139) goto CPyL141;
     cpy_r_r140 = CPyList_GetItemUnsafe(cpy_r_r129, cpy_r_r130);
     if (likely(PyUnicode_Check(cpy_r_r140)))
         cpy_r_r141 = cpy_r_r140;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 284, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_r140);
-        goto CPyL141;
+        goto CPyL142;
     }
     cpy_r_arg_name = cpy_r_r141;
     cpy_r_r142 = CPyList_GetItemUnsafe(cpy_r_defaults, cpy_r_r131);
@@ -3790,7 +3790,7 @@ CPyL84: ;
         cpy_r_r143 = cpy_r_r142;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 284, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.Expression", cpy_r_r142);
-        goto CPyL142;
+        goto CPyL143;
     }
     cpy_r_default = cpy_r_r143;
     cpy_r_r144 = CPyDict_SetItem(cpy_r_r123, cpy_r_arg_name, cpy_r_default);
@@ -3799,7 +3799,7 @@ CPyL84: ;
     cpy_r_r145 = cpy_r_r144 >= 0;
     if (unlikely(!cpy_r_r145)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 284, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL141;
+        goto CPyL142;
     }
     cpy_r_r146 = cpy_r_r130 + 2;
     cpy_r_r130 = cpy_r_r146;
@@ -3813,7 +3813,7 @@ CPyL91: ;
     cpy_r_r148 = PyDict_New();
     if (unlikely(cpy_r_r148 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 288, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL143;
+        goto CPyL144;
     }
     cpy_r_default_items = cpy_r_r148;
 CPyL93: ;
@@ -3824,7 +3824,7 @@ CPyL93: ;
         cpy_r_r150 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 291, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL144;
+        goto CPyL145;
     }
     cpy_r_r151 = ((mypy___nodes___CallExprObject *)cpy_r_r150)->_analyzed;
     cpy_r_r152 = (PyObject *)CPyType_nodes___NamedTupleExpr;
@@ -3832,7 +3832,7 @@ CPyL93: ;
     cpy_r_r154 = *(PyObject * *)cpy_r_r153;
     cpy_r_r155 = cpy_r_r154 == cpy_r_r152;
     if (cpy_r_r155) {
-        goto CPyL145;
+        goto CPyL146;
     } else
         goto CPyL98;
 CPyL95: ;
@@ -3840,14 +3840,14 @@ CPyL95: ;
         cpy_r_r156 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 292, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL146;
+        goto CPyL147;
     }
     cpy_r_r157 = ((mypy___nodes___CallExprObject *)cpy_r_r156)->_analyzed;
     if (likely(Py_TYPE(cpy_r_r157) == CPyType_nodes___NamedTupleExpr))
         cpy_r_r158 = cpy_r_r157;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 292, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.NamedTupleExpr", cpy_r_r157);
-        goto CPyL146;
+        goto CPyL147;
     }
     cpy_r_r159 = ((mypy___nodes___NamedTupleExprObject *)cpy_r_r158)->_info;
     CPy_INCREF(cpy_r_r159);
@@ -3857,7 +3857,7 @@ CPyL98: ;
         cpy_r_r160 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 294, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL144;
+        goto CPyL145;
     }
     cpy_r_r161 = ((mypy___nodes___CallExprObject *)cpy_r_r160)->_line;
     CPyTagged_INCREF(cpy_r_r161);
@@ -3869,7 +3869,7 @@ CPyL98: ;
     CPy_DECREF(cpy_r_existing_info);
     if (unlikely(cpy_r_r162 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 293, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL147;
+        goto CPyL148;
     }
     cpy_r_info = cpy_r_r162;
     cpy_r_r163 = (PyObject *)&_Py_NoneStruct;
@@ -3880,7 +3880,7 @@ CPyL98: ;
         cpy_r_r165 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 214, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL148;
+        goto CPyL149;
     }
     cpy_r_r166 = CPyStr_IsTrue(cpy_r_r165);
     CPy_DECREF(cpy_r_r165);
@@ -3890,21 +3890,21 @@ CPyL98: ;
         cpy_r_r167 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 301, CPyStatic_semanal_namedtuple___globals, "str", cpy_r_var_name);
-        goto CPyL148;
+        goto CPyL149;
     }
     cpy_r_r168 = CPyDef_semanal_namedtuple___NamedTupleAnalyzer___store_namedtuple_info(cpy_r_self, cpy_r_info, cpy_r_r167, cpy_r_call, cpy_r_is_typed);
     CPy_DECREF(cpy_r_r167);
     CPy_DECREF(cpy_r_call);
     if (unlikely(cpy_r_r168 == 2)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 301, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL149;
+        goto CPyL150;
     } else
         goto CPyL108;
 CPyL105: ;
     cpy_r_r169 = CPyDef_nodes___NamedTupleExpr(cpy_r_info, cpy_r_is_typed);
     if (unlikely(cpy_r_r169 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 303, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL148;
+        goto CPyL149;
     }
     CPy_DECREF(((mypy___nodes___CallExprObject *)cpy_r_call)->_analyzed);
     ((mypy___nodes___CallExprObject *)cpy_r_call)->_analyzed = cpy_r_r169;
@@ -3914,7 +3914,7 @@ CPyL105: ;
         cpy_r_r172 = cpy_r_r171;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 304, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.NamedTupleExpr", cpy_r_r171);
-        goto CPyL148;
+        goto CPyL149;
     }
     cpy_r_r173 = NULL;
     cpy_r_r174 = NULL;
@@ -3924,13 +3924,13 @@ CPyL105: ;
     CPy_DECREF(cpy_r_r172);
     if (unlikely(cpy_r_r176 == 2)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 304, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL149;
+        goto CPyL150;
     }
 CPyL108: ;
     cpy_r_r177 = PyObject_RichCompare(cpy_r_name, cpy_r_var_name, 3);
     if (unlikely(cpy_r_r177 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 317, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL149;
+        goto CPyL150;
     }
     if (unlikely(!PyBool_Check(cpy_r_r177))) {
         CPy_TypeError("bool", cpy_r_r177); cpy_r_r178 = 2;
@@ -3939,10 +3939,10 @@ CPyL108: ;
     CPy_DECREF(cpy_r_r177);
     if (unlikely(cpy_r_r178 == 2)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 317, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL149;
+        goto CPyL150;
     }
     if (cpy_r_r178) goto CPyL112;
-    if (!cpy_r_is_func_scope) goto CPyL150;
+    if (!cpy_r_is_func_scope) goto CPyL151;
 CPyL112: ;
     cpy_r_r179 = ((mypy___semanal_namedtuple___NamedTupleAnalyzerObject *)cpy_r_self)->_api;
     CPy_INCREF(cpy_r_r179);
@@ -3951,7 +3951,7 @@ CPyL112: ;
     CPy_DECREF(cpy_r_r179);
     if (unlikely(cpy_r_r180 == 2)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "check_namedtuple", 319, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL151;
+        goto CPyL152;
     }
 CPyL113: ;
     cpy_r_r181.f0 = cpy_r_typename;
@@ -3992,6 +3992,7 @@ CPyL115: ;
     goto CPyL11;
 CPyL116: ;
     CPy_DecRef(cpy_r_call);
+    CPy_DecRef(cpy_r_callee);
     goto CPyL114;
 CPyL117: ;
     CPy_DecRef(cpy_r_call);
@@ -4006,21 +4007,19 @@ CPyL119: ;
     CPy_DECREF(cpy_r_fullname);
     goto CPyL26;
 CPyL120: ;
+    CPy_DecRef(cpy_r_call);
+    goto CPyL114;
+CPyL121: ;
     CPy_DECREF(cpy_r_result);
     goto CPyL35;
-CPyL121: ;
+CPyL122: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_result);
     goto CPyL114;
-CPyL122: ;
+CPyL123: ;
     CPy_INCREF(cpy_r_var_name);
     goto CPyL47;
-CPyL123: ;
-    CPy_DecRef(cpy_r_call);
-    CPy_DecRef(cpy_r_name);
-    goto CPyL114;
 CPyL124: ;
-    CPy_DecRef(cpy_r_var_name);
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     goto CPyL114;
@@ -4028,14 +4027,12 @@ CPyL125: ;
     CPy_DecRef(cpy_r_var_name);
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
-    CPy_DecRef(cpy_r_r79);
     goto CPyL114;
 CPyL126: ;
     CPy_DecRef(cpy_r_var_name);
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_r79);
-    CPy_DecRef(cpy_r_r80);
     goto CPyL114;
 CPyL127: ;
     CPy_DecRef(cpy_r_var_name);
@@ -4043,50 +4040,49 @@ CPyL127: ;
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_r79);
     CPy_DecRef(cpy_r_r80);
-    CPy_DecRef(cpy_r_r81);
     goto CPyL114;
 CPyL128: ;
     CPy_DecRef(cpy_r_var_name);
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
-    CPy_DecRef(cpy_r_info);
+    CPy_DecRef(cpy_r_r79);
+    CPy_DecRef(cpy_r_r80);
+    CPy_DecRef(cpy_r_r81);
     goto CPyL114;
 CPyL129: ;
     CPy_DecRef(cpy_r_var_name);
+    CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_info);
     goto CPyL114;
 CPyL130: ;
-    CPy_DECREF(cpy_r_name);
-    goto CPyL61;
-CPyL131: ;
     CPy_DecRef(cpy_r_var_name);
+    CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_info);
     goto CPyL114;
+CPyL131: ;
+    CPy_DECREF(cpy_r_name);
+    goto CPyL61;
 CPyL132: ;
+    CPy_DecRef(cpy_r_var_name);
     CPy_DecRef(cpy_r_info);
     goto CPyL114;
 CPyL133: ;
     CPy_DecRef(cpy_r_info);
-    CPy_DecRef(cpy_r_r97);
     goto CPyL114;
 CPyL134: ;
+    CPy_DecRef(cpy_r_info);
+    CPy_DecRef(cpy_r_r97);
+    goto CPyL114;
+CPyL135: ;
     CPy_DECREF(cpy_r_call);
     CPy_DECREF(cpy_r_items);
     CPy_DECREF(cpy_r_types);
     CPy_DECREF(cpy_r_defaults);
     CPy_DECREF(cpy_r_tvar_defs);
     goto CPyL65;
-CPyL135: ;
-    CPy_DecRef(cpy_r_typename);
-    goto CPyL114;
 CPyL136: ;
-    CPy_DecRef(cpy_r_call);
-    CPy_DecRef(cpy_r_items);
-    CPy_DecRef(cpy_r_types);
-    CPy_DecRef(cpy_r_defaults);
     CPy_DecRef(cpy_r_typename);
-    CPy_DecRef(cpy_r_tvar_defs);
     goto CPyL114;
 CPyL137: ;
     CPy_DecRef(cpy_r_call);
@@ -4095,12 +4091,20 @@ CPyL137: ;
     CPy_DecRef(cpy_r_defaults);
     CPy_DecRef(cpy_r_typename);
     CPy_DecRef(cpy_r_tvar_defs);
-    CPy_DecRef(cpy_r_name);
     goto CPyL114;
 CPyL138: ;
+    CPy_DecRef(cpy_r_call);
+    CPy_DecRef(cpy_r_items);
+    CPy_DecRef(cpy_r_types);
+    CPy_DecRef(cpy_r_defaults);
+    CPy_DecRef(cpy_r_typename);
+    CPy_DecRef(cpy_r_tvar_defs);
+    CPy_DecRef(cpy_r_name);
+    goto CPyL114;
+CPyL139: ;
     CPy_DECREF(cpy_r_defaults);
     goto CPyL91;
-CPyL139: ;
+CPyL140: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
@@ -4110,11 +4114,11 @@ CPyL139: ;
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_r123);
     goto CPyL114;
-CPyL140: ;
+CPyL141: ;
     CPy_DECREF(cpy_r_defaults);
     CPy_DECREF(cpy_r_r129);
     goto CPyL90;
-CPyL141: ;
+CPyL142: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
@@ -4125,7 +4129,7 @@ CPyL141: ;
     CPy_DecRef(cpy_r_r123);
     CPy_DecRef(cpy_r_r129);
     goto CPyL114;
-CPyL142: ;
+CPyL143: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
@@ -4137,7 +4141,7 @@ CPyL142: ;
     CPy_DecRef(cpy_r_r129);
     CPy_DecRef(cpy_r_arg_name);
     goto CPyL114;
-CPyL143: ;
+CPyL144: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
@@ -4145,7 +4149,7 @@ CPyL143: ;
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_name);
     goto CPyL114;
-CPyL144: ;
+CPyL145: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
@@ -4155,10 +4159,10 @@ CPyL144: ;
     CPy_DecRef(cpy_r_default_items);
     CPy_DecRef(cpy_r_existing_info);
     goto CPyL114;
-CPyL145: ;
+CPyL146: ;
     CPy_DECREF(cpy_r_existing_info);
     goto CPyL95;
-CPyL146: ;
+CPyL147: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
@@ -4167,29 +4171,29 @@ CPyL146: ;
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_default_items);
     goto CPyL114;
-CPyL147: ;
-    CPy_DecRef(cpy_r_call);
-    CPy_DecRef(cpy_r_typename);
-    CPy_DecRef(cpy_r_tvar_defs);
-    CPy_DecRef(cpy_r_name);
-    goto CPyL114;
 CPyL148: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_typename);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_name);
-    CPy_DecRef(cpy_r_info);
     goto CPyL114;
 CPyL149: ;
+    CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_typename);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_info);
     goto CPyL114;
 CPyL150: ;
+    CPy_DecRef(cpy_r_typename);
+    CPy_DecRef(cpy_r_tvar_defs);
+    CPy_DecRef(cpy_r_name);
+    CPy_DecRef(cpy_r_info);
+    goto CPyL114;
+CPyL151: ;
     CPy_DECREF(cpy_r_name);
     goto CPyL113;
-CPyL151: ;
+CPyL152: ;
     CPy_DecRef(cpy_r_typename);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_info);
@@ -6576,7 +6580,9 @@ CPyL21: ;
     cpy_r_r43 = ((mypy___semanal_namedtuple___NamedTupleAnalyzerObject *)cpy_r_self)->_options;
     CPy_INCREF(cpy_r_r43);
     cpy_r_r44 = ((mypy___semanal_namedtuple___NamedTupleAnalyzerObject *)cpy_r_self)->_api;
+    CPy_INCREF(cpy_r_r44);
     cpy_r_r45 = CPY_GET_ATTR_TRAIT(cpy_r_r44, CPyType_semanal_shared___SemanticAnalyzerInterface, 27, mypy___semanal_shared___SemanticAnalyzerInterfaceObject, char); /* is_stub_file */
+    CPy_DECREF(cpy_r_r44);
     if (unlikely(cpy_r_r45 == 2)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "parse_namedtuple_fields_with_types", 449, CPyStatic_semanal_namedtuple___globals);
         goto CPyL64;
@@ -7663,15 +7669,13 @@ CPyL35: ;
     }
     cpy_r_arg_2 = cpy_r_r53;
     cpy_r_r54 = ((mypy___nodes___ArgumentObject *)cpy_r_arg_2)->_variable;
-    CPy_INCREF(cpy_r_r54);
-    CPy_DECREF(cpy_r_arg_2);
     cpy_r_r55 = CPY_GET_ATTR(cpy_r_r54, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r54);
     if (unlikely(cpy_r_r55 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 569, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL92;
+        goto CPyL93;
     }
 CPyL38: ;
+    CPy_DECREF(cpy_r_arg_2);
     cpy_r_r56 = CPyList_SetItemUnsafe(cpy_r_r46, cpy_r_r47, cpy_r_r55);
     if (unlikely(!cpy_r_r56)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 569, CPyStatic_semanal_namedtuple___globals);
@@ -7687,7 +7691,7 @@ CPyL40: ;
     cpy_r_r60 = PyList_New(cpy_r_r59);
     if (unlikely(cpy_r_r60 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 570, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL93;
+        goto CPyL94;
     }
     cpy_r_r61 = 0;
 CPyL42: ;
@@ -7701,7 +7705,7 @@ CPyL42: ;
         cpy_r_r67 = cpy_r_r66;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "add_method", 570, CPyStatic_semanal_namedtuple___globals, "mypy.nodes.Argument", cpy_r_r66);
-        goto CPyL94;
+        goto CPyL95;
     }
     cpy_r_arg_3 = cpy_r_r67;
     cpy_r_r68 = ((mypy___nodes___ArgumentObject *)cpy_r_arg_3)->_kind;
@@ -7710,7 +7714,7 @@ CPyL42: ;
     cpy_r_r69 = CPyList_SetItemUnsafe(cpy_r_r60, cpy_r_r61, cpy_r_r68);
     if (unlikely(!cpy_r_r69)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 570, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL94;
+        goto CPyL95;
     }
     cpy_r_r70 = cpy_r_r61 + 2;
     cpy_r_r61 = cpy_r_r70;
@@ -7722,14 +7726,14 @@ CPyL46: ;
     cpy_r_r73 = cpy_r_r72 >= 0;
     if (unlikely(!cpy_r_r73)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 571, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL95;
+        goto CPyL96;
     }
     cpy_r_r74 = cpy_r_r72;
     cpy_r_r75 = cpy_r_r74 ^ 1;
     if (cpy_r_r75) {
         goto CPyL50;
     } else
-        goto CPyL96;
+        goto CPyL97;
 CPyL48: ;
     PyErr_SetNone(PyExc_AssertionError);
     cpy_r_r76 = 0;
@@ -7742,7 +7746,7 @@ CPyL50: ;
     cpy_r_r77 = ((mypy___semanal_namedtuple___build_namedtuple_typeinfo_NamedTupleAnalyzer_envObject *)cpy_r_r0)->_function_type;
     if (unlikely(cpy_r_r77 == NULL)) {
         CPy_AttributeError("mypy/semanal_namedtuple.py", "add_method", "build_namedtuple_typeinfo_NamedTupleAnalyzer_env", "function_type", 572, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL95;
+        goto CPyL96;
     }
     CPy_INCREF(cpy_r_r77);
 CPyL51: ;
@@ -7773,14 +7777,14 @@ CPyL51: ;
     cpy_r_r93 = ((mypy___semanal_namedtuple___build_namedtuple_typeinfo_NamedTupleAnalyzer_envObject *)cpy_r_r0)->_tvd;
     if (unlikely(cpy_r_r93 == NULL)) {
         CPy_AttributeError("mypy/semanal_namedtuple.py", "add_method", "build_namedtuple_typeinfo_NamedTupleAnalyzer_env", "tvd", 573, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL97;
+        goto CPyL98;
     }
     CPy_INCREF(cpy_r_r93);
 CPyL53: ;
     cpy_r_r94 = PyList_New(1);
     if (unlikely(cpy_r_r94 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 573, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL98;
+        goto CPyL99;
     }
     cpy_r_r95 = (CPyPtr)&((PyListObject *)cpy_r_r94)->ob_item;
     cpy_r_r96 = *(CPyPtr *)cpy_r_r95;
@@ -7790,13 +7794,13 @@ CPyL53: ;
     cpy_r_r98 = PyList_New(0);
     if (unlikely(cpy_r_r98 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 574, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL97;
+        goto CPyL98;
     }
     cpy_r_r99 = CPyDef_nodes___Block(cpy_r_r98);
     CPy_DECREF(cpy_r_r98);
     if (unlikely(cpy_r_r99 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 574, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL97;
+        goto CPyL98;
     }
     cpy_r_r100 = NULL;
     cpy_r_r101 = CPyDef_nodes___FuncDef(cpy_r_funcname, cpy_r_args, cpy_r_r99, cpy_r_r100);
@@ -7804,13 +7808,13 @@ CPyL53: ;
     CPy_DECREF(cpy_r_r99);
     if (unlikely(cpy_r_r101 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 574, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL99;
+        goto CPyL100;
     }
     cpy_r_func = cpy_r_r101;
     cpy_r_r102 = ((mypy___semanal_namedtuple___build_namedtuple_typeinfo_NamedTupleAnalyzer_envObject *)cpy_r_r0)->_info;
     if (unlikely(cpy_r_r102 == NULL)) {
         CPy_AttributeError("mypy/semanal_namedtuple.py", "add_method", "build_namedtuple_typeinfo_NamedTupleAnalyzer_env", "info", 575, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL100;
+        goto CPyL101;
     }
     CPy_INCREF(cpy_r_r102);
 CPyL58: ;
@@ -7821,14 +7825,14 @@ CPyL58: ;
     CPy_DECREF(cpy_r_signature);
     if (unlikely(cpy_r_r105 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 577, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL101;
+        goto CPyL102;
     }
     CPy_DECREF(((mypy___nodes___FuncDefObject *)cpy_r_func)->_type);
     ((mypy___nodes___FuncDefObject *)cpy_r_func)->_type = cpy_r_r105;
     cpy_r_r107 = ((mypy___semanal_namedtuple___build_namedtuple_typeinfo_NamedTupleAnalyzer_envObject *)cpy_r_r0)->_info;
     if (unlikely(cpy_r_r107 == NULL)) {
         CPy_AttributeError("mypy/semanal_namedtuple.py", "add_method", "build_namedtuple_typeinfo_NamedTupleAnalyzer_env", "info", 578, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL101;
+        goto CPyL102;
     }
     CPy_INCREF(cpy_r_r107);
 CPyL60: ;
@@ -7836,7 +7840,7 @@ CPyL60: ;
     CPy_DECREF(cpy_r_r107);
     if (unlikely(cpy_r_r108 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 578, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL101;
+        goto CPyL102;
     }
 CPyL61: ;
     cpy_r_r109 = CPyStatics[224]; /* '.' */
@@ -7844,20 +7848,20 @@ CPyL61: ;
     CPy_DECREF(cpy_r_r108);
     if (unlikely(cpy_r_r110 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 578, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL101;
+        goto CPyL102;
     }
     cpy_r_r111 = PyUnicode_Concat(cpy_r_r110, cpy_r_funcname);
     CPy_DECREF(cpy_r_r110);
     if (unlikely(cpy_r_r111 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 578, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL101;
+        goto CPyL102;
     }
     CPy_DECREF(((mypy___nodes___FuncDefObject *)cpy_r_func)->__fullname);
     ((mypy___nodes___FuncDefObject *)cpy_r_func)->__fullname = cpy_r_r111;
     cpy_r_r113 = ((mypy___semanal_namedtuple___build_namedtuple_typeinfo_NamedTupleAnalyzer_envObject *)cpy_r_r0)->_line;
     if (unlikely(cpy_r_r113 == CPY_INT_TAG)) {
         CPy_AttributeError("mypy/semanal_namedtuple.py", "add_method", "build_namedtuple_typeinfo_NamedTupleAnalyzer_env", "line", 579, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL101;
+        goto CPyL102;
     }
     CPyTagged_INCREF(cpy_r_r113);
 CPyL64: ;
@@ -7870,20 +7874,20 @@ CPyL64: ;
         cpy_r_r116 = cpy_r_r115;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_namedtuple.py", "add_method", 581, CPyStatic_semanal_namedtuple___globals, "mypy.types.ProperType", cpy_r_r115);
-        goto CPyL101;
+        goto CPyL102;
     }
     cpy_r_r117 = CPyDef_nodes___Var(cpy_r_funcname, cpy_r_r116);
     CPy_DECREF(cpy_r_r116);
     if (unlikely(cpy_r_r117 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 581, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL101;
+        goto CPyL102;
     }
     cpy_r_v = cpy_r_r117;
     ((mypy___nodes___VarObject *)cpy_r_v)->_is_classmethod = 1;
     cpy_r_r119 = ((mypy___semanal_namedtuple___build_namedtuple_typeinfo_NamedTupleAnalyzer_envObject *)cpy_r_r0)->_info;
     if (unlikely(cpy_r_r119 == NULL)) {
         CPy_AttributeError("mypy/semanal_namedtuple.py", "add_method", "build_namedtuple_typeinfo_NamedTupleAnalyzer_env", "info", 583, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL102;
+        goto CPyL103;
     }
     CPy_INCREF(cpy_r_r119);
 CPyL68: ;
@@ -7897,18 +7901,18 @@ CPyL68: ;
     cpy_r_r123 = 1;
     if (unlikely(!cpy_r_r123)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 585, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL102;
+        goto CPyL103;
     }
     cpy_r_r124 = CPyStatics[4849]; /* 'classmethod' */
     cpy_r_r125 = CPyDef_nodes___NameExpr(cpy_r_r124);
     if (unlikely(cpy_r_r125 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 586, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL102;
+        goto CPyL103;
     }
     cpy_r_r126 = PyList_New(1);
     if (unlikely(cpy_r_r126 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 586, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL103;
+        goto CPyL104;
     }
     cpy_r_r127 = (CPyPtr)&((PyListObject *)cpy_r_r126)->ob_item;
     cpy_r_r128 = *(CPyPtr *)cpy_r_r127;
@@ -7925,7 +7929,7 @@ CPyL68: ;
     cpy_r_r130 = ((mypy___semanal_namedtuple___build_namedtuple_typeinfo_NamedTupleAnalyzer_envObject *)cpy_r_r0)->_line;
     if (unlikely(cpy_r_r130 == CPY_INT_TAG)) {
         CPy_AttributeError("mypy/semanal_namedtuple.py", "add_method", "build_namedtuple_typeinfo_NamedTupleAnalyzer_env", "line", 587, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL104;
+        goto CPyL105;
     }
     CPyTagged_INCREF(cpy_r_r130);
 CPyL73: ;
@@ -7968,7 +7972,7 @@ CPyL77: ;
     CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r145 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 592, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL105;
+        goto CPyL106;
     }
 CPyL78: ;
     cpy_r_r146 = ((mypy___nodes___TypeInfoObject *)cpy_r_r145)->_names;
@@ -7980,7 +7984,7 @@ CPyL78: ;
     CPy_DECREF(cpy_r_r145);
     if (unlikely(cpy_r_r146 == NULL)) {
         CPy_AddTraceback("mypy/semanal_namedtuple.py", "add_method", 592, CPyStatic_semanal_namedtuple___globals);
-        goto CPyL105;
+        goto CPyL106;
     }
 CPyL79: ;
     cpy_r_r147 = CPyDict_SetItem(cpy_r_r146, cpy_r_funcname, cpy_r_sym);
@@ -8048,69 +8052,76 @@ CPyL93: ;
     CPy_DecRef(cpy_r_args);
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_types);
-    CPy_DecRef(cpy_r_items);
+    CPy_DecRef(cpy_r_r46);
+    CPy_DecRef(cpy_r_arg_2);
     goto CPyL81;
 CPyL94: ;
     CPy_DecRef(cpy_r_args);
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_types);
     CPy_DecRef(cpy_r_items);
-    CPy_DecRef(cpy_r_r60);
     goto CPyL81;
 CPyL95: ;
     CPy_DecRef(cpy_r_args);
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_types);
     CPy_DecRef(cpy_r_items);
-    CPy_DecRef(cpy_r_arg_kinds);
+    CPy_DecRef(cpy_r_r60);
     goto CPyL81;
 CPyL96: ;
+    CPy_DecRef(cpy_r_args);
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_types);
+    CPy_DecRef(cpy_r_items);
+    CPy_DecRef(cpy_r_arg_kinds);
+    goto CPyL81;
+CPyL97: ;
     CPy_DECREF(cpy_r_args);
     CPy_DECREF(cpy_r_r0);
     CPy_DECREF(cpy_r_types);
     CPy_DECREF(cpy_r_items);
     CPy_DECREF(cpy_r_arg_kinds);
     goto CPyL48;
-CPyL97: ;
+CPyL98: ;
     CPy_DecRef(cpy_r_args);
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_signature);
     goto CPyL81;
-CPyL98: ;
+CPyL99: ;
     CPy_DecRef(cpy_r_args);
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_signature);
     CPy_DecRef(cpy_r_r93);
     goto CPyL81;
-CPyL99: ;
-    CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_signature);
-    goto CPyL81;
 CPyL100: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_signature);
-    CPy_DecRef(cpy_r_func);
     goto CPyL81;
 CPyL101: ;
     CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_signature);
     CPy_DecRef(cpy_r_func);
     goto CPyL81;
 CPyL102: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_func);
-    CPy_DecRef(cpy_r_v);
     goto CPyL81;
 CPyL103: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_func);
     CPy_DecRef(cpy_r_v);
-    CPy_DecRef(cpy_r_r125);
     goto CPyL81;
 CPyL104: ;
     CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_dec);
+    CPy_DecRef(cpy_r_func);
+    CPy_DecRef(cpy_r_v);
+    CPy_DecRef(cpy_r_r125);
     goto CPyL81;
 CPyL105: ;
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_dec);
+    goto CPyL81;
+CPyL106: ;
     CPy_DecRef(cpy_r_sym);
     goto CPyL81;
 }

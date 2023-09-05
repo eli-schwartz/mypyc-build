@@ -2862,7 +2862,6 @@ CPyL11: ;
         goto CPyL54;
     }
     cpy_r_r34 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_node)->_node;
-    CPy_INCREF(cpy_r_r34);
     if (likely((Py_TYPE(cpy_r_r34) == CPyType_nodes___FakeInfo) || (Py_TYPE(cpy_r_r34) == CPyType_nodes___TypeInfo)))
         cpy_r_r35 = cpy_r_r34;
     else {
@@ -2870,7 +2869,6 @@ CPyL11: ;
         goto CPyL55;
     }
     cpy_r_r36 = CPY_GET_ATTR(cpy_r_r35, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r35);
     if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "load_type_map", 144, CPyStatic_prepare___globals);
         goto CPyL55;
@@ -4344,7 +4342,6 @@ char CPyDef_prepare___prepare_method_def(PyObject *cpy_r_ir, PyObject *cpy_r_mod
     }
     CPy_INCREF(cpy_r_r7);
 CPyL4: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___FuncDef))
         cpy_r_r8 = cpy_r_node;
     else {
@@ -4352,7 +4349,6 @@ CPyL4: ;
         goto CPyL53;
     }
     cpy_r_r9 = CPY_GET_ATTR(cpy_r_r8, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r8);
     if (unlikely(cpy_r_r9 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "prepare_method_def", 183, CPyStatic_prepare___globals);
         goto CPyL53;
@@ -4413,7 +4409,6 @@ CPyL7: ;
     }
     CPy_INCREF(cpy_r_r26);
 CPyL13: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___Decorator))
         cpy_r_r27 = cpy_r_node;
     else {
@@ -4421,7 +4416,6 @@ CPyL13: ;
         goto CPyL56;
     }
     cpy_r_r28 = CPY_GET_ATTR(cpy_r_r27, CPyType_nodes___Decorator, 6, mypy___nodes___DecoratorObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r27);
     if (unlikely(cpy_r_r28 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "prepare_method_def", 189, CPyStatic_prepare___globals);
         goto CPyL56;
@@ -4527,7 +4521,6 @@ CPyL25: ;
     CPy_INCREF(cpy_r_r60);
 CPyL30: ;
     cpy_r_r61 = CPyStatics[7714]; /* '__mypyc_setter__' */
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___Decorator))
         cpy_r_r62 = cpy_r_node;
     else {
@@ -4535,7 +4528,6 @@ CPyL30: ;
         goto CPyL57;
     }
     cpy_r_r63 = CPY_GET_ATTR(cpy_r_r62, CPyType_nodes___Decorator, 6, mypy___nodes___DecoratorObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r62);
     if (unlikely(cpy_r_r63 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "prepare_method_def", 198, CPyStatic_prepare___globals);
         goto CPyL57;
@@ -4584,7 +4576,6 @@ CPyL36: ;
         goto CPyL59;
 CPyL38: ;
     cpy_r_r75 = CPyStatics[8508]; /* "Expected return type annotation for property '" */
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___Decorator))
         cpy_r_r76 = cpy_r_node;
     else {
@@ -4592,7 +4583,6 @@ CPyL38: ;
         goto CPyL50;
     }
     cpy_r_r77 = CPY_GET_ATTR(cpy_r_r76, CPyType_nodes___Decorator, 6, mypy___nodes___DecoratorObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r76);
     if (unlikely(cpy_r_r77 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "prepare_method_def", 201, CPyStatic_prepare___globals);
         goto CPyL50;
@@ -4641,7 +4631,6 @@ CPyL45: ;
     }
     CPy_INCREF(cpy_r_r89);
 CPyL46: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___Decorator))
         cpy_r_r90 = cpy_r_node;
     else {
@@ -4649,7 +4638,6 @@ CPyL46: ;
         goto CPyL62;
     }
     cpy_r_r91 = CPY_GET_ATTR(cpy_r_r90, CPyType_nodes___Decorator, 6, mypy___nodes___DecoratorObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r90);
     if (unlikely(cpy_r_r91 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "prepare_method_def", 203, CPyStatic_prepare___globals);
         goto CPyL62;
@@ -7658,7 +7646,6 @@ __LL10436: ;
     cpy_r_r26 = *(PyObject * *)cpy_r_r25;
     cpy_r_r27 = cpy_r_r26 == cpy_r_r24;
     if (!cpy_r_r27) goto CPyL22;
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___Decorator))
         cpy_r_r28 = cpy_r_node;
     else {
@@ -7666,7 +7653,6 @@ __LL10436: ;
         goto CPyL42;
     }
     cpy_r_r29 = CPY_GET_ATTR(cpy_r_r28, CPyType_nodes___Decorator, 6, mypy___nodes___DecoratorObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r28);
     if (unlikely(cpy_r_r29 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "add_property_methods_for_attribute_if_needed", 398, CPyStatic_prepare___globals);
         goto CPyL42;
@@ -7902,7 +7888,7 @@ char CPyDef_prepare___add_getter_declaration(PyObject *cpy_r_ir, PyObject *cpy_r
     int32_t cpy_r_r19;
     char cpy_r_r20;
     char cpy_r_r21;
-    cpy_r_r0 = CPyStatics[729]; /* 'self' */
+    cpy_r_r0 = CPyStatics[730]; /* 'self' */
     cpy_r_r1 = CPyDef_rtypes___RInstance(cpy_r_ir);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "add_getter_declaration", 413, CPyStatic_prepare___globals);
@@ -8070,7 +8056,7 @@ char CPyDef_prepare___add_setter_declaration(PyObject *cpy_r_ir, PyObject *cpy_r
     int32_t cpy_r_r24;
     char cpy_r_r25;
     char cpy_r_r26;
-    cpy_r_r0 = CPyStatics[729]; /* 'self' */
+    cpy_r_r0 = CPyStatics[730]; /* 'self' */
     cpy_r_r1 = CPyDef_rtypes___RInstance(cpy_r_ir);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "add_setter_declaration", 425, CPyStatic_prepare___globals);
@@ -8447,15 +8433,13 @@ CPyL16: ;
         goto CPyL55;
     }
     cpy_r_r30 = ((mypy___nodes___FuncDefObject *)cpy_r_r29)->_info;
-    CPy_INCREF(cpy_r_r30);
-    CPy_DECREF(cpy_r_init_node);
     cpy_r_r31 = CPY_GET_ATTR(cpy_r_r30, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r30);
     if (unlikely(cpy_r_r31 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/prepare.py", "prepare_init_method", 449, CPyStatic_prepare___globals);
-        goto CPyL59;
+        goto CPyL55;
     }
 CPyL18: ;
+    CPy_DECREF(cpy_r_init_node);
     cpy_r_r32 = CPyStatics[736]; /* 'builtins.object' */
     cpy_r_r33 = PyUnicode_Compare(cpy_r_r31, cpy_r_r32);
     CPy_DECREF(cpy_r_r31);

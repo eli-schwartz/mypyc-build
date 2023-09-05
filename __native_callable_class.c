@@ -554,9 +554,7 @@ CPyL11: ;
     cpy_r_r32 = ((mypy___nodes___FuncItemObject *)cpy_r_r31)->_line;
     CPyTagged_INCREF(cpy_r_r32);
     cpy_r_r33 = ((mypyc___irbuild___context___FuncInfoObject *)cpy_r_fn_info)->_fitem;
-    CPy_INCREF(cpy_r_r33);
     cpy_r_r34 = CPY_GET_ATTR(cpy_r_r33, CPyType_nodes___FuncItem, 6, mypy___nodes___FuncItemObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r33);
     if (unlikely(cpy_r_r34 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/callable_class.py", "add_call_to_callable_class", 101, CPyStatic_callable_class___globals);
         goto CPyL27;

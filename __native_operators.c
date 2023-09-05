@@ -456,7 +456,7 @@ CPyL3: ;
     cpy_r_r50 = CPyStatics[4198]; /* '__gt__' */
     cpy_r_r51 = CPyStatics[2470]; /* '<=' */
     cpy_r_r52 = CPyStatics[4199]; /* '__le__' */
-    cpy_r_r53 = CPyStatics[867]; /* 'in' */
+    cpy_r_r53 = CPyStatics[866]; /* 'in' */
     cpy_r_r54 = CPyStatics[1188]; /* '__contains__' */
     cpy_r_r55 = CPyDict_Build(21, cpy_r_r13, cpy_r_r14, cpy_r_r15, cpy_r_r16, cpy_r_r17, cpy_r_r18, cpy_r_r19, cpy_r_r20, cpy_r_r21, cpy_r_r22, cpy_r_r23, cpy_r_r24, cpy_r_r25, cpy_r_r26, cpy_r_r27, cpy_r_r28, cpy_r_r29, cpy_r_r30, cpy_r_r31, cpy_r_r32, cpy_r_r33, cpy_r_r34, cpy_r_r35, cpy_r_r36, cpy_r_r37, cpy_r_r38, cpy_r_r39, cpy_r_r40, cpy_r_r41, cpy_r_r42, cpy_r_r43, cpy_r_r44, cpy_r_r45, cpy_r_r46, cpy_r_r47, cpy_r_r48, cpy_r_r49, cpy_r_r50, cpy_r_r51, cpy_r_r52, cpy_r_r53, cpy_r_r54);
     if (unlikely(cpy_r_r55 == NULL)) {

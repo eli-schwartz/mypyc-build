@@ -4612,8 +4612,10 @@ CPyL20: ;
         CPy_AttributeError("mypy/typeanal.py", "__init__", "TypeAnalyser", "api", 214, CPyStatic_typeanal___globals);
         goto CPyL58;
     }
+    CPy_INCREF(cpy_r_r13);
 CPyL30: ;
     cpy_r_r14 = CPY_GET_ATTR_TRAIT(cpy_r_r13, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 11, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, char); /* is_stub_file */
+    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "__init__", 214, CPyStatic_typeanal___globals);
         goto CPyL58;
@@ -5659,8 +5661,10 @@ CPyL6: ;
         CPy_AttributeError("mypy/typeanal.py", "visit_unbound_type_nonoptional", "TypeAnalyser", "api", 266, CPyStatic_typeanal___globals);
         goto CPyL264;
     }
+    CPy_INCREF(cpy_r_r13);
 CPyL7: ;
     cpy_r_r14 = CPY_GET_ATTR_TRAIT(cpy_r_r13, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 9, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, char); /* final_iteration */
+    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 266, CPyStatic_typeanal___globals);
         goto CPyL264;
@@ -5730,15 +5734,15 @@ CPyL18: ;
         cpy_r_r28 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 276, CPyStatic_typeanal___globals, "mypy.nodes.PlaceholderNode", cpy_r_node);
-        goto CPyL260;
+        goto CPyL264;
     }
     cpy_r_r29 = CPY_GET_ATTR(cpy_r_r28, CPyType_nodes___PlaceholderNode, 7, mypy___nodes___PlaceholderNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r28);
     if (unlikely(cpy_r_r29 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 276, CPyStatic_typeanal___globals);
-        goto CPyL260;
+        goto CPyL264;
     }
 CPyL20: ;
+    CPy_DECREF(cpy_r_node);
     cpy_r_r30 = ((mypy___types___UnboundTypeObject *)cpy_r_t)->_args;
     CPy_INCREF(cpy_r_r30);
     cpy_r_r31 = 2;
@@ -5765,8 +5769,10 @@ CPyL23: ;
         CPy_AttributeError("mypy/typeanal.py", "visit_unbound_type_nonoptional", "TypeAnalyser", "api", 283, CPyStatic_typeanal___globals);
         goto CPyL260;
     }
+    CPy_INCREF(cpy_r_r35);
 CPyL24: ;
     cpy_r_r36 = CPY_GET_ATTR_TRAIT(cpy_r_r35, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 9, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, char); /* final_iteration */
+    CPy_DECREF(cpy_r_r35);
     if (unlikely(cpy_r_r36 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 283, CPyStatic_typeanal___globals);
         goto CPyL260;
@@ -5862,7 +5868,6 @@ CPyL34: ;
     }
     return cpy_r_r64;
 CPyL40: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r65 = cpy_r_node;
     else {
@@ -5870,7 +5875,6 @@ CPyL40: ;
         goto CPyL269;
     }
     cpy_r_r66 = CPY_GET_ATTR_TRAIT(cpy_r_r65, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r65);
     if (unlikely(cpy_r_r66 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 293, CPyStatic_typeanal___globals);
         goto CPyL269;
@@ -6768,7 +6772,6 @@ CPyL181: ;
     }
     cpy_r_r309 = ((mypy___types___UnboundTypeObject *)cpy_r_t)->_args;
     CPy_INCREF(cpy_r_r309);
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___TypeAlias))
         cpy_r_r310 = cpy_r_node;
     else {
@@ -6776,7 +6779,6 @@ CPyL181: ;
         goto CPyL315;
     }
     cpy_r_r311 = CPY_GET_ATTR(cpy_r_r310, CPyType_nodes___TypeAlias, 10, mypy___nodes___TypeAliasObject, char); /* has_param_spec_type */
-    CPy_DECREF(cpy_r_r310);
     if (unlikely(cpy_r_r311 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 390, CPyStatic_typeanal___globals);
         goto CPyL315;
@@ -6790,7 +6792,6 @@ CPyL184: ;
         goto CPyL264;
     }
     cpy_r_an_args = cpy_r_r313;
-    CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___TypeAlias))
         cpy_r_r314 = cpy_r_node;
     else {
@@ -6798,7 +6799,6 @@ CPyL184: ;
         goto CPyL316;
     }
     cpy_r_r315 = CPY_GET_ATTR(cpy_r_r314, CPyType_nodes___TypeAlias, 10, mypy___nodes___TypeAliasObject, char); /* has_param_spec_type */
-    CPy_DECREF(cpy_r_r314);
     if (unlikely(cpy_r_r315 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 392, CPyStatic_typeanal___globals);
         goto CPyL316;
@@ -7043,7 +7043,6 @@ CPyL227: ;
     }
     return cpy_r_r379;
 CPyL230: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r380 = cpy_r_node;
     else {
@@ -7051,7 +7050,6 @@ CPyL230: ;
         goto CPyL269;
     }
     cpy_r_r381 = CPY_GET_ATTR_TRAIT(cpy_r_r380, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r380);
     if (unlikely(cpy_r_r381 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 429, CPyStatic_typeanal___globals);
         goto CPyL269;
@@ -7105,7 +7103,6 @@ CPyL237: ;
     }
     return cpy_r_r392;
 CPyL239: ;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r393 = cpy_r_node;
     else {
@@ -7113,7 +7110,6 @@ CPyL239: ;
         goto CPyL269;
     }
     cpy_r_r394 = CPY_GET_ATTR_TRAIT(cpy_r_r393, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r393);
     if (unlikely(cpy_r_r394 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 432, CPyStatic_typeanal___globals);
         goto CPyL269;
@@ -7146,15 +7142,15 @@ CPyL246: ;
         cpy_r_r403 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 432, CPyStatic_typeanal___globals, "mypy.nodes.SymbolNode", cpy_r_node);
-        goto CPyL262;
+        goto CPyL269;
     }
     cpy_r_r404 = CPY_GET_ATTR_TRAIT(cpy_r_r403, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r403);
     if (unlikely(cpy_r_r404 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type_nonoptional", 432, CPyStatic_typeanal___globals);
-        goto CPyL262;
+        goto CPyL269;
     }
 CPyL248: ;
+    CPy_DECREF(cpy_r_node);
     cpy_r_r405 = CPyStatics[6231]; /* 'typing.Concatenate' */
     cpy_r_r406 = PyUnicode_Compare(cpy_r_r404, cpy_r_r405);
     CPy_DECREF(cpy_r_r404);
@@ -10745,8 +10741,10 @@ CPyL309: ;
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeAnalyser", "api", 639, CPyStatic_typeanal___globals);
         goto CPyL348;
     }
+    CPy_INCREF(cpy_r_r526);
 CPyL310: ;
     cpy_r_r527 = CPY_GET_ATTR_TRAIT(cpy_r_r526, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r526);
     if (unlikely(cpy_r_r527 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 639, CPyStatic_typeanal___globals);
         goto CPyL348;
@@ -10754,6 +10752,7 @@ CPyL310: ;
 CPyL311: ;
     cpy_r_r528 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r529 = cpy_r_r527 == cpy_r_r528;
+    CPy_DECREF(cpy_r_r527);
     if (!cpy_r_r529) goto CPyL315;
     cpy_r_r530 = CPyStatics[6259]; /* ('Self type is only allowed in annotations within '
                                       'class definition') */
@@ -10779,8 +10778,10 @@ CPyL315: ;
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeAnalyser", "api", 642, CPyStatic_typeanal___globals);
         goto CPyL348;
     }
+    CPy_INCREF(cpy_r_r538);
 CPyL316: ;
     cpy_r_r539 = CPY_GET_ATTR_TRAIT(cpy_r_r538, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r538);
     if (unlikely(cpy_r_r539 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 642, CPyStatic_typeanal___globals);
         goto CPyL348;
@@ -10813,8 +10814,10 @@ CPyL321: ;
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeAnalyser", "api", 644, CPyStatic_typeanal___globals);
         goto CPyL348;
     }
+    CPy_INCREF(cpy_r_r546);
 CPyL322: ;
     cpy_r_r547 = CPY_GET_ATTR_TRAIT(cpy_r_r546, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r546);
     if (unlikely(cpy_r_r547 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 644, CPyStatic_typeanal___globals);
         goto CPyL348;
@@ -10824,24 +10827,27 @@ CPyL323: ;
         cpy_r_r548 = cpy_r_r547;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 644, CPyStatic_typeanal___globals, "mypy.nodes.TypeInfo", cpy_r_r547);
-        goto CPyL348;
+        goto CPyL356;
     }
     cpy_r_r549 = ((mypy___nodes___TypeInfoObject *)cpy_r_r548)->_self_type;
     if (unlikely(cpy_r_r549 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeInfo", "self_type", 644, CPyStatic_typeanal___globals);
-        goto CPyL348;
+        goto CPyL356;
     }
 CPyL325: ;
     cpy_r_r550 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r551 = cpy_r_r549 != cpy_r_r550;
+    CPy_DECREF(cpy_r_r547);
     if (!cpy_r_r551) goto CPyL344;
     cpy_r_r552 = ((mypy___typeanal___TypeAnalyserObject *)cpy_r_self)->_api;
     if (unlikely(cpy_r_r552 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeAnalyser", "api", 645, CPyStatic_typeanal___globals);
         goto CPyL348;
     }
+    CPy_INCREF(cpy_r_r552);
 CPyL327: ;
     cpy_r_r553 = CPY_GET_ATTR_TRAIT(cpy_r_r552, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r552);
     if (unlikely(cpy_r_r553 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 645, CPyStatic_typeanal___globals);
         goto CPyL348;
@@ -10851,14 +10857,15 @@ CPyL328: ;
         cpy_r_r554 = cpy_r_r553;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 645, CPyStatic_typeanal___globals, "mypy.nodes.TypeInfo", cpy_r_r553);
-        goto CPyL348;
+        goto CPyL357;
     }
     cpy_r_r555 = ((mypy___nodes___TypeInfoObject *)cpy_r_r554)->_is_final;
     if (unlikely(cpy_r_r555 == 2)) {
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeInfo", "is_final", 645, CPyStatic_typeanal___globals);
-        goto CPyL348;
+        goto CPyL357;
     }
 CPyL330: ;
+    CPy_DECREF(cpy_r_r553);
     if (!cpy_r_r555) goto CPyL336;
 CPyL331: ;
     cpy_r_r556 = ((mypy___typeanal___TypeAnalyserObject *)cpy_r_self)->_api;
@@ -10866,8 +10873,10 @@ CPyL331: ;
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeAnalyser", "api", 646, CPyStatic_typeanal___globals);
         goto CPyL348;
     }
+    CPy_INCREF(cpy_r_r556);
 CPyL332: ;
     cpy_r_r557 = CPY_GET_ATTR_TRAIT(cpy_r_r556, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r556);
     if (unlikely(cpy_r_r557 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 646, CPyStatic_typeanal___globals);
         goto CPyL348;
@@ -10892,8 +10901,10 @@ CPyL336: ;
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeAnalyser", "api", 647, CPyStatic_typeanal___globals);
         goto CPyL348;
     }
+    CPy_INCREF(cpy_r_r560);
 CPyL337: ;
     cpy_r_r561 = CPY_GET_ATTR_TRAIT(cpy_r_r560, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r560);
     if (unlikely(cpy_r_r561 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 647, CPyStatic_typeanal___globals);
         goto CPyL348;
@@ -10903,12 +10914,12 @@ CPyL338: ;
         cpy_r_r562 = cpy_r_r561;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 647, CPyStatic_typeanal___globals, "mypy.nodes.TypeInfo", cpy_r_r561);
-        goto CPyL348;
+        goto CPyL358;
     }
     cpy_r_r563 = ((mypy___nodes___TypeInfoObject *)cpy_r_r562)->_self_type;
     if (unlikely(cpy_r_r563 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "try_analyze_special_unbound_type", "TypeInfo", "self_type", 647, CPyStatic_typeanal___globals);
-        goto CPyL348;
+        goto CPyL358;
     }
     CPy_INCREF(cpy_r_r563);
 CPyL340: ;
@@ -10916,8 +10927,9 @@ CPyL340: ;
         cpy_r_r564 = cpy_r_r563;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 647, CPyStatic_typeanal___globals, "mypy.types.TypeVarType", cpy_r_r563);
-        goto CPyL348;
+        goto CPyL358;
     }
+    CPy_DECREF(cpy_r_r561);
     cpy_r_r565 = ((mypy___types___UnboundTypeObject *)cpy_r_t)->_line;
     CPyTagged_INCREF(cpy_r_r565);
     cpy_r_r566 = ((mypy___types___UnboundTypeObject *)cpy_r_t)->_column;
@@ -10925,7 +10937,7 @@ CPyL340: ;
     cpy_r_r567 = PyDict_New();
     if (unlikely(cpy_r_r567 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "try_analyze_special_unbound_type", 647, CPyStatic_typeanal___globals);
-        goto CPyL356;
+        goto CPyL359;
     }
     cpy_r_r568 = NULL;
     cpy_r_r569 = NULL;
@@ -10988,6 +11000,15 @@ CPyL355: ;
     CPy_DECREF(cpy_r_item);
     goto CPyL141;
 CPyL356: ;
+    CPy_DecRef(cpy_r_r547);
+    goto CPyL348;
+CPyL357: ;
+    CPy_DecRef(cpy_r_r553);
+    goto CPyL348;
+CPyL358: ;
+    CPy_DecRef(cpy_r_r561);
+    goto CPyL348;
+CPyL359: ;
     CPy_DecRef(cpy_r_r564);
     CPyTagged_DecRef(cpy_r_r565);
     CPyTagged_DecRef(cpy_r_r566);
@@ -12370,7 +12391,6 @@ CPyL2: ;
     CPy_Unreachable();
 CPyL5: ;
     cpy_r_r7 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_sym)->_node;
-    CPy_INCREF(cpy_r_r7);
     if (likely(cpy_r_r7 != Py_None))
         cpy_r_r8 = cpy_r_r7;
     else {
@@ -12378,7 +12398,6 @@ CPyL5: ;
         goto CPyL126;
     }
     cpy_r_r9 = CPY_GET_ATTR_TRAIT(cpy_r_r8, CPyType_nodes___SymbolNode, 5, mypy___nodes___SymbolNodeObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r8);
     if (unlikely(cpy_r_r9 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_unbound_type_without_type_info", 765, CPyStatic_typeanal___globals);
         goto CPyL126;
@@ -12457,9 +12476,7 @@ CPyL17: ;
         goto CPyL131;
     }
     cpy_r_r35 = ((mypy___types___InstanceObject *)cpy_r_r34)->_type;
-    CPy_INCREF(cpy_r_r35);
     cpy_r_r36 = CPY_GET_ATTR(cpy_r_r35, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r35);
     if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_unbound_type_without_type_info", 778, CPyStatic_typeanal___globals);
         goto CPyL131;
@@ -12639,7 +12656,6 @@ CPyL51: ;
         goto CPyL74;
 CPyL52: ;
     cpy_r_r95 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_sym)->_node;
-    CPy_INCREF(cpy_r_r95);
     if (likely(Py_TYPE(cpy_r_r95) == CPyType_nodes___Var))
         cpy_r_r96 = cpy_r_r95;
     else {
@@ -12647,7 +12663,6 @@ CPyL52: ;
         goto CPyL126;
     }
     cpy_r_r97 = CPY_GET_ATTR(cpy_r_r96, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r96);
     if (unlikely(cpy_r_r97 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_unbound_type_without_type_info", 802, CPyStatic_typeanal___globals);
         goto CPyL126;
@@ -12662,9 +12677,7 @@ CPyL54: ;
         goto CPyL137;
     }
     cpy_r_r100 = ((mypy___nodes___VarObject *)cpy_r_r99)->_info;
-    CPy_INCREF(cpy_r_r100);
     cpy_r_r101 = CPY_GET_ATTR(cpy_r_r100, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r100);
     if (unlikely(cpy_r_r101 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_unbound_type_without_type_info", 803, CPyStatic_typeanal___globals);
         goto CPyL137;
@@ -15708,21 +15721,19 @@ PyObject *CPyDef_typeanal___TypeAnalyser___anal_type_guard(PyObject *cpy_r_self,
         goto CPyL18;
     }
     cpy_r_r17 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_r16)->_node;
-    CPy_INCREF(cpy_r_r17);
     if (likely(cpy_r_r17 != Py_None))
         cpy_r_r18 = cpy_r_r17;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "anal_type_guard", 963, CPyStatic_typeanal___globals, "mypy.nodes.SymbolNode", cpy_r_r17);
         goto CPyL18;
     }
-    CPy_DECREF(cpy_r_sym);
     cpy_r_r19 = CPY_GET_ATTR_TRAIT(cpy_r_r18, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r18);
     if (unlikely(cpy_r_r19 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "anal_type_guard", 963, CPyStatic_typeanal___globals);
-        goto CPyL19;
+        goto CPyL18;
     }
 CPyL11: ;
+    CPy_DECREF(cpy_r_sym);
     cpy_r_r20 = CPyDef_typeanal___TypeAnalyser___anal_type_guard_arg(cpy_r_self, cpy_r_r15, cpy_r_r19);
     CPy_DECREF(cpy_r_r15);
     CPy_DECREF(cpy_r_r19);
@@ -15749,9 +15760,6 @@ CPyL17: ;
     goto CPyL14;
 CPyL18: ;
     CPy_DecRef(cpy_r_sym);
-    CPy_DecRef(cpy_r_r15);
-    goto CPyL14;
-CPyL19: ;
     CPy_DecRef(cpy_r_r15);
     goto CPyL14;
 }
@@ -19484,7 +19492,6 @@ CPyL10: ;
         goto CPyL77;
     }
     cpy_r_r19 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_r18)->_node;
-    CPy_INCREF(cpy_r_r19);
     if (likely(cpy_r_r19 != Py_None))
         cpy_r_r20 = cpy_r_r19;
     else {
@@ -19492,7 +19499,6 @@ CPyL10: ;
         goto CPyL77;
     }
     cpy_r_r21 = CPY_GET_ATTR_TRAIT(cpy_r_r20, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r20);
     if (unlikely(cpy_r_r21 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args_for_concatenate", 1188, CPyStatic_typeanal___globals);
         goto CPyL77;
@@ -19528,21 +19534,19 @@ CPyL18: ;
         goto CPyL77;
     }
     cpy_r_r31 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_r30)->_node;
-    CPy_INCREF(cpy_r_r31);
     if (likely(cpy_r_r31 != Py_None))
         cpy_r_r32 = cpy_r_r31;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args_for_concatenate", 1188, CPyStatic_typeanal___globals, "mypy.nodes.SymbolNode", cpy_r_r31);
         goto CPyL77;
     }
-    CPy_DECREF(cpy_r_sym);
     cpy_r_r33 = CPY_GET_ATTR_TRAIT(cpy_r_r32, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r32);
     if (unlikely(cpy_r_r33 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args_for_concatenate", 1188, CPyStatic_typeanal___globals);
-        goto CPyL74;
+        goto CPyL77;
     }
 CPyL21: ;
+    CPy_DECREF(cpy_r_sym);
     cpy_r_r34 = CPyStatics[6231]; /* 'typing.Concatenate' */
     cpy_r_r35 = PyUnicode_Compare(cpy_r_r33, cpy_r_r34);
     CPy_DECREF(cpy_r_r33);
@@ -20959,7 +20963,6 @@ CPyL19: ;
     CPy_INCREF(cpy_r_r36);
     return cpy_r_r36;
 CPyL20: ;
-    CPy_INCREF(cpy_r_found);
     if (likely(cpy_r_found != Py_None))
         cpy_r_r37 = cpy_r_found;
     else {
@@ -20967,7 +20970,6 @@ CPyL20: ;
         goto CPyL113;
     }
     cpy_r_r38 = CPY_GET_ATTR(cpy_r_r37, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r37);
     if (unlikely(cpy_r_r38 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1289, CPyStatic_typeanal___globals);
         goto CPyL113;
@@ -21009,30 +21011,30 @@ CPyL27: ;
         goto CPyL116;
     }
     cpy_r_r47 = CPY_GET_ATTR(cpy_r_r46, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r46);
     if (unlikely(cpy_r_r47 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1290, CPyStatic_typeanal___globals);
         goto CPyL116;
     }
 CPyL29: ;
+    CPy_DECREF(cpy_r_found);
     cpy_r_r48 = PyObject_Str(cpy_r_r47);
     CPy_DECREF(cpy_r_r47);
     if (unlikely(cpy_r_r48 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1290, CPyStatic_typeanal___globals);
-        goto CPyL116;
+        goto CPyL117;
     }
     cpy_r_r49 = CPyStatics[178]; /* '"' */
     cpy_r_r50 = CPyStr_Build(3, cpy_r_r45, cpy_r_r48, cpy_r_r49);
     CPy_DECREF(cpy_r_r48);
     if (unlikely(cpy_r_r50 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1290, CPyStatic_typeanal___globals);
-        goto CPyL116;
+        goto CPyL117;
     }
     if (likely(Py_TYPE(cpy_r_arg) == CPyType_types___CallableArgument))
         cpy_r_r51 = cpy_r_arg;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args", 1290, CPyStatic_typeanal___globals, "mypy.types.CallableArgument", cpy_r_arg);
-        goto CPyL117;
+        goto CPyL118;
     }
     cpy_r_r52 = NULL;
     cpy_r_r53 = CPyDef_typeanal___TypeAnalyser___fail(cpy_r_self, cpy_r_r50, cpy_r_r51, cpy_r_r52);
@@ -21046,7 +21048,6 @@ CPyL29: ;
     CPy_INCREF(cpy_r_r54);
     return cpy_r_r54;
 CPyL34: ;
-    CPy_INCREF(cpy_r_found);
     if (likely(cpy_r_found != Py_None))
         cpy_r_r55 = cpy_r_found;
     else {
@@ -21054,7 +21055,6 @@ CPyL34: ;
         goto CPyL113;
     }
     cpy_r_r56 = CPY_GET_ATTR(cpy_r_r55, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r55);
     if (unlikely(cpy_r_r56 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1293, CPyStatic_typeanal___globals);
         goto CPyL113;
@@ -21064,11 +21064,10 @@ CPyL36: ;
         cpy_r_r57 = cpy_r_r56;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args", 1293, CPyStatic_typeanal___globals, "str", cpy_r_r56);
-        goto CPyL118;
+        goto CPyL113;
     }
     cpy_r_r58 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r59 = cpy_r_r57 != cpy_r_r58;
-    CPy_DECREF(cpy_r_r56);
     if (cpy_r_r59) {
         goto CPyL40;
     } else
@@ -21100,21 +21099,21 @@ CPyL43: ;
         cpy_r_r63 = cpy_r_found;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args", 1294, CPyStatic_typeanal___globals, "mypy.nodes.SymbolTableNode", cpy_r_found);
-        goto CPyL109;
+        goto CPyL113;
     }
     cpy_r_r64 = CPY_GET_ATTR(cpy_r_r63, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r63);
     if (unlikely(cpy_r_r64 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1294, CPyStatic_typeanal___globals);
-        goto CPyL109;
+        goto CPyL113;
     }
 CPyL45: ;
     if (likely(cpy_r_r64 != Py_None))
         cpy_r_r65 = cpy_r_r64;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args", 1294, CPyStatic_typeanal___globals, "str", cpy_r_r64);
-        goto CPyL109;
+        goto CPyL113;
     }
+    CPy_DECREF(cpy_r_found);
     cpy_r_r66 = CPyDict_GetItem(cpy_r_r61, cpy_r_r65);
     CPy_DECREF(cpy_r_r65);
     if (unlikely(cpy_r_r66 == NULL)) {
@@ -21171,7 +21170,7 @@ CPyL54: ;
         cpy_r_r79 = cpy_r_arg;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args", 1297, CPyStatic_typeanal___globals, "mypy.types.CallableArgument", cpy_r_arg);
-        goto CPyL116;
+        goto CPyL117;
     }
     cpy_r_r80 = ((mypy___types___CallableArgumentObject *)cpy_r_r79)->_constructor;
     CPy_INCREF(cpy_r_r80);
@@ -21179,14 +21178,14 @@ CPyL54: ;
         cpy_r_r81 = cpy_r_r80;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args", 1297, CPyStatic_typeanal___globals, "str", cpy_r_r80);
-        goto CPyL116;
+        goto CPyL117;
     }
     cpy_r_r82 = CPyStatics[6311]; /* ' arguments should not have names' */
     cpy_r_r83 = CPyStr_Build(2, cpy_r_r81, cpy_r_r82);
     CPy_DECREF(cpy_r_r81);
     if (unlikely(cpy_r_r83 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1297, CPyStatic_typeanal___globals);
-        goto CPyL116;
+        goto CPyL117;
     }
     if (likely(Py_TYPE(cpy_r_arg) == CPyType_types___CallableArgument))
         cpy_r_r84 = cpy_r_arg;
@@ -21254,7 +21253,6 @@ CPyL64: ;
     cpy_r_r99 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r100 = cpy_r_sym != cpy_r_r99;
     if (!cpy_r_r100) goto CPyL128;
-    CPy_INCREF(cpy_r_sym);
     if (likely(cpy_r_sym != Py_None))
         cpy_r_r101 = cpy_r_sym;
     else {
@@ -21262,7 +21260,6 @@ CPyL64: ;
         goto CPyL129;
     }
     cpy_r_r102 = CPY_GET_ATTR(cpy_r_r101, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r101);
     if (unlikely(cpy_r_r102 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1304, CPyStatic_typeanal___globals);
         goto CPyL129;
@@ -21296,15 +21293,15 @@ CPyL74: ;
         cpy_r_r107 = cpy_r_sym;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "analyze_callable_args", 1304, CPyStatic_typeanal___globals, "mypy.nodes.SymbolTableNode", cpy_r_sym);
-        goto CPyL121;
+        goto CPyL129;
     }
     cpy_r_r108 = CPY_GET_ATTR(cpy_r_r107, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r107);
     if (unlikely(cpy_r_r108 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "analyze_callable_args", 1304, CPyStatic_typeanal___globals);
-        goto CPyL121;
+        goto CPyL129;
     }
 CPyL76: ;
+    CPy_DECREF(cpy_r_sym);
     cpy_r_r109 = CPyStatics[4888]; /* 'typing.Unpack' */
     cpy_r_r110 = PyObject_RichCompare(cpy_r_r108, cpy_r_r109, 2);
     CPy_DECREF(cpy_r_r108);
@@ -21569,18 +21566,13 @@ CPyL115: ;
     goto CPyL27;
 CPyL116: ;
     CPy_DecRef(cpy_r_arg);
+    CPy_DecRef(cpy_r_found);
     goto CPyL104;
 CPyL117: ;
-    CPy_DecRef(cpy_r_r50);
+    CPy_DecRef(cpy_r_arg);
     goto CPyL104;
 CPyL118: ;
-    CPy_DecRef(cpy_r_args);
-    CPy_DecRef(cpy_r_kinds);
-    CPy_DecRef(cpy_r_names);
-    CPy_DecRef(cpy_r_r3);
-    CPy_DecRef(cpy_r_arg);
-    CPy_DecRef(cpy_r_found);
-    CPy_DecRef(cpy_r_r56);
+    CPy_DecRef(cpy_r_r50);
     goto CPyL104;
 CPyL119: ;
     CPy_DECREF(cpy_r_args);
@@ -24806,20 +24798,26 @@ CPyL7: ;
 CPyL10: ;
     cpy_r_r13 = ((mypy___typeanal___TypeAnalyserObject *)cpy_r_r12)->_api;
     if (unlikely(cpy_r_r13 == NULL)) {
-        CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "TypeAnalyser", "api", 1463, CPyStatic_typeanal___globals);
-        goto CPyL98;
+        PyErr_SetString(PyExc_AttributeError, "attribute 'api' of 'TypeAnalyser' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r13);
+    }
+    CPy_DECREF(cpy_r_r12);
+    if (unlikely(cpy_r_r13 == NULL)) {
+        CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals);
+        goto CPyL97;
     }
 CPyL11: ;
     cpy_r_r14 = CPY_GET_ATTR_TRAIT(cpy_r_r13, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals);
-        goto CPyL98;
+        goto CPyL97;
     }
 CPyL12: ;
-    CPy_DECREF(cpy_r_r12);
     cpy_r_r15 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r16 = cpy_r_r14 != cpy_r_r15;
-    if (!cpy_r_r16) goto CPyL99;
+    if (!cpy_r_r16) goto CPyL98;
     if (likely(cpy_r_r14 != Py_None))
         cpy_r_r17 = cpy_r_r14;
     else {
@@ -24842,30 +24840,37 @@ CPyL12: ;
 CPyL17: ;
     cpy_r_r20 = ((mypy___typeanal___TypeAnalyserObject *)cpy_r_r19)->_api;
     if (unlikely(cpy_r_r20 == NULL)) {
-        CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "TypeAnalyser", "api", 1463, CPyStatic_typeanal___globals);
-        goto CPyL100;
+        PyErr_SetString(PyExc_AttributeError, "attribute 'api' of 'TypeAnalyser' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r20);
+    }
+    CPy_DECREF(cpy_r_r19);
+    if (unlikely(cpy_r_r20 == NULL)) {
+        CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals);
+        goto CPyL97;
     }
 CPyL18: ;
     cpy_r_r21 = CPY_GET_ATTR_TRAIT(cpy_r_r20, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r20);
     if (unlikely(cpy_r_r21 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals);
-        goto CPyL100;
+        goto CPyL97;
     }
 CPyL19: ;
     if (likely(cpy_r_r21 != Py_None))
         cpy_r_r22 = cpy_r_r21;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals, "mypy.nodes.TypeInfo", cpy_r_r21);
-        goto CPyL100;
+        goto CPyL99;
     }
     cpy_r_r23 = ((mypy___nodes___TypeInfoObject *)cpy_r_r22)->_self_type;
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "TypeInfo", "self_type", 1463, CPyStatic_typeanal___globals);
-        goto CPyL100;
+        goto CPyL99;
     }
     CPy_INCREF(cpy_r_r23);
 CPyL21: ;
-    CPy_DECREF(cpy_r_r19);
+    CPy_DECREF(cpy_r_r21);
     cpy_r_r24 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r25 = cpy_r_r23 != cpy_r_r24;
     CPy_DECREF(cpy_r_r23);
@@ -24879,26 +24884,33 @@ CPyL21: ;
 CPyL23: ;
     cpy_r_r27 = ((mypy___typeanal___TypeAnalyserObject *)cpy_r_r26)->_api;
     if (unlikely(cpy_r_r27 == NULL)) {
-        CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "TypeAnalyser", "api", 1463, CPyStatic_typeanal___globals);
-        goto CPyL101;
+        PyErr_SetString(PyExc_AttributeError, "attribute 'api' of 'TypeAnalyser' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r27);
+    }
+    CPy_DECREF(cpy_r_r26);
+    if (unlikely(cpy_r_r27 == NULL)) {
+        CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals);
+        goto CPyL97;
     }
 CPyL24: ;
     cpy_r_r28 = CPY_GET_ATTR_TRAIT(cpy_r_r27, CPyType_semanal_shared___SemanticAnalyzerCoreInterface, 13, mypy___semanal_shared___SemanticAnalyzerCoreInterfaceObject, PyObject *); /* type */
+    CPy_DECREF(cpy_r_r27);
     if (unlikely(cpy_r_r28 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals);
-        goto CPyL101;
+        goto CPyL97;
     }
 CPyL25: ;
     if (likely(cpy_r_r28 != Py_None))
         cpy_r_r29 = cpy_r_r28;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals, "mypy.nodes.TypeInfo", cpy_r_r28);
-        goto CPyL101;
+        goto CPyL100;
     }
     cpy_r_r30 = ((mypy___nodes___TypeInfoObject *)cpy_r_r29)->_self_type;
     if (unlikely(cpy_r_r30 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "TypeInfo", "self_type", 1463, CPyStatic_typeanal___globals);
-        goto CPyL101;
+        goto CPyL100;
     }
     CPy_INCREF(cpy_r_r30);
 CPyL27: ;
@@ -24906,9 +24918,9 @@ CPyL27: ;
         cpy_r_r31 = cpy_r_r30;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "bind_function_type_variables", 1463, CPyStatic_typeanal___globals, "mypy.types.TypeVarType", cpy_r_r30);
-        goto CPyL101;
+        goto CPyL100;
     }
-    CPy_DECREF(cpy_r_r26);
+    CPy_DECREF(cpy_r_r28);
     cpy_r_r32 = PyObject_RichCompare(cpy_r_var, cpy_r_r31, 2);
     CPy_DECREF(cpy_r_r31);
     if (unlikely(cpy_r_r32 == NULL)) {
@@ -24925,7 +24937,7 @@ CPyL27: ;
         goto CPyL97;
     }
     if (cpy_r_r33) {
-        goto CPyL102;
+        goto CPyL101;
     } else
         goto CPyL32;
 CPyL31: ;
@@ -24944,7 +24956,7 @@ CPyL33: ;
     cpy_r_r36 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_defn;
     if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "defn", 1466, CPyStatic_typeanal___globals);
-        goto CPyL103;
+        goto CPyL102;
     }
     CPy_INCREF(cpy_r_r36);
 CPyL34: ;
@@ -24963,7 +24975,7 @@ CPyL34: ;
     if (cpy_r_r40) {
         goto CPyL38;
     } else
-        goto CPyL104;
+        goto CPyL103;
 CPyL36: ;
     PyErr_SetString(PyExc_AssertionError, "Binding for function type variable not found within function");
     cpy_r_r41 = 0;
@@ -24977,7 +24989,7 @@ CPyL38: ;
         cpy_r_r42 = cpy_r_var_node;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "bind_function_type_variables", 1468, CPyStatic_typeanal___globals, "mypy.nodes.SymbolTableNode", cpy_r_var_node);
-        goto CPyL105;
+        goto CPyL104;
     }
     cpy_r_r43 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_r42)->_node;
     CPy_INCREF(cpy_r_r43);
@@ -25010,7 +25022,7 @@ CPyL45: ;
     if (cpy_r_r53) {
         goto CPyL48;
     } else
-        goto CPyL106;
+        goto CPyL105;
 CPyL46: ;
     PyErr_SetNone(PyExc_AssertionError);
     cpy_r_r58 = 0;
@@ -25023,7 +25035,7 @@ CPyL48: ;
     cpy_r_r59 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_self;
     if (unlikely(cpy_r_r59 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "self", 1470, CPyStatic_typeanal___globals);
-        goto CPyL107;
+        goto CPyL106;
     }
     CPy_INCREF(cpy_r_r59);
 CPyL49: ;
@@ -25036,7 +25048,7 @@ CPyL49: ;
     CPy_DECREF(cpy_r_r59);
     if (unlikely(cpy_r_r60 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1470, CPyStatic_typeanal___globals);
-        goto CPyL107;
+        goto CPyL106;
     }
 CPyL50: ;
     cpy_r_r61 = ((mypy___types___TypeVarLikeTypeObject *)cpy_r_var)->_name;
@@ -25046,7 +25058,7 @@ CPyL50: ;
         cpy_r_r62 = cpy_r_var_expr;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "bind_function_type_variables", 1470, CPyStatic_typeanal___globals, "mypy.nodes.TypeVarLikeExpr", cpy_r_var_expr);
-        goto CPyL108;
+        goto CPyL107;
     }
     cpy_r_r63 = CPyDef_tvar_scope___TypeVarLikeScope___bind_new(cpy_r_r60, cpy_r_r61, cpy_r_r62);
     CPy_DECREF(cpy_r_r61);
@@ -25069,7 +25081,7 @@ CPyL53: ;
     cpy_r_r66 = CPy_NoErrOccured();
     if (unlikely(!cpy_r_r66)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1462, CPyStatic_typeanal___globals);
-        goto CPyL109;
+        goto CPyL108;
     }
     cpy_r_r67.f0 = cpy_r_defs;
     cpy_r_r67.f1 = cpy_r_has_self_type;
@@ -25102,7 +25114,7 @@ CPyL56: ;
     cpy_r_r73 = CPyDef_typeanal_____mypyc_lambda__0_bind_function_type_variables_TypeAnalyser_obj();
     if (unlikely(cpy_r_r73 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1475, CPyStatic_typeanal___globals);
-        goto CPyL110;
+        goto CPyL109;
     }
     CPy_INCREF(cpy_r_r0);
     if (((mypy___typeanal_____mypyc_lambda__0_bind_function_type_variables_TypeAnalyser_objObject *)cpy_r_r73)->___mypyc_env__ != NULL) {
@@ -25112,19 +25124,19 @@ CPyL56: ;
     cpy_r_r74 = 1;
     if (unlikely(!cpy_r_r74)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1475, CPyStatic_typeanal___globals);
-        goto CPyL111;
+        goto CPyL110;
     }
     cpy_r_r75 = CPyDef_typeanal___find_self_type(cpy_r_fun_type, cpy_r_r73);
     CPy_DECREF(cpy_r_r73);
     if (unlikely(cpy_r_r75 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1474, CPyStatic_typeanal___globals);
-        goto CPyL110;
+        goto CPyL109;
     }
     cpy_r_has_self_type = cpy_r_r75;
     cpy_r_r76 = PyList_New(0);
     if (unlikely(cpy_r_r76 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1478, CPyStatic_typeanal___globals);
-        goto CPyL110;
+        goto CPyL109;
     }
     cpy_r_r77 = 0;
 CPyL62: ;
@@ -25132,7 +25144,7 @@ CPyL62: ;
     cpy_r_r79 = *(int64_t *)cpy_r_r78;
     cpy_r_r80 = cpy_r_r79 << 1;
     cpy_r_r81 = (Py_ssize_t)cpy_r_r77 < (Py_ssize_t)cpy_r_r80;
-    if (!cpy_r_r81) goto CPyL112;
+    if (!cpy_r_r81) goto CPyL111;
     cpy_r_r82 = CPyList_GetItemUnsafe(cpy_r_typevars, cpy_r_r77);
     PyObject *__tmp7667;
     if (unlikely(!(PyTuple_Check(cpy_r_r82) && PyTuple_GET_SIZE(cpy_r_r82) == 2))) {
@@ -25180,7 +25192,7 @@ __LL7668: ;
     CPy_DECREF(cpy_r_r82);
     if (unlikely(cpy_r_r83.f0 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1478, CPyStatic_typeanal___globals);
-        goto CPyL113;
+        goto CPyL112;
     }
     cpy_r_r84 = cpy_r_r83.f0;
     CPy_INCREF(cpy_r_r84);
@@ -25193,14 +25205,14 @@ __LL7668: ;
     cpy_r_r86 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_self;
     if (unlikely(cpy_r_r86 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "self", 1479, CPyStatic_typeanal___globals);
-        goto CPyL114;
+        goto CPyL113;
     }
     CPy_INCREF(cpy_r_r86);
 CPyL65: ;
     cpy_r_r87 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_defn;
     if (unlikely(cpy_r_r87 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "defn", 1479, CPyStatic_typeanal___globals);
-        goto CPyL115;
+        goto CPyL114;
     }
     CPy_INCREF(cpy_r_r87);
 CPyL66: ;
@@ -25209,10 +25221,10 @@ CPyL66: ;
     CPy_DECREF(cpy_r_r86);
     if (unlikely(cpy_r_r88 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1479, CPyStatic_typeanal___globals);
-        goto CPyL114;
+        goto CPyL113;
     }
     cpy_r_r89 = cpy_r_r88 ^ 1;
-    if (!cpy_r_r89) goto CPyL116;
+    if (!cpy_r_r89) goto CPyL115;
     cpy_r_r90.f0 = cpy_r_name;
     cpy_r_r90.f1 = cpy_r_tvar;
     CPy_INCREF(cpy_r_r90.f0);
@@ -25231,7 +25243,7 @@ CPyL66: ;
     cpy_r_r93 = cpy_r_r92 >= 0;
     if (unlikely(!cpy_r_r93)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1478, CPyStatic_typeanal___globals);
-        goto CPyL113;
+        goto CPyL112;
     }
 CPyL69: ;
     cpy_r_r94 = cpy_r_r77 + 2;
@@ -25242,7 +25254,7 @@ CPyL70: ;
     cpy_r_r95 = PyList_New(0);
     if (unlikely(cpy_r_r95 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1481, CPyStatic_typeanal___globals);
-        goto CPyL110;
+        goto CPyL109;
     }
     cpy_r_defs = cpy_r_r95;
     cpy_r_r96 = 0;
@@ -25251,7 +25263,7 @@ CPyL72: ;
     cpy_r_r98 = *(int64_t *)cpy_r_r97;
     cpy_r_r99 = cpy_r_r98 << 1;
     cpy_r_r100 = (Py_ssize_t)cpy_r_r96 < (Py_ssize_t)cpy_r_r99;
-    if (!cpy_r_r100) goto CPyL117;
+    if (!cpy_r_r100) goto CPyL116;
     cpy_r_r101 = CPyList_GetItemUnsafe(cpy_r_typevars, cpy_r_r96);
     PyObject *__tmp7675;
     if (unlikely(!(PyTuple_Check(cpy_r_r101) && PyTuple_GET_SIZE(cpy_r_r101) == 2))) {
@@ -25299,7 +25311,7 @@ __LL7676: ;
     CPy_DECREF(cpy_r_r101);
     if (unlikely(cpy_r_r102.f0 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1482, CPyStatic_typeanal___globals);
-        goto CPyL118;
+        goto CPyL117;
     }
     cpy_r_r103 = cpy_r_r102.f0;
     CPy_INCREF(cpy_r_r103);
@@ -25312,7 +25324,7 @@ __LL7676: ;
     cpy_r_r105 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_self;
     if (unlikely(cpy_r_r105 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "self", 1483, CPyStatic_typeanal___globals);
-        goto CPyL119;
+        goto CPyL118;
     }
     CPy_INCREF(cpy_r_r105);
 CPyL75: ;
@@ -25325,13 +25337,13 @@ CPyL75: ;
     CPy_DECREF(cpy_r_r105);
     if (unlikely(cpy_r_r106 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1483, CPyStatic_typeanal___globals);
-        goto CPyL119;
+        goto CPyL118;
     }
 CPyL76: ;
     cpy_r_r107 = CPY_GET_ATTR(cpy_r_tvar_2, CPyType_nodes___TypeVarLikeExpr, 7, mypy___nodes___TypeVarLikeExprObject, PyObject *); /* fullname */
     if (unlikely(cpy_r_r107 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1483, CPyStatic_typeanal___globals);
-        goto CPyL120;
+        goto CPyL119;
     }
 CPyL77: ;
     cpy_r_r108 = CPyDef_tvar_scope___TypeVarLikeScope___allow_binding(cpy_r_r106, cpy_r_r107);
@@ -25339,13 +25351,13 @@ CPyL77: ;
     CPy_DECREF(cpy_r_r106);
     if (unlikely(cpy_r_r108 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1483, CPyStatic_typeanal___globals);
-        goto CPyL119;
+        goto CPyL118;
     }
     if (cpy_r_r108) goto CPyL86;
     cpy_r_r109 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_self;
     if (unlikely(cpy_r_r109 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "self", 1484, CPyStatic_typeanal___globals);
-        goto CPyL119;
+        goto CPyL118;
     }
     CPy_INCREF(cpy_r_r109);
 CPyL80: ;
@@ -25354,18 +25366,18 @@ CPyL80: ;
     cpy_r_r112 = CPyStr_Build(3, cpy_r_r110, cpy_r_name_2, cpy_r_r111);
     if (unlikely(cpy_r_r112 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1485, CPyStatic_typeanal___globals);
-        goto CPyL121;
+        goto CPyL120;
     }
     cpy_r_r113 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_defn;
     if (unlikely(cpy_r_r113 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "defn", 1486, CPyStatic_typeanal___globals);
-        goto CPyL122;
+        goto CPyL121;
     }
     CPy_INCREF(cpy_r_r113);
 CPyL82: ;
     cpy_r_r114 = CPyStatic_errorcodes___VALID_TYPE;
     if (unlikely(cpy_r_r114 == NULL)) {
-        goto CPyL123;
+        goto CPyL122;
     } else
         goto CPyL85;
 CPyL83: ;
@@ -25383,13 +25395,13 @@ CPyL85: ;
     CPy_DECREF(cpy_r_r109);
     if (unlikely(cpy_r_r116 == 2)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1484, CPyStatic_typeanal___globals);
-        goto CPyL119;
+        goto CPyL118;
     }
 CPyL86: ;
     cpy_r_r117 = ((mypy___typeanal___bind_function_type_variables_TypeAnalyser_envObject *)cpy_r_r0)->_self;
     if (unlikely(cpy_r_r117 == NULL)) {
         CPy_AttributeError("mypy/typeanal.py", "bind_function_type_variables", "bind_function_type_variables_TypeAnalyser_env", "self", 1489, CPyStatic_typeanal___globals);
-        goto CPyL119;
+        goto CPyL118;
     }
     CPy_INCREF(cpy_r_r117);
 CPyL87: ;
@@ -25402,7 +25414,7 @@ CPyL87: ;
     CPy_DECREF(cpy_r_r117);
     if (unlikely(cpy_r_r118 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1489, CPyStatic_typeanal___globals);
-        goto CPyL119;
+        goto CPyL118;
     }
 CPyL88: ;
     cpy_r_r119 = CPyDef_tvar_scope___TypeVarLikeScope___bind_new(cpy_r_r118, cpy_r_name_2, cpy_r_tvar_2);
@@ -25411,7 +25423,7 @@ CPyL88: ;
     CPy_DECREF(cpy_r_r118);
     if (unlikely(cpy_r_r119 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1489, CPyStatic_typeanal___globals);
-        goto CPyL118;
+        goto CPyL117;
     }
     cpy_r_binding = cpy_r_r119;
     cpy_r_r120 = PyList_Append(cpy_r_defs, cpy_r_binding);
@@ -25419,7 +25431,7 @@ CPyL88: ;
     cpy_r_r121 = cpy_r_r120 >= 0;
     if (unlikely(!cpy_r_r121)) {
         CPy_AddTraceback("mypy/typeanal.py", "bind_function_type_variables", 1490, CPyStatic_typeanal___globals);
-        goto CPyL118;
+        goto CPyL117;
     }
     cpy_r_r122 = cpy_r_r96 + 2;
     cpy_r_r96 = cpy_r_r122;
@@ -25465,33 +25477,26 @@ CPyL97: ;
     CPy_DecRef(cpy_r_var);
     goto CPyL92;
 CPyL98: ;
+    CPy_DECREF(cpy_r_r14);
+    goto CPyL32;
+CPyL99: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_r9);
     CPy_DecRef(cpy_r_var);
-    CPy_DecRef(cpy_r_r12);
+    CPy_DecRef(cpy_r_r21);
     goto CPyL92;
-CPyL99: ;
-    CPy_DECREF(cpy_r_r14);
-    goto CPyL32;
 CPyL100: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_r9);
     CPy_DecRef(cpy_r_var);
-    CPy_DecRef(cpy_r_r19);
+    CPy_DecRef(cpy_r_r28);
     goto CPyL92;
 CPyL101: ;
-    CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_defs);
-    CPy_DecRef(cpy_r_r9);
-    CPy_DecRef(cpy_r_var);
-    CPy_DecRef(cpy_r_r26);
-    goto CPyL92;
-CPyL102: ;
     CPy_DECREF(cpy_r_var);
     goto CPyL31;
-CPyL103: ;
+CPyL102: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_r9);
@@ -25499,60 +25504,67 @@ CPyL103: ;
     CPy_DecRef(cpy_r_r34);
     CPy_DecRef(cpy_r_r35);
     goto CPyL92;
-CPyL104: ;
+CPyL103: ;
     CPy_DECREF(cpy_r_r0);
     CPy_DECREF(cpy_r_defs);
     CPy_DECREF(cpy_r_r9);
     CPy_DECREF(cpy_r_var);
     CPy_DECREF(cpy_r_var_node);
     goto CPyL36;
-CPyL105: ;
+CPyL104: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_r9);
     CPy_DecRef(cpy_r_var);
     CPy_DecRef(cpy_r_var_node);
     goto CPyL92;
-CPyL106: ;
+CPyL105: ;
     CPy_DECREF(cpy_r_r0);
     CPy_DECREF(cpy_r_defs);
     CPy_DECREF(cpy_r_r9);
     CPy_DECREF(cpy_r_var);
     CPy_DECREF(cpy_r_var_expr);
     goto CPyL46;
-CPyL107: ;
+CPyL106: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_r9);
     CPy_DecRef(cpy_r_var);
     CPy_DecRef(cpy_r_var_expr);
     goto CPyL92;
-CPyL108: ;
+CPyL107: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_r9);
     CPy_DecRef(cpy_r_r60);
     CPy_DecRef(cpy_r_r61);
     goto CPyL92;
-CPyL109: ;
+CPyL108: ;
     CPy_DecRef(cpy_r_defs);
+    goto CPyL92;
+CPyL109: ;
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_typevars);
     goto CPyL92;
 CPyL110: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_typevars);
-    goto CPyL92;
-CPyL111: ;
-    CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_typevars);
     CPy_DecRef(cpy_r_r73);
     goto CPyL92;
-CPyL112: ;
+CPyL111: ;
     CPy_DECREF(cpy_r_typevars);
     goto CPyL70;
+CPyL112: ;
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_typevars);
+    CPy_DecRef(cpy_r_r76);
+    goto CPyL92;
 CPyL113: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_typevars);
     CPy_DecRef(cpy_r_r76);
+    CPy_DecRef(cpy_r_name);
+    CPy_DecRef(cpy_r_tvar);
     goto CPyL92;
 CPyL114: ;
     CPy_DecRef(cpy_r_r0);
@@ -25560,27 +25572,27 @@ CPyL114: ;
     CPy_DecRef(cpy_r_r76);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_tvar);
-    goto CPyL92;
-CPyL115: ;
-    CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_typevars);
-    CPy_DecRef(cpy_r_r76);
-    CPy_DecRef(cpy_r_name);
-    CPy_DecRef(cpy_r_tvar);
     CPy_DecRef(cpy_r_r86);
     goto CPyL92;
-CPyL116: ;
+CPyL115: ;
     CPy_DECREF(cpy_r_name);
     CPy_DECREF(cpy_r_tvar);
     goto CPyL69;
-CPyL117: ;
+CPyL116: ;
     CPy_DECREF(cpy_r_r0);
     CPy_DECREF(cpy_r_typevars);
     goto CPyL91;
+CPyL117: ;
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_defs);
+    CPy_DecRef(cpy_r_typevars);
+    goto CPyL92;
 CPyL118: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_typevars);
+    CPy_DecRef(cpy_r_name_2);
+    CPy_DecRef(cpy_r_tvar_2);
     goto CPyL92;
 CPyL119: ;
     CPy_DecRef(cpy_r_r0);
@@ -25588,6 +25600,7 @@ CPyL119: ;
     CPy_DecRef(cpy_r_typevars);
     CPy_DecRef(cpy_r_name_2);
     CPy_DecRef(cpy_r_tvar_2);
+    CPy_DecRef(cpy_r_r106);
     goto CPyL92;
 CPyL120: ;
     CPy_DecRef(cpy_r_r0);
@@ -25595,7 +25608,7 @@ CPyL120: ;
     CPy_DecRef(cpy_r_typevars);
     CPy_DecRef(cpy_r_name_2);
     CPy_DecRef(cpy_r_tvar_2);
-    CPy_DecRef(cpy_r_r106);
+    CPy_DecRef(cpy_r_r109);
     goto CPyL92;
 CPyL121: ;
     CPy_DecRef(cpy_r_r0);
@@ -25604,17 +25617,9 @@ CPyL121: ;
     CPy_DecRef(cpy_r_name_2);
     CPy_DecRef(cpy_r_tvar_2);
     CPy_DecRef(cpy_r_r109);
-    goto CPyL92;
-CPyL122: ;
-    CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_defs);
-    CPy_DecRef(cpy_r_typevars);
-    CPy_DecRef(cpy_r_name_2);
-    CPy_DecRef(cpy_r_tvar_2);
-    CPy_DecRef(cpy_r_r109);
     CPy_DecRef(cpy_r_r112);
     goto CPyL92;
-CPyL123: ;
+CPyL122: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_defs);
     CPy_DecRef(cpy_r_typevars);
@@ -27944,15 +27949,13 @@ CPyL37: ;
         goto CPyL81;
     }
     cpy_r_r56 = ((mypy___types___InstanceObject *)cpy_r_r55)->_type;
-    CPy_INCREF(cpy_r_r56);
-    CPy_DECREF(cpy_r_base_type);
     cpy_r_r57 = CPY_GET_ATTR(cpy_r_r56, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r56);
     if (unlikely(cpy_r_r57 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "get_omitted_any", 1645, CPyStatic_typeanal___globals);
-        goto CPyL67;
+        goto CPyL81;
     }
 CPyL39: ;
+    CPy_DECREF(cpy_r_base_type);
     cpy_r_r58 = cpy_r_r57;
     goto CPyL41;
 CPyL40: ;
@@ -28658,9 +28661,7 @@ CPyL4: ;
     goto CPyL9;
 CPyL7: ;
     cpy_r_r7 = ((mypy___types___InstanceObject *)cpy_r_t)->_type;
-    CPy_INCREF(cpy_r_r7);
     cpy_r_r8 = CPY_GET_ATTR(cpy_r_r7, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r7);
     if (unlikely(cpy_r_r8 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "fix_instance", 1700, CPyStatic_typeanal___globals);
         goto CPyL37;
@@ -28739,9 +28740,7 @@ CPyL16: ;
         goto CPyL34;
     }
     cpy_r_r32 = ((mypy___types___InstanceObject *)cpy_r_t)->_type;
-    CPy_INCREF(cpy_r_r32);
     cpy_r_r33 = CPY_GET_ATTR(cpy_r_r32, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r32);
     if (unlikely(cpy_r_r33 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "fix_instance", 1708, CPyStatic_typeanal___globals);
         goto CPyL40;
@@ -29529,9 +29528,7 @@ CPyL73: ;
         goto CPyL117;
     }
     cpy_r_r108 = ((mypy___types___InstanceObject *)cpy_r_r107)->_type;
-    CPy_INCREF(cpy_r_r108);
     cpy_r_r109 = CPY_GET_ATTR(cpy_r_r108, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r108);
     if (unlikely(cpy_r_r109 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "instantiate_type_alias", 1796, CPyStatic_typeanal___globals);
         goto CPyL117;
@@ -31085,7 +31082,6 @@ CPyL51: ;
     cpy_r_r82 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r83 = cpy_r_node != cpy_r_r82;
     if (!cpy_r_r83) goto CPyL61;
-    CPy_INCREF(cpy_r_node);
     if (likely(cpy_r_node != Py_None))
         cpy_r_r84 = cpy_r_node;
     else {
@@ -31093,7 +31089,6 @@ CPyL51: ;
         goto CPyL93;
     }
     cpy_r_r85 = CPY_GET_ATTR(cpy_r_r84, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r84);
     if (unlikely(cpy_r_r85 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type", 1901, CPyStatic_typeanal___globals);
         goto CPyL93;
@@ -31150,15 +31145,15 @@ CPyL61: ;
         cpy_r_r95 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "visit_unbound_type", 1903, CPyStatic_typeanal___globals, "mypy.nodes.SymbolTableNode", cpy_r_node);
-        goto CPyL80;
+        goto CPyL93;
     }
     cpy_r_r96 = CPY_GET_ATTR(cpy_r_r95, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r95);
     if (unlikely(cpy_r_r96 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type", 1903, CPyStatic_typeanal___globals);
-        goto CPyL80;
+        goto CPyL93;
     }
 CPyL64: ;
+    CPy_DECREF(cpy_r_node);
     cpy_r_r97 = CPyStatic_types___ANNOTATED_TYPE_NAMES;
     if (unlikely(cpy_r_r97.f0 == NULL)) {
         goto CPyL98;
@@ -34156,18 +34151,18 @@ __LL7715: ;
         cpy_r_r8 = cpy_r_sym;
     else {
         CPy_TypeErrorTraceback("mypy/typeanal.py", "visit_unbound_type", 2105, CPyStatic_typeanal___globals, "mypy.nodes.SymbolTableNode", cpy_r_sym);
-        goto CPyL14;
+        goto CPyL17;
     }
     cpy_r_r9 = CPY_GET_ATTR(cpy_r_r8, CPyType_nodes___SymbolTableNode, 1, mypy___nodes___SymbolTableNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r8);
     if (unlikely(cpy_r_r9 == NULL)) {
         CPy_AddTraceback("mypy/typeanal.py", "visit_unbound_type", 2105, CPyStatic_typeanal___globals);
-        goto CPyL14;
+        goto CPyL17;
     }
 CPyL6: ;
+    CPy_DECREF(cpy_r_sym);
     cpy_r_r10 = CPyStatic_typeanal___SELF_TYPE_NAMES;
     if (unlikely(cpy_r_r10 == NULL)) {
-        goto CPyL17;
+        goto CPyL18;
     } else
         goto CPyL9;
 CPyL7: ;
@@ -34206,6 +34201,9 @@ CPyL16: ;
     CPy_DECREF(cpy_r_sym);
     goto CPyL12;
 CPyL17: ;
+    CPy_DecRef(cpy_r_sym);
+    goto CPyL14;
+CPyL18: ;
     CPy_DecRef(cpy_r_r9);
     goto CPyL7;
 }

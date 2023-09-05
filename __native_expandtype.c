@@ -1701,7 +1701,6 @@ CPyL21: ;
     }
     CPy_Unreachable();
 CPyL24: ;
-    CPy_INCREF(cpy_r_callee);
     if (likely(Py_TYPE(cpy_r_callee) == CPyType_types___Overloaded))
         cpy_r_r48 = cpy_r_callee;
     else {
@@ -1709,7 +1708,6 @@ CPyL24: ;
         goto CPyL36;
     }
     cpy_r_r49 = CPY_GET_ATTR(cpy_r_r48, CPyType_types___Overloaded, 22, mypy___types___OverloadedObject, PyObject *); /* items */
-    CPy_DECREF(cpy_r_r48);
     if (unlikely(cpy_r_r49 == NULL)) {
         CPy_AddTraceback("mypy/expandtype.py", "freshen_function_type_vars", 141, CPyStatic_expandtype___globals);
         goto CPyL36;
@@ -4933,9 +4931,7 @@ CPyL23: ;
         goto CPyL164;
     }
     cpy_r_r35 = ((mypy___types___InstanceObject *)cpy_r_r34)->_type;
-    CPy_INCREF(cpy_r_r35);
     cpy_r_r36 = CPY_GET_ATTR(cpy_r_r35, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r35);
     if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AddTraceback("mypy/expandtype.py", "interpolate_args_for_unpack", 311, CPyStatic_expandtype___globals);
         goto CPyL164;
@@ -5431,9 +5427,7 @@ CPyL96: ;
         goto CPyL185;
     }
     cpy_r_r149 = ((mypy___types___InstanceObject *)cpy_r_r148)->_type;
-    CPy_INCREF(cpy_r_r149);
     cpy_r_r150 = CPY_GET_ATTR(cpy_r_r149, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r149);
     if (unlikely(cpy_r_r150 == NULL)) {
         CPy_AddTraceback("mypy/expandtype.py", "interpolate_args_for_unpack", 361, CPyStatic_expandtype___globals);
         goto CPyL185;
@@ -8811,9 +8805,7 @@ CPyL9: ;
         goto CPyL46;
     }
     cpy_r_r26 = ((mypy___types___InstanceObject *)cpy_r_r25)->_type;
-    CPy_INCREF(cpy_r_r26);
     cpy_r_r27 = CPY_GET_ATTR(cpy_r_r26, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r26);
     if (unlikely(cpy_r_r27 == NULL)) {
         CPy_AddTraceback("mypy/expandtype.py", "expand_unpack_with_variables", 551, CPyStatic_expandtype___globals);
         goto CPyL46;
@@ -9296,9 +9288,7 @@ CPyL14: ;
         goto CPyL47;
     }
     cpy_r_r23 = ((mypy___types___InstanceObject *)cpy_r_r22)->_type;
-    CPy_INCREF(cpy_r_r23);
     cpy_r_r24 = CPY_GET_ATTR(cpy_r_r23, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r23);
     if (unlikely(cpy_r_r24 == NULL)) {
         CPy_AddTraceback("mypy/expandtype.py", "remove_trivial", 604, CPyStatic_expandtype___globals);
         goto CPyL47;

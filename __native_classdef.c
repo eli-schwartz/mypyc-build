@@ -4292,9 +4292,7 @@ CPyL6: ;
     cpy_r_r7 = ((mypyc___irbuild___classdef___ExtClassBuilderObject *)cpy_r_self)->_builder;
     CPy_INCREF(cpy_r_r7);
     cpy_r_r8 = ((mypyc___irbuild___classdef___ExtClassBuilderObject *)cpy_r_self)->_cdef;
-    CPy_INCREF(cpy_r_r8);
     cpy_r_r9 = CPY_GET_ATTR(cpy_r_r8, CPyType_nodes___ClassDef, 6, mypy___nodes___ClassDefObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r8);
     if (unlikely(cpy_r_r9 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/classdef.py", "add_attr", 279, CPyStatic_classdef___globals);
         goto CPyL21;
@@ -5724,7 +5722,6 @@ PyObject *CPyDef_classdef___AttrsClassBuilder___get_type_annotation(PyObject *cp
     cpy_r_r10 = *(PyObject * *)cpy_r_r9;
     cpy_r_r11 = cpy_r_r10 == cpy_r_r8;
     if (!cpy_r_r11) goto CPyL41;
-    CPy_INCREF(cpy_r_callee);
     if (likely(Py_TYPE(cpy_r_callee) == CPyType_nodes___MemberExpr))
         cpy_r_r12 = cpy_r_callee;
     else {
@@ -5732,7 +5729,6 @@ PyObject *CPyDef_classdef___AttrsClassBuilder___get_type_annotation(PyObject *cp
         goto CPyL42;
     }
     cpy_r_r13 = CPY_GET_ATTR(cpy_r_r12, CPyType_nodes___MemberExpr, 6, mypy___nodes___MemberExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r12);
     if (unlikely(cpy_r_r13 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/classdef.py", "get_type_annotation", 393, CPyStatic_classdef___globals);
         goto CPyL42;
@@ -5765,15 +5761,15 @@ CPyL10: ;
         cpy_r_r22 = cpy_r_callee;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/classdef.py", "get_type_annotation", 393, CPyStatic_classdef___globals, "mypy.nodes.MemberExpr", cpy_r_callee);
-        goto CPyL40;
+        goto CPyL42;
     }
     cpy_r_r23 = CPY_GET_ATTR(cpy_r_r22, CPyType_nodes___MemberExpr, 6, mypy___nodes___MemberExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/classdef.py", "get_type_annotation", 393, CPyStatic_classdef___globals);
-        goto CPyL40;
+        goto CPyL42;
     }
 CPyL12: ;
+    CPy_DECREF(cpy_r_callee);
     cpy_r_r24 = CPyStatics[4460]; /* 'attr.attr' */
     cpy_r_r25 = PyUnicode_Compare(cpy_r_r23, cpy_r_r24);
     CPy_DECREF(cpy_r_r23);
@@ -9167,9 +9163,7 @@ CPyL7: ;
         goto CPyL24;
     }
     cpy_r_r22 = ((mypy___types___InstanceObject *)cpy_r_r21)->_type;
-    CPy_INCREF(cpy_r_r22);
     cpy_r_r23 = CPY_GET_ATTR(cpy_r_r22, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/classdef.py", "add_non_ext_class_attr", 641, CPyStatic_classdef___globals);
         goto CPyL24;
@@ -9876,7 +9870,6 @@ CPyL67: ;
         goto CPyL108;
     }
     cpy_r_r132 = ((mypy___nodes___AssignmentStmtObject *)cpy_r_r131)->_rvalue;
-    CPy_INCREF(cpy_r_r132);
     if (likely((Py_TYPE(cpy_r_r132) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r132) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r132) == CPyType_nodes___RefExpr)))
         cpy_r_r133 = cpy_r_r132;
     else {
@@ -9884,7 +9877,6 @@ CPyL67: ;
         goto CPyL108;
     }
     cpy_r_r134 = CPY_GET_ATTR(cpy_r_r133, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r133);
     if (unlikely(cpy_r_r134 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/classdef.py", "find_attr_initializers", 692, CPyStatic_classdef___globals);
         goto CPyL108;
@@ -12203,9 +12195,7 @@ char CPyDef_classdef___cache_class_attrs(PyObject *cpy_r_builder, PyObject *cpy_
     CPyTagged cpy_r_r24;
     char cpy_r_r25;
     cpy_r_r0 = ((mypy___nodes___ClassDefObject *)cpy_r_cdef)->_info;
-    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/classdef.py", "cache_class_attrs", 823, CPyStatic_classdef___globals);
         goto CPyL14;

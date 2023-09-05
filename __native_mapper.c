@@ -781,7 +781,9 @@ CPyL5: ;
         goto CPyL276;
     }
     cpy_r_r12 = ((mypy___types___InstanceObject *)cpy_r_r11)->_type;
+    CPy_INCREF(cpy_r_r12);
     cpy_r_r13 = CPY_GET_ATTR(cpy_r_r12, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r12);
     if (unlikely(cpy_r_r13 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 71, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -827,7 +829,9 @@ CPyL19: ;
         goto CPyL276;
     }
     cpy_r_r24 = ((mypy___types___InstanceObject *)cpy_r_r23)->_type;
+    CPy_INCREF(cpy_r_r24);
     cpy_r_r25 = CPY_GET_ATTR(cpy_r_r24, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r24);
     if (unlikely(cpy_r_r25 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 73, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -873,7 +877,9 @@ CPyL29: ;
         goto CPyL276;
     }
     cpy_r_r36 = ((mypy___types___InstanceObject *)cpy_r_r35)->_type;
+    CPy_INCREF(cpy_r_r36);
     cpy_r_r37 = CPY_GET_ATTR(cpy_r_r36, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r36);
     if (unlikely(cpy_r_r37 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 75, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -919,7 +925,9 @@ CPyL39: ;
         goto CPyL276;
     }
     cpy_r_r48 = ((mypy___types___InstanceObject *)cpy_r_r47)->_type;
+    CPy_INCREF(cpy_r_r48);
     cpy_r_r49 = CPY_GET_ATTR(cpy_r_r48, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r48);
     if (unlikely(cpy_r_r49 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 77, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -965,7 +973,9 @@ CPyL49: ;
         goto CPyL276;
     }
     cpy_r_r60 = ((mypy___types___InstanceObject *)cpy_r_r59)->_type;
+    CPy_INCREF(cpy_r_r60);
     cpy_r_r61 = CPY_GET_ATTR(cpy_r_r60, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r60);
     if (unlikely(cpy_r_r61 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 79, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1011,7 +1021,9 @@ CPyL59: ;
         goto CPyL276;
     }
     cpy_r_r72 = ((mypy___types___InstanceObject *)cpy_r_r71)->_type;
+    CPy_INCREF(cpy_r_r72);
     cpy_r_r73 = CPY_GET_ATTR(cpy_r_r72, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r72);
     if (unlikely(cpy_r_r73 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 81, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1139,7 +1151,9 @@ CPyL86: ;
         goto CPyL276;
     }
     cpy_r_r106 = ((mypy___types___InstanceObject *)cpy_r_r105)->_type;
+    CPy_INCREF(cpy_r_r106);
     cpy_r_r107 = CPY_GET_ATTR(cpy_r_r106, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r106);
     if (unlikely(cpy_r_r107 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 88, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1185,7 +1199,9 @@ CPyL96: ;
         goto CPyL276;
     }
     cpy_r_r118 = ((mypy___types___InstanceObject *)cpy_r_r117)->_type;
+    CPy_INCREF(cpy_r_r118);
     cpy_r_r119 = CPY_GET_ATTR(cpy_r_r118, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r118);
     if (unlikely(cpy_r_r119 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 90, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1231,7 +1247,9 @@ CPyL106: ;
         goto CPyL276;
     }
     cpy_r_r130 = ((mypy___types___InstanceObject *)cpy_r_r129)->_type;
+    CPy_INCREF(cpy_r_r130);
     cpy_r_r131 = CPY_GET_ATTR(cpy_r_r130, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r130);
     if (unlikely(cpy_r_r131 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 92, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1378,7 +1396,9 @@ CPyL133: ;
         goto CPyL276;
     }
     cpy_r_r164 = ((mypy___types___InstanceObject *)cpy_r_r163)->_type;
+    CPy_INCREF(cpy_r_r164);
     cpy_r_r165 = CPY_GET_ATTR(cpy_r_r164, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r164);
     if (unlikely(cpy_r_r165 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 103, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1424,7 +1444,9 @@ CPyL143: ;
         goto CPyL276;
     }
     cpy_r_r176 = ((mypy___types___InstanceObject *)cpy_r_r175)->_type;
+    CPy_INCREF(cpy_r_r176);
     cpy_r_r177 = CPY_GET_ATTR(cpy_r_r176, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r176);
     if (unlikely(cpy_r_r177 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 105, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1470,7 +1492,9 @@ CPyL153: ;
         goto CPyL276;
     }
     cpy_r_r188 = ((mypy___types___InstanceObject *)cpy_r_r187)->_type;
+    CPy_INCREF(cpy_r_r188);
     cpy_r_r189 = CPY_GET_ATTR(cpy_r_r188, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r188);
     if (unlikely(cpy_r_r189 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 107, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -1516,13 +1540,15 @@ CPyL163: ;
         goto CPyL276;
     }
     cpy_r_r200 = ((mypy___types___InstanceObject *)cpy_r_r199)->_type;
+    CPy_INCREF(cpy_r_r200);
+    CPy_DECREF(cpy_r_typ);
     cpy_r_r201 = CPY_GET_ATTR(cpy_r_r200, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r200);
     if (unlikely(cpy_r_r201 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 109, CPyStatic_mapper___globals);
-        goto CPyL276;
+        goto CPyL275;
     }
 CPyL165: ;
-    CPy_DECREF(cpy_r_typ);
     cpy_r_r202 = CPyStatics[6457]; /* 'mypy_extensions.u8' */
     cpy_r_r203 = PyUnicode_Compare(cpy_r_r201, cpy_r_r202);
     CPy_DECREF(cpy_r_r201);
@@ -1578,7 +1604,9 @@ CPyL177: ;
     }
     cpy_r_r218 = ((mypy___types___TupleTypeObject *)cpy_r_r217)->_partial_fallback;
     cpy_r_r219 = ((mypy___types___InstanceObject *)cpy_r_r218)->_type;
+    CPy_INCREF(cpy_r_r219);
     cpy_r_r220 = CPY_GET_ATTR(cpy_r_r219, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r219);
     if (unlikely(cpy_r_r220 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "type_to_rtype", 116, CPyStatic_mapper___globals);
         goto CPyL276;
@@ -2919,13 +2947,15 @@ CPyL60: ;
     }
     cpy_r_arg_2 = cpy_r_r110;
     cpy_r_r111 = ((mypy___nodes___ArgumentObject *)cpy_r_arg_2)->_variable;
+    CPy_INCREF(cpy_r_r111);
+    CPy_DECREF(cpy_r_arg_2);
     cpy_r_r112 = CPY_GET_ATTR(cpy_r_r111, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
+    CPy_DECREF(cpy_r_r111);
     if (unlikely(cpy_r_r112 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 187, CPyStatic_mapper___globals);
-        goto CPyL162;
+        goto CPyL161;
     }
 CPyL63: ;
-    CPy_DECREF(cpy_r_arg_2);
     cpy_r_r113 = CPyList_SetItemUnsafe(cpy_r_r103, cpy_r_r104, cpy_r_r112);
     if (unlikely(!cpy_r_r113)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 187, CPyStatic_mapper___globals);
@@ -2945,7 +2975,7 @@ CPyL66: ;
     cpy_r_r118 = PyList_New(cpy_r_r117);
     if (unlikely(cpy_r_r118 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 189, CPyStatic_mapper___globals);
-        goto CPyL163;
+        goto CPyL162;
     }
     cpy_r_r119 = 0;
 CPyL68: ;
@@ -2953,7 +2983,7 @@ CPyL68: ;
     cpy_r_r121 = *(int64_t *)cpy_r_r120;
     cpy_r_r122 = cpy_r_r121 << 1;
     cpy_r_r123 = (Py_ssize_t)cpy_r_r119 < (Py_ssize_t)cpy_r_r122;
-    if (!cpy_r_r123) goto CPyL164;
+    if (!cpy_r_r123) goto CPyL163;
     cpy_r_r124 = CPyList_GetItemUnsafe(cpy_r_r115, cpy_r_r119);
     if (PyUnicode_Check(cpy_r_r124))
         cpy_r_r125 = cpy_r_r124;
@@ -2968,27 +2998,27 @@ CPyL68: ;
     }
     if (cpy_r_r125 != NULL) goto __LL10370;
     CPy_TypeErrorTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 189, CPyStatic_mapper___globals, "str or None", cpy_r_r124);
-    goto CPyL165;
+    goto CPyL164;
 __LL10370: ;
     cpy_r_name_2 = cpy_r_r125;
     cpy_r_r126 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r127 = cpy_r_name_2 != cpy_r_r126;
-    if (!cpy_r_r127) goto CPyL166;
+    if (!cpy_r_r127) goto CPyL165;
     CPy_INCREF(cpy_r_name_2);
     if (likely(cpy_r_name_2 != Py_None))
         cpy_r_r128 = cpy_r_name_2;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 189, CPyStatic_mapper___globals, "str", cpy_r_name_2);
-        goto CPyL167;
+        goto CPyL166;
     }
     cpy_r_r129 = CPyStr_IsTrue(cpy_r_r128);
     CPy_DECREF(cpy_r_r128);
-    if (!cpy_r_r129) goto CPyL166;
+    if (!cpy_r_r129) goto CPyL165;
     if (likely(cpy_r_name_2 != Py_None))
         cpy_r_r130 = cpy_r_name_2;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 189, CPyStatic_mapper___globals, "str", cpy_r_name_2);
-        goto CPyL165;
+        goto CPyL164;
     }
     cpy_r_r131 = cpy_r_r130;
     goto CPyL76;
@@ -3000,7 +3030,7 @@ CPyL76: ;
     cpy_r_r133 = CPyList_SetItemUnsafe(cpy_r_r118, cpy_r_r119, cpy_r_r131);
     if (unlikely(!cpy_r_r133)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 189, CPyStatic_mapper___globals);
-        goto CPyL165;
+        goto CPyL164;
     }
     cpy_r_r134 = cpy_r_r119 + 2;
     cpy_r_r119 = cpy_r_r134;
@@ -3011,7 +3041,7 @@ CPyL79: ;
     cpy_r_r135 = PyList_New(0);
     if (unlikely(cpy_r_r135 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 191, CPyStatic_mapper___globals);
-        goto CPyL168;
+        goto CPyL167;
     }
     cpy_r_r136 = 0;
     cpy_r_r137 = ((mypy___nodes___FuncDefObject *)cpy_r_fdef)->_arg_kinds;
@@ -3024,28 +3054,28 @@ CPyL81: ;
     cpy_r_r142 = *(int64_t *)cpy_r_r141;
     cpy_r_r143 = cpy_r_r142 << 1;
     cpy_r_r144 = (Py_ssize_t)cpy_r_r136 < (Py_ssize_t)cpy_r_r143;
-    if (!cpy_r_r144) goto CPyL169;
+    if (!cpy_r_r144) goto CPyL168;
     cpy_r_r145 = (CPyPtr)&((PyVarObject *)cpy_r_r137)->ob_size;
     cpy_r_r146 = *(int64_t *)cpy_r_r145;
     cpy_r_r147 = cpy_r_r146 << 1;
     cpy_r_r148 = (Py_ssize_t)cpy_r_r138 < (Py_ssize_t)cpy_r_r147;
-    if (!cpy_r_r148) goto CPyL169;
+    if (!cpy_r_r148) goto CPyL168;
     cpy_r_r149 = (CPyPtr)&((PyVarObject *)cpy_r_arg_types)->ob_size;
     cpy_r_r150 = *(int64_t *)cpy_r_r149;
     cpy_r_r151 = cpy_r_r150 << 1;
     cpy_r_r152 = (Py_ssize_t)cpy_r_r139 < (Py_ssize_t)cpy_r_r151;
-    if (!cpy_r_r152) goto CPyL169;
+    if (!cpy_r_r152) goto CPyL168;
     cpy_r_r153 = (CPyPtr)&((PyVarObject *)cpy_r_arg_pos_onlys)->ob_size;
     cpy_r_r154 = *(int64_t *)cpy_r_r153;
     cpy_r_r155 = cpy_r_r154 << 1;
     cpy_r_r156 = (Py_ssize_t)cpy_r_r140 < (Py_ssize_t)cpy_r_r155;
-    if (!cpy_r_r156) goto CPyL169;
+    if (!cpy_r_r156) goto CPyL168;
     cpy_r_r157 = CPyList_GetItemUnsafe(cpy_r_arg_names, cpy_r_r136);
     if (likely(PyUnicode_Check(cpy_r_r157)))
         cpy_r_r158 = cpy_r_r157;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 191, CPyStatic_mapper___globals, "str", cpy_r_r157);
-        goto CPyL170;
+        goto CPyL169;
     }
     cpy_r_arg_name = cpy_r_r158;
     cpy_r_r159 = CPyList_GetItemUnsafe(cpy_r_r137, cpy_r_r138);
@@ -3053,7 +3083,7 @@ CPyL81: ;
         cpy_r_r160 = cpy_r_r159;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 191, CPyStatic_mapper___globals, "mypy.nodes.ArgKind", cpy_r_r159);
-        goto CPyL171;
+        goto CPyL170;
     }
     cpy_r_arg_kind = cpy_r_r160;
     cpy_r_r161 = CPyList_GetItemUnsafe(cpy_r_arg_types, cpy_r_r139);
@@ -3061,7 +3091,7 @@ CPyL81: ;
         cpy_r_r162 = cpy_r_r161;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 191, CPyStatic_mapper___globals, "mypyc.ir.rtypes.RType", cpy_r_r161);
-        goto CPyL172;
+        goto CPyL171;
     }
     cpy_r_arg_type = cpy_r_r162;
     cpy_r_r163 = CPyList_GetItemUnsafe(cpy_r_arg_pos_onlys, cpy_r_r140);
@@ -3072,7 +3102,7 @@ CPyL81: ;
     CPy_DECREF(cpy_r_r163);
     if (unlikely(cpy_r_r164 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 191, CPyStatic_mapper___globals);
-        goto CPyL173;
+        goto CPyL172;
     }
     cpy_r_arg_pos_only = cpy_r_r164;
     cpy_r_r165 = CPyDef_func_ir___RuntimeArg(cpy_r_arg_name, cpy_r_arg_type, cpy_r_arg_kind, cpy_r_arg_pos_only);
@@ -3081,14 +3111,14 @@ CPyL81: ;
     CPy_DECREF(cpy_r_arg_kind);
     if (unlikely(cpy_r_r165 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 192, CPyStatic_mapper___globals);
-        goto CPyL170;
+        goto CPyL169;
     }
     cpy_r_r166 = PyList_Append(cpy_r_r135, cpy_r_r165);
     CPy_DECREF(cpy_r_r165);
     cpy_r_r167 = cpy_r_r166 >= 0;
     if (unlikely(!cpy_r_r167)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 191, CPyStatic_mapper___globals);
-        goto CPyL170;
+        goto CPyL169;
     }
     cpy_r_r168 = cpy_r_r136 + 2;
     cpy_r_r136 = cpy_r_r168;
@@ -3104,7 +3134,7 @@ CPyL92: ;
     cpy_r_r172 = CPY_GET_ATTR(cpy_r_fdef, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
     if (unlikely(cpy_r_r172 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 201, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL93: ;
     cpy_r_r173 = CPyStatics[753]; /* '__eq__' */
@@ -3118,7 +3148,7 @@ CPyL93: ;
     cpy_r_r178 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r178)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", -1, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL96: ;
     cpy_r_r179 = cpy_r_r174 == 0;
@@ -3129,7 +3159,7 @@ CPyL98: ;
     cpy_r_r181 = CPY_GET_ATTR(cpy_r_fdef, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
     if (unlikely(cpy_r_r181 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 201, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL99: ;
     cpy_r_r182 = CPyStatics[754]; /* '__ne__' */
@@ -3143,7 +3173,7 @@ CPyL99: ;
     cpy_r_r187 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r187)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", -1, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL102: ;
     cpy_r_r188 = cpy_r_r183 == 0;
@@ -3156,7 +3186,7 @@ CPyL105: ;
     cpy_r_r190 = CPY_GET_ATTR(cpy_r_fdef, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
     if (unlikely(cpy_r_r190 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 201, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL106: ;
     cpy_r_r191 = CPyStatics[4196]; /* '__lt__' */
@@ -3170,7 +3200,7 @@ CPyL106: ;
     cpy_r_r196 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r196)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", -1, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL109: ;
     cpy_r_r197 = cpy_r_r192 == 0;
@@ -3183,7 +3213,7 @@ CPyL112: ;
     cpy_r_r199 = CPY_GET_ATTR(cpy_r_fdef, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
     if (unlikely(cpy_r_r199 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 201, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL113: ;
     cpy_r_r200 = CPyStatics[4198]; /* '__gt__' */
@@ -3197,7 +3227,7 @@ CPyL113: ;
     cpy_r_r205 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r205)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", -1, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL116: ;
     cpy_r_r206 = cpy_r_r201 == 0;
@@ -3210,7 +3240,7 @@ CPyL119: ;
     cpy_r_r208 = CPY_GET_ATTR(cpy_r_fdef, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
     if (unlikely(cpy_r_r208 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 201, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL120: ;
     cpy_r_r209 = CPyStatics[4199]; /* '__le__' */
@@ -3224,7 +3254,7 @@ CPyL120: ;
     cpy_r_r214 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r214)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", -1, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL123: ;
     cpy_r_r215 = cpy_r_r210 == 0;
@@ -3237,7 +3267,7 @@ CPyL126: ;
     cpy_r_r217 = CPY_GET_ATTR(cpy_r_fdef, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
     if (unlikely(cpy_r_r217 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", 201, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL127: ;
     cpy_r_r218 = CPyStatics[4197]; /* '__ge__' */
@@ -3251,20 +3281,20 @@ CPyL127: ;
     cpy_r_r223 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r223)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "fdef_to_sig", -1, CPyStatic_mapper___globals);
-        goto CPyL174;
+        goto CPyL173;
     }
 CPyL130: ;
     cpy_r_r224 = cpy_r_r219 == 0;
     cpy_r_r216 = cpy_r_r224;
 CPyL131: ;
     if (cpy_r_r216) {
-        goto CPyL175;
+        goto CPyL174;
     } else
         goto CPyL136;
 CPyL132: ;
     cpy_r_r225 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r225 == NULL)) {
-        goto CPyL176;
+        goto CPyL175;
     } else
         goto CPyL135;
 CPyL133: ;
@@ -3390,30 +3420,22 @@ CPyL162: ;
     CPy_DecRef(cpy_r_arg_types);
     CPy_DecRef(cpy_r_arg_pos_onlys);
     CPy_DecRef(cpy_r_ret);
-    CPy_DecRef(cpy_r_r100);
-    CPy_DecRef(cpy_r_r103);
-    CPy_DecRef(cpy_r_arg_2);
-    goto CPyL138;
-CPyL163: ;
-    CPy_DecRef(cpy_r_arg_types);
-    CPy_DecRef(cpy_r_arg_pos_onlys);
-    CPy_DecRef(cpy_r_ret);
     CPy_DecRef(cpy_r_r115);
     goto CPyL138;
-CPyL164: ;
+CPyL163: ;
     CPy_DECREF(cpy_r_r115);
     goto CPyL78;
-CPyL165: ;
+CPyL164: ;
     CPy_DecRef(cpy_r_arg_types);
     CPy_DecRef(cpy_r_arg_pos_onlys);
     CPy_DecRef(cpy_r_ret);
     CPy_DecRef(cpy_r_r115);
     CPy_DecRef(cpy_r_r118);
     goto CPyL138;
-CPyL166: ;
+CPyL165: ;
     CPy_DECREF(cpy_r_name_2);
     goto CPyL75;
-CPyL167: ;
+CPyL166: ;
     CPy_DecRef(cpy_r_arg_types);
     CPy_DecRef(cpy_r_arg_pos_onlys);
     CPy_DecRef(cpy_r_ret);
@@ -3421,18 +3443,26 @@ CPyL167: ;
     CPy_DecRef(cpy_r_r118);
     CPy_DecRef(cpy_r_name_2);
     goto CPyL138;
-CPyL168: ;
+CPyL167: ;
     CPy_DecRef(cpy_r_arg_types);
     CPy_DecRef(cpy_r_arg_pos_onlys);
     CPy_DecRef(cpy_r_ret);
     CPy_DecRef(cpy_r_arg_names);
     goto CPyL138;
-CPyL169: ;
+CPyL168: ;
     CPy_DECREF(cpy_r_arg_types);
     CPy_DECREF(cpy_r_arg_pos_onlys);
     CPy_DECREF(cpy_r_arg_names);
     CPy_DECREF(cpy_r_r137);
     goto CPyL92;
+CPyL169: ;
+    CPy_DecRef(cpy_r_arg_types);
+    CPy_DecRef(cpy_r_arg_pos_onlys);
+    CPy_DecRef(cpy_r_ret);
+    CPy_DecRef(cpy_r_arg_names);
+    CPy_DecRef(cpy_r_r135);
+    CPy_DecRef(cpy_r_r137);
+    goto CPyL138;
 CPyL170: ;
     CPy_DecRef(cpy_r_arg_types);
     CPy_DecRef(cpy_r_arg_pos_onlys);
@@ -3440,6 +3470,7 @@ CPyL170: ;
     CPy_DecRef(cpy_r_arg_names);
     CPy_DecRef(cpy_r_r135);
     CPy_DecRef(cpy_r_r137);
+    CPy_DecRef(cpy_r_arg_name);
     goto CPyL138;
 CPyL171: ;
     CPy_DecRef(cpy_r_arg_types);
@@ -3449,6 +3480,7 @@ CPyL171: ;
     CPy_DecRef(cpy_r_r135);
     CPy_DecRef(cpy_r_r137);
     CPy_DecRef(cpy_r_arg_name);
+    CPy_DecRef(cpy_r_arg_kind);
     goto CPyL138;
 CPyL172: ;
     CPy_DecRef(cpy_r_arg_types);
@@ -3459,26 +3491,16 @@ CPyL172: ;
     CPy_DecRef(cpy_r_r137);
     CPy_DecRef(cpy_r_arg_name);
     CPy_DecRef(cpy_r_arg_kind);
-    goto CPyL138;
-CPyL173: ;
-    CPy_DecRef(cpy_r_arg_types);
-    CPy_DecRef(cpy_r_arg_pos_onlys);
-    CPy_DecRef(cpy_r_ret);
-    CPy_DecRef(cpy_r_arg_names);
-    CPy_DecRef(cpy_r_r135);
-    CPy_DecRef(cpy_r_r137);
-    CPy_DecRef(cpy_r_arg_name);
-    CPy_DecRef(cpy_r_arg_kind);
     CPy_DecRef(cpy_r_arg_type);
     goto CPyL138;
-CPyL174: ;
+CPyL173: ;
     CPy_DecRef(cpy_r_ret);
     CPy_DecRef(cpy_r_args);
     goto CPyL138;
-CPyL175: ;
+CPyL174: ;
     CPy_DECREF(cpy_r_ret);
     goto CPyL132;
-CPyL176: ;
+CPyL175: ;
     CPy_DecRef(cpy_r_args);
     goto CPyL133;
 }
@@ -3598,6 +3620,7 @@ char CPyDef_mapper___Mapper___is_native_ref_expr(PyObject *cpy_r_self, PyObject 
 CPyL2: ;
     cpy_r_r3 = CPyStatics[224]; /* '.' */
     cpy_r_r4 = ((mypy___nodes___RefExprObject *)cpy_r_expr)->_node;
+    CPy_INCREF(cpy_r_r4);
     if (likely(cpy_r_r4 != Py_None))
         cpy_r_r5 = cpy_r_r4;
     else {
@@ -3605,6 +3628,7 @@ CPyL2: ;
         goto CPyL13;
     }
     cpy_r_r6 = CPY_GET_ATTR_TRAIT(cpy_r_r5, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r5);
     if (unlikely(cpy_r_r6 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "is_native_ref_expr", 212, CPyStatic_mapper___globals);
         goto CPyL13;
@@ -3620,6 +3644,7 @@ CPyL4: ;
     cpy_r_r9 = cpy_r_r7;
     if (!cpy_r_r9) goto CPyL12;
     cpy_r_r10 = ((mypy___nodes___RefExprObject *)cpy_r_expr)->_node;
+    CPy_INCREF(cpy_r_r10);
     if (likely(cpy_r_r10 != Py_None))
         cpy_r_r11 = cpy_r_r10;
     else {
@@ -3627,6 +3652,7 @@ CPyL4: ;
         goto CPyL13;
     }
     cpy_r_r12 = CPY_GET_ATTR_TRAIT(cpy_r_r11, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
+    CPy_DECREF(cpy_r_r11);
     if (unlikely(cpy_r_r12 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/mapper.py", "is_native_ref_expr", 213, CPyStatic_mapper___globals);
         goto CPyL13;

@@ -1348,12 +1348,12 @@ CPyL33: ;
         goto CPyL68;
     }
     cpy_r_r65 = CPY_GET_ATTR(cpy_r_r64, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r64);
     if (unlikely(cpy_r_r65 == NULL)) {
         CPy_AddTraceback("mypy/server/mergecheck.py", "path_to_str", 76, CPyStatic_mergecheck___globals);
         goto CPyL68;
     }
 CPyL37: ;
+    CPy_DECREF(cpy_r_obj);
     cpy_r_r66 = CPyStatics[72]; /* ')' */
     cpy_r_r67 = CPyStr_Build(7, cpy_r_r60, cpy_r_r61, cpy_r_r62, cpy_r_t, cpy_r_r63, cpy_r_r65, cpy_r_r66);
     CPy_DECREF(cpy_r_r61);
@@ -1497,6 +1497,7 @@ CPyL67: ;
     goto CPyL60;
 CPyL68: ;
     CPy_DecRef(cpy_r_result);
+    CPy_DecRef(cpy_r_obj);
     CPy_DecRef(cpy_r_t);
     CPy_DecRef(cpy_r_r61);
     goto CPyL60;

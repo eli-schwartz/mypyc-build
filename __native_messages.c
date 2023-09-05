@@ -6769,9 +6769,7 @@ CPyL111: ;
         goto CPyL295;
     }
     cpy_r_r206 = ((mypy___types___InstanceObject *)cpy_r_r205)->_type;
-    CPy_INCREF(cpy_r_r206);
     cpy_r_r207 = CPY_GET_ATTR(cpy_r_r206, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r206);
     if (unlikely(cpy_r_r207 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "has_no_attr", 438, CPyStatic_messages___globals);
         goto CPyL295;
@@ -9835,7 +9833,7 @@ CPyL27: ;
     } else
         goto CPyL447;
 CPyL31: ;
-    cpy_r_r52 = CPyStatics[867]; /* 'in' */
+    cpy_r_r52 = CPyStatics[866]; /* 'in' */
     cpy_r_r53 = PyUnicode_Compare(cpy_r_op, cpy_r_r52);
     cpy_r_r54 = cpy_r_r53 == -1;
     if (!cpy_r_r54) goto CPyL34;
@@ -15759,7 +15757,7 @@ CPyL3: ;
     }
     cpy_r_r9 = cpy_r_r7;
     if (!cpy_r_r9) goto CPyL13;
-    cpy_r_r10 = CPyStatics[10309]; /* frozenset({'self', 'cls', 'mcs'}) */
+    cpy_r_r10 = CPyStatics[10309]; /* frozenset({'cls', 'self', 'mcs'}) */
     cpy_r_r11 = PySet_Contains(cpy_r_r10, cpy_r_first_arg);
     CPy_DECREF(cpy_r_first_arg);
     cpy_r_r12 = cpy_r_r11 >= 0;
@@ -27017,7 +27015,6 @@ CPyL34: ;
         goto CPyL89;
     }
     cpy_r_r57 = ((mypy___types___PartialTypeObject *)cpy_r_r56)->_type;
-    CPy_INCREF(cpy_r_r57);
     if (likely(cpy_r_r57 != Py_None))
         cpy_r_r58 = cpy_r_r57;
     else {
@@ -27025,7 +27022,6 @@ CPyL34: ;
         goto CPyL89;
     }
     cpy_r_r59 = CPY_GET_ATTR(cpy_r_r58, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r58);
     if (unlikely(cpy_r_r59 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "need_annotation_for_var", 1744, CPyStatic_messages___globals);
         goto CPyL89;
@@ -27086,7 +27082,6 @@ CPyL46: ;
         goto CPyL97;
     }
     cpy_r_r70 = ((mypy___types___PartialTypeObject *)cpy_r_r69)->_type;
-    CPy_INCREF(cpy_r_r70);
     if (likely(cpy_r_r70 != Py_None))
         cpy_r_r71 = cpy_r_r70;
     else {
@@ -27094,7 +27089,6 @@ CPyL46: ;
         goto CPyL97;
     }
     cpy_r_r72 = CPY_GET_ATTR(cpy_r_r71, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r71);
     if (unlikely(cpy_r_r72 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "need_annotation_for_var", 1746, CPyStatic_messages___globals);
         goto CPyL97;
@@ -31681,9 +31675,7 @@ char CPyDef_messages___MessageBuilder___report_protocol_problems(PyObject *cpy_r
     }
     cpy_r_exclusions = cpy_r_r12;
     cpy_r_r13 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r13);
     cpy_r_r14 = CPY_GET_ATTR(cpy_r_r13, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2061, CPyStatic_messages___globals);
         goto CPyL241;
@@ -32053,9 +32045,7 @@ CPyL64: ;
     cpy_r_r121 = *(int64_t *)cpy_r_r120;
     cpy_r_r122 = cpy_r_r121 << 1;
     cpy_r_r123 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r123);
     cpy_r_r124 = CPY_GET_ATTR(cpy_r_r123, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r123);
     if (unlikely(cpy_r_r124 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2103, CPyStatic_messages___globals);
         goto CPyL260;
@@ -32063,7 +32053,6 @@ CPyL64: ;
 CPyL68: ;
     cpy_r_r125 = (CPyPtr)&((PyVarObject *)cpy_r_r124)->ob_size;
     cpy_r_r126 = *(int64_t *)cpy_r_r125;
-    CPy_DECREF(cpy_r_r124);
     cpy_r_r127 = cpy_r_r126 << 1;
     cpy_r_r128 = (Py_ssize_t)cpy_r_r122 < (Py_ssize_t)cpy_r_r127;
     if (cpy_r_r128) goto CPyL73;
@@ -32151,18 +32140,14 @@ CPyL82: ;
         goto CPyL257;
     }
     cpy_r_r151 = ((mypy___types___InstanceObject *)cpy_r_r150)->_type;
-    CPy_INCREF(cpy_r_r151);
     cpy_r_r152 = CPY_GET_ATTR(cpy_r_r151, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r151);
     if (unlikely(cpy_r_r152 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2109, CPyStatic_messages___globals);
         goto CPyL257;
     }
 CPyL84: ;
     cpy_r_r153 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r153);
     cpy_r_r154 = CPY_GET_ATTR(cpy_r_r153, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r153);
     if (unlikely(cpy_r_r154 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2109, CPyStatic_messages___globals);
         goto CPyL262;
@@ -32198,18 +32183,14 @@ CPyL87: ;
         goto CPyL260;
     }
     cpy_r_r166 = ((mypy___types___InstanceObject *)cpy_r_r165)->_type;
-    CPy_INCREF(cpy_r_r166);
     cpy_r_r167 = CPY_GET_ATTR(cpy_r_r166, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r166);
     if (unlikely(cpy_r_r167 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2117, CPyStatic_messages___globals);
         goto CPyL260;
     }
 CPyL89: ;
     cpy_r_r168 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r168);
     cpy_r_r169 = CPY_GET_ATTR(cpy_r_r168, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r168);
     if (unlikely(cpy_r_r169 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2117, CPyStatic_messages___globals);
         goto CPyL263;
@@ -32286,9 +32267,7 @@ CPyL99: ;
     CPy_DECREF(cpy_r_missing);
     cpy_r_r200 = cpy_r_r199 << 1;
     cpy_r_r201 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r201);
     cpy_r_r202 = CPY_GET_ATTR(cpy_r_r201, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r201);
     if (unlikely(cpy_r_r202 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2123, CPyStatic_messages___globals);
         goto CPyL257;
@@ -32296,7 +32275,6 @@ CPyL99: ;
 CPyL100: ;
     cpy_r_r203 = (CPyPtr)&((PyVarObject *)cpy_r_r202)->ob_size;
     cpy_r_r204 = *(int64_t *)cpy_r_r203;
-    CPy_DECREF(cpy_r_r202);
     cpy_r_r205 = cpy_r_r204 << 1;
     cpy_r_r206 = cpy_r_r200 == cpy_r_r205;
     if (cpy_r_r206) {
@@ -32988,9 +32966,7 @@ __LL3391: ;
     cpy_r_r393 = cpy_r_r392 ^ 1;
     if (!cpy_r_r393) goto CPyL196;
     cpy_r_r394 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r394);
     cpy_r_r395 = CPY_GET_ATTR(cpy_r_r394, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r394);
     if (unlikely(cpy_r_r395 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2185, CPyStatic_messages___globals);
         goto CPyL291;
@@ -33038,9 +33014,7 @@ CPyL196: ;
     cpy_r_r414 = cpy_r_r413 ^ 1;
     if (!cpy_r_r414) goto CPyL204;
     cpy_r_r415 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r415);
     cpy_r_r416 = CPY_GET_ATTR(cpy_r_r415, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r415);
     if (unlikely(cpy_r_r416 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2192, CPyStatic_messages___globals);
         goto CPyL291;
@@ -33087,9 +33061,7 @@ CPyL204: ;
     cpy_r_r435 = cpy_r_r434 ^ 1;
     if (!cpy_r_r435) goto CPyL211;
     cpy_r_r436 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r436);
     cpy_r_r437 = CPY_GET_ATTR(cpy_r_r436, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r436);
     if (unlikely(cpy_r_r437 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2199, CPyStatic_messages___globals);
         goto CPyL291;
@@ -33136,9 +33108,7 @@ CPyL211: ;
     cpy_r_r456 = cpy_r_r455 ^ 1;
     if (!cpy_r_r456) goto CPyL218;
     cpy_r_r457 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r457);
     cpy_r_r458 = CPY_GET_ATTR(cpy_r_r457, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r457);
     if (unlikely(cpy_r_r458 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2206, CPyStatic_messages___globals);
         goto CPyL291;
@@ -33202,9 +33172,7 @@ CPyL218: ;
         goto CPyL293;
     }
     cpy_r_r483 = ((mypy___types___InstanceObject *)cpy_r_r482)->_type;
-    CPy_INCREF(cpy_r_r483);
     cpy_r_r484 = CPY_GET_ATTR(cpy_r_r483, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r483);
     if (unlikely(cpy_r_r484 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2218, CPyStatic_messages___globals);
         goto CPyL293;
@@ -33244,9 +33212,7 @@ CPyL229: ;
     cpy_r_r498 = cpy_r_r496;
     if (!cpy_r_r498) goto CPyL296;
     cpy_r_r499 = ((mypy___types___InstanceObject *)cpy_r_supertype)->_type;
-    CPy_INCREF(cpy_r_r499);
     cpy_r_r500 = CPY_GET_ATTR(cpy_r_r499, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r499);
     if (unlikely(cpy_r_r500 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "report_protocol_problems", 2225, CPyStatic_messages___globals);
         goto CPyL295;
@@ -34293,9 +34259,7 @@ CPyL4: ;
         goto CPyL57;
     }
     cpy_r_r17 = ((mypy___types___InstanceObject *)cpy_r_r16)->_type;
-    CPy_INCREF(cpy_r_r17);
     cpy_r_r18 = CPY_GET_ATTR(cpy_r_r17, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r17);
     if (unlikely(cpy_r_r18 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "try_report_long_tuple_assignment_error", 2294, CPyStatic_messages___globals);
         goto CPyL57;
@@ -38170,7 +38134,6 @@ CPyL26: ;
         goto CPyL439;
     }
     cpy_r_r32 = ((mypy___types___TypeAliasTypeObject *)cpy_r_r31)->_alias;
-    CPy_INCREF(cpy_r_r32);
     if (likely(cpy_r_r32 != Py_None))
         cpy_r_r33 = cpy_r_r32;
     else {
@@ -38178,7 +38141,6 @@ CPyL26: ;
         goto CPyL439;
     }
     cpy_r_r34 = CPY_GET_ATTR(cpy_r_r33, CPyType_nodes___TypeAlias, 8, mypy___nodes___TypeAliasObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r33);
     if (unlikely(cpy_r_r34 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2460, CPyStatic_messages___globals);
         goto CPyL439;
@@ -38299,9 +38261,7 @@ CPyL46: ;
     }
     cpy_r_itype = cpy_r_r62;
     cpy_r_r63 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r63);
     cpy_r_r64 = CPY_GET_ATTR(cpy_r_r63, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r63);
     if (unlikely(cpy_r_r64 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2472, CPyStatic_messages___globals);
         goto CPyL449;
@@ -38388,9 +38348,7 @@ CPyL65: ;
     return cpy_r_base_str;
 CPyL66: ;
     cpy_r_r90 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r90);
     cpy_r_r91 = CPY_GET_ATTR(cpy_r_r90, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r90);
     if (unlikely(cpy_r_r91 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2478, CPyStatic_messages___globals);
         goto CPyL449;
@@ -38421,9 +38379,7 @@ CPyL71: ;
     return cpy_r_r99;
 CPyL72: ;
     cpy_r_r100 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r100);
     cpy_r_r101 = CPY_GET_ATTR(cpy_r_r100, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r100);
     if (unlikely(cpy_r_r101 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2481, CPyStatic_messages___globals);
         goto CPyL449;
@@ -38481,9 +38437,7 @@ CPyL82: ;
     CPy_Unreachable();
 CPyL84: ;
     cpy_r_r111 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r111);
     cpy_r_r112 = CPY_GET_ATTR(cpy_r_r111, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r111);
     if (unlikely(cpy_r_r112 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2482, CPyStatic_messages___globals);
         goto CPyL449;
@@ -38571,9 +38525,7 @@ CPyL96: ;
     cpy_r_r130 = cpy_r_r128;
     if (!cpy_r_r130) goto CPyL107;
     cpy_r_r131 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r131);
     cpy_r_r132 = CPY_GET_ATTR(cpy_r_r131, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r131);
     if (unlikely(cpy_r_r132 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2484, CPyStatic_messages___globals);
         goto CPyL449;
@@ -38604,9 +38556,7 @@ CPyL102: ;
     if (!cpy_r_r137) goto CPyL107;
 CPyL105: ;
     cpy_r_r138 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r138);
     cpy_r_r139 = CPY_GET_ATTR(cpy_r_r138, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r138);
     if (unlikely(cpy_r_r139 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2485, CPyStatic_messages___globals);
         goto CPyL449;
@@ -38616,9 +38566,7 @@ CPyL106: ;
     goto CPyL109;
 CPyL107: ;
     cpy_r_r140 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r140);
     cpy_r_r141 = CPY_GET_ATTR(cpy_r_r140, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r140);
     if (unlikely(cpy_r_r141 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2487, CPyStatic_messages___globals);
         goto CPyL449;
@@ -38644,9 +38592,7 @@ CPyL111: ;
     return cpy_r_base_str;
 CPyL112: ;
     cpy_r_r146 = ((mypy___types___InstanceObject *)cpy_r_itype)->_type;
-    CPy_INCREF(cpy_r_r146);
     cpy_r_r147 = CPY_GET_ATTR(cpy_r_r146, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r146);
     if (unlikely(cpy_r_r147 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2491, CPyStatic_messages___globals);
         goto CPyL459;
@@ -39009,9 +38955,7 @@ CPyL163: ;
     }
     cpy_r_r242 = ((mypy___types___TupleTypeObject *)cpy_r_r241)->_partial_fallback;
     cpy_r_r243 = ((mypy___types___InstanceObject *)cpy_r_r242)->_type;
-    CPy_INCREF(cpy_r_r243);
     cpy_r_r244 = CPY_GET_ATTR(cpy_r_r243, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r243);
     if (unlikely(cpy_r_r244 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "format_type_inner", 2517, CPyStatic_messages___globals);
         goto CPyL466;
@@ -41868,9 +41812,7 @@ CPyL7: ;
     }
     cpy_r_inst = cpy_r_r15;
     cpy_r_r16 = ((mypy___types___InstanceObject *)cpy_r_inst)->_type;
-    CPy_INCREF(cpy_r_r16);
     cpy_r_r17 = CPY_GET_ATTR(cpy_r_r16, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r16);
     if (unlikely(cpy_r_r17 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "find_type_overlaps", 2665, CPyStatic_messages___globals);
         goto CPyL44;
@@ -41889,15 +41831,13 @@ CPyL10: ;
         goto CPyL44;
     }
     cpy_r_r20 = ((mypy___types___InstanceObject *)cpy_r_inst)->_type;
-    CPy_INCREF(cpy_r_r20);
-    CPy_DECREF(cpy_r_inst);
     cpy_r_r21 = CPY_GET_ATTR(cpy_r_r20, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r20);
     if (unlikely(cpy_r_r21 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "find_type_overlaps", 2665, CPyStatic_messages___globals);
         goto CPyL45;
     }
 CPyL13: ;
+    CPy_DECREF(cpy_r_inst);
     cpy_r_r22 = PySet_Add(cpy_r_r19, cpy_r_r21);
     CPy_DECREF(cpy_r_r19);
     CPy_DECREF(cpy_r_r21);
@@ -42083,6 +42023,7 @@ CPyL44: ;
 CPyL45: ;
     CPy_DecRef(cpy_r_d);
     CPy_DecRef(cpy_r_r8);
+    CPy_DecRef(cpy_r_inst);
     CPy_DecRef(cpy_r_r19);
     goto CPyL40;
 CPyL46: ;
@@ -43749,15 +43690,13 @@ CPyL88: ;
     }
     cpy_r_arg = cpy_r_r132;
     cpy_r_r133 = ((mypy___nodes___ArgumentObject *)cpy_r_arg)->_variable;
-    CPy_INCREF(cpy_r_r133);
-    CPy_DECREF(cpy_r_arg);
     cpy_r_r134 = CPY_GET_ATTR(cpy_r_r133, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r133);
     if (unlikely(cpy_r_r134 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2792, CPyStatic_messages___globals);
-        goto CPyL210;
+        goto CPyL211;
     }
 CPyL91: ;
+    CPy_DECREF(cpy_r_arg);
     cpy_r_r135 = CPyList_SetItemUnsafe(cpy_r_r125, cpy_r_r126, cpy_r_r134);
     if (unlikely(!cpy_r_r135)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2792, CPyStatic_messages___globals);
@@ -43776,22 +43715,22 @@ CPyL93: ;
     cpy_r_r142 = *(int64_t *)cpy_r_r141;
     cpy_r_r143 = cpy_r_r142 << 1;
     cpy_r_r144 = (Py_ssize_t)cpy_r_r139 > (Py_ssize_t)cpy_r_r143;
-    if (!cpy_r_r144) goto CPyL211;
+    if (!cpy_r_r144) goto CPyL212;
     cpy_r_r145 = CPyList_GetItemShort(cpy_r_definition_arg_names, 0);
     if (unlikely(cpy_r_r145 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2795, CPyStatic_messages___globals);
-        goto CPyL212;
+        goto CPyL213;
     }
     if (likely(PyUnicode_Check(cpy_r_r145)))
         cpy_r_r146 = cpy_r_r145;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2795, CPyStatic_messages___globals, "str", cpy_r_r145);
-        goto CPyL212;
+        goto CPyL213;
     }
     cpy_r_r147 = CPyStr_IsTrue(cpy_r_r146);
     CPy_DECREF(cpy_r_r146);
-    if (!cpy_r_r147) goto CPyL211;
-    if (cpy_r_skip_self) goto CPyL211;
+    if (!cpy_r_r147) goto CPyL212;
+    if (cpy_r_skip_self) goto CPyL212;
     cpy_r_r148 = CPyStr_IsTrue(cpy_r_s);
     if (!cpy_r_r148) goto CPyL101;
     cpy_r_r149 = CPyStatics[71]; /* ', ' */
@@ -43799,7 +43738,7 @@ CPyL93: ;
     CPy_DECREF(cpy_r_s);
     if (unlikely(cpy_r_r150 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2799, CPyStatic_messages___globals);
-        goto CPyL213;
+        goto CPyL214;
     }
     cpy_r_s = cpy_r_r150;
 CPyL101: ;
@@ -43825,7 +43764,6 @@ CPyL101: ;
     cpy_r_s = cpy_r_r153;
 CPyL105: ;
     cpy_r_r154 = ((mypy___types___CallableTypeObject *)cpy_r_tp)->_definition;
-    CPy_INCREF(cpy_r_r154);
     if (likely(Py_TYPE(cpy_r_r154) == CPyType_nodes___FuncDef))
         cpy_r_r155 = cpy_r_r154;
     else {
@@ -43833,7 +43771,6 @@ CPyL105: ;
         goto CPyL206;
     }
     cpy_r_r156 = CPY_GET_ATTR(cpy_r_r155, CPyType_nodes___FuncDef, 12, mypy___nodes___FuncDefObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r155);
     if (unlikely(cpy_r_r156 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2801, CPyStatic_messages___globals);
         goto CPyL206;
@@ -43855,7 +43792,7 @@ CPyL109: ;
     CPy_INCREF(cpy_r_r160);
     cpy_r_r161 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r162 = cpy_r_r160 != cpy_r_r161;
-    if (!cpy_r_r162) goto CPyL214;
+    if (!cpy_r_r162) goto CPyL215;
     if (likely(cpy_r_r160 != Py_None))
         cpy_r_r163 = cpy_r_r160;
     else {
@@ -43877,7 +43814,7 @@ CPyL109: ;
     cpy_r_first_arg = cpy_r_r167;
     cpy_r_r168 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r169 = cpy_r_first_arg != cpy_r_r168;
-    if (!cpy_r_r169) goto CPyL215;
+    if (!cpy_r_r169) goto CPyL216;
     CPy_INCREF(cpy_r_first_arg);
     cpy_r_r170 = cpy_r_first_arg;
     cpy_r_r171 = PyObject_IsTrue(cpy_r_r170);
@@ -43885,10 +43822,10 @@ CPyL109: ;
     cpy_r_r172 = cpy_r_r171 >= 0;
     if (unlikely(!cpy_r_r172)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2803, CPyStatic_messages___globals);
-        goto CPyL216;
+        goto CPyL217;
     }
     cpy_r_r173 = cpy_r_r171;
-    if (!cpy_r_r173) goto CPyL215;
+    if (!cpy_r_r173) goto CPyL216;
     cpy_r_r174 = CPyStr_IsTrue(cpy_r_s);
     if (!cpy_r_r174) goto CPyL120;
     cpy_r_r175 = CPyStatics[71]; /* ', ' */
@@ -43896,7 +43833,7 @@ CPyL109: ;
     CPy_DECREF(cpy_r_s);
     if (unlikely(cpy_r_r176 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2806, CPyStatic_messages___globals);
-        goto CPyL217;
+        goto CPyL218;
     }
     cpy_r_s = cpy_r_r176;
 CPyL120: ;
@@ -44048,16 +43985,16 @@ CPyL141: ;
     CPy_DECREF(cpy_r_r214);
     if (unlikely(cpy_r_r215 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2820, CPyStatic_messages___globals);
-        goto CPyL218;
+        goto CPyL219;
     }
 CPyL145: ;
     cpy_r_r216 = PyIter_Next(cpy_r_r215);
-    if (cpy_r_r216 == NULL) goto CPyL219;
+    if (cpy_r_r216 == NULL) goto CPyL220;
     if (likely(PyObject_TypeCheck(cpy_r_r216, CPyType_types___TypeVarLikeType)))
         cpy_r_r217 = cpy_r_r216;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2820, CPyStatic_messages___globals, "mypy.types.TypeVarLikeType", cpy_r_r216);
-        goto CPyL220;
+        goto CPyL221;
     }
     cpy_r_tvar = cpy_r_r217;
     cpy_r_r218 = (PyObject *)CPyType_types___TypeVarType;
@@ -44069,7 +44006,7 @@ CPyL145: ;
         cpy_r_r222 = cpy_r_tvar;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2822, CPyStatic_messages___globals, "mypy.types.TypeVarType", cpy_r_tvar);
-        goto CPyL221;
+        goto CPyL222;
     }
     cpy_r_r223 = ((mypy___types___TypeVarTypeObject *)cpy_r_r222)->_upper_bound;
     CPy_INCREF(cpy_r_r223);
@@ -44077,33 +44014,31 @@ CPyL145: ;
     CPy_DECREF(cpy_r_r223);
     if (unlikely(cpy_r_r224 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2822, CPyStatic_messages___globals);
-        goto CPyL221;
+        goto CPyL222;
     }
     if (likely(cpy_r_r224 != Py_None))
         cpy_r_r225 = cpy_r_r224;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2822, CPyStatic_messages___globals, "mypy.types.ProperType", cpy_r_r224);
-        goto CPyL221;
+        goto CPyL222;
     }
     cpy_r_upper_bound = cpy_r_r225;
     cpy_r_r226 = (PyObject *)CPyType_types___Instance;
     cpy_r_r227 = (CPyPtr)&((PyObject *)cpy_r_upper_bound)->ob_type;
     cpy_r_r228 = *(PyObject * *)cpy_r_r227;
     cpy_r_r229 = cpy_r_r228 == cpy_r_r226;
-    if (!cpy_r_r229) goto CPyL222;
+    if (!cpy_r_r229) goto CPyL223;
     if (likely(Py_TYPE(cpy_r_upper_bound) == CPyType_types___Instance))
         cpy_r_r230 = cpy_r_upper_bound;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2825, CPyStatic_messages___globals, "mypy.types.Instance", cpy_r_upper_bound);
-        goto CPyL223;
+        goto CPyL224;
     }
     cpy_r_r231 = ((mypy___types___InstanceObject *)cpy_r_r230)->_type;
-    CPy_INCREF(cpy_r_r231);
     cpy_r_r232 = CPY_GET_ATTR(cpy_r_r231, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r231);
     if (unlikely(cpy_r_r232 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2825, CPyStatic_messages___globals);
-        goto CPyL223;
+        goto CPyL224;
     }
 CPyL154: ;
     cpy_r_r233 = CPyStatics[736]; /* 'builtins.object' */
@@ -44117,16 +44052,16 @@ CPyL154: ;
     cpy_r_r238 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r238)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2825, CPyStatic_messages___globals);
-        goto CPyL223;
+        goto CPyL224;
     }
 CPyL157: ;
     cpy_r_r239 = cpy_r_r234 != 0;
-    if (!cpy_r_r239) goto CPyL222;
+    if (!cpy_r_r239) goto CPyL223;
     if (likely(Py_TYPE(cpy_r_tvar) == CPyType_types___TypeVarType))
         cpy_r_r240 = cpy_r_tvar;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2827, CPyStatic_messages___globals, "mypy.types.TypeVarType", cpy_r_tvar);
-        goto CPyL223;
+        goto CPyL224;
     }
     cpy_r_r241 = ((mypy___types___TypeVarTypeObject *)cpy_r_r240)->_name;
     CPy_INCREF(cpy_r_r241);
@@ -44136,7 +44071,7 @@ CPyL157: ;
         cpy_r_r243 = cpy_r_upper_bound;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2827, CPyStatic_messages___globals, "mypy.types.Instance", cpy_r_upper_bound);
-        goto CPyL224;
+        goto CPyL225;
     }
     cpy_r_r244 = CPY_INT_TAG;
     cpy_r_r245 = 2;
@@ -44144,21 +44079,21 @@ CPyL157: ;
     CPy_DECREF(cpy_r_r243);
     if (unlikely(cpy_r_r246 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2827, CPyStatic_messages___globals);
-        goto CPyL224;
+        goto CPyL225;
     }
     cpy_r_r247 = CPyStr_Build(3, cpy_r_r241, cpy_r_r242, cpy_r_r246);
     CPy_DECREF(cpy_r_r241);
     CPy_DECREF(cpy_r_r246);
     if (unlikely(cpy_r_r247 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2827, CPyStatic_messages___globals);
-        goto CPyL220;
+        goto CPyL221;
     }
     cpy_r_r248 = PyList_Append(cpy_r_tvars, cpy_r_r247);
     CPy_DECREF(cpy_r_r247);
     cpy_r_r249 = cpy_r_r248 >= 0;
     if (unlikely(!cpy_r_r249)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2827, CPyStatic_messages___globals);
-        goto CPyL220;
+        goto CPyL221;
     } else
         goto CPyL145;
 CPyL163: ;
@@ -44166,7 +44101,7 @@ CPyL163: ;
         cpy_r_r250 = cpy_r_tvar;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2828, CPyStatic_messages___globals, "mypy.types.TypeVarType", cpy_r_tvar);
-        goto CPyL221;
+        goto CPyL222;
     }
     cpy_r_r251 = ((mypy___types___TypeVarTypeObject *)cpy_r_r250)->_values;
     CPy_INCREF(cpy_r_r251);
@@ -44180,7 +44115,7 @@ CPyL163: ;
         cpy_r_r256 = cpy_r_tvar;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2831, CPyStatic_messages___globals, "mypy.types.TypeVarType", cpy_r_tvar);
-        goto CPyL221;
+        goto CPyL222;
     }
     cpy_r_r257 = ((mypy___types___TypeVarTypeObject *)cpy_r_r256)->_name;
     CPy_INCREF(cpy_r_r257);
@@ -44189,7 +44124,7 @@ CPyL163: ;
         cpy_r_r259 = cpy_r_tvar;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2832, CPyStatic_messages___globals, "mypy.types.TypeVarType", cpy_r_tvar);
-        goto CPyL225;
+        goto CPyL226;
     }
     cpy_r_r260 = ((mypy___types___TypeVarTypeObject *)cpy_r_r259)->_values;
     CPy_INCREF(cpy_r_r260);
@@ -44199,7 +44134,7 @@ CPyL163: ;
     cpy_r_r263 = PyList_New(cpy_r_r262);
     if (unlikely(cpy_r_r263 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2832, CPyStatic_messages___globals);
-        goto CPyL226;
+        goto CPyL227;
     }
     cpy_r_r264 = 0;
 CPyL169: ;
@@ -44207,13 +44142,13 @@ CPyL169: ;
     cpy_r_r266 = *(int64_t *)cpy_r_r265;
     cpy_r_r267 = cpy_r_r266 << 1;
     cpy_r_r268 = (Py_ssize_t)cpy_r_r264 < (Py_ssize_t)cpy_r_r267;
-    if (!cpy_r_r268) goto CPyL227;
+    if (!cpy_r_r268) goto CPyL228;
     cpy_r_r269 = CPyList_GetItemUnsafe(cpy_r_r260, cpy_r_r264);
     if (likely(PyObject_TypeCheck(cpy_r_r269, CPyType_types___Type)))
         cpy_r_r270 = cpy_r_r269;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2832, CPyStatic_messages___globals, "mypy.types.Type", cpy_r_r269);
-        goto CPyL228;
+        goto CPyL229;
     }
     cpy_r_tp_2 = cpy_r_r270;
     cpy_r_r271 = CPY_INT_TAG;
@@ -44222,12 +44157,12 @@ CPyL169: ;
     CPy_DECREF(cpy_r_tp_2);
     if (unlikely(cpy_r_r273 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2832, CPyStatic_messages___globals);
-        goto CPyL228;
+        goto CPyL229;
     }
     cpy_r_r274 = CPyList_SetItemUnsafe(cpy_r_r263, cpy_r_r264, cpy_r_r273);
     if (unlikely(!cpy_r_r274)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2832, CPyStatic_messages___globals);
-        goto CPyL228;
+        goto CPyL229;
     }
     cpy_r_r275 = cpy_r_r264 + 2;
     cpy_r_r264 = cpy_r_r275;
@@ -44237,7 +44172,7 @@ CPyL174: ;
     CPy_DECREF(cpy_r_r263);
     if (unlikely(cpy_r_r276 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2832, CPyStatic_messages___globals);
-        goto CPyL229;
+        goto CPyL230;
     }
     cpy_r_r277 = CPyStatics[3706]; /* ' in (' */
     cpy_r_r278 = CPyStatics[72]; /* ')' */
@@ -44246,14 +44181,14 @@ CPyL174: ;
     CPy_DECREF(cpy_r_r276);
     if (unlikely(cpy_r_r279 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2830, CPyStatic_messages___globals);
-        goto CPyL220;
+        goto CPyL221;
     }
     cpy_r_r280 = PyList_Append(cpy_r_tvars, cpy_r_r279);
     CPy_DECREF(cpy_r_r279);
     cpy_r_r281 = cpy_r_r280 >= 0;
     if (unlikely(!cpy_r_r281)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2829, CPyStatic_messages___globals);
-        goto CPyL220;
+        goto CPyL221;
     } else
         goto CPyL145;
 CPyL177: ;
@@ -44261,7 +44196,7 @@ CPyL177: ;
         cpy_r_r282 = cpy_r_tvar;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2836, CPyStatic_messages___globals, "mypy.types.TypeVarType", cpy_r_tvar);
-        goto CPyL221;
+        goto CPyL222;
     }
     cpy_r_r283 = ((mypy___types___TypeVarTypeObject *)cpy_r_r282)->_name;
     CPy_INCREF(cpy_r_r283);
@@ -44271,7 +44206,7 @@ CPyL177: ;
     cpy_r_r285 = cpy_r_r284 >= 0;
     if (unlikely(!cpy_r_r285)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2836, CPyStatic_messages___globals);
-        goto CPyL220;
+        goto CPyL221;
     } else
         goto CPyL145;
 CPyL179: ;
@@ -44280,7 +44215,7 @@ CPyL179: ;
     cpy_r_r288 = CPyObject_GetAttr(cpy_r_r286, cpy_r_r287);
     if (unlikely(cpy_r_r288 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2839, CPyStatic_messages___globals);
-        goto CPyL221;
+        goto CPyL222;
     }
     PyObject *cpy_r_r289[1] = {cpy_r_tvar};
     cpy_r_r290 = (PyObject **)&cpy_r_r289;
@@ -44288,28 +44223,28 @@ CPyL179: ;
     CPy_DECREF(cpy_r_r288);
     if (unlikely(cpy_r_r291 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2839, CPyStatic_messages___globals);
-        goto CPyL221;
+        goto CPyL222;
     }
     CPy_DECREF(cpy_r_tvar);
     if (likely(PyUnicode_Check(cpy_r_r291)))
         cpy_r_r292 = cpy_r_r291;
     else {
         CPy_TypeErrorTraceback("mypy/messages.py", "pretty_callable", 2839, CPyStatic_messages___globals, "str", cpy_r_r291);
-        goto CPyL220;
+        goto CPyL221;
     }
     cpy_r_r293 = PyList_Append(cpy_r_tvars, cpy_r_r292);
     CPy_DECREF(cpy_r_r292);
     cpy_r_r294 = cpy_r_r293 >= 0;
     if (unlikely(!cpy_r_r294)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2839, CPyStatic_messages___globals);
-        goto CPyL220;
+        goto CPyL221;
     } else
         goto CPyL145;
 CPyL183: ;
     cpy_r_r295 = CPy_NoErrOccured();
     if (unlikely(!cpy_r_r295)) {
         CPy_AddTraceback("mypy/messages.py", "pretty_callable", 2820, CPyStatic_messages___globals);
-        goto CPyL218;
+        goto CPyL219;
     }
     cpy_r_r296 = CPyStatics[207]; /* '[' */
     cpy_r_r297 = CPyStatics[71]; /* ', ' */
@@ -44435,80 +44370,86 @@ CPyL210: ;
     CPy_DecRef(cpy_r_r125);
     goto CPyL189;
 CPyL211: ;
+    CPy_DecRef(cpy_r_s);
+    CPy_DecRef(cpy_r_r122);
+    CPy_DecRef(cpy_r_r125);
+    CPy_DecRef(cpy_r_arg);
+    goto CPyL189;
+CPyL212: ;
     CPy_DECREF(cpy_r_definition_arg_names);
     goto CPyL105;
-CPyL212: ;
-    CPy_DecRef(cpy_r_s);
-    CPy_DecRef(cpy_r_definition_arg_names);
-    goto CPyL189;
 CPyL213: ;
+    CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_definition_arg_names);
     goto CPyL189;
 CPyL214: ;
+    CPy_DecRef(cpy_r_definition_arg_names);
+    goto CPyL189;
+CPyL215: ;
     CPy_DECREF(cpy_r_r160);
     goto CPyL129;
-CPyL215: ;
+CPyL216: ;
     CPy_DECREF(cpy_r_first_arg);
     goto CPyL123;
-CPyL216: ;
-    CPy_DecRef(cpy_r_s);
-    CPy_DecRef(cpy_r_first_arg);
-    goto CPyL189;
 CPyL217: ;
+    CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_first_arg);
     goto CPyL189;
 CPyL218: ;
+    CPy_DecRef(cpy_r_first_arg);
+    goto CPyL189;
+CPyL219: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     goto CPyL189;
-CPyL219: ;
+CPyL220: ;
     CPy_DECREF(cpy_r_r215);
     goto CPyL183;
-CPyL220: ;
+CPyL221: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
     goto CPyL189;
-CPyL221: ;
+CPyL222: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
     CPy_DecRef(cpy_r_tvar);
     goto CPyL189;
-CPyL222: ;
+CPyL223: ;
     CPy_DECREF(cpy_r_upper_bound);
     goto CPyL163;
-CPyL223: ;
+CPyL224: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
     CPy_DecRef(cpy_r_tvar);
     CPy_DecRef(cpy_r_upper_bound);
     goto CPyL189;
-CPyL224: ;
+CPyL225: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
     CPy_DecRef(cpy_r_r241);
     goto CPyL189;
-CPyL225: ;
+CPyL226: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
     CPy_DecRef(cpy_r_tvar);
     CPy_DecRef(cpy_r_r257);
     goto CPyL189;
-CPyL226: ;
+CPyL227: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
     CPy_DecRef(cpy_r_r257);
     CPy_DecRef(cpy_r_r260);
     goto CPyL189;
-CPyL227: ;
+CPyL228: ;
     CPy_DECREF(cpy_r_r260);
     goto CPyL174;
-CPyL228: ;
+CPyL229: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
@@ -44516,7 +44457,7 @@ CPyL228: ;
     CPy_DecRef(cpy_r_r260);
     CPy_DecRef(cpy_r_r263);
     goto CPyL189;
-CPyL229: ;
+CPyL230: ;
     CPy_DecRef(cpy_r_s);
     CPy_DecRef(cpy_r_tvars);
     CPy_DecRef(cpy_r_r215);
@@ -44656,9 +44597,7 @@ CPyL4: ;
     }
     cpy_r_missing = cpy_r_r3;
     cpy_r_r4 = ((mypy___types___InstanceObject *)cpy_r_right)->_type;
-    CPy_INCREF(cpy_r_r4);
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "get_missing_protocol_members", 2859, CPyStatic_messages___globals);
         goto CPyL17;
@@ -44875,9 +44814,7 @@ CPyL6: ;
     }
     cpy_r_conflicts = cpy_r_r3;
     cpy_r_r4 = ((mypy___types___InstanceObject *)cpy_r_right)->_type;
-    CPy_INCREF(cpy_r_r4);
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "get_conflict_protocol_types", 2875, CPyStatic_messages___globals);
         goto CPyL47;
@@ -45327,9 +45264,7 @@ CPyL6: ;
     }
     cpy_r_all_flags = cpy_r_r3;
     cpy_r_r4 = ((mypy___types___InstanceObject *)cpy_r_right)->_type;
-    CPy_INCREF(cpy_r_r4);
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "get_bad_protocol_flags", 2899, CPyStatic_messages___globals);
         goto CPyL51;
@@ -46850,7 +46785,6 @@ CPyL4: ;
     return cpy_r_r7;
 CPyL5: ;
     cpy_r_r8 = ((mypy___types___CallableTypeObject *)cpy_r_typ)->_definition;
-    CPy_INCREF(cpy_r_r8);
     if (likely(cpy_r_r8 != Py_None))
         cpy_r_r9 = cpy_r_r8;
     else {
@@ -46858,7 +46792,6 @@ CPyL5: ;
         goto CPyL36;
     }
     cpy_r_r10 = CPY_GET_ATTR_TRAIT(cpy_r_r9, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r9);
     if (unlikely(cpy_r_r10 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "find_defining_module", 2999, CPyStatic_messages___globals);
         goto CPyL36;
@@ -48425,9 +48358,7 @@ PyObject *CPyDef_messages___append_invariance_notes(PyObject *cpy_r_notes, PyObj
     CPy_INCREF(cpy_r_r1);
     cpy_r_covariant_suggestion = cpy_r_r1;
     cpy_r_r2 = ((mypy___types___InstanceObject *)cpy_r_arg_type)->_type;
-    CPy_INCREF(cpy_r_r2);
     cpy_r_r3 = CPY_GET_ATTR(cpy_r_r2, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r2);
     if (unlikely(cpy_r_r3 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "append_invariance_notes", 3053, CPyStatic_messages___globals);
         goto CPyL48;
@@ -48450,9 +48381,7 @@ CPyL4: ;
     cpy_r_r10 = cpy_r_r5 == 0;
     if (!cpy_r_r10) goto CPyL17;
     cpy_r_r11 = ((mypy___types___InstanceObject *)cpy_r_expected_type)->_type;
-    CPy_INCREF(cpy_r_r11);
     cpy_r_r12 = CPY_GET_ATTR(cpy_r_r11, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r11);
     if (unlikely(cpy_r_r12 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "append_invariance_notes", 3054, CPyStatic_messages___globals);
         goto CPyL48;
@@ -48530,9 +48459,7 @@ CPyL16: ;
     goto CPyL40;
 CPyL17: ;
     cpy_r_r36 = ((mypy___types___InstanceObject *)cpy_r_arg_type)->_type;
-    CPy_INCREF(cpy_r_r36);
     cpy_r_r37 = CPY_GET_ATTR(cpy_r_r36, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r36);
     if (unlikely(cpy_r_r37 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "append_invariance_notes", 3060, CPyStatic_messages___globals);
         goto CPyL48;
@@ -48555,9 +48482,7 @@ CPyL21: ;
     cpy_r_r44 = cpy_r_r39 == 0;
     if (!cpy_r_r44) goto CPyL40;
     cpy_r_r45 = ((mypy___types___InstanceObject *)cpy_r_expected_type)->_type;
-    CPy_INCREF(cpy_r_r45);
     cpy_r_r46 = CPY_GET_ATTR(cpy_r_r45, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r45);
     if (unlikely(cpy_r_r46 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "append_invariance_notes", 3061, CPyStatic_messages___globals);
         goto CPyL48;
@@ -48803,9 +48728,7 @@ PyObject *CPyDef_messages___append_numbers_notes(PyObject *cpy_r_notes, PyObject
     char cpy_r_r15;
     PyObject *cpy_r_r16;
     cpy_r_r0 = ((mypy___types___InstanceObject *)cpy_r_expected_type)->_type;
-    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "append_numbers_notes", 3082, CPyStatic_messages___globals);
         goto CPyL10;
@@ -49046,9 +48969,7 @@ PyObject *CPyDef_messages___make_inferred_type_note(PyObject *cpy_r_context, PyO
         goto CPyL51;
     }
     cpy_r_r13 = ((mypy___types___InstanceObject *)cpy_r_r12)->_type;
-    CPy_INCREF(cpy_r_r13);
     cpy_r_r14 = CPY_GET_ATTR(cpy_r_r13, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "make_inferred_type_note", 3104, CPyStatic_messages___globals);
         goto CPyL51;
@@ -49061,9 +48982,7 @@ CPyL8: ;
         goto CPyL52;
     }
     cpy_r_r16 = ((mypy___types___InstanceObject *)cpy_r_r15)->_type;
-    CPy_INCREF(cpy_r_r16);
     cpy_r_r17 = CPY_GET_ATTR(cpy_r_r16, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r16);
     if (unlikely(cpy_r_r17 == NULL)) {
         CPy_AddTraceback("mypy/messages.py", "make_inferred_type_note", 3104, CPyStatic_messages___globals);
         goto CPyL52;

@@ -2963,9 +2963,7 @@ CPyL21: ;
     cpy_r_r35 = cpy_r_r34 != 0;
     if (!cpy_r_r35) goto CPyL121;
     cpy_r_r36 = ((mypy___patterns___ClassPatternObject *)cpy_r_pattern)->_class_ref;
-    CPy_INCREF(cpy_r_r36);
     cpy_r_r37 = CPY_GET_ATTR(cpy_r_r36, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r36);
     if (unlikely(cpy_r_r37 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 143, CPyStatic_match___globals);
         goto CPyL163;
@@ -3139,15 +3137,15 @@ CPyL50: ;
         cpy_r_r75 = cpy_r_ty;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 157, CPyStatic_match___globals, "mypy.nodes.SymbolTableNode", cpy_r_ty);
-        goto CPyL163;
+        goto CPyL177;
     }
     cpy_r_r76 = CPY_GET_ATTR(cpy_r_r75, CPyType_nodes___SymbolTableNode, 2, mypy___nodes___SymbolTableNodeObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r75);
     if (unlikely(cpy_r_r76 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 157, CPyStatic_match___globals);
-        goto CPyL163;
+        goto CPyL177;
     }
 CPyL52: ;
+    CPy_DECREF(cpy_r_ty);
     cpy_r_r77 = CPyDef_types___get_proper_type(cpy_r_r76);
     CPy_DECREF(cpy_r_r76);
     if (unlikely(cpy_r_r77 == NULL)) {
@@ -3162,7 +3160,7 @@ CPyL52: ;
     if (cpy_r_r81) {
         goto CPyL56;
     } else
-        goto CPyL177;
+        goto CPyL178;
 CPyL54: ;
     PyErr_SetNone(PyExc_AssertionError);
     cpy_r_r82 = 0;
@@ -3175,14 +3173,14 @@ CPyL56: ;
     cpy_r_r83 = PyList_New(0);
     if (unlikely(cpy_r_r83 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 160, CPyStatic_match___globals);
-        goto CPyL178;
+        goto CPyL179;
     }
     cpy_r_match_args = cpy_r_r83;
     if (likely(Py_TYPE(cpy_r_match_args_type) == CPyType_types___TupleType))
         cpy_r_r84 = cpy_r_match_args_type;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 162, CPyStatic_match___globals, "mypy.types.TupleType", cpy_r_match_args_type);
-        goto CPyL179;
+        goto CPyL180;
     }
     cpy_r_r85 = ((mypy___types___TupleTypeObject *)cpy_r_r84)->_items;
     CPy_INCREF(cpy_r_r85);
@@ -3193,26 +3191,26 @@ CPyL59: ;
     cpy_r_r88 = *(int64_t *)cpy_r_r87;
     cpy_r_r89 = cpy_r_r88 << 1;
     cpy_r_r90 = (Py_ssize_t)cpy_r_r86 < (Py_ssize_t)cpy_r_r89;
-    if (!cpy_r_r90) goto CPyL180;
+    if (!cpy_r_r90) goto CPyL181;
     cpy_r_r91 = CPyList_GetItemUnsafe(cpy_r_r85, cpy_r_r86);
     if (likely(PyObject_TypeCheck(cpy_r_r91, CPyType_types___Type)))
         cpy_r_r92 = cpy_r_r91;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 162, CPyStatic_match___globals, "mypy.types.Type", cpy_r_r91);
-        goto CPyL181;
+        goto CPyL182;
     }
     cpy_r_item = cpy_r_r92;
     cpy_r_r93 = CPyDef_types___get_proper_type(cpy_r_item);
     CPy_DECREF(cpy_r_item);
     if (unlikely(cpy_r_r93 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 163, CPyStatic_match___globals);
-        goto CPyL181;
+        goto CPyL182;
     }
     if (likely(cpy_r_r93 != Py_None))
         cpy_r_r94 = cpy_r_r93;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 163, CPyStatic_match___globals, "mypy.types.ProperType", cpy_r_r93);
-        goto CPyL181;
+        goto CPyL182;
     }
     cpy_r_proper_item = cpy_r_r94;
     cpy_r_r95 = (PyObject *)CPyType_types___Instance;
@@ -3229,7 +3227,7 @@ CPyL65: ;
         cpy_r_r101 = cpy_r_proper_item;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 164, CPyStatic_match___globals, "mypy.types.Instance", cpy_r_proper_item);
-        goto CPyL182;
+        goto CPyL183;
     }
     cpy_r_r102 = ((mypy___types___InstanceObject *)cpy_r_r101)->_last_known_value;
     CPy_INCREF(cpy_r_r102);
@@ -3240,13 +3238,13 @@ CPyL67: ;
     cpy_r_r104 = cpy_r_r103 >= 0;
     if (unlikely(!cpy_r_r104)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", -1, CPyStatic_match___globals);
-        goto CPyL182;
+        goto CPyL183;
     }
     cpy_r_r105 = cpy_r_r103;
     if (cpy_r_r105) {
         goto CPyL71;
     } else
-        goto CPyL183;
+        goto CPyL184;
 CPyL69: ;
     PyErr_SetNone(PyExc_AssertionError);
     cpy_r_r106 = 0;
@@ -3260,14 +3258,14 @@ CPyL71: ;
         cpy_r_r107 = cpy_r_proper_item;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 166, CPyStatic_match___globals, "mypy.types.Instance", cpy_r_proper_item);
-        goto CPyL182;
+        goto CPyL183;
     }
     cpy_r_r108 = ((mypy___types___InstanceObject *)cpy_r_r107)->_last_known_value;
     if (likely(cpy_r_r108 != Py_None))
         cpy_r_r109 = cpy_r_r108;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 166, CPyStatic_match___globals, "mypy.types.LiteralType", cpy_r_r108);
-        goto CPyL182;
+        goto CPyL183;
     }
     cpy_r_r110 = ((mypy___types___LiteralTypeObject *)cpy_r_r109)->_value;
     CPy_INCREF(cpy_r_r110);
@@ -3278,13 +3276,13 @@ CPyL71: ;
     cpy_r_r113 = cpy_r_r112 >= 0;
     if (unlikely(!cpy_r_r113)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 167, CPyStatic_match___globals);
-        goto CPyL184;
+        goto CPyL185;
     }
     cpy_r_r114 = cpy_r_r112;
     if (cpy_r_r114) {
         goto CPyL77;
     } else
-        goto CPyL185;
+        goto CPyL186;
 CPyL75: ;
     PyErr_SetNone(PyExc_AssertionError);
     cpy_r_r115 = 0;
@@ -3298,14 +3296,14 @@ CPyL77: ;
         cpy_r_r116 = cpy_r_match_arg;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 169, CPyStatic_match___globals, "str", cpy_r_match_arg);
-        goto CPyL181;
+        goto CPyL182;
     }
     cpy_r_r117 = PyList_Append(cpy_r_match_args, cpy_r_r116);
     CPy_DECREF(cpy_r_r116);
     cpy_r_r118 = cpy_r_r117 >= 0;
     if (unlikely(!cpy_r_r118)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 169, CPyStatic_match___globals);
-        goto CPyL181;
+        goto CPyL182;
     }
     cpy_r_r119 = cpy_r_r86 + 2;
     cpy_r_r86 = cpy_r_r119;
@@ -3321,26 +3319,26 @@ CPyL81: ;
     cpy_r_r124 = *(int64_t *)cpy_r_r123;
     cpy_r_r125 = cpy_r_r124 << 1;
     cpy_r_r126 = (Py_ssize_t)cpy_r_r122 < (Py_ssize_t)cpy_r_r125;
-    if (!cpy_r_r126) goto CPyL186;
+    if (!cpy_r_r126) goto CPyL187;
     cpy_r_r127 = CPyList_GetItemUnsafe(cpy_r_r121, cpy_r_r122);
     if (likely(PyObject_TypeCheck(cpy_r_r127, CPyType_patterns___Pattern)))
         cpy_r_r128 = cpy_r_r127;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 171, CPyStatic_match___globals, "mypy.patterns.Pattern", cpy_r_r127);
-        goto CPyL187;
+        goto CPyL188;
     }
     cpy_r_expr = cpy_r_r128;
     cpy_r_r129 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_builder;
     if (unlikely(cpy_r_r129 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "builder", 172, CPyStatic_match___globals);
-        goto CPyL188;
+        goto CPyL189;
     }
     CPy_INCREF(cpy_r_r129);
 CPyL84: ;
     cpy_r_r130 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_code_block;
     if (unlikely(cpy_r_r130 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "code_block", 172, CPyStatic_match___globals);
-        goto CPyL189;
+        goto CPyL190;
     }
     CPy_INCREF(cpy_r_r130);
 CPyL85: ;
@@ -3349,13 +3347,13 @@ CPyL85: ;
     CPy_DECREF(cpy_r_r129);
     if (unlikely(cpy_r_r131 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 172, CPyStatic_match___globals);
-        goto CPyL188;
+        goto CPyL189;
     }
     cpy_r_r132 = CPY_INT_TAG;
     cpy_r_r133 = CPyDef_ops___BasicBlock(cpy_r_r132);
     if (unlikely(cpy_r_r133 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 173, CPyStatic_match___globals);
-        goto CPyL188;
+        goto CPyL189;
     }
     if (((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_code_block != NULL) {
         CPy_DECREF(((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_code_block);
@@ -3364,19 +3362,19 @@ CPyL85: ;
     cpy_r_r134 = 1;
     if (unlikely(!cpy_r_r134)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 173, CPyStatic_match___globals);
-        goto CPyL188;
+        goto CPyL189;
     }
     cpy_r_r135 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_builder;
     if (unlikely(cpy_r_r135 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "builder", 177, CPyStatic_match___globals);
-        goto CPyL188;
+        goto CPyL189;
     }
     CPy_INCREF(cpy_r_r135);
 CPyL89: ;
     cpy_r_r136 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_subject;
     if (unlikely(cpy_r_r136 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "subject", 177, CPyStatic_match___globals);
-        goto CPyL190;
+        goto CPyL191;
     }
     CPy_INCREF(cpy_r_r136);
 CPyL90: ;
@@ -3384,18 +3382,18 @@ CPyL90: ;
     CPyTagged_DECREF(cpy_r_i);
     if (unlikely(cpy_r_r137 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 177, CPyStatic_match___globals);
-        goto CPyL191;
+        goto CPyL192;
     }
     if (likely(PyUnicode_Check(cpy_r_r137)))
         cpy_r_r138 = cpy_r_r137;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 177, CPyStatic_match___globals, "str", cpy_r_r137);
-        goto CPyL191;
+        goto CPyL192;
     }
     cpy_r_r139 = ((mypy___nodes___ContextObject *)cpy_r_expr)->_line;
     if (unlikely(cpy_r_r139 == CPY_INT_TAG)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "Pattern", "line", 177, CPyStatic_match___globals);
-        goto CPyL192;
+        goto CPyL193;
     }
     CPyTagged_INCREF(cpy_r_r139);
 CPyL93: ;
@@ -3406,7 +3404,7 @@ CPyL93: ;
     CPy_DECREF(cpy_r_r135);
     if (unlikely(cpy_r_r140 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 177, CPyStatic_match___globals);
-        goto CPyL193;
+        goto CPyL194;
     }
     cpy_r_positional = cpy_r_r140;
     cpy_r_r141 = CPyStatics[8475]; /* 'enter_subpattern' */
@@ -3415,7 +3413,7 @@ CPyL93: ;
     cpy_r_r144 = PyObject_VectorcallMethod(cpy_r_r141, cpy_r_r143, 9223372036854775810ULL, 0);
     if (unlikely(cpy_r_r144 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 179, CPyStatic_match___globals);
-        goto CPyL194;
+        goto CPyL195;
     }
     CPy_DECREF(cpy_r_positional);
     cpy_r_r145 = PyObject_Type(cpy_r_r144);
@@ -3423,14 +3421,14 @@ CPyL93: ;
     cpy_r_r147 = CPyObject_GetAttr(cpy_r_r145, cpy_r_r146);
     if (unlikely(cpy_r_r147 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 179, CPyStatic_match___globals);
-        goto CPyL195;
+        goto CPyL196;
     }
     cpy_r_r148 = CPyStatics[201]; /* '__enter__' */
     cpy_r_r149 = CPyObject_GetAttr(cpy_r_r145, cpy_r_r148);
     CPy_DECREF(cpy_r_r145);
     if (unlikely(cpy_r_r149 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 179, CPyStatic_match___globals);
-        goto CPyL196;
+        goto CPyL197;
     }
     PyObject *cpy_r_r150[1] = {cpy_r_r144};
     cpy_r_r151 = (PyObject **)&cpy_r_r150;
@@ -3438,9 +3436,9 @@ CPyL93: ;
     CPy_DECREF(cpy_r_r149);
     if (unlikely(cpy_r_r152 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 179, CPyStatic_match___globals);
-        goto CPyL196;
-    } else
         goto CPyL197;
+    } else
+        goto CPyL198;
 CPyL98: ;
     cpy_r_r153 = 1;
     cpy_r_r154 = CPY_GET_METHOD_TRAIT(cpy_r_expr, CPyType_patterns___Pattern, 5, mypy___patterns___PatternObject, PyObject * (*)(PyObject *, PyObject *))(cpy_r_expr, cpy_r_self); /* accept */
@@ -3448,7 +3446,7 @@ CPyL98: ;
     if (unlikely(cpy_r_r154 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 180, CPyStatic_match___globals);
     } else
-        goto CPyL198;
+        goto CPyL199;
     cpy_r_r155 = CPy_CatchError();
     cpy_r_r153 = 0;
     cpy_r_r156 = CPy_GetExcInfo();
@@ -3466,7 +3464,7 @@ CPyL98: ;
     cpy_r_r162 = _PyObject_Vectorcall(cpy_r_r147, cpy_r_r161, 4, 0);
     if (unlikely(cpy_r_r162 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 179, CPyStatic_match___globals);
-        goto CPyL199;
+        goto CPyL200;
     }
     CPy_DecRef(cpy_r_r157);
     CPy_DecRef(cpy_r_r158);
@@ -3484,7 +3482,7 @@ CPyL98: ;
     if (!0) {
         goto CPyL106;
     } else
-        goto CPyL200;
+        goto CPyL201;
 CPyL104: ;
     CPy_Unreachable();
 CPyL105: ;
@@ -3502,7 +3500,7 @@ CPyL106: ;
     if (!cpy_r_r166) {
         goto CPyL109;
     } else
-        goto CPyL201;
+        goto CPyL202;
 CPyL107: ;
     CPy_Unreachable();
 CPyL108: ;
@@ -3514,7 +3512,7 @@ CPyL109: ;
     cpy_r_r169 = CPy_CatchError();
     cpy_r_r168 = cpy_r_r169;
 CPyL110: ;
-    if (!cpy_r_r153) goto CPyL202;
+    if (!cpy_r_r153) goto CPyL203;
     cpy_r_r170 = (PyObject *)&_Py_NoneStruct;
     PyObject *cpy_r_r171[4] = {cpy_r_r144, cpy_r_r170, cpy_r_r170, cpy_r_r170};
     cpy_r_r172 = (PyObject **)&cpy_r_r171;
@@ -3522,22 +3520,22 @@ CPyL110: ;
     CPy_DECREF(cpy_r_r147);
     if (unlikely(cpy_r_r173 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 179, CPyStatic_match___globals);
-        goto CPyL203;
-    } else
         goto CPyL204;
+    } else
+        goto CPyL205;
 CPyL112: ;
     CPy_DECREF(cpy_r_r144);
 CPyL113: ;
     if (cpy_r_r168.f0 == NULL) {
         goto CPyL120;
     } else
-        goto CPyL205;
+        goto CPyL206;
 CPyL114: ;
     CPy_Reraise();
     if (!0) {
         goto CPyL116;
     } else
-        goto CPyL206;
+        goto CPyL207;
 CPyL115: ;
     CPy_Unreachable();
 CPyL116: ;
@@ -3569,18 +3567,18 @@ CPyL122: ;
     cpy_r_r182 = *(int64_t *)cpy_r_r181;
     cpy_r_r183 = cpy_r_r182 << 1;
     cpy_r_r184 = (Py_ssize_t)cpy_r_r178 < (Py_ssize_t)cpy_r_r183;
-    if (!cpy_r_r184) goto CPyL207;
+    if (!cpy_r_r184) goto CPyL208;
     cpy_r_r185 = (CPyPtr)&((PyVarObject *)cpy_r_r179)->ob_size;
     cpy_r_r186 = *(int64_t *)cpy_r_r185;
     cpy_r_r187 = cpy_r_r186 << 1;
     cpy_r_r188 = (Py_ssize_t)cpy_r_r180 < (Py_ssize_t)cpy_r_r187;
-    if (!cpy_r_r188) goto CPyL207;
+    if (!cpy_r_r188) goto CPyL208;
     cpy_r_r189 = CPyList_GetItemUnsafe(cpy_r_r177, cpy_r_r178);
     if (likely(PyUnicode_Check(cpy_r_r189)))
         cpy_r_r190 = cpy_r_r189;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 182, CPyStatic_match___globals, "str", cpy_r_r189);
-        goto CPyL208;
+        goto CPyL209;
     }
     cpy_r_key = cpy_r_r190;
     cpy_r_r191 = CPyList_GetItemUnsafe(cpy_r_r179, cpy_r_r180);
@@ -3588,20 +3586,20 @@ CPyL122: ;
         cpy_r_r192 = cpy_r_r191;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 182, CPyStatic_match___globals, "mypy.patterns.Pattern", cpy_r_r191);
-        goto CPyL209;
+        goto CPyL210;
     }
     cpy_r_value = cpy_r_r192;
     cpy_r_r193 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_builder;
     if (unlikely(cpy_r_r193 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "builder", 183, CPyStatic_match___globals);
-        goto CPyL210;
+        goto CPyL211;
     }
     CPy_INCREF(cpy_r_r193);
 CPyL127: ;
     cpy_r_r194 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_code_block;
     if (unlikely(cpy_r_r194 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "code_block", 183, CPyStatic_match___globals);
-        goto CPyL211;
+        goto CPyL212;
     }
     CPy_INCREF(cpy_r_r194);
 CPyL128: ;
@@ -3610,13 +3608,13 @@ CPyL128: ;
     CPy_DECREF(cpy_r_r193);
     if (unlikely(cpy_r_r195 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 183, CPyStatic_match___globals);
-        goto CPyL210;
+        goto CPyL211;
     }
     cpy_r_r196 = CPY_INT_TAG;
     cpy_r_r197 = CPyDef_ops___BasicBlock(cpy_r_r196);
     if (unlikely(cpy_r_r197 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 184, CPyStatic_match___globals);
-        goto CPyL210;
+        goto CPyL211;
     }
     if (((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_code_block != NULL) {
         CPy_DECREF(((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_code_block);
@@ -3625,26 +3623,26 @@ CPyL128: ;
     cpy_r_r198 = 1;
     if (unlikely(!cpy_r_r198)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 184, CPyStatic_match___globals);
-        goto CPyL210;
+        goto CPyL211;
     }
     cpy_r_r199 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_builder;
     if (unlikely(cpy_r_r199 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "builder", 187, CPyStatic_match___globals);
-        goto CPyL210;
+        goto CPyL211;
     }
     CPy_INCREF(cpy_r_r199);
 CPyL132: ;
     cpy_r_r200 = ((mypyc___irbuild___match___MatchVisitorObject *)cpy_r_self)->_subject;
     if (unlikely(cpy_r_r200 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "MatchVisitor", "subject", 187, CPyStatic_match___globals);
-        goto CPyL212;
+        goto CPyL213;
     }
     CPy_INCREF(cpy_r_r200);
 CPyL133: ;
     cpy_r_r201 = ((mypy___nodes___ContextObject *)cpy_r_value)->_line;
     if (unlikely(cpy_r_r201 == CPY_INT_TAG)) {
         CPy_AttributeError("mypyc/irbuild/match.py", "visit_class_pattern", "Pattern", "line", 187, CPyStatic_match___globals);
-        goto CPyL213;
+        goto CPyL214;
     }
     CPyTagged_INCREF(cpy_r_r201);
 CPyL134: ;
@@ -3655,7 +3653,7 @@ CPyL134: ;
     CPy_DECREF(cpy_r_r199);
     if (unlikely(cpy_r_r202 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 187, CPyStatic_match___globals);
-        goto CPyL214;
+        goto CPyL215;
     }
     cpy_r_attr = cpy_r_r202;
     cpy_r_r203 = CPyStatics[8475]; /* 'enter_subpattern' */
@@ -3664,7 +3662,7 @@ CPyL134: ;
     cpy_r_r206 = PyObject_VectorcallMethod(cpy_r_r203, cpy_r_r205, 9223372036854775810ULL, 0);
     if (unlikely(cpy_r_r206 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 189, CPyStatic_match___globals);
-        goto CPyL215;
+        goto CPyL216;
     }
     CPy_DECREF(cpy_r_attr);
     cpy_r_r207 = PyObject_Type(cpy_r_r206);
@@ -3672,14 +3670,14 @@ CPyL134: ;
     cpy_r_r209 = CPyObject_GetAttr(cpy_r_r207, cpy_r_r208);
     if (unlikely(cpy_r_r209 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 189, CPyStatic_match___globals);
-        goto CPyL216;
+        goto CPyL217;
     }
     cpy_r_r210 = CPyStatics[201]; /* '__enter__' */
     cpy_r_r211 = CPyObject_GetAttr(cpy_r_r207, cpy_r_r210);
     CPy_DECREF(cpy_r_r207);
     if (unlikely(cpy_r_r211 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 189, CPyStatic_match___globals);
-        goto CPyL217;
+        goto CPyL218;
     }
     PyObject *cpy_r_r212[1] = {cpy_r_r206};
     cpy_r_r213 = (PyObject **)&cpy_r_r212;
@@ -3687,9 +3685,9 @@ CPyL134: ;
     CPy_DECREF(cpy_r_r211);
     if (unlikely(cpy_r_r214 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 189, CPyStatic_match___globals);
-        goto CPyL217;
-    } else
         goto CPyL218;
+    } else
+        goto CPyL219;
 CPyL139: ;
     cpy_r_r215 = 1;
     cpy_r_r216 = CPY_GET_METHOD_TRAIT(cpy_r_value, CPyType_patterns___Pattern, 5, mypy___patterns___PatternObject, PyObject * (*)(PyObject *, PyObject *))(cpy_r_value, cpy_r_self); /* accept */
@@ -3697,7 +3695,7 @@ CPyL139: ;
     if (unlikely(cpy_r_r216 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 190, CPyStatic_match___globals);
     } else
-        goto CPyL219;
+        goto CPyL220;
     cpy_r_r217 = CPy_CatchError();
     cpy_r_r215 = 0;
     cpy_r_r218 = CPy_GetExcInfo();
@@ -3715,7 +3713,7 @@ CPyL139: ;
     cpy_r_r224 = _PyObject_Vectorcall(cpy_r_r209, cpy_r_r223, 4, 0);
     if (unlikely(cpy_r_r224 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 189, CPyStatic_match___globals);
-        goto CPyL220;
+        goto CPyL221;
     }
     CPy_DecRef(cpy_r_r219);
     CPy_DecRef(cpy_r_r220);
@@ -3733,7 +3731,7 @@ CPyL139: ;
     if (!0) {
         goto CPyL147;
     } else
-        goto CPyL221;
+        goto CPyL222;
 CPyL145: ;
     CPy_Unreachable();
 CPyL146: ;
@@ -3751,7 +3749,7 @@ CPyL147: ;
     if (!cpy_r_r228) {
         goto CPyL150;
     } else
-        goto CPyL222;
+        goto CPyL223;
 CPyL148: ;
     CPy_Unreachable();
 CPyL149: ;
@@ -3763,7 +3761,7 @@ CPyL150: ;
     cpy_r_r231 = CPy_CatchError();
     cpy_r_r230 = cpy_r_r231;
 CPyL151: ;
-    if (!cpy_r_r215) goto CPyL223;
+    if (!cpy_r_r215) goto CPyL224;
     cpy_r_r232 = (PyObject *)&_Py_NoneStruct;
     PyObject *cpy_r_r233[4] = {cpy_r_r206, cpy_r_r232, cpy_r_r232, cpy_r_r232};
     cpy_r_r234 = (PyObject **)&cpy_r_r233;
@@ -3771,22 +3769,22 @@ CPyL151: ;
     CPy_DECREF(cpy_r_r209);
     if (unlikely(cpy_r_r235 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/match.py", "visit_class_pattern", 189, CPyStatic_match___globals);
-        goto CPyL224;
-    } else
         goto CPyL225;
+    } else
+        goto CPyL226;
 CPyL153: ;
     CPy_DECREF(cpy_r_r206);
 CPyL154: ;
     if (cpy_r_r230.f0 == NULL) {
         goto CPyL161;
     } else
-        goto CPyL226;
+        goto CPyL227;
 CPyL155: ;
     CPy_Reraise();
     if (!0) {
         goto CPyL157;
     } else
-        goto CPyL227;
+        goto CPyL228;
 CPyL156: ;
     CPy_Unreachable();
 CPyL157: ;
@@ -3859,78 +3857,74 @@ CPyL176: ;
     CPy_DECREF(cpy_r_ty);
     goto CPyL48;
 CPyL177: ;
+    CPy_DecRef(cpy_r_ty);
+    goto CPyL163;
+CPyL178: ;
     CPy_DECREF(cpy_r_match_args_type);
     goto CPyL54;
-CPyL178: ;
+CPyL179: ;
     CPy_DecRef(cpy_r_match_args_type);
     goto CPyL163;
-CPyL179: ;
+CPyL180: ;
     CPy_DecRef(cpy_r_match_args_type);
     CPy_DecRef(cpy_r_match_args);
     goto CPyL163;
-CPyL180: ;
+CPyL181: ;
     CPy_DECREF(cpy_r_r85);
     goto CPyL80;
-CPyL181: ;
+CPyL182: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r85);
     goto CPyL163;
-CPyL182: ;
+CPyL183: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r85);
     CPy_DecRef(cpy_r_proper_item);
     goto CPyL163;
-CPyL183: ;
+CPyL184: ;
     CPy_DECREF(cpy_r_match_args);
     CPy_DECREF(cpy_r_r85);
     CPy_DECREF(cpy_r_proper_item);
     goto CPyL69;
-CPyL184: ;
+CPyL185: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r85);
     CPy_DecRef(cpy_r_match_arg);
     goto CPyL163;
-CPyL185: ;
+CPyL186: ;
     CPy_DECREF(cpy_r_match_args);
     CPy_DECREF(cpy_r_r85);
     CPy_DECREF(cpy_r_match_arg);
     goto CPyL75;
-CPyL186: ;
+CPyL187: ;
     CPy_DECREF(cpy_r_match_args);
     CPyTagged_DECREF(cpy_r_i);
     CPy_DECREF(cpy_r_r121);
     goto CPyL121;
-CPyL187: ;
-    CPy_DecRef(cpy_r_match_args);
-    CPyTagged_DecRef(cpy_r_i);
-    CPy_DecRef(cpy_r_r121);
-    goto CPyL163;
 CPyL188: ;
     CPy_DecRef(cpy_r_match_args);
     CPyTagged_DecRef(cpy_r_i);
     CPy_DecRef(cpy_r_r121);
-    CPy_DecRef(cpy_r_expr);
     goto CPyL163;
 CPyL189: ;
     CPy_DecRef(cpy_r_match_args);
     CPyTagged_DecRef(cpy_r_i);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_expr);
-    CPy_DecRef(cpy_r_r129);
     goto CPyL163;
 CPyL190: ;
     CPy_DecRef(cpy_r_match_args);
     CPyTagged_DecRef(cpy_r_i);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_expr);
-    CPy_DecRef(cpy_r_r135);
+    CPy_DecRef(cpy_r_r129);
     goto CPyL163;
 CPyL191: ;
     CPy_DecRef(cpy_r_match_args);
+    CPyTagged_DecRef(cpy_r_i);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_expr);
     CPy_DecRef(cpy_r_r135);
-    CPy_DecRef(cpy_r_r136);
     goto CPyL163;
 CPyL192: ;
     CPy_DecRef(cpy_r_match_args);
@@ -3938,45 +3932,52 @@ CPyL192: ;
     CPy_DecRef(cpy_r_expr);
     CPy_DecRef(cpy_r_r135);
     CPy_DecRef(cpy_r_r136);
-    CPy_DecRef(cpy_r_r138);
     goto CPyL163;
 CPyL193: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_expr);
+    CPy_DecRef(cpy_r_r135);
+    CPy_DecRef(cpy_r_r136);
+    CPy_DecRef(cpy_r_r138);
     goto CPyL163;
 CPyL194: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_expr);
-    CPy_DecRef(cpy_r_positional);
     goto CPyL163;
 CPyL195: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_expr);
-    CPy_DecRef(cpy_r_r144);
-    CPy_DecRef(cpy_r_r145);
+    CPy_DecRef(cpy_r_positional);
     goto CPyL163;
 CPyL196: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_expr);
     CPy_DecRef(cpy_r_r144);
-    CPy_DecRef(cpy_r_r147);
+    CPy_DecRef(cpy_r_r145);
     goto CPyL163;
 CPyL197: ;
+    CPy_DecRef(cpy_r_match_args);
+    CPy_DecRef(cpy_r_r121);
+    CPy_DecRef(cpy_r_expr);
+    CPy_DecRef(cpy_r_r144);
+    CPy_DecRef(cpy_r_r147);
+    goto CPyL163;
+CPyL198: ;
     CPy_DECREF(cpy_r_r152);
     goto CPyL98;
-CPyL198: ;
+CPyL199: ;
     CPy_DECREF(cpy_r_r154);
     goto CPyL108;
-CPyL199: ;
+CPyL200: ;
     CPy_DecRef(cpy_r_r157);
     CPy_DecRef(cpy_r_r158);
     CPy_DecRef(cpy_r_r159);
     goto CPyL106;
-CPyL200: ;
+CPyL201: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_r144);
@@ -3985,65 +3986,58 @@ CPyL200: ;
     CPy_DecRef(cpy_r_r155.f1);
     CPy_DecRef(cpy_r_r155.f2);
     goto CPyL104;
-CPyL201: ;
+CPyL202: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_r144);
     CPy_DecRef(cpy_r_r147);
     goto CPyL107;
-CPyL202: ;
+CPyL203: ;
     CPy_DECREF(cpy_r_r144);
     CPy_DECREF(cpy_r_r147);
     goto CPyL113;
-CPyL203: ;
+CPyL204: ;
     CPy_DecRef(cpy_r_match_args);
     CPy_DecRef(cpy_r_r121);
     CPy_DecRef(cpy_r_r144);
     goto CPyL116;
-CPyL204: ;
+CPyL205: ;
     CPy_DECREF(cpy_r_r173);
     goto CPyL112;
-CPyL205: ;
+CPyL206: ;
     CPy_DECREF(cpy_r_match_args);
     CPy_DECREF(cpy_r_r121);
     goto CPyL114;
-CPyL206: ;
+CPyL207: ;
     CPy_XDECREF(cpy_r_r168.f0);
     CPy_XDECREF(cpy_r_r168.f1);
     CPy_XDECREF(cpy_r_r168.f2);
     goto CPyL115;
-CPyL207: ;
+CPyL208: ;
     CPy_DECREF(cpy_r_r177);
     CPy_DECREF(cpy_r_r179);
     goto CPyL162;
-CPyL208: ;
-    CPy_DecRef(cpy_r_r177);
-    CPy_DecRef(cpy_r_r179);
-    goto CPyL163;
 CPyL209: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
-    CPy_DecRef(cpy_r_key);
     goto CPyL163;
 CPyL210: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_key);
-    CPy_DecRef(cpy_r_value);
     goto CPyL163;
 CPyL211: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_key);
     CPy_DecRef(cpy_r_value);
-    CPy_DecRef(cpy_r_r193);
     goto CPyL163;
 CPyL212: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_key);
     CPy_DecRef(cpy_r_value);
-    CPy_DecRef(cpy_r_r199);
+    CPy_DecRef(cpy_r_r193);
     goto CPyL163;
 CPyL213: ;
     CPy_DecRef(cpy_r_r177);
@@ -4051,45 +4045,52 @@ CPyL213: ;
     CPy_DecRef(cpy_r_key);
     CPy_DecRef(cpy_r_value);
     CPy_DecRef(cpy_r_r199);
-    CPy_DecRef(cpy_r_r200);
     goto CPyL163;
 CPyL214: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
+    CPy_DecRef(cpy_r_key);
     CPy_DecRef(cpy_r_value);
+    CPy_DecRef(cpy_r_r199);
+    CPy_DecRef(cpy_r_r200);
     goto CPyL163;
 CPyL215: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_value);
-    CPy_DecRef(cpy_r_attr);
     goto CPyL163;
 CPyL216: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_value);
-    CPy_DecRef(cpy_r_r206);
-    CPy_DecRef(cpy_r_r207);
+    CPy_DecRef(cpy_r_attr);
     goto CPyL163;
 CPyL217: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_value);
     CPy_DecRef(cpy_r_r206);
-    CPy_DecRef(cpy_r_r209);
+    CPy_DecRef(cpy_r_r207);
     goto CPyL163;
 CPyL218: ;
+    CPy_DecRef(cpy_r_r177);
+    CPy_DecRef(cpy_r_r179);
+    CPy_DecRef(cpy_r_value);
+    CPy_DecRef(cpy_r_r206);
+    CPy_DecRef(cpy_r_r209);
+    goto CPyL163;
+CPyL219: ;
     CPy_DECREF(cpy_r_r214);
     goto CPyL139;
-CPyL219: ;
+CPyL220: ;
     CPy_DECREF(cpy_r_r216);
     goto CPyL149;
-CPyL220: ;
+CPyL221: ;
     CPy_DecRef(cpy_r_r219);
     CPy_DecRef(cpy_r_r220);
     CPy_DecRef(cpy_r_r221);
     goto CPyL147;
-CPyL221: ;
+CPyL222: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_r206);
@@ -4098,29 +4099,29 @@ CPyL221: ;
     CPy_DecRef(cpy_r_r217.f1);
     CPy_DecRef(cpy_r_r217.f2);
     goto CPyL145;
-CPyL222: ;
+CPyL223: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_r206);
     CPy_DecRef(cpy_r_r209);
     goto CPyL148;
-CPyL223: ;
+CPyL224: ;
     CPy_DECREF(cpy_r_r206);
     CPy_DECREF(cpy_r_r209);
     goto CPyL154;
-CPyL224: ;
+CPyL225: ;
     CPy_DecRef(cpy_r_r177);
     CPy_DecRef(cpy_r_r179);
     CPy_DecRef(cpy_r_r206);
     goto CPyL157;
-CPyL225: ;
+CPyL226: ;
     CPy_DECREF(cpy_r_r235);
     goto CPyL153;
-CPyL226: ;
+CPyL227: ;
     CPy_DECREF(cpy_r_r177);
     CPy_DECREF(cpy_r_r179);
     goto CPyL155;
-CPyL227: ;
+CPyL228: ;
     CPy_XDECREF(cpy_r_r230.f0);
     CPy_XDECREF(cpy_r_r230.f1);
     CPy_XDECREF(cpy_r_r230.f2);

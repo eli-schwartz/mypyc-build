@@ -10199,7 +10199,7 @@ char CPyDef_emitclass___generate_constructor_for_class(PyObject *cpy_r_cl, PyObj
         goto CPyL44;
     }
     cpy_r_r26 = CPyStatics[71]; /* ', ' */
-    cpy_r_r27 = CPyStatics[729]; /* 'self' */
+    cpy_r_r27 = CPyStatics[730]; /* 'self' */
     cpy_r_r28 = PyList_New(1);
     if (unlikely(cpy_r_r28 == NULL)) {
         CPy_AddTraceback("mypyc/codegen/emitclass.py", "generate_constructor_for_class", 620, CPyStatic_emitclass___globals);
@@ -14822,7 +14822,7 @@ CPyL12: ;
     cpy_r_always_defined = cpy_r_r19;
     if (cpy_r_always_defined) goto CPyL36;
     cpy_r_r22 = CPyStatics[860]; /* '==' */
-    cpy_r_r23 = CPyStatics[729]; /* 'self' */
+    cpy_r_r23 = CPyStatics[730]; /* 'self' */
     cpy_r_r24 = CPyDef_emit___Emitter___emit_undefined_attr_check(cpy_r_emitter, cpy_r_rtype, cpy_r_attr_expr, cpy_r_r22, cpy_r_r23, cpy_r_attr, cpy_r_cl, 1);
     CPy_DECREF(cpy_r_attr_expr);
     if (unlikely(cpy_r_r24 == 2)) {
@@ -15344,7 +15344,7 @@ CPyL26: ;
     cpy_r_attr_expr = cpy_r_r56;
     if (cpy_r_always_defined) goto CPyL68;
     cpy_r_r57 = CPyStatics[863]; /* '!=' */
-    cpy_r_r58 = CPyStatics[729]; /* 'self' */
+    cpy_r_r58 = CPyStatics[730]; /* 'self' */
     cpy_r_r59 = 2;
     cpy_r_r60 = CPyDef_emit___Emitter___emit_undefined_attr_check(cpy_r_emitter, cpy_r_rtype, cpy_r_attr_expr, cpy_r_r57, cpy_r_r58, cpy_r_attr, cpy_r_cl, cpy_r_r59);
     CPy_DECREF(cpy_r_attr_expr);
@@ -15488,7 +15488,7 @@ CPyL47: ;
 CPyL51: ;
     if (cpy_r_always_defined) goto CPyL53;
     cpy_r_r108 = CPyStatics[7242]; /* 'tmp' */
-    cpy_r_r109 = CPyStatics[729]; /* 'self' */
+    cpy_r_r109 = CPyStatics[730]; /* 'self' */
     cpy_r_r110 = CPyDef_emit___Emitter___emit_attr_bitmap_set(cpy_r_emitter, cpy_r_r108, cpy_r_r109, cpy_r_rtype, cpy_r_cl, cpy_r_attr);
     if (unlikely(cpy_r_r110 == 2)) {
         CPy_AddTraceback("mypyc/codegen/emitclass.py", "generate_setter", 992, CPyStatic_emitclass___globals);
@@ -15528,7 +15528,7 @@ CPyL53: ;
     cpy_r_r121 = ((mypyc___ir___rtypes___RTypeObject *)cpy_r_rtype)->_error_overlap;
     if (!cpy_r_r121) goto CPyL60;
 CPyL59: ;
-    cpy_r_r122 = CPyStatics[729]; /* 'self' */
+    cpy_r_r122 = CPyStatics[730]; /* 'self' */
     cpy_r_r123 = CPyDef_emit___Emitter___emit_attr_bitmap_clear(cpy_r_emitter, cpy_r_r122, cpy_r_rtype, cpy_r_cl, cpy_r_attr);
     if (unlikely(cpy_r_r123 == 2)) {
         CPy_AddTraceback("mypyc/codegen/emitclass.py", "generate_setter", 998, CPyStatic_emitclass___globals);

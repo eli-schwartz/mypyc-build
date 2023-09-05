@@ -527,7 +527,9 @@ PyObject *CPyDef_generator___instantiate_generator_class(PyObject *cpy_r_builder
     CPy_INCREF(cpy_r_r1);
     cpy_r_fitem = cpy_r_r1;
     cpy_r_r2 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r2);
     cpy_r_r3 = CPY_GET_ATTR(cpy_r_r2, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r2);
     if (unlikely(cpy_r_r3 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 62, CPyStatic_generator___globals);
         goto CPyL18;
@@ -537,14 +539,15 @@ CPyL1: ;
     cpy_r_r5 = ((mypyc___ir___class_ir___ClassIRObject *)cpy_r_r4)->_ctor;
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/generator.py", "instantiate_generator_class", "ClassIR", "ctor", 62, CPyStatic_generator___globals);
-        goto CPyL18;
+        goto CPyL19;
     }
     CPy_INCREF(cpy_r_r5);
 CPyL2: ;
+    CPy_DECREF(cpy_r_r3);
     cpy_r_r6 = PyList_New(0);
     if (unlikely(cpy_r_r6 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 62, CPyStatic_generator___globals);
-        goto CPyL19;
+        goto CPyL20;
     }
     cpy_r_r7 = ((mypy___nodes___FuncItemObject *)cpy_r_fitem)->_line;
     CPyTagged_INCREF(cpy_r_r7);
@@ -568,26 +571,31 @@ CPyL2: ;
     if (!cpy_r_r11) goto CPyL9;
 CPyL6: ;
     cpy_r_r12 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r12);
     cpy_r_r13 = CPY_GET_ATTR(cpy_r_r12, CPyType_context___FuncInfo, 4, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* callable_class */
+    CPy_DECREF(cpy_r_r12);
     if (unlikely(cpy_r_r13 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 69, CPyStatic_generator___globals);
-        goto CPyL20;
+        goto CPyL21;
     }
 CPyL7: ;
     cpy_r_r14 = CPY_GET_ATTR(cpy_r_r13, CPyType_context___ImplicitClass, 3, mypyc___irbuild___context___ImplicitClassObject, PyObject *); /* curr_env_reg */
+    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 69, CPyStatic_generator___globals);
-        goto CPyL20;
+        goto CPyL21;
     }
 CPyL8: ;
     cpy_r_curr_env_reg = cpy_r_r14;
     goto CPyL11;
 CPyL9: ;
     cpy_r_r15 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r15);
     cpy_r_r16 = CPY_GET_ATTR(cpy_r_r15, CPyType_context___FuncInfo, 10, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* curr_env_reg */
+    CPy_DECREF(cpy_r_r15);
     if (unlikely(cpy_r_r16 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 71, CPyStatic_generator___globals);
-        goto CPyL20;
+        goto CPyL21;
     }
 CPyL10: ;
     cpy_r_curr_env_reg = cpy_r_r16;
@@ -599,22 +607,22 @@ CPyL11: ;
     CPyTagged_DECREF(cpy_r_r18);
     if (unlikely(cpy_r_r19 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 75, CPyStatic_generator___globals);
-        goto CPyL21;
+        goto CPyL22;
     }
     cpy_r_r20 = CPyDef_builder___IRBuilder___add(cpy_r_builder, cpy_r_r19);
     CPy_DECREF(cpy_r_r19);
     if (unlikely(cpy_r_r20 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 75, CPyStatic_generator___globals);
-        goto CPyL21;
-    } else
         goto CPyL22;
+    } else
+        goto CPyL23;
 CPyL13: ;
     cpy_r_r21 = NULL;
     cpy_r_r22 = CPY_INT_TAG;
     cpy_r_r23 = CPyDef_ops___Integer(0, cpy_r_r21, cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 78, CPyStatic_generator___globals);
-        goto CPyL21;
+        goto CPyL22;
     }
     cpy_r_zero = cpy_r_r23;
     cpy_r_r24 = CPyStatics[7708]; /* '__mypyc_next_label__' */
@@ -627,15 +635,15 @@ CPyL13: ;
     CPyTagged_DECREF(cpy_r_r25);
     if (unlikely(cpy_r_r26 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 79, CPyStatic_generator___globals);
-        goto CPyL23;
+        goto CPyL24;
     }
     cpy_r_r27 = CPyDef_builder___IRBuilder___add(cpy_r_builder, cpy_r_r26);
     CPy_DECREF(cpy_r_r26);
     if (unlikely(cpy_r_r27 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "instantiate_generator_class", 79, CPyStatic_generator___globals);
-        goto CPyL23;
-    } else
         goto CPyL24;
+    } else
+        goto CPyL25;
 CPyL16: ;
     return cpy_r_generator_reg;
 CPyL17: ;
@@ -646,24 +654,28 @@ CPyL18: ;
     goto CPyL17;
 CPyL19: ;
     CPy_DecRef(cpy_r_fitem);
-    CPy_DecRef(cpy_r_r5);
+    CPy_DecRef(cpy_r_r3);
     goto CPyL17;
 CPyL20: ;
     CPy_DecRef(cpy_r_fitem);
-    CPy_DecRef(cpy_r_generator_reg);
+    CPy_DecRef(cpy_r_r5);
     goto CPyL17;
 CPyL21: ;
     CPy_DecRef(cpy_r_fitem);
     CPy_DecRef(cpy_r_generator_reg);
-    CPy_DecRef(cpy_r_curr_env_reg);
     goto CPyL17;
 CPyL22: ;
+    CPy_DecRef(cpy_r_fitem);
+    CPy_DecRef(cpy_r_generator_reg);
+    CPy_DecRef(cpy_r_curr_env_reg);
+    goto CPyL17;
+CPyL23: ;
     CPy_DECREF(cpy_r_r20);
     goto CPyL13;
-CPyL23: ;
+CPyL24: ;
     CPy_DecRef(cpy_r_generator_reg);
     goto CPyL17;
-CPyL24: ;
+CPyL25: ;
     CPy_DECREF(cpy_r_r27);
     goto CPyL16;
 }
@@ -754,7 +766,9 @@ CPyL3: ;
     }
     cpy_r_generator_class_ir = cpy_r_r8;
     cpy_r_r9 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r9);
     cpy_r_r10 = CPY_GET_ATTR(cpy_r_r9, CPyType_context___FuncInfo, 6, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* env_class */
+    CPy_DECREF(cpy_r_r9);
     if (unlikely(cpy_r_r10 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "setup_generator_class", 87, CPyStatic_generator___globals);
         goto CPyL16;
@@ -815,7 +829,9 @@ CPyL7: ;
         goto CPyL16;
     }
     cpy_r_r24 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r24);
     cpy_r_r25 = CPY_SET_ATTR(cpy_r_r24, CPyType_context___FuncInfo, 9, cpy_r_r23, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r24);
     if (unlikely(!cpy_r_r25)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "setup_generator_class", 91, CPyStatic_generator___globals);
         goto CPyL16;
@@ -875,7 +891,9 @@ char CPyDef_generator___create_switch_for_generator_class(PyObject *cpy_r_builde
     char cpy_r_r13;
     char cpy_r_r14;
     cpy_r_r0 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "create_switch_for_generator_class", 96, CPyStatic_generator___globals);
         goto CPyL8;
@@ -883,6 +901,7 @@ char CPyDef_generator___create_switch_for_generator_class(PyObject *cpy_r_builde
 CPyL1: ;
     cpy_r_r2 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r1)->_switch_block;
     CPy_INCREF(cpy_r_r2);
+    CPy_DECREF(cpy_r_r1);
     cpy_r_r3 = CPY_INT_TAG;
     cpy_r_r4 = CPyDef_ops___Goto(cpy_r_r2, cpy_r_r3);
     CPy_DECREF(cpy_r_r2);
@@ -906,7 +925,9 @@ CPyL3: ;
     }
     cpy_r_block = cpy_r_r7;
     cpy_r_r8 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r8);
     cpy_r_r9 = CPY_GET_ATTR(cpy_r_r8, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r8);
     if (unlikely(cpy_r_r9 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "create_switch_for_generator_class", 98, CPyStatic_generator___globals);
         goto CPyL10;
@@ -914,6 +935,7 @@ CPyL3: ;
 CPyL5: ;
     cpy_r_r10 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r9)->_continuation_blocks;
     CPy_INCREF(cpy_r_r10);
+    CPy_DECREF(cpy_r_r9);
     cpy_r_r11 = PyList_Append(cpy_r_r10, cpy_r_block);
     CPy_DECREF(cpy_r_r10);
     cpy_r_r12 = cpy_r_r11 >= 0;
@@ -1009,7 +1031,9 @@ char CPyDef_generator___populate_switch_for_generator_class(PyObject *cpy_r_buil
     PyObject *cpy_r_r34;
     char cpy_r_r35;
     cpy_r_r0 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "populate_switch_for_generator_class", 103, CPyStatic_generator___globals);
         goto CPyL17;
@@ -1266,7 +1290,9 @@ char CPyDef_generator___add_raise_exception_blocks_to_generator_class(PyObject *
     char cpy_r_r33;
     char cpy_r_r34;
     cpy_r_r0 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r0);
     cpy_r_r1 = CPY_GET_ATTR(cpy_r_r0, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r1 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "add_raise_exception_blocks_to_generator_class", 124, CPyStatic_generator___globals);
         goto CPyL19;
@@ -1881,6 +1907,7 @@ CPyL22: ;
     cpy_r_r36 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r35)->_ir;
     cpy_r_r37 = ((mypyc___ir___class_ir___ClassIRObject *)cpy_r_r36)->_name;
     CPy_INCREF(cpy_r_r37);
+    CPy_DECREF(cpy_r_r35);
     cpy_r_r38 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_module_name;
     if (unlikely(cpy_r_r38 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/generator.py", "add_helper_to_generator_class", "IRBuilder", "module_name", 177, CPyStatic_generator___globals);
@@ -1905,9 +1932,7 @@ CPyL23: ;
     cpy_r_r45 = ((mypy___nodes___FuncItemObject *)cpy_r_r44)->_line;
     CPyTagged_INCREF(cpy_r_r45);
     cpy_r_r46 = ((mypyc___irbuild___context___FuncInfoObject *)cpy_r_fn_info)->_fitem;
-    CPy_INCREF(cpy_r_r46);
     cpy_r_r47 = CPY_GET_ATTR(cpy_r_r46, CPyType_nodes___FuncItem, 6, mypy___nodes___FuncItemObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r46);
     if (unlikely(cpy_r_r47 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "add_helper_to_generator_class", 180, CPyStatic_generator___globals);
         goto CPyL42;
@@ -1931,10 +1956,11 @@ CPyL27: ;
     cpy_r_r51 = ((mypyc___ir___class_ir___ClassIRObject *)cpy_r_r50)->_methods;
     if (unlikely(cpy_r_r51 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/generator.py", "add_helper_to_generator_class", "ClassIR", "methods", 182, CPyStatic_generator___globals);
-        goto CPyL44;
+        goto CPyL45;
     }
     CPy_INCREF(cpy_r_r51);
 CPyL28: ;
+    CPy_DECREF(cpy_r_r49);
     cpy_r_r52 = CPyStatics[8372]; /* '__mypyc_generator_helper__' */
     cpy_r_r53 = CPyDict_SetItem(cpy_r_r51, cpy_r_r52, cpy_r_helper_fn_ir);
     CPy_DECREF(cpy_r_r51);
@@ -2010,6 +2036,11 @@ CPyL43: ;
 CPyL44: ;
     CPy_DecRef(cpy_r_helper_fn_decl);
     CPy_DecRef(cpy_r_helper_fn_ir);
+    goto CPyL31;
+CPyL45: ;
+    CPy_DecRef(cpy_r_helper_fn_decl);
+    CPy_DecRef(cpy_r_helper_fn_ir);
+    CPy_DecRef(cpy_r_r49);
     goto CPyL31;
 }
 
@@ -2114,6 +2145,7 @@ char CPyDef_generator___add_iter_to_generator_class(PyObject *cpy_r_builder, PyO
 CPyL1: ;
     cpy_r_r1 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r0)->_ir;
     CPy_INCREF(cpy_r_r1);
+    CPy_DECREF(cpy_r_r0);
     cpy_r_r2 = CPyStatics[823]; /* '__iter__' */
     cpy_r_r3 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r3 == NULL)) {
@@ -2433,6 +2465,7 @@ char CPyDef_generator___add_next_to_generator_class(PyObject *cpy_r_builder, PyO
 CPyL1: ;
     cpy_r_r1 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r0)->_ir;
     CPy_INCREF(cpy_r_r1);
+    CPy_DECREF(cpy_r_r0);
     cpy_r_r2 = CPyStatics[824]; /* '__next__' */
     cpy_r_r3 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r3 == NULL)) {
@@ -2826,6 +2859,7 @@ char CPyDef_generator___add_send_to_generator_class(PyObject *cpy_r_builder, PyO
 CPyL1: ;
     cpy_r_r1 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r0)->_ir;
     CPy_INCREF(cpy_r_r1);
+    CPy_DECREF(cpy_r_r0);
     cpy_r_r2 = CPyStatics[8373]; /* 'send' */
     cpy_r_r3 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r3 == NULL)) {
@@ -3462,6 +3496,7 @@ char CPyDef_generator___add_throw_to_generator_class(PyObject *cpy_r_builder, Py
 CPyL2: ;
     cpy_r_r2 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r1)->_ir;
     CPy_INCREF(cpy_r_r2);
+    CPy_DECREF(cpy_r_r1);
     cpy_r_r3 = CPyStatics[8374]; /* 'throw' */
     cpy_r_r4 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r4 == NULL)) {
@@ -4259,6 +4294,7 @@ char CPyDef_generator___add_close_to_generator_class(PyObject *cpy_r_builder, Py
 CPyL1: ;
     cpy_r_r1 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r0)->_ir;
     CPy_INCREF(cpy_r_r1);
+    CPy_DECREF(cpy_r_r0);
     cpy_r_r2 = CPyStatics[1927]; /* 'close' */
     cpy_r_r3 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r3 == NULL)) {
@@ -5160,6 +5196,7 @@ char CPyDef_generator___add_await_to_generator_class(PyObject *cpy_r_builder, Py
 CPyL1: ;
     cpy_r_r1 = ((mypyc___irbuild___context___GeneratorClassObject *)cpy_r_r0)->_ir;
     CPy_INCREF(cpy_r_r1);
+    CPy_DECREF(cpy_r_r0);
     cpy_r_r2 = CPyStatics[811]; /* '__await__' */
     cpy_r_r3 = CPyStatic_rtypes___object_rprimitive;
     if (unlikely(cpy_r_r3 == NULL)) {
@@ -5488,7 +5525,9 @@ char CPyDef_generator___setup_env_for_generator_class(PyObject *cpy_r_builder) {
     CPy_INCREF(cpy_r_r1);
     cpy_r_fitem = cpy_r_r1;
     cpy_r_r2 = ((mypyc___irbuild___builder___IRBuilderObject *)cpy_r_builder)->_fn_info;
+    CPy_INCREF(cpy_r_r2);
     cpy_r_r3 = CPY_GET_ATTR(cpy_r_r2, CPyType_context___FuncInfo, 8, mypyc___irbuild___context___FuncInfoObject, PyObject *); /* generator_class */
+    CPy_DECREF(cpy_r_r2);
     if (unlikely(cpy_r_r3 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/generator.py", "setup_env_for_generator_class", 318, CPyStatic_generator___globals);
         goto CPyL41;

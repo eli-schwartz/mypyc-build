@@ -2693,9 +2693,7 @@ CPyL5: ;
     }
     if (!cpy_r_r12) goto CPyL22;
     cpy_r_r13 = ((mypy___nodes___FuncDefObject *)cpy_r_fdef)->_info;
-    CPy_INCREF(cpy_r_r13);
     cpy_r_r14 = CPY_GET_ATTR(cpy_r_r13, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r13);
     if (unlikely(cpy_r_r14 == NULL)) {
         CPy_AddTraceback("mypy/semanal_shared.py", "set_callable_name", 261, CPyStatic_semanal_shared___globals);
         goto CPyL29;
@@ -2743,9 +2741,7 @@ CPyL12: ;
     goto CPyL17;
 CPyL15: ;
     cpy_r_r22 = ((mypy___nodes___FuncDefObject *)cpy_r_fdef)->_info;
-    CPy_INCREF(cpy_r_r22);
     cpy_r_r23 = CPY_GET_ATTR(cpy_r_r22, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypy/semanal_shared.py", "set_callable_name", 265, CPyStatic_semanal_shared___globals);
         goto CPyL29;
@@ -2893,9 +2889,7 @@ char CPyDef_semanal_shared___calculate_tuple_fallback(PyObject *cpy_r_typ) {
     CPy_INCREF(cpy_r_r0);
     cpy_r_fallback = cpy_r_r0;
     cpy_r_r1 = ((mypy___types___InstanceObject *)cpy_r_fallback)->_type;
-    CPy_INCREF(cpy_r_r1);
     cpy_r_r2 = CPY_GET_ATTR(cpy_r_r1, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r1);
     if (unlikely(cpy_r_r2 == NULL)) {
         CPy_AddTraceback("mypy/semanal_shared.py", "calculate_tuple_fallback", 288, CPyStatic_semanal_shared___globals);
         goto CPyL15;
@@ -4514,7 +4508,6 @@ PyObject *CPyDef_semanal_shared___parse_bool(PyObject *cpy_r_expr) {
     cpy_r_r2 = *(PyObject * *)cpy_r_r1;
     cpy_r_r3 = cpy_r_r2 == cpy_r_r0;
     if (!cpy_r_r3) goto CPyL15;
-    CPy_INCREF(cpy_r_expr);
     if (likely(Py_TYPE(cpy_r_expr) == CPyType_nodes___NameExpr))
         cpy_r_r4 = cpy_r_expr;
     else {
@@ -4522,7 +4515,6 @@ PyObject *CPyDef_semanal_shared___parse_bool(PyObject *cpy_r_expr) {
         goto CPyL16;
     }
     cpy_r_r5 = CPY_GET_ATTR(cpy_r_r4, CPyType_nodes___NameExpr, 6, mypy___nodes___NameExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r4);
     if (unlikely(cpy_r_r5 == NULL)) {
         CPy_AddTraceback("mypy/semanal_shared.py", "parse_bool", 471, CPyStatic_semanal_shared___globals);
         goto CPyL16;
@@ -4548,7 +4540,6 @@ CPyL6: ;
     CPy_INCREF(cpy_r_r13);
     return cpy_r_r13;
 CPyL8: ;
-    CPy_INCREF(cpy_r_expr);
     if (likely(Py_TYPE(cpy_r_expr) == CPyType_nodes___NameExpr))
         cpy_r_r14 = cpy_r_expr;
     else {
@@ -4556,7 +4547,6 @@ CPyL8: ;
         goto CPyL16;
     }
     cpy_r_r15 = CPY_GET_ATTR(cpy_r_r14, CPyType_nodes___NameExpr, 6, mypy___nodes___NameExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r14);
     if (unlikely(cpy_r_r15 == NULL)) {
         CPy_AddTraceback("mypy/semanal_shared.py", "parse_bool", 473, CPyStatic_semanal_shared___globals);
         goto CPyL16;

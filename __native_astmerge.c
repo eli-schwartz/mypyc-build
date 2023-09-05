@@ -1349,7 +1349,6 @@ CPyL2: ;
     cpy_r_r23 = cpy_r_r21;
     if (!cpy_r_r23) goto CPyL82;
     cpy_r_r24 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_node)->_node;
-    CPy_INCREF(cpy_r_r24);
     if (likely(cpy_r_r24 != Py_None))
         cpy_r_r25 = cpy_r_r24;
     else {
@@ -1357,7 +1356,6 @@ CPyL2: ;
         goto CPyL81;
     }
     cpy_r_r26 = CPY_GET_ATTR_TRAIT(cpy_r_r25, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r25);
     if (unlikely(cpy_r_r26 == NULL)) {
         CPy_AddTraceback("mypy/server/astmerge.py", "replacement_map_from_symbol_table", 160, CPyStatic_astmerge___globals);
         goto CPyL81;
@@ -1464,7 +1462,6 @@ CPyL19: ;
     cpy_r_r55 = cpy_r_r53;
     if (!cpy_r_r55) goto CPyL86;
     cpy_r_r56 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_new_node)->_node;
-    CPy_INCREF(cpy_r_r56);
     if (likely(cpy_r_r56 != Py_None))
         cpy_r_r57 = cpy_r_r56;
     else {
@@ -1472,14 +1469,12 @@ CPyL19: ;
         goto CPyL85;
     }
     cpy_r_r58 = CPY_GET_ATTR_TRAIT(cpy_r_r57, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r57);
     if (unlikely(cpy_r_r58 == NULL)) {
         CPy_AddTraceback("mypy/server/astmerge.py", "replacement_map_from_symbol_table", 167, CPyStatic_astmerge___globals);
         goto CPyL85;
     }
 CPyL34: ;
     cpy_r_r59 = ((mypy___nodes___SymbolTableNodeObject *)cpy_r_node)->_node;
-    CPy_INCREF(cpy_r_r59);
     if (likely(cpy_r_r59 != Py_None))
         cpy_r_r60 = cpy_r_r59;
     else {
@@ -1487,7 +1482,6 @@ CPyL34: ;
         goto CPyL89;
     }
     cpy_r_r61 = CPY_GET_ATTR_TRAIT(cpy_r_r60, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r60);
     if (unlikely(cpy_r_r61 == NULL)) {
         CPy_AddTraceback("mypy/server/astmerge.py", "replacement_map_from_symbol_table", 167, CPyStatic_astmerge___globals);
         goto CPyL89;

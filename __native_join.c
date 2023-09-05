@@ -8579,9 +8579,7 @@ CPyL11: ;
         goto CPyL23;
     }
     cpy_r_r22 = ((mypy___types___InstanceObject *)cpy_r_r21)->_type;
-    CPy_INCREF(cpy_r_r22);
     cpy_r_r23 = CPY_GET_ATTR(cpy_r_r22, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypy/join.py", "visit_type_type", 504, CPyStatic_join___globals);
         goto CPyL23;
@@ -9783,9 +9781,7 @@ CPyL3: ;
 CPyL11: ;
     cpy_r_r21 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_fallback;
     cpy_r_r22 = ((mypy___types___InstanceObject *)cpy_r_r21)->_type;
-    CPy_INCREF(cpy_r_r22);
     cpy_r_r23 = CPY_GET_ATTR(cpy_r_r22, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("mypy/join.py", "join_similar_callables", 575, CPyStatic_join___globals);
         goto CPyL26;
@@ -10033,9 +10029,7 @@ CPyL2: ;
 CPyL10: ;
     cpy_r_r18 = ((mypy___types___CallableTypeObject *)cpy_r_t)->_fallback;
     cpy_r_r19 = ((mypy___types___InstanceObject *)cpy_r_r18)->_type;
-    CPy_INCREF(cpy_r_r19);
     cpy_r_r20 = CPY_GET_ATTR(cpy_r_r19, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r19);
     if (unlikely(cpy_r_r20 == NULL)) {
         CPy_AddTraceback("mypy/join.py", "combine_similar_callables", 596, CPyStatic_join___globals);
         goto CPyL25;
@@ -11135,9 +11129,7 @@ CPyL2: ;
     CPy_Unreachable();
 CPyL4: ;
     cpy_r_r3 = ((mypy___types___InstanceObject *)cpy_r_t)->_type;
-    CPy_INCREF(cpy_r_r3);
     cpy_r_r4 = CPY_GET_ATTR(cpy_r_r3, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r3);
     if (unlikely(cpy_r_r4 == NULL)) {
         CPy_AddTraceback("mypy/join.py", "unpack_callback_protocol", 680, CPyStatic_join___globals);
         goto CPyL13;

@@ -10267,7 +10267,6 @@ CPyL102: ;
         goto CPyL288;
     }
     cpy_r_r133 = ((mypy___nodes___CallExprObject *)cpy_r_r132)->_callee;
-    CPy_INCREF(cpy_r_r133);
     if (likely((Py_TYPE(cpy_r_r133) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r133) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r133) == CPyType_nodes___RefExpr)))
         cpy_r_r134 = cpy_r_r133;
     else {
@@ -10275,7 +10274,6 @@ CPyL102: ;
         goto CPyL288;
     }
     cpy_r_r135 = CPY_GET_ATTR(cpy_r_r134, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r134);
     if (unlikely(cpy_r_r135 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/for_helpers.py", "make_for_loop_generator", 416, CPyStatic_for_helpers___globals);
         goto CPyL288;
@@ -10461,7 +10459,6 @@ CPyL135: ;
         goto CPyL288;
     }
     cpy_r_r184 = ((mypy___nodes___CallExprObject *)cpy_r_r183)->_callee;
-    CPy_INCREF(cpy_r_r184);
     if (likely((Py_TYPE(cpy_r_r184) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r184) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r184) == CPyType_nodes___RefExpr)))
         cpy_r_r185 = cpy_r_r184;
     else {
@@ -10469,7 +10466,6 @@ CPyL135: ;
         goto CPyL288;
     }
     cpy_r_r186 = CPY_GET_ATTR(cpy_r_r185, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r185);
     if (unlikely(cpy_r_r186 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/for_helpers.py", "make_for_loop_generator", 430, CPyStatic_for_helpers___globals);
         goto CPyL288;
@@ -10632,7 +10628,6 @@ CPyL164: ;
         goto CPyL288;
     }
     cpy_r_r233 = ((mypy___nodes___CallExprObject *)cpy_r_r232)->_callee;
-    CPy_INCREF(cpy_r_r233);
     if (likely((Py_TYPE(cpy_r_r233) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r233) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r233) == CPyType_nodes___RefExpr)))
         cpy_r_r234 = cpy_r_r233;
     else {
@@ -10640,7 +10635,6 @@ CPyL164: ;
         goto CPyL288;
     }
     cpy_r_r235 = CPY_GET_ATTR(cpy_r_r234, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r234);
     if (unlikely(cpy_r_r235 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/for_helpers.py", "make_for_loop_generator", 442, CPyStatic_for_helpers___globals);
         goto CPyL288;

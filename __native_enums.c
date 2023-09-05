@@ -385,9 +385,7 @@ CPyL2: ;
         goto CPyL65;
     }
     cpy_r_r12 = ((mypy___types___InstanceObject *)cpy_r_r11)->_type;
-    CPy_INCREF(cpy_r_r12);
     cpy_r_r13 = CPY_GET_ATTR(cpy_r_r12, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r12);
     if (unlikely(cpy_r_r13 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "_infer_value_type_with_auto_fallback", 80, CPyStatic_enums___globals);
         goto CPyL65;
@@ -630,12 +628,12 @@ CPyL44: ;
         goto CPyL76;
     }
     cpy_r_r68 = CPY_GET_ATTR(cpy_r_r67, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r67);
     if (unlikely(cpy_r_r68 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "_infer_value_type_with_auto_fallback", 98, CPyStatic_enums___globals);
         goto CPyL76;
     }
 CPyL48: ;
+    CPy_DECREF(cpy_r_type_with_gnv);
     cpy_r_r69 = CPyStatics[4609]; /* 'enum.Enum' */
     cpy_r_r70 = PyUnicode_Compare(cpy_r_r68, cpy_r_r69);
     CPy_DECREF(cpy_r_r68);
@@ -647,12 +645,12 @@ CPyL48: ;
     cpy_r_r74 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r74)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "_infer_value_type_with_auto_fallback", 98, CPyStatic_enums___globals);
-        goto CPyL76;
+        goto CPyL77;
     }
 CPyL51: ;
     cpy_r_r75 = cpy_r_r70 == 0;
     if (cpy_r_r75) {
-        goto CPyL77;
+        goto CPyL78;
     } else
         goto CPyL57;
 CPyL52: ;
@@ -671,7 +669,7 @@ CPyL52: ;
     cpy_r_r79 = PyList_New(0);
     if (unlikely(cpy_r_r79 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "_infer_value_type_with_auto_fallback", 99, CPyStatic_enums___globals);
-        goto CPyL78;
+        goto CPyL79;
     }
     cpy_r_r80 = CPY_GET_METHOD_TRAIT(cpy_r_r77, CPyType_plugin___CheckerPluginInterface, 2, mypy___plugin___CheckerPluginInterfaceObject, PyObject * (*)(PyObject *, PyObject *, PyObject *))(cpy_r_r77, cpy_r_r78, cpy_r_r79); /* named_generic_type */
     CPy_DECREF(cpy_r_r79);
@@ -687,7 +685,7 @@ CPyL57: ;
         cpy_r_r81 = cpy_r_node_type;
     else {
         CPy_TypeErrorTraceback("mypy/plugins/enums.py", "_infer_value_type_with_auto_fallback", 101, CPyStatic_enums___globals, "mypy.types.CallableType", cpy_r_node_type);
-        goto CPyL76;
+        goto CPyL77;
     }
     cpy_r_r82 = ((mypy___types___CallableTypeObject *)cpy_r_r81)->_ret_type;
     CPy_INCREF(cpy_r_r82);
@@ -759,12 +757,16 @@ CPyL75: ;
     CPy_DECREF(cpy_r_node_type);
     goto CPyL61;
 CPyL76: ;
+    CPy_DecRef(cpy_r_type_with_gnv);
     CPy_DecRef(cpy_r_node_type);
     goto CPyL64;
 CPyL77: ;
+    CPy_DecRef(cpy_r_node_type);
+    goto CPyL64;
+CPyL78: ;
     CPy_DECREF(cpy_r_node_type);
     goto CPyL52;
-CPyL78: ;
+CPyL79: ;
     CPy_DecRef(cpy_r_r77);
     goto CPyL64;
 }
@@ -1006,7 +1008,6 @@ __LL4926: ;
 CPyL20: ;
     return 0;
 CPyL21: ;
-    CPy_INCREF(cpy_r_type_with_new);
     if (likely(cpy_r_type_with_new != Py_None))
         cpy_r_r32 = cpy_r_type_with_new;
     else {
@@ -1014,7 +1015,6 @@ CPyL21: ;
         goto CPyL51;
     }
     cpy_r_r33 = CPY_GET_ATTR(cpy_r_r32, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r32);
     if (unlikely(cpy_r_r33 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "_implements_new", 117, CPyStatic_enums___globals);
         goto CPyL51;
@@ -1039,7 +1039,6 @@ CPyL26: ;
     cpy_r_r41 = cpy_r_r40;
     goto CPyL34;
 CPyL28: ;
-    CPy_INCREF(cpy_r_type_with_new);
     if (likely(cpy_r_type_with_new != Py_None))
         cpy_r_r42 = cpy_r_type_with_new;
     else {
@@ -1047,7 +1046,6 @@ CPyL28: ;
         goto CPyL51;
     }
     cpy_r_r43 = CPY_GET_ATTR(cpy_r_r42, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r42);
     if (unlikely(cpy_r_r43 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "_implements_new", 117, CPyStatic_enums___globals);
         goto CPyL51;
@@ -1082,15 +1080,15 @@ CPyL36: ;
         cpy_r_r52 = cpy_r_type_with_new;
     else {
         CPy_TypeErrorTraceback("mypy/plugins/enums.py", "_implements_new", 117, CPyStatic_enums___globals, "mypy.nodes.TypeInfo", cpy_r_type_with_new);
-        goto CPyL43;
+        goto CPyL51;
     }
     cpy_r_r53 = CPY_GET_ATTR(cpy_r_r52, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r52);
     if (unlikely(cpy_r_r53 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "_implements_new", 117, CPyStatic_enums___globals);
-        goto CPyL43;
+        goto CPyL51;
     }
 CPyL38: ;
+    CPy_DECREF(cpy_r_type_with_new);
     cpy_r_r54 = CPyStatics[4611]; /* 'enum.StrEnum' */
     cpy_r_r55 = PyUnicode_Compare(cpy_r_r53, cpy_r_r54);
     CPy_DECREF(cpy_r_r53);
@@ -1535,15 +1533,15 @@ CPyL31: ;
         cpy_r_r45 = cpy_r_n;
     else {
         CPy_TypeErrorTraceback("mypy/plugins/enums.py", "enum_value_callback", 165, CPyStatic_enums___globals, "mypy.nodes.SymbolTableNode", cpy_r_n);
-        goto CPyL135;
+        goto CPyL136;
     }
     cpy_r_r46 = CPY_GET_ATTR(cpy_r_r45, CPyType_nodes___SymbolTableNode, 2, mypy___nodes___SymbolTableNodeObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r45);
     if (unlikely(cpy_r_r46 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "enum_value_callback", 165, CPyStatic_enums___globals);
-        goto CPyL135;
+        goto CPyL136;
     }
 CPyL35: ;
+    CPy_DECREF(cpy_r_n);
     cpy_r_r47 = CPyDef_types___get_proper_type(cpy_r_r46);
     CPy_DECREF(cpy_r_r46);
     if (unlikely(cpy_r_r47 == NULL)) {
@@ -1994,15 +1992,15 @@ CPyL113: ;
         cpy_r_r144 = cpy_r_stnode;
     else {
         CPy_TypeErrorTraceback("mypy/plugins/enums.py", "enum_value_callback", 225, CPyStatic_enums___globals, "mypy.nodes.SymbolTableNode", cpy_r_stnode);
-        goto CPyL123;
+        goto CPyL160;
     }
     cpy_r_r145 = CPY_GET_ATTR(cpy_r_r144, CPyType_nodes___SymbolTableNode, 2, mypy___nodes___SymbolTableNodeObject, PyObject *); /* type */
-    CPy_DECREF(cpy_r_r144);
     if (unlikely(cpy_r_r145 == NULL)) {
         CPy_AddTraceback("mypy/plugins/enums.py", "enum_value_callback", 225, CPyStatic_enums___globals);
-        goto CPyL123;
+        goto CPyL160;
     }
 CPyL115: ;
+    CPy_DECREF(cpy_r_stnode);
     cpy_r_r146 = CPyDef_types___get_proper_type(cpy_r_r145);
     CPy_DECREF(cpy_r_r145);
     if (unlikely(cpy_r_r146 == NULL)) {
@@ -2019,7 +2017,7 @@ CPyL115: ;
     cpy_r_r148 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r149 = cpy_r_underlying_type == cpy_r_r148;
     if (cpy_r_r149) {
-        goto CPyL160;
+        goto CPyL161;
     } else
         goto CPyL121;
 CPyL118: ;
@@ -2176,6 +2174,9 @@ CPyL159: ;
     CPy_DECREF(cpy_r_stnode);
     goto CPyL110;
 CPyL160: ;
+    CPy_DecRef(cpy_r_stnode);
+    goto CPyL123;
+CPyL161: ;
     CPy_DECREF(cpy_r_underlying_type);
     goto CPyL118;
 }

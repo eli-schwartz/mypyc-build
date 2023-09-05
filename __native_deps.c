@@ -15875,7 +15875,7 @@ __LL6529: ;
     cpy_r_r7 = CPyStr_IsTrue(cpy_r_r6);
     CPy_DECREF(cpy_r_r6);
     if (!cpy_r_r7) goto CPyL29;
-    cpy_r_r8 = CPyStatics[867]; /* 'in' */
+    cpy_r_r8 = CPyStatics[866]; /* 'in' */
     cpy_r_r9 = PyUnicode_Compare(cpy_r_op, cpy_r_r8);
     cpy_r_r10 = cpy_r_r9 == -1;
     if (!cpy_r_r10) goto CPyL11;

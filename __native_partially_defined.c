@@ -8774,9 +8774,7 @@ CPyL23: ;
     }
     cpy_r_arg = cpy_r_r34;
     cpy_r_r35 = ((mypy___nodes___ArgumentObject *)cpy_r_arg)->_variable;
-    CPy_INCREF(cpy_r_r35);
     cpy_r_r36 = CPY_GET_ATTR(cpy_r_r35, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r35);
     if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AddTraceback("mypy/partially_defined.py", "visit_func", 438, CPyStatic_partially_defined___globals);
         goto CPyL40;

@@ -879,7 +879,6 @@ CPyL12: ;
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 84, CPyStatic_semanal_typeddict___globals);
         goto CPyL216;
     }
-    CPy_INCREF(cpy_r_base_expr);
     if (likely((Py_TYPE(cpy_r_base_expr) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_base_expr) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_base_expr) == CPyType_nodes___RefExpr)))
         cpy_r_r31 = cpy_r_base_expr;
     else {
@@ -887,7 +886,6 @@ CPyL12: ;
         goto CPyL216;
     }
     cpy_r_r32 = CPY_GET_ATTR(cpy_r_r31, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r31);
     if (unlikely(cpy_r_r32 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 85, CPyStatic_semanal_typeddict___globals);
         goto CPyL216;
@@ -1011,47 +1009,45 @@ CPyL37: ;
         goto CPyL221;
     }
     cpy_r_r59 = ((mypy___nodes___RefExprObject *)cpy_r_r58)->_node;
-    CPy_INCREF(cpy_r_r59);
     if (likely((Py_TYPE(cpy_r_r59) == CPyType_nodes___FakeInfo) || (Py_TYPE(cpy_r_r59) == CPyType_nodes___TypeInfo)))
         cpy_r_r60 = cpy_r_r59;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 89, CPyStatic_semanal_typeddict___globals, "mypy.nodes.TypeInfo", cpy_r_r59);
         goto CPyL221;
     }
-    CPy_DECREF(cpy_r_base_expr);
     cpy_r_r61 = CPY_GET_ATTR(cpy_r_r60, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r60);
     if (unlikely(cpy_r_r61 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 89, CPyStatic_semanal_typeddict___globals);
-        goto CPyL222;
+        goto CPyL221;
     }
 CPyL40: ;
+    CPy_DECREF(cpy_r_base_expr);
     cpy_r_r62 = CPyStatics[193]; /* 'format' */
     PyObject *cpy_r_r63[2] = {cpy_r_err, cpy_r_r61};
     cpy_r_r64 = (PyObject **)&cpy_r_r63;
     cpy_r_r65 = PyObject_VectorcallMethod(cpy_r_r62, cpy_r_r64, 9223372036854775810ULL, 0);
     if (unlikely(cpy_r_r65 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 89, CPyStatic_semanal_typeddict___globals);
-        goto CPyL223;
+        goto CPyL222;
     }
     CPy_DECREF(cpy_r_r61);
     if (likely(PyTuple_Check(cpy_r_r65)))
         cpy_r_r66 = cpy_r_r65;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 89, CPyStatic_semanal_typeddict___globals, "tuple", cpy_r_r65);
-        goto CPyL222;
+        goto CPyL223;
     }
     cpy_r_r67 = CPySequenceTuple_GetItem(cpy_r_r66, 0);
     CPy_DECREF(cpy_r_r66);
     if (unlikely(cpy_r_r67 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 89, CPyStatic_semanal_typeddict___globals);
-        goto CPyL222;
+        goto CPyL223;
     }
     if (likely(PyUnicode_Check(cpy_r_r67)))
         cpy_r_r68 = cpy_r_r67;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 89, CPyStatic_semanal_typeddict___globals, "str", cpy_r_r67);
-        goto CPyL222;
+        goto CPyL223;
     }
     cpy_r_r69 = CPySequenceTuple_GetItem(cpy_r_err, 2);
     CPy_DECREF(cpy_r_err);
@@ -1157,7 +1153,7 @@ CPyL60: ;
 CPyL61: ;
     if (!cpy_r_r101) goto CPyL79;
     cpy_r_r106 = ((mypy___nodes___ClassDefObject *)cpy_r_defn)->_base_type_exprs;
-    cpy_r_r107 = CPyList_GetItemShort(cpy_r_r106, 0);
+    cpy_r_r107 = CPyList_GetItemShortBorrow(cpy_r_r106, 0);
     if (unlikely(cpy_r_r107 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 98, CPyStatic_semanal_typeddict___globals);
         goto CPyL226;
@@ -1169,7 +1165,6 @@ CPyL61: ;
         goto CPyL226;
     }
     cpy_r_r109 = CPY_GET_ATTR(cpy_r_r108, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r108);
     if (unlikely(cpy_r_r109 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 98, CPyStatic_semanal_typeddict___globals);
         goto CPyL226;
@@ -1362,7 +1357,6 @@ CPyL89: ;
     cpy_r_r163 = cpy_r_r167;
 CPyL90: ;
     if (!cpy_r_r163) goto CPyL102;
-    CPy_INCREF(cpy_r_expr);
     if (likely((Py_TYPE(cpy_r_expr) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___RefExpr)))
         cpy_r_r168 = cpy_r_expr;
     else {
@@ -1370,7 +1364,6 @@ CPyL90: ;
         goto CPyL237;
     }
     cpy_r_r169 = CPY_GET_ATTR(cpy_r_r168, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r168);
     if (unlikely(cpy_r_r169 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 117, CPyStatic_semanal_typeddict___globals);
         goto CPyL237;
@@ -1483,7 +1476,6 @@ CPyL108: ;
         goto CPyL237;
     }
     if (!cpy_r_r202) goto CPyL138;
-    CPy_INCREF(cpy_r_expr);
     if (likely((Py_TYPE(cpy_r_expr) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___RefExpr)))
         cpy_r_r203 = cpy_r_expr;
     else {
@@ -1491,7 +1483,6 @@ CPyL108: ;
         goto CPyL237;
     }
     cpy_r_r204 = CPY_GET_ATTR(cpy_r_r203, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r203);
     if (unlikely(cpy_r_r204 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 123, CPyStatic_semanal_typeddict___globals);
         goto CPyL237;
@@ -1512,7 +1503,6 @@ CPyL115: ;
     }
     CPy_Unreachable();
 CPyL117: ;
-    CPy_INCREF(cpy_r_expr);
     if (likely((Py_TYPE(cpy_r_expr) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___RefExpr)))
         cpy_r_r207 = cpy_r_expr;
     else {
@@ -1520,7 +1510,6 @@ CPyL117: ;
         goto CPyL237;
     }
     cpy_r_r208 = CPY_GET_ATTR(cpy_r_r207, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r207);
     if (unlikely(cpy_r_r208 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 124, CPyStatic_semanal_typeddict___globals);
         goto CPyL237;
@@ -1536,7 +1525,6 @@ CPyL119: ;
     cpy_r_r211 = cpy_r_r209;
     cpy_r_r212 = cpy_r_r211 ^ 1;
     if (!cpy_r_r212) goto CPyL126;
-    CPy_INCREF(cpy_r_expr);
     if (likely((Py_TYPE(cpy_r_expr) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_expr) == CPyType_nodes___RefExpr)))
         cpy_r_r213 = cpy_r_expr;
     else {
@@ -1544,7 +1532,6 @@ CPyL119: ;
         goto CPyL237;
     }
     cpy_r_r214 = CPY_GET_ATTR(cpy_r_r213, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r213);
     if (unlikely(cpy_r_r214 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 125, CPyStatic_semanal_typeddict___globals);
         goto CPyL237;
@@ -1614,21 +1601,19 @@ CPyL133: ;
         goto CPyL237;
     }
     cpy_r_r234 = ((mypy___nodes___RefExprObject *)cpy_r_r233)->_node;
-    CPy_INCREF(cpy_r_r234);
     if (likely((Py_TYPE(cpy_r_r234) == CPyType_nodes___FakeInfo) || (Py_TYPE(cpy_r_r234) == CPyType_nodes___TypeInfo)))
         cpy_r_r235 = cpy_r_r234;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 129, CPyStatic_semanal_typeddict___globals, "mypy.nodes.TypeInfo", cpy_r_r234);
         goto CPyL237;
     }
-    CPy_DECREF(cpy_r_expr);
     cpy_r_r236 = CPY_GET_ATTR(cpy_r_r235, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r235);
     if (unlikely(cpy_r_r236 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 129, CPyStatic_semanal_typeddict___globals);
-        goto CPyL236;
+        goto CPyL237;
     }
 CPyL136: ;
+    CPy_DECREF(cpy_r_expr);
     cpy_r_r237 = CPyStatics[178]; /* '"' */
     cpy_r_r238 = CPyStr_Build(3, cpy_r_r232, cpy_r_r236, cpy_r_r237);
     CPy_DECREF(cpy_r_r236);
@@ -1716,7 +1701,6 @@ CPyL152: ;
         goto CPyL237;
     }
     cpy_r_r266 = ((mypy___nodes___IndexExprObject *)cpy_r_r265)->_base;
-    CPy_INCREF(cpy_r_r266);
     if (likely((Py_TYPE(cpy_r_r266) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r266) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r266) == CPyType_nodes___RefExpr)))
         cpy_r_r267 = cpy_r_r266;
     else {
@@ -1724,7 +1708,6 @@ CPyL152: ;
         goto CPyL237;
     }
     cpy_r_r268 = CPY_GET_ATTR(cpy_r_r267, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r267);
     if (unlikely(cpy_r_r268 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 132, CPyStatic_semanal_typeddict___globals);
         goto CPyL237;
@@ -1752,7 +1735,6 @@ CPyL158: ;
         goto CPyL237;
     }
     cpy_r_r272 = ((mypy___nodes___IndexExprObject *)cpy_r_r271)->_base;
-    CPy_INCREF(cpy_r_r272);
     if (likely((Py_TYPE(cpy_r_r272) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r272) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r272) == CPyType_nodes___RefExpr)))
         cpy_r_r273 = cpy_r_r272;
     else {
@@ -1760,7 +1742,6 @@ CPyL158: ;
         goto CPyL237;
     }
     cpy_r_r274 = CPY_GET_ATTR(cpy_r_r273, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r273);
     if (unlikely(cpy_r_r274 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 133, CPyStatic_semanal_typeddict___globals);
         goto CPyL237;
@@ -1783,7 +1764,6 @@ CPyL161: ;
         goto CPyL237;
     }
     cpy_r_r280 = ((mypy___nodes___IndexExprObject *)cpy_r_r279)->_base;
-    CPy_INCREF(cpy_r_r280);
     if (likely((Py_TYPE(cpy_r_r280) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r280) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r280) == CPyType_nodes___RefExpr)))
         cpy_r_r281 = cpy_r_r280;
     else {
@@ -1791,7 +1771,6 @@ CPyL161: ;
         goto CPyL237;
     }
     cpy_r_r282 = CPY_GET_ATTR(cpy_r_r281, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r281);
     if (unlikely(cpy_r_r282 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 134, CPyStatic_semanal_typeddict___globals);
         goto CPyL237;
@@ -1875,21 +1854,19 @@ CPyL177: ;
         goto CPyL237;
     }
     cpy_r_r306 = ((mypy___nodes___RefExprObject *)cpy_r_r305)->_node;
-    CPy_INCREF(cpy_r_r306);
     if (likely((Py_TYPE(cpy_r_r306) == CPyType_nodes___FakeInfo) || (Py_TYPE(cpy_r_r306) == CPyType_nodes___TypeInfo)))
         cpy_r_r307 = cpy_r_r306;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 138, CPyStatic_semanal_typeddict___globals, "mypy.nodes.TypeInfo", cpy_r_r306);
         goto CPyL237;
     }
-    CPy_DECREF(cpy_r_expr);
     cpy_r_r308 = CPY_GET_ATTR(cpy_r_r307, CPyType_nodes___TypeInfo, 7, mypy___nodes___TypeInfoObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r307);
     if (unlikely(cpy_r_r308 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_typeddict_classdef", 138, CPyStatic_semanal_typeddict___globals);
-        goto CPyL236;
+        goto CPyL237;
     }
 CPyL181: ;
+    CPy_DECREF(cpy_r_expr);
     cpy_r_r309 = CPyStatics[178]; /* '"' */
     cpy_r_r310 = CPyStr_Build(3, cpy_r_r302, cpy_r_r308, cpy_r_r309);
     CPy_DECREF(cpy_r_r308);
@@ -2162,11 +2139,11 @@ CPyL221: ;
 CPyL222: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_err);
+    CPy_DecRef(cpy_r_r61);
     goto CPyL213;
 CPyL223: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_err);
-    CPy_DecRef(cpy_r_r61);
     goto CPyL213;
 CPyL224: ;
     CPy_DecRef(cpy_r_r0);
@@ -3327,7 +3304,9 @@ CPyL7: ;
     cpy_r_r20 = ((mypy___semanal_typeddict___TypedDictAnalyzerObject *)cpy_r_self)->_options;
     CPy_INCREF(cpy_r_r20);
     cpy_r_r21 = ((mypy___semanal_typeddict___TypedDictAnalyzerObject *)cpy_r_self)->_api;
+    CPy_INCREF(cpy_r_r21);
     cpy_r_r22 = CPY_GET_ATTR_TRAIT(cpy_r_r21, CPyType_semanal_shared___SemanticAnalyzerInterface, 27, mypy___semanal_shared___SemanticAnalyzerInterfaceObject, char); /* is_stub_file */
+    CPy_DECREF(cpy_r_r21);
     if (unlikely(cpy_r_r22 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "analyze_base_args", 226, CPyStatic_semanal_typeddict___globals);
         goto CPyL36;
@@ -5419,12 +5398,12 @@ CPyL13: ;
         goto CPyL112;
     }
     cpy_r_r29 = CPY_GET_ATTR(cpy_r_r28, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r28);
     if (unlikely(cpy_r_r29 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 357, CPyStatic_semanal_typeddict___globals);
         goto CPyL112;
     }
 CPyL15: ;
+    CPy_DECREF(cpy_r_callee);
     cpy_r_fullname = cpy_r_r29;
     cpy_r_r30 = CPyStatic_types___TPDICT_NAMES;
     if (unlikely(cpy_r_r30.f0 == NULL)) {
@@ -5458,12 +5437,12 @@ CPyL18: ;
     cpy_r_r34 = cpy_r_r33 >= 0;
     if (unlikely(!cpy_r_r34)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 358, CPyStatic_semanal_typeddict___globals);
-        goto CPyL112;
+        goto CPyL114;
     }
     cpy_r_r35 = cpy_r_r33;
     cpy_r_r36 = cpy_r_r35 ^ 1;
     if (cpy_r_r36) {
-        goto CPyL114;
+        goto CPyL115;
     } else
         goto CPyL22;
 CPyL20: ;
@@ -5489,13 +5468,13 @@ CPyL22: ;
     cpy_r_r41 = CPyDef_semanal_typeddict___TypedDictAnalyzer___parse_typeddict_args(cpy_r_self, cpy_r_call);
     if (unlikely(cpy_r_r41 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 360, CPyStatic_semanal_typeddict___globals);
-        goto CPyL112;
+        goto CPyL114;
     }
     cpy_r_res = cpy_r_r41;
     cpy_r_r42 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r43 = cpy_r_res == cpy_r_r42;
     if (cpy_r_r43) {
-        goto CPyL115;
+        goto CPyL116;
     } else
         goto CPyL26;
 CPyL24: ;
@@ -5622,7 +5601,7 @@ __LL6185: ;
     CPy_DECREF(cpy_r_res);
     if (unlikely(cpy_r_r48.f0 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 365, CPyStatic_semanal_typeddict___globals);
-        goto CPyL112;
+        goto CPyL114;
     }
     cpy_r_r49 = cpy_r_r48.f0;
     CPy_INCREF(cpy_r_r49);
@@ -5647,23 +5626,23 @@ __LL6185: ;
     if (cpy_r_ok) {
         goto CPyL33;
     } else
-        goto CPyL116;
+        goto CPyL117;
 CPyL28: ;
     cpy_r_r55 = CPyStatics[514]; /* 'TypedDict' */
     cpy_r_r56 = PyList_New(0);
     if (unlikely(cpy_r_r56 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 368, CPyStatic_semanal_typeddict___globals);
-        goto CPyL117;
+        goto CPyL118;
     }
     cpy_r_r57 = PyList_New(0);
     if (unlikely(cpy_r_r57 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 368, CPyStatic_semanal_typeddict___globals);
-        goto CPyL118;
+        goto CPyL119;
     }
     cpy_r_r58 = PySet_New(NULL);
     if (unlikely(cpy_r_r58 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 368, CPyStatic_semanal_typeddict___globals);
-        goto CPyL119;
+        goto CPyL120;
     }
     cpy_r_r59 = ((mypy___nodes___CallExprObject *)cpy_r_call)->_line;
     CPyTagged_INCREF(cpy_r_r59);
@@ -5675,7 +5654,7 @@ CPyL28: ;
     CPyTagged_DECREF(cpy_r_r59);
     if (unlikely(cpy_r_r61 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 368, CPyStatic_semanal_typeddict___globals);
-        goto CPyL117;
+        goto CPyL118;
     }
     cpy_r_info = cpy_r_r61;
     goto CPyL100;
@@ -5688,7 +5667,7 @@ CPyL33: ;
         cpy_r_r64 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 370, CPyStatic_semanal_typeddict___globals, "str", cpy_r_var_name);
-        goto CPyL120;
+        goto CPyL121;
     }
     cpy_r_r65 = PyUnicode_Compare(cpy_r_name, cpy_r_r64);
     CPy_DECREF(cpy_r_r64);
@@ -5700,7 +5679,7 @@ CPyL33: ;
     cpy_r_r69 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r69)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 370, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
 CPyL38: ;
     cpy_r_r70 = cpy_r_r65 != 0;
@@ -5710,7 +5689,7 @@ CPyL38: ;
         cpy_r_r71 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 373, CPyStatic_semanal_typeddict___globals, "str", cpy_r_var_name);
-        goto CPyL120;
+        goto CPyL121;
     }
     cpy_r_r72 = CPyStatics[5273]; /* 'First argument "' */
     cpy_r_r73 = CPyStatics[5274]; /* '" to TypedDict() does not match variable name "' */
@@ -5719,18 +5698,18 @@ CPyL38: ;
     CPy_DECREF(cpy_r_r71);
     if (unlikely(cpy_r_r75 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 372, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
     CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___CallExpr))
         cpy_r_r76 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 375, CPyStatic_semanal_typeddict___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL121;
+        goto CPyL122;
     }
     cpy_r_r77 = CPyStatic_errorcodes___NAME_MATCH;
     if (unlikely(cpy_r_r77 == NULL)) {
-        goto CPyL122;
+        goto CPyL123;
     } else
         goto CPyL45;
 CPyL43: ;
@@ -5747,13 +5726,13 @@ CPyL45: ;
     CPy_DECREF(cpy_r_r76);
     if (unlikely(cpy_r_r79 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 371, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
 CPyL46: ;
     cpy_r_r80 = PyObject_RichCompare(cpy_r_name, cpy_r_var_name, 3);
     if (unlikely(cpy_r_r80 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 378, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
     if (unlikely(!PyBool_Check(cpy_r_r80))) {
         CPy_TypeError("bool", cpy_r_r80); cpy_r_r81 = 2;
@@ -5762,7 +5741,7 @@ CPyL46: ;
     CPy_DECREF(cpy_r_r80);
     if (unlikely(cpy_r_r81 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 378, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
     if (cpy_r_r81) goto CPyL50;
     if (!cpy_r_is_func_scope) goto CPyL54;
@@ -5774,26 +5753,26 @@ CPyL50: ;
     CPyTagged_DECREF(cpy_r_r83);
     if (unlikely(cpy_r_r84 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 380, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
     cpy_r_r85 = PyUnicode_Concat(cpy_r_r82, cpy_r_r84);
     CPy_DECREF(cpy_r_r84);
     if (unlikely(cpy_r_r85 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 380, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
     cpy_r_r86 = CPyStr_Append(cpy_r_name, cpy_r_r85);
     CPy_DECREF(cpy_r_r85);
     if (unlikely(cpy_r_r86 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 380, CPyStatic_semanal_typeddict___globals);
-        goto CPyL123;
+        goto CPyL124;
     }
     cpy_r_name = cpy_r_r86;
 CPyL54: ;
     cpy_r_r87 = PySet_New(NULL);
     if (unlikely(cpy_r_r87 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 381, CPyStatic_semanal_typeddict___globals);
-        goto CPyL120;
+        goto CPyL121;
     }
     cpy_r_r88 = 0;
     cpy_r_r89 = 0;
@@ -5813,7 +5792,7 @@ CPyL56: ;
         cpy_r_r99 = cpy_r_r98;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 381, CPyStatic_semanal_typeddict___globals, "str", cpy_r_r98);
-        goto CPyL124;
+        goto CPyL125;
     }
     cpy_r_field = cpy_r_r99;
     cpy_r_r100 = CPyList_GetItemUnsafe(cpy_r_types, cpy_r_r89);
@@ -5821,7 +5800,7 @@ CPyL56: ;
         cpy_r_r101 = cpy_r_r100;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 381, CPyStatic_semanal_typeddict___globals, "mypy.types.Type", cpy_r_r100);
-        goto CPyL125;
+        goto CPyL126;
     }
     cpy_r_t = cpy_r_r101;
     if (!cpy_r_total) goto CPyL62;
@@ -5840,7 +5819,7 @@ CPyL64: ;
         cpy_r_r108 = cpy_r_t;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 384, CPyStatic_semanal_typeddict___globals, "mypy.types.RequiredType", cpy_r_t);
-        goto CPyL126;
+        goto CPyL127;
     }
     cpy_r_r109 = ((mypy___types___RequiredTypeObject *)cpy_r_r108)->_required;
     cpy_r_r107 = cpy_r_r109;
@@ -5850,7 +5829,7 @@ CPyL67: ;
     if (cpy_r_r102) {
         goto CPyL69;
     } else
-        goto CPyL127;
+        goto CPyL128;
 CPyL68: ;
     cpy_r_r110 = cpy_r_r102;
     goto CPyL74;
@@ -5862,7 +5841,7 @@ CPyL69: ;
     if (cpy_r_r114) {
         goto CPyL71;
     } else
-        goto CPyL128;
+        goto CPyL129;
 CPyL70: ;
     cpy_r_r115 = cpy_r_r114;
     goto CPyL73;
@@ -5871,7 +5850,7 @@ CPyL71: ;
         cpy_r_r116 = cpy_r_t;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 385, CPyStatic_semanal_typeddict___globals, "mypy.types.RequiredType", cpy_r_t);
-        goto CPyL126;
+        goto CPyL127;
     }
     cpy_r_r117 = ((mypy___types___RequiredTypeObject *)cpy_r_r116)->_required;
     CPy_DECREF(cpy_r_t);
@@ -5881,13 +5860,13 @@ CPyL73: ;
     cpy_r_r119 = cpy_r_r115 ^ 1;
     cpy_r_r110 = cpy_r_r119;
 CPyL74: ;
-    if (!cpy_r_r110) goto CPyL129;
+    if (!cpy_r_r110) goto CPyL130;
     cpy_r_r120 = PySet_Add(cpy_r_r87, cpy_r_field);
     CPy_DECREF(cpy_r_field);
     cpy_r_r121 = cpy_r_r120 >= 0;
     if (unlikely(!cpy_r_r121)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 381, CPyStatic_semanal_typeddict___globals);
-        goto CPyL124;
+        goto CPyL125;
     }
 CPyL76: ;
     cpy_r_r122 = cpy_r_r88 + 2;
@@ -5902,7 +5881,7 @@ CPyL77: ;
     cpy_r_r126 = PyList_New(cpy_r_r125);
     if (unlikely(cpy_r_r126 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 387, CPyStatic_semanal_typeddict___globals);
-        goto CPyL130;
+        goto CPyL131;
     }
     cpy_r_r127 = 0;
 CPyL79: ;
@@ -5910,13 +5889,13 @@ CPyL79: ;
     cpy_r_r129 = *(int64_t *)cpy_r_r128;
     cpy_r_r130 = cpy_r_r129 << 1;
     cpy_r_r131 = (Py_ssize_t)cpy_r_r127 < (Py_ssize_t)cpy_r_r130;
-    if (!cpy_r_r131) goto CPyL131;
+    if (!cpy_r_r131) goto CPyL132;
     cpy_r_r132 = CPyList_GetItemUnsafe(cpy_r_types, cpy_r_r127);
     if (likely(PyObject_TypeCheck(cpy_r_r132, CPyType_types___Type)))
         cpy_r_r133 = cpy_r_r132;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 387, CPyStatic_semanal_typeddict___globals, "mypy.types.Type", cpy_r_r132);
-        goto CPyL132;
+        goto CPyL133;
     }
     cpy_r_t_2 = cpy_r_r133;
     cpy_r_r134 = (PyObject *)CPyType_types___RequiredType;
@@ -5928,7 +5907,7 @@ CPyL79: ;
         cpy_r_r138 = cpy_r_t_2;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 388, CPyStatic_semanal_typeddict___globals, "mypy.types.RequiredType", cpy_r_t_2);
-        goto CPyL133;
+        goto CPyL134;
     }
     cpy_r_r139 = ((mypy___types___RequiredTypeObject *)cpy_r_r138)->_item;
     CPy_INCREF(cpy_r_r139);
@@ -5941,7 +5920,7 @@ CPyL85: ;
     cpy_r_r141 = CPyList_SetItemUnsafe(cpy_r_r126, cpy_r_r127, cpy_r_r140);
     if (unlikely(!cpy_r_r141)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 387, CPyStatic_semanal_typeddict___globals);
-        goto CPyL132;
+        goto CPyL133;
     }
     cpy_r_r142 = cpy_r_r127 + 2;
     cpy_r_r127 = cpy_r_r142;
@@ -5955,7 +5934,7 @@ CPyL87: ;
         cpy_r_r144 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 391, CPyStatic_semanal_typeddict___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL134;
+        goto CPyL135;
     }
     cpy_r_r145 = ((mypy___nodes___CallExprObject *)cpy_r_r144)->_analyzed;
     cpy_r_r146 = (PyObject *)CPyType_nodes___TypedDictExpr;
@@ -5963,7 +5942,7 @@ CPyL87: ;
     cpy_r_r148 = *(PyObject * *)cpy_r_r147;
     cpy_r_r149 = cpy_r_r148 == cpy_r_r146;
     if (cpy_r_r149) {
-        goto CPyL135;
+        goto CPyL136;
     } else
         goto CPyL92;
 CPyL89: ;
@@ -5971,14 +5950,14 @@ CPyL89: ;
         cpy_r_r150 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 392, CPyStatic_semanal_typeddict___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL130;
+        goto CPyL131;
     }
     cpy_r_r151 = ((mypy___nodes___CallExprObject *)cpy_r_r150)->_analyzed;
     if (likely(Py_TYPE(cpy_r_r151) == CPyType_nodes___TypedDictExpr))
         cpy_r_r152 = cpy_r_r151;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 392, CPyStatic_semanal_typeddict___globals, "mypy.nodes.TypedDictExpr", cpy_r_r151);
-        goto CPyL130;
+        goto CPyL131;
     }
     cpy_r_r153 = ((mypy___nodes___TypedDictExprObject *)cpy_r_r152)->_info;
     CPy_INCREF(cpy_r_r153);
@@ -5994,14 +5973,14 @@ CPyL92: ;
     CPy_DECREF(cpy_r_existing_info);
     if (unlikely(cpy_r_r155 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 393, CPyStatic_semanal_typeddict___globals);
-        goto CPyL136;
+        goto CPyL137;
     }
     cpy_r_info = cpy_r_r155;
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___CallExpr))
         cpy_r_r156 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 396, CPyStatic_semanal_typeddict___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL137;
+        goto CPyL138;
     }
     cpy_r_r157 = ((mypy___nodes___CallExprObject *)cpy_r_r156)->_line;
     CPyTagged_INCREF(cpy_r_r157);
@@ -6012,12 +5991,12 @@ CPyL92: ;
     cpy_r_r158 = 1;
     if (unlikely(!cpy_r_r158)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 396, CPyStatic_semanal_typeddict___globals);
-        goto CPyL137;
+        goto CPyL138;
     }
     cpy_r_r159 = PyObject_RichCompare(cpy_r_name, cpy_r_var_name, 3);
     if (unlikely(cpy_r_r159 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 398, CPyStatic_semanal_typeddict___globals);
-        goto CPyL137;
+        goto CPyL138;
     }
     if (unlikely(!PyBool_Check(cpy_r_r159))) {
         CPy_TypeError("bool", cpy_r_r159); cpy_r_r160 = 2;
@@ -6026,10 +6005,10 @@ CPyL92: ;
     CPy_DECREF(cpy_r_r159);
     if (unlikely(cpy_r_r160 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 398, CPyStatic_semanal_typeddict___globals);
-        goto CPyL137;
+        goto CPyL138;
     }
     if (cpy_r_r160) goto CPyL99;
-    if (!cpy_r_is_func_scope) goto CPyL138;
+    if (!cpy_r_is_func_scope) goto CPyL139;
 CPyL99: ;
     cpy_r_r161 = ((mypy___semanal_typeddict___TypedDictAnalyzerObject *)cpy_r_self)->_api;
     CPy_INCREF(cpy_r_r161);
@@ -6038,7 +6017,7 @@ CPyL99: ;
     CPy_DECREF(cpy_r_r161);
     if (unlikely(cpy_r_r162 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 399, CPyStatic_semanal_typeddict___globals);
-        goto CPyL139;
+        goto CPyL140;
     }
 CPyL100: ;
     cpy_r_r163 = (PyObject *)&_Py_NoneStruct;
@@ -6049,7 +6028,7 @@ CPyL100: ;
         cpy_r_r165 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 338, CPyStatic_semanal_typeddict___globals, "str", cpy_r_var_name);
-        goto CPyL139;
+        goto CPyL140;
     }
     cpy_r_r166 = CPyStr_IsTrue(cpy_r_r165);
     CPy_DECREF(cpy_r_r165);
@@ -6061,14 +6040,14 @@ CPyL100: ;
         cpy_r_r168 = cpy_r_var_name;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 401, CPyStatic_semanal_typeddict___globals, "str", cpy_r_var_name);
-        goto CPyL140;
+        goto CPyL141;
     }
     CPy_INCREF(cpy_r_node);
     if (likely(Py_TYPE(cpy_r_node) == CPyType_nodes___CallExpr))
         cpy_r_r169 = cpy_r_node;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 401, CPyStatic_semanal_typeddict___globals, "mypy.nodes.CallExpr", cpy_r_node);
-        goto CPyL141;
+        goto CPyL142;
     }
     cpy_r_r170 = 2;
     cpy_r_r171 = 2;
@@ -6079,13 +6058,13 @@ CPyL100: ;
     CPy_DECREF(cpy_r_r167);
     if (unlikely(cpy_r_r173 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 401, CPyStatic_semanal_typeddict___globals);
-        goto CPyL139;
+        goto CPyL140;
     }
 CPyL106: ;
     cpy_r_r174 = CPyDef_nodes___TypedDictExpr(cpy_r_info);
     if (unlikely(cpy_r_r174 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 402, CPyStatic_semanal_typeddict___globals);
-        goto CPyL139;
+        goto CPyL140;
     }
     CPy_DECREF(((mypy___nodes___CallExprObject *)cpy_r_call)->_analyzed);
     ((mypy___nodes___CallExprObject *)cpy_r_call)->_analyzed = cpy_r_r174;
@@ -6095,7 +6074,7 @@ CPyL106: ;
         cpy_r_r177 = cpy_r_r176;
     else {
         CPy_TypeErrorTraceback("mypy/semanal_typeddict.py", "check_typeddict", 403, CPyStatic_semanal_typeddict___globals, "mypy.nodes.TypedDictExpr", cpy_r_r176);
-        goto CPyL139;
+        goto CPyL140;
     }
     cpy_r_r178 = NULL;
     cpy_r_r179 = NULL;
@@ -6105,7 +6084,7 @@ CPyL106: ;
     CPy_DECREF(cpy_r_r177);
     if (unlikely(cpy_r_r181 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "check_typeddict", 403, CPyStatic_semanal_typeddict___globals);
-        goto CPyL142;
+        goto CPyL143;
     }
     cpy_r_r182.f0 = 1;
     cpy_r_r182.f1 = cpy_r_info;
@@ -6125,44 +6104,41 @@ CPyL111: ;
     goto CPyL11;
 CPyL112: ;
     CPy_DecRef(cpy_r_call);
+    CPy_DecRef(cpy_r_callee);
     goto CPyL110;
 CPyL113: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_fullname);
     goto CPyL16;
 CPyL114: ;
+    CPy_DecRef(cpy_r_call);
+    goto CPyL110;
+CPyL115: ;
     CPy_DECREF(cpy_r_call);
     goto CPyL20;
-CPyL115: ;
+CPyL116: ;
     CPy_DECREF(cpy_r_call);
     CPy_DECREF(cpy_r_res);
     goto CPyL24;
-CPyL116: ;
+CPyL117: ;
     CPy_DECREF(cpy_r_name);
     CPy_DECREF(cpy_r_items);
     CPy_DECREF(cpy_r_types);
     goto CPyL28;
-CPyL117: ;
-    CPy_DecRef(cpy_r_call);
-    CPy_DecRef(cpy_r_tvar_defs);
-    goto CPyL110;
 CPyL118: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_tvar_defs);
-    CPy_DecRef(cpy_r_r56);
     goto CPyL110;
 CPyL119: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_r56);
-    CPy_DecRef(cpy_r_r57);
     goto CPyL110;
 CPyL120: ;
     CPy_DecRef(cpy_r_call);
-    CPy_DecRef(cpy_r_name);
-    CPy_DecRef(cpy_r_items);
-    CPy_DecRef(cpy_r_types);
     CPy_DecRef(cpy_r_tvar_defs);
+    CPy_DecRef(cpy_r_r56);
+    CPy_DecRef(cpy_r_r57);
     goto CPyL110;
 CPyL121: ;
     CPy_DecRef(cpy_r_call);
@@ -6170,7 +6146,6 @@ CPyL121: ;
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
     CPy_DecRef(cpy_r_tvar_defs);
-    CPy_DecRef(cpy_r_r75);
     goto CPyL110;
 CPyL122: ;
     CPy_DecRef(cpy_r_call);
@@ -6179,21 +6154,21 @@ CPyL122: ;
     CPy_DecRef(cpy_r_types);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_r75);
-    CPy_DecRef(cpy_r_r76);
-    goto CPyL43;
-CPyL123: ;
-    CPy_DecRef(cpy_r_call);
-    CPy_DecRef(cpy_r_items);
-    CPy_DecRef(cpy_r_types);
-    CPy_DecRef(cpy_r_tvar_defs);
     goto CPyL110;
-CPyL124: ;
+CPyL123: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_items);
     CPy_DecRef(cpy_r_types);
     CPy_DecRef(cpy_r_tvar_defs);
-    CPy_DecRef(cpy_r_r87);
+    CPy_DecRef(cpy_r_r75);
+    CPy_DecRef(cpy_r_r76);
+    goto CPyL43;
+CPyL124: ;
+    CPy_DecRef(cpy_r_call);
+    CPy_DecRef(cpy_r_items);
+    CPy_DecRef(cpy_r_types);
+    CPy_DecRef(cpy_r_tvar_defs);
     goto CPyL110;
 CPyL125: ;
     CPy_DecRef(cpy_r_call);
@@ -6202,7 +6177,6 @@ CPyL125: ;
     CPy_DecRef(cpy_r_types);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_r87);
-    CPy_DecRef(cpy_r_field);
     goto CPyL110;
 CPyL126: ;
     CPy_DecRef(cpy_r_call);
@@ -6212,18 +6186,27 @@ CPyL126: ;
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_r87);
     CPy_DecRef(cpy_r_field);
-    CPy_DecRef(cpy_r_t);
     goto CPyL110;
 CPyL127: ;
-    CPy_DECREF(cpy_r_t);
-    goto CPyL68;
+    CPy_DecRef(cpy_r_call);
+    CPy_DecRef(cpy_r_name);
+    CPy_DecRef(cpy_r_items);
+    CPy_DecRef(cpy_r_types);
+    CPy_DecRef(cpy_r_tvar_defs);
+    CPy_DecRef(cpy_r_r87);
+    CPy_DecRef(cpy_r_field);
+    CPy_DecRef(cpy_r_t);
+    goto CPyL110;
 CPyL128: ;
     CPy_DECREF(cpy_r_t);
-    goto CPyL70;
+    goto CPyL68;
 CPyL129: ;
+    CPy_DECREF(cpy_r_t);
+    goto CPyL70;
+CPyL130: ;
     CPy_DECREF(cpy_r_field);
     goto CPyL76;
-CPyL130: ;
+CPyL131: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_items);
@@ -6231,10 +6214,10 @@ CPyL130: ;
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_required_keys);
     goto CPyL110;
-CPyL131: ;
+CPyL132: ;
     CPy_DECREF(cpy_r_types);
     goto CPyL87;
-CPyL132: ;
+CPyL133: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_items);
@@ -6243,7 +6226,7 @@ CPyL132: ;
     CPy_DecRef(cpy_r_required_keys);
     CPy_DecRef(cpy_r_r126);
     goto CPyL110;
-CPyL133: ;
+CPyL134: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_items);
@@ -6253,7 +6236,7 @@ CPyL133: ;
     CPy_DecRef(cpy_r_r126);
     CPy_DecRef(cpy_r_t_2);
     goto CPyL110;
-CPyL134: ;
+CPyL135: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_items);
@@ -6262,42 +6245,42 @@ CPyL134: ;
     CPy_DecRef(cpy_r_required_keys);
     CPy_DecRef(cpy_r_existing_info);
     goto CPyL110;
-CPyL135: ;
+CPyL136: ;
     CPy_DECREF(cpy_r_existing_info);
     goto CPyL89;
-CPyL136: ;
-    CPy_DecRef(cpy_r_call);
-    CPy_DecRef(cpy_r_name);
-    CPy_DecRef(cpy_r_tvar_defs);
-    goto CPyL110;
 CPyL137: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_tvar_defs);
-    CPy_DecRef(cpy_r_info);
     goto CPyL110;
 CPyL138: ;
-    CPy_DECREF(cpy_r_name);
-    goto CPyL100;
-CPyL139: ;
     CPy_DecRef(cpy_r_call);
+    CPy_DecRef(cpy_r_name);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_info);
     goto CPyL110;
+CPyL139: ;
+    CPy_DECREF(cpy_r_name);
+    goto CPyL100;
 CPyL140: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_info);
-    CPy_DecRef(cpy_r_r167);
     goto CPyL110;
 CPyL141: ;
     CPy_DecRef(cpy_r_call);
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_info);
     CPy_DecRef(cpy_r_r167);
-    CPy_DecRef(cpy_r_r168);
     goto CPyL110;
 CPyL142: ;
+    CPy_DecRef(cpy_r_call);
+    CPy_DecRef(cpy_r_tvar_defs);
+    CPy_DecRef(cpy_r_info);
+    CPy_DecRef(cpy_r_r167);
+    CPy_DecRef(cpy_r_r168);
+    goto CPyL110;
+CPyL143: ;
     CPy_DecRef(cpy_r_tvar_defs);
     CPy_DecRef(cpy_r_info);
     goto CPyL110;
@@ -7294,7 +7277,9 @@ CPyL76: ;
     cpy_r_r134 = ((mypy___semanal_typeddict___TypedDictAnalyzerObject *)cpy_r_self)->_options;
     CPy_INCREF(cpy_r_r134);
     cpy_r_r135 = ((mypy___semanal_typeddict___TypedDictAnalyzerObject *)cpy_r_self)->_api;
+    CPy_INCREF(cpy_r_r135);
     cpy_r_r136 = CPY_GET_ATTR_TRAIT(cpy_r_r135, CPyType_semanal_shared___SemanticAnalyzerInterface, 14, mypy___semanal_shared___SemanticAnalyzerInterfaceObject, char); /* is_typeshed_stub_file */
+    CPy_DECREF(cpy_r_r135);
     if (unlikely(cpy_r_r136 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "parse_typeddict_args", 449, CPyStatic_semanal_typeddict___globals);
         goto CPyL124;
@@ -7960,7 +7945,9 @@ CPyL23: ;
     cpy_r_r41 = ((mypy___semanal_typeddict___TypedDictAnalyzerObject *)cpy_r_self)->_options;
     CPy_INCREF(cpy_r_r41);
     cpy_r_r42 = ((mypy___semanal_typeddict___TypedDictAnalyzerObject *)cpy_r_self)->_api;
+    CPy_INCREF(cpy_r_r42);
     cpy_r_r43 = CPY_GET_ATTR_TRAIT(cpy_r_r42, CPyType_semanal_shared___SemanticAnalyzerInterface, 27, mypy___semanal_shared___SemanticAnalyzerInterfaceObject, char); /* is_stub_file */
+    CPy_DECREF(cpy_r_r42);
     if (unlikely(cpy_r_r43 == 2)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "parse_typeddict_fields_with_types", 482, CPyStatic_semanal_typeddict___globals);
         goto CPyL81;
@@ -8026,7 +8013,6 @@ CPyL35: ;
         goto CPyL85;
     }
     cpy_r_r70 = ((mypy___nodes___CallExprObject *)cpy_r_r69)->_callee;
-    CPy_INCREF(cpy_r_r70);
     if (likely((Py_TYPE(cpy_r_r70) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_r70) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_r70) == CPyType_nodes___RefExpr)))
         cpy_r_r71 = cpy_r_r70;
     else {
@@ -8034,7 +8020,6 @@ CPyL35: ;
         goto CPyL85;
     }
     cpy_r_r72 = CPY_GET_ATTR(cpy_r_r71, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DecRef(cpy_r_r71);
     if (unlikely(cpy_r_r72 == NULL)) {
         CPy_AddTraceback("mypy/semanal_typeddict.py", "parse_typeddict_fields_with_types", 488, CPyStatic_semanal_typeddict___globals);
         goto CPyL85;

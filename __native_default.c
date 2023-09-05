@@ -9478,15 +9478,17 @@ PyObject *CPyDef_default___int_neg_callback(PyObject *cpy_r_ctx) {
         goto CPyL53;
     }
     cpy_r_r26 = CPY_GET_ATTR_TRAIT(cpy_r_r25, CPyType_plugin___CheckerPluginInterface, 0, mypy___plugin___CheckerPluginInterfaceObject, PyObject *); /* type_context */
+    CPy_DECREF(cpy_r_r25);
     if (unlikely(cpy_r_r26 == NULL)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 468, CPyStatic_default___globals);
-        goto CPyL55;
+        goto CPyL53;
     }
 CPyL16: ;
     cpy_r_r27 = CPyList_GetItemShort(cpy_r_r26, -2);
+    CPy_DECREF(cpy_r_r26);
     if (unlikely(cpy_r_r27 == NULL)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 468, CPyStatic_default___globals);
-        goto CPyL55;
+        goto CPyL53;
     }
     if (PyObject_TypeCheck(cpy_r_r27, CPyType_types___Type))
         cpy_r_r28 = cpy_r_r27;
@@ -9501,16 +9503,15 @@ CPyL16: ;
     }
     if (cpy_r_r28 != NULL) goto __LL4920;
     CPy_TypeErrorTraceback("mypy/plugins/default.py", "int_neg_callback", 468, CPyStatic_default___globals, "mypy.types.Type or None", cpy_r_r27);
-    goto CPyL55;
+    goto CPyL53;
 __LL4920: ;
-    CPy_DECREF(cpy_r_r25);
     cpy_r_r29 = CPyDef_typeops___is_literal_type_like(cpy_r_r28);
     CPy_DECREF(cpy_r_r28);
     if (unlikely(cpy_r_r29 == 2)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 468, CPyStatic_default___globals);
         goto CPyL53;
     }
-    if (!cpy_r_r29) goto CPyL56;
+    if (!cpy_r_r29) goto CPyL55;
     if (likely(PyLong_Check(cpy_r_value)))
         cpy_r_r30 = CPyTagged_FromObject(cpy_r_value);
     else {
@@ -9519,7 +9520,7 @@ __LL4920: ;
     CPy_DECREF(cpy_r_value);
     if (unlikely(cpy_r_r30 == CPY_INT_TAG)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 469, CPyStatic_default___globals);
-        goto CPyL57;
+        goto CPyL56;
     }
     cpy_r_r31 = CPyTagged_Negate(cpy_r_r30);
     CPyTagged_DECREF(cpy_r_r30);
@@ -9554,31 +9555,31 @@ CPyL23: ;
     CPy_DECREF(cpy_r_value);
     if (unlikely(cpy_r_r38 == CPY_INT_TAG)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 473, CPyStatic_default___globals);
-        goto CPyL58;
+        goto CPyL57;
     }
     cpy_r_r39 = CPyTagged_Negate(cpy_r_r38);
     CPyTagged_DECREF(cpy_r_r38);
     cpy_r_r40 = CPySequenceTuple_GetItem(cpy_r_ctx, 0);
     if (unlikely(cpy_r_r40 == NULL)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 473, CPyStatic_default___globals);
-        goto CPyL59;
+        goto CPyL58;
     }
     if (likely(Py_TYPE(cpy_r_r40) == CPyType_types___Instance))
         cpy_r_r41 = cpy_r_r40;
     else {
         CPy_TypeErrorTraceback("mypy/plugins/default.py", "int_neg_callback", 473, CPyStatic_default___globals, "mypy.types.Instance", cpy_r_r40);
-        goto CPyL59;
+        goto CPyL58;
     }
     cpy_r_r42 = CPySequenceTuple_GetItem(cpy_r_ctx, 0);
     if (unlikely(cpy_r_r42 == NULL)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 473, CPyStatic_default___globals);
-        goto CPyL60;
+        goto CPyL59;
     }
     if (likely(Py_TYPE(cpy_r_r42) == CPyType_types___Instance))
         cpy_r_r43 = cpy_r_r42;
     else {
         CPy_TypeErrorTraceback("mypy/plugins/default.py", "int_neg_callback", 473, CPyStatic_default___globals, "mypy.types.Instance", cpy_r_r42);
-        goto CPyL60;
+        goto CPyL59;
     }
     cpy_r_r44 = ((mypy___types___InstanceObject *)cpy_r_r43)->_line;
     CPyTagged_INCREF(cpy_r_r44);
@@ -9586,13 +9587,13 @@ CPyL23: ;
     cpy_r_r45 = CPySequenceTuple_GetItem(cpy_r_ctx, 0);
     if (unlikely(cpy_r_r45 == NULL)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 473, CPyStatic_default___globals);
-        goto CPyL61;
+        goto CPyL60;
     }
     if (likely(Py_TYPE(cpy_r_r45) == CPyType_types___Instance))
         cpy_r_r46 = cpy_r_r45;
     else {
         CPy_TypeErrorTraceback("mypy/plugins/default.py", "int_neg_callback", 473, CPyStatic_default___globals, "mypy.types.Instance", cpy_r_r45);
-        goto CPyL61;
+        goto CPyL60;
     }
     cpy_r_r47 = ((mypy___types___InstanceObject *)cpy_r_r46)->_column;
     CPyTagged_INCREF(cpy_r_r47);
@@ -9605,7 +9606,7 @@ CPyL23: ;
     CPyTagged_DECREF(cpy_r_r47);
     if (unlikely(cpy_r_r49 == NULL)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 472, CPyStatic_default___globals);
-        goto CPyL58;
+        goto CPyL57;
     }
     cpy_r_r50 = NULL;
     cpy_r_r51 = CPyDef_types___Instance___copy_modified(cpy_r_r37, cpy_r_r50, cpy_r_r49);
@@ -9675,7 +9676,7 @@ CPyL35: ;
     CPy_DECREF(cpy_r_value);
     if (unlikely(cpy_r_r67 == CPY_INT_TAG)) {
         CPy_AddTraceback("mypy/plugins/default.py", "int_neg_callback", 480, CPyStatic_default___globals);
-        goto CPyL57;
+        goto CPyL56;
     }
     cpy_r_r68 = CPyTagged_Negate(cpy_r_r67);
     CPyTagged_DECREF(cpy_r_r67);
@@ -9725,29 +9726,24 @@ CPyL54: ;
     CPy_DECREF(cpy_r_fallback);
     goto CPyL46;
 CPyL55: ;
-    CPy_DecRef(cpy_r_value);
-    CPy_DecRef(cpy_r_fallback);
-    CPy_DecRef(cpy_r_r25);
-    goto CPyL49;
-CPyL56: ;
     CPy_DECREF(cpy_r_fallback);
     goto CPyL23;
-CPyL57: ;
+CPyL56: ;
     CPy_DecRef(cpy_r_fallback);
+    goto CPyL49;
+CPyL57: ;
+    CPy_DecRef(cpy_r_r37);
     goto CPyL49;
 CPyL58: ;
     CPy_DecRef(cpy_r_r37);
+    CPyTagged_DecRef(cpy_r_r39);
     goto CPyL49;
 CPyL59: ;
     CPy_DecRef(cpy_r_r37);
     CPyTagged_DecRef(cpy_r_r39);
-    goto CPyL49;
-CPyL60: ;
-    CPy_DecRef(cpy_r_r37);
-    CPyTagged_DecRef(cpy_r_r39);
     CPy_DecRef(cpy_r_r41);
     goto CPyL49;
-CPyL61: ;
+CPyL60: ;
     CPy_DecRef(cpy_r_r37);
     CPyTagged_DecRef(cpy_r_r39);
     CPy_DecRef(cpy_r_r41);

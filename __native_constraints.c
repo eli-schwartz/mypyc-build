@@ -9054,9 +9054,7 @@ CPyL7: ;
 CPyL8: ;
     cpy_r_r13 = CPyStatics[706]; /* '__call__' */
     cpy_r_r14 = ((mypy___types___InstanceObject *)cpy_r_template)->_type;
-    CPy_INCREF(cpy_r_r14);
     cpy_r_r15 = CPY_GET_ATTR(cpy_r_r14, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r14);
     if (unlikely(cpy_r_r15 == NULL)) {
         CPy_AddTraceback("mypy/constraints.py", "visit_instance", 578, CPyStatic_constraints___globals);
         goto CPyL507;
@@ -9738,9 +9736,7 @@ CPyL119: ;
     cpy_r_r186 = ((mypy___types___InstanceObject *)cpy_r_template)->_type;
     CPy_INCREF(cpy_r_r186);
     cpy_r_r187 = ((mypy___types___InstanceObject *)cpy_r_instance)->_type;
-    CPy_INCREF(cpy_r_r187);
     cpy_r_r188 = CPY_GET_ATTR(cpy_r_r187, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r187);
     if (unlikely(cpy_r_r188 == NULL)) {
         CPy_AddTraceback("mypy/constraints.py", "visit_instance", 641, CPyStatic_constraints___globals);
         goto CPyL533;
@@ -10697,9 +10693,7 @@ CPyL251: ;
     cpy_r_r450 = ((mypy___types___InstanceObject *)cpy_r_instance)->_type;
     CPy_INCREF(cpy_r_r450);
     cpy_r_r451 = ((mypy___types___InstanceObject *)cpy_r_template)->_type;
-    CPy_INCREF(cpy_r_r451);
     cpy_r_r452 = CPY_GET_ATTR(cpy_r_r451, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r451);
     if (unlikely(cpy_r_r452 == NULL)) {
         CPy_AddTraceback("mypy/constraints.py", "visit_instance", 711, CPyStatic_constraints___globals);
         goto CPyL578;
@@ -13360,9 +13354,7 @@ CPyL2: ;
     }
     cpy_r_res = cpy_r_r0;
     cpy_r_r1 = ((mypy___types___InstanceObject *)cpy_r_protocol)->_type;
-    CPy_INCREF(cpy_r_r1);
     cpy_r_r2 = CPY_GET_ATTR(cpy_r_r1, CPyType_nodes___TypeInfo, 12, mypy___nodes___TypeInfoObject, PyObject *); /* protocol_members */
-    CPy_DECREF(cpy_r_r1);
     if (unlikely(cpy_r_r2 == NULL)) {
         CPy_AddTraceback("mypy/constraints.py", "infer_constraints_from_protocol_members", 862, CPyStatic_constraints___globals);
         goto CPyL34;
@@ -16077,9 +16069,7 @@ CPyL4: ;
         goto CPyL79;
     }
     cpy_r_r9 = ((mypy___types___InstanceObject *)cpy_r_r8)->_type;
-    CPy_INCREF(cpy_r_r9);
     cpy_r_r10 = CPY_GET_ATTR(cpy_r_r9, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r9);
     if (unlikely(cpy_r_r10 == NULL)) {
         CPy_AddTraceback("mypy/constraints.py", "visit_tuple_type", 1030, CPyStatic_constraints___globals);
         goto CPyL79;
@@ -19018,9 +19008,7 @@ CPyL21: ;
         goto CPyL65;
     }
     cpy_r_r45 = ((mypy___types___InstanceObject *)cpy_r_r44)->_type;
-    CPy_INCREF(cpy_r_r45);
     cpy_r_r46 = CPY_GET_ATTR(cpy_r_r45, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r45);
     if (unlikely(cpy_r_r46 == NULL)) {
         CPy_AddTraceback("mypy/constraints.py", "build_constraints_for_unpack", 1253, CPyStatic_constraints___globals);
         goto CPyL65;

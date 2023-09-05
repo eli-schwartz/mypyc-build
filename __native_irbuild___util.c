@@ -689,7 +689,7 @@ CPyL44: ;
     cpy_r_r94 = ((mypy___nodes___NameExprObject *)cpy_r_r93)->_name;
     CPy_INCREF(cpy_r_r94);
     CPy_DECREF(cpy_r_auto);
-    cpy_r_r95 = CPyStatics[1151]; /* 'True' */
+    cpy_r_r95 = CPyStatics[1152]; /* 'True' */
     cpy_r_r96 = PyUnicode_Compare(cpy_r_r94, cpy_r_r95);
     CPy_DECREF(cpy_r_r94);
     cpy_r_r97 = cpy_r_r96 == -1;

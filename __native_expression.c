@@ -1374,7 +1374,6 @@ CPyL3: ;
     return cpy_r_r8;
 CPyL5: ;
     cpy_r_r9 = ((mypy___nodes___NameExprObject *)cpy_r_expr)->_node;
-    CPy_INCREF(cpy_r_r9);
     if (likely(cpy_r_r9 != Py_None))
         cpy_r_r10 = cpy_r_r9;
     else {
@@ -1382,7 +1381,6 @@ CPyL5: ;
         goto CPyL95;
     }
     cpy_r_r11 = CPY_GET_ATTR_TRAIT(cpy_r_r10, CPyType_nodes___SymbolNode, 6, mypy___nodes___SymbolNodeObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r10);
     if (unlikely(cpy_r_r11 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_name_expr", 118, CPyStatic_expression___globals);
         goto CPyL95;
@@ -1680,7 +1678,6 @@ CPyL51: ;
     cpy_r_r82 = cpy_r_r81 == cpy_r_r79;
     if (!cpy_r_r82) goto CPyL60;
     cpy_r_r83 = ((mypy___nodes___NameExprObject *)cpy_r_expr)->_node;
-    CPy_INCREF(cpy_r_r83);
     if (likely(Py_TYPE(cpy_r_r83) == CPyType_nodes___MypyFile))
         cpy_r_r84 = cpy_r_r83;
     else {
@@ -1688,7 +1685,6 @@ CPyL51: ;
         goto CPyL95;
     }
     cpy_r_r85 = CPY_GET_ATTR(cpy_r_r84, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r84);
     if (unlikely(cpy_r_r85 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_name_expr", 146, CPyStatic_expression___globals);
         goto CPyL95;
@@ -1707,7 +1703,6 @@ CPyL54: ;
     cpy_r_r89 = cpy_r_r87;
     if (!cpy_r_r89) goto CPyL60;
     cpy_r_r90 = ((mypy___nodes___NameExprObject *)cpy_r_expr)->_node;
-    CPy_INCREF(cpy_r_r90);
     if (likely(Py_TYPE(cpy_r_r90) == CPyType_nodes___MypyFile))
         cpy_r_r91 = cpy_r_r90;
     else {
@@ -1715,7 +1710,6 @@ CPyL54: ;
         goto CPyL95;
     }
     cpy_r_r92 = CPY_GET_ATTR(cpy_r_r91, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r91);
     if (unlikely(cpy_r_r92 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_name_expr", 147, CPyStatic_expression___globals);
         goto CPyL95;
@@ -1793,7 +1787,6 @@ CPyL66: ;
     if (!cpy_r_r115) goto CPyL77;
 CPyL72: ;
     cpy_r_r116 = ((mypy___nodes___NameExprObject *)cpy_r_expr)->_node;
-    CPy_INCREF(cpy_r_r116);
     if (likely(Py_TYPE(cpy_r_r116) == CPyType_nodes___Var))
         cpy_r_r117 = cpy_r_r116;
     else {
@@ -1801,7 +1794,6 @@ CPyL72: ;
         goto CPyL95;
     }
     cpy_r_r118 = CPY_GET_ATTR(cpy_r_r117, CPyType_nodes___Var, 6, mypy___nodes___VarObject, PyObject *); /* name */
-    CPy_DECREF(cpy_r_r117);
     if (unlikely(cpy_r_r118 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_name_expr", 163, CPyStatic_expression___globals);
         goto CPyL95;
@@ -1881,7 +1873,6 @@ CPyL77: ;
         goto CPyL108;
     }
     cpy_r_r142 = ((mypy___nodes___NameExprObject *)cpy_r_expr)->_node;
-    CPy_INCREF(cpy_r_r142);
     if (likely(Py_TYPE(cpy_r_r142) == CPyType_nodes___MypyFile))
         cpy_r_r143 = cpy_r_r142;
     else {
@@ -1889,7 +1880,6 @@ CPyL77: ;
         goto CPyL109;
     }
     cpy_r_r144 = CPY_GET_ATTR(cpy_r_r143, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r143);
     if (unlikely(cpy_r_r144 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_name_expr", 178, CPyStatic_expression___globals);
         goto CPyL109;
@@ -2292,7 +2282,6 @@ CPyL15: ;
     cpy_r_r25 = cpy_r_r24 == cpy_r_r22;
     if (!cpy_r_r25) goto CPyL24;
     cpy_r_r26 = ((mypy___nodes___MemberExprObject *)cpy_r_expr)->_node;
-    CPy_INCREF(cpy_r_r26);
     if (likely(Py_TYPE(cpy_r_r26) == CPyType_nodes___MypyFile))
         cpy_r_r27 = cpy_r_r26;
     else {
@@ -2300,7 +2289,6 @@ CPyL15: ;
         goto CPyL54;
     }
     cpy_r_r28 = CPY_GET_ATTR(cpy_r_r27, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r27);
     if (unlikely(cpy_r_r28 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_member_expr", 202, CPyStatic_expression___globals);
         goto CPyL54;
@@ -2319,7 +2307,6 @@ CPyL18: ;
     cpy_r_r32 = cpy_r_r30;
     if (!cpy_r_r32) goto CPyL24;
     cpy_r_r33 = ((mypy___nodes___MemberExprObject *)cpy_r_expr)->_node;
-    CPy_INCREF(cpy_r_r33);
     if (likely(Py_TYPE(cpy_r_r33) == CPyType_nodes___MypyFile))
         cpy_r_r34 = cpy_r_r33;
     else {
@@ -2327,7 +2314,6 @@ CPyL18: ;
         goto CPyL54;
     }
     cpy_r_r35 = CPY_GET_ATTR(cpy_r_r34, CPyType_nodes___MypyFile, 8, mypy___nodes___MypyFileObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r34);
     if (unlikely(cpy_r_r35 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_member_expr", 203, CPyStatic_expression___globals);
         goto CPyL54;
@@ -3226,7 +3212,6 @@ CPyL12: ;
     CPy_Unreachable();
 CPyL14: ;
     cpy_r_r30 = ((mypy___nodes___SuperExprObject *)cpy_r_o)->_info;
-    CPy_INCREF(cpy_r_r30);
     if (likely(cpy_r_r30 != Py_None))
         cpy_r_r31 = cpy_r_r30;
     else {
@@ -3234,7 +3219,6 @@ CPyL14: ;
         goto CPyL48;
     }
     cpy_r_r32 = CPY_GET_ATTR(cpy_r_r31, CPyType_nodes___TypeInfo, 8, mypy___nodes___TypeInfoObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r31);
     if (unlikely(cpy_r_r32 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_super_expr", 262, CPyStatic_expression___globals);
         goto CPyL48;
@@ -8834,7 +8818,6 @@ CPyL12: ;
     cpy_r_r18 = cpy_r_r22;
 CPyL13: ;
     if (!cpy_r_r18) goto CPyL35;
-    CPy_INCREF(cpy_r_item);
     if (likely((Py_TYPE(cpy_r_item) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_item) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_item) == CPyType_nodes___RefExpr)))
         cpy_r_r23 = cpy_r_item;
     else {
@@ -8842,7 +8825,6 @@ CPyL13: ;
         goto CPyL51;
     }
     cpy_r_r24 = CPY_GET_ATTR(cpy_r_r23, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r23);
     if (unlikely(cpy_r_r24 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "set_literal_values", 653, CPyStatic_expression___globals);
         goto CPyL51;
@@ -8877,7 +8859,6 @@ CPyL20: ;
     } else
         goto CPyL2;
 CPyL21: ;
-    CPy_INCREF(cpy_r_item);
     if (likely((Py_TYPE(cpy_r_item) == CPyType_nodes___MemberExpr) || (Py_TYPE(cpy_r_item) == CPyType_nodes___NameExpr) || (Py_TYPE(cpy_r_item) == CPyType_nodes___RefExpr)))
         cpy_r_r35 = cpy_r_item;
     else {
@@ -8885,7 +8866,6 @@ CPyL21: ;
         goto CPyL51;
     }
     cpy_r_r36 = CPY_GET_ATTR(cpy_r_r35, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r35);
     if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "set_literal_values", 655, CPyStatic_expression___globals);
         goto CPyL51;
@@ -8924,15 +8904,15 @@ CPyL28: ;
         cpy_r_r47 = cpy_r_item;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/expression.py", "set_literal_values", 657, CPyStatic_expression___globals, "mypy.nodes.RefExpr", cpy_r_item);
-        goto CPyL50;
+        goto CPyL51;
     }
     cpy_r_r48 = CPY_GET_ATTR(cpy_r_r47, CPyType_nodes___RefExpr, 6, mypy___nodes___RefExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r47);
     if (unlikely(cpy_r_r48 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "set_literal_values", 657, CPyStatic_expression___globals);
-        goto CPyL50;
+        goto CPyL51;
     }
 CPyL30: ;
+    CPy_DECREF(cpy_r_item);
     cpy_r_r49 = CPyStatics[766]; /* 'builtins.False' */
     cpy_r_r50 = PyUnicode_Compare(cpy_r_r48, cpy_r_r49);
     CPy_DECREF(cpy_r_r48);
@@ -10605,7 +10585,7 @@ CPyL4: ;
     }
     CPy_DECREF(cpy_r_r3);
     cpy_r_first_op = cpy_r_r6;
-    cpy_r_r7 = CPyStatics[867]; /* 'in' */
+    cpy_r_r7 = CPyStatics[866]; /* 'in' */
     cpy_r_r8 = PyUnicode_Compare(cpy_r_first_op, cpy_r_r7);
     cpy_r_r9 = cpy_r_r8 == -1;
     if (!cpy_r_r9) goto CPyL9;
@@ -10623,7 +10603,7 @@ CPyL9: ;
     cpy_r_r14 = cpy_r_r13;
     goto CPyL15;
 CPyL11: ;
-    cpy_r_r15 = CPyStatics[866]; /* 'not in' */
+    cpy_r_r15 = CPyStatics[867]; /* 'not in' */
     cpy_r_r16 = PyUnicode_Compare(cpy_r_first_op, cpy_r_r15);
     cpy_r_r17 = cpy_r_r16 == -1;
     if (!cpy_r_r17) goto CPyL14;
@@ -10802,7 +10782,7 @@ CPyL43: ;
         goto CPyL261;
     }
     CPy_DECREF(cpy_r_r73);
-    cpy_r_r77 = CPyStatics[867]; /* 'in' */
+    cpy_r_r77 = CPyStatics[866]; /* 'in' */
     cpy_r_r78 = PyUnicode_Compare(cpy_r_r76, cpy_r_r77);
     CPy_DECREF(cpy_r_r76);
     cpy_r_r79 = cpy_r_r78 == -1;
@@ -11173,7 +11153,7 @@ CPyL100: ;
         goto CPyL283;
     }
     CPy_DECREF(cpy_r_r169);
-    cpy_r_r173 = CPyStatics[867]; /* 'in' */
+    cpy_r_r173 = CPyStatics[866]; /* 'in' */
     cpy_r_r174 = PyUnicode_Compare(cpy_r_r172, cpy_r_r173);
     CPy_DECREF(cpy_r_r172);
     cpy_r_r175 = cpy_r_r174 == -1;
@@ -11273,7 +11253,7 @@ CPyL116: ;
         goto CPyL288;
     }
     CPy_DECREF(cpy_r_r193);
-    cpy_r_r197 = CPyStatics[867]; /* 'in' */
+    cpy_r_r197 = CPyStatics[866]; /* 'in' */
     cpy_r_r198 = PyUnicode_Compare(cpy_r_r196, cpy_r_r197);
     CPy_DECREF(cpy_r_r196);
     cpy_r_r199 = cpy_r_r198 == -1;
@@ -11329,7 +11309,7 @@ CPyL126: ;
     }
     return cpy_r_r207;
 CPyL128: ;
-    cpy_r_r208 = CPyStatics[867]; /* 'in' */
+    cpy_r_r208 = CPyStatics[866]; /* 'in' */
     cpy_r_r209 = PyUnicode_Compare(cpy_r_first_op, cpy_r_r208);
     cpy_r_r210 = cpy_r_r209 == -1;
     if (!cpy_r_r210) goto CPyL131;
@@ -11347,7 +11327,7 @@ CPyL131: ;
     cpy_r_r215 = cpy_r_r214;
     goto CPyL137;
 CPyL133: ;
-    cpy_r_r216 = CPyStatics[866]; /* 'not in' */
+    cpy_r_r216 = CPyStatics[867]; /* 'not in' */
     cpy_r_r217 = PyUnicode_Compare(cpy_r_first_op, cpy_r_r216);
     cpy_r_r218 = cpy_r_r217 == -1;
     if (!cpy_r_r218) goto CPyL136;
@@ -11550,7 +11530,7 @@ CPyL164: ;
         goto CPyL256;
     }
     cpy_r_result = cpy_r_r267;
-    cpy_r_r268 = CPyStatics[866]; /* 'not in' */
+    cpy_r_r268 = CPyStatics[867]; /* 'not in' */
     cpy_r_r269 = PyUnicode_Compare(cpy_r_first_op, cpy_r_r268);
     CPy_DECREF(cpy_r_first_op);
     cpy_r_r270 = cpy_r_r269 == -1;
@@ -11680,15 +11660,15 @@ CPyL187: ;
         cpy_r_r309 = cpy_r_right_expr;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 763, CPyStatic_expression___globals, "mypy.nodes.NameExpr", cpy_r_right_expr);
-        goto CPyL256;
+        goto CPyL309;
     }
     cpy_r_r310 = CPY_GET_ATTR(cpy_r_r309, CPyType_nodes___NameExpr, 6, mypy___nodes___NameExprObject, PyObject *); /* fullname */
-    CPy_DECREF(cpy_r_r309);
     if (unlikely(cpy_r_r310 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 763, CPyStatic_expression___globals);
-        goto CPyL256;
+        goto CPyL309;
     }
 CPyL192: ;
+    CPy_DECREF(cpy_r_right_expr);
     cpy_r_r311 = CPyStatics[743]; /* 'builtins.None' */
     cpy_r_r312 = PyUnicode_Compare(cpy_r_r310, cpy_r_r311);
     CPy_DECREF(cpy_r_r310);
@@ -11721,20 +11701,20 @@ CPyL197: ;
     CPy_DECREF(cpy_r_r0);
     if (unlikely(cpy_r_r319 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 765, CPyStatic_expression___globals);
-        goto CPyL309;
+        goto CPyL310;
     }
 CPyL198: ;
     cpy_r_r320 = ((mypy___nodes___ComparisonExprObject *)cpy_r_r319)->_operands;
     cpy_r_r321 = CPyList_GetItemShort(cpy_r_r320, 0);
     if (unlikely(cpy_r_r321 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 765, CPyStatic_expression___globals);
-        goto CPyL310;
+        goto CPyL311;
     }
     if (likely(PyObject_TypeCheck(cpy_r_r321, CPyType_nodes___Expression)))
         cpy_r_r322 = cpy_r_r321;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 765, CPyStatic_expression___globals, "mypy.nodes.Expression", cpy_r_r321);
-        goto CPyL310;
+        goto CPyL311;
     }
     CPy_DECREF(cpy_r_r319);
     cpy_r_r323 = CPyStatics[861]; /* 'is' */
@@ -11748,7 +11728,7 @@ CPyL198: ;
     cpy_r_r328 = CPy_KeepPropagating();
     if (unlikely(!cpy_r_r328)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 765, CPyStatic_expression___globals);
-        goto CPyL311;
+        goto CPyL312;
     }
 CPyL203: ;
     cpy_r_r329 = cpy_r_r324 != 0;
@@ -11772,20 +11752,20 @@ CPyL206: ;
     cpy_r_r333 = CPyList_GetItemShort(cpy_r_r332, 0);
     if (unlikely(cpy_r_r333 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 766, CPyStatic_expression___globals);
-        goto CPyL312;
+        goto CPyL313;
     }
     if (likely(PyObject_TypeCheck(cpy_r_r333, CPyType_nodes___Expression)))
         cpy_r_r334 = cpy_r_r333;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 766, CPyStatic_expression___globals, "mypy.nodes.Expression", cpy_r_r333);
-        goto CPyL312;
+        goto CPyL313;
     }
     CPy_DECREF(cpy_r_r331);
     cpy_r_left_expr = cpy_r_r334;
     cpy_r_r335 = ((mypyc___irbuild___expression___transform_comparison_expr_envObject *)cpy_r_r0)->_builder;
     if (unlikely(cpy_r_r335 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/expression.py", "transform_comparison_expr", "transform_comparison_expr_env", "builder", 767, CPyStatic_expression___globals);
-        goto CPyL313;
+        goto CPyL314;
     }
     CPy_INCREF(cpy_r_r335);
 CPyL209: ;
@@ -11793,19 +11773,19 @@ CPyL209: ;
     CPy_DECREF(cpy_r_r335);
     if (unlikely(cpy_r_r336 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 767, CPyStatic_expression___globals);
-        goto CPyL313;
+        goto CPyL314;
     }
     cpy_r_r337 = CPyDef_rtypes___is_int_rprimitive(cpy_r_r336);
     CPy_DECREF(cpy_r_r336);
     if (unlikely(cpy_r_r337 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 767, CPyStatic_expression___globals);
-        goto CPyL313;
+        goto CPyL314;
     }
-    if (!cpy_r_r337) goto CPyL314;
+    if (!cpy_r_r337) goto CPyL315;
     cpy_r_r338 = ((mypyc___irbuild___expression___transform_comparison_expr_envObject *)cpy_r_r0)->_e;
     if (unlikely(cpy_r_r338 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/expression.py", "transform_comparison_expr", "transform_comparison_expr_env", "e", 768, CPyStatic_expression___globals);
-        goto CPyL313;
+        goto CPyL314;
     }
     CPy_INCREF(cpy_r_r338);
 CPyL213: ;
@@ -11813,20 +11793,20 @@ CPyL213: ;
     cpy_r_r340 = CPyList_GetItemShort(cpy_r_r339, 2);
     if (unlikely(cpy_r_r340 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 768, CPyStatic_expression___globals);
-        goto CPyL315;
+        goto CPyL316;
     }
     if (likely(PyObject_TypeCheck(cpy_r_r340, CPyType_nodes___Expression)))
         cpy_r_r341 = cpy_r_r340;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 768, CPyStatic_expression___globals, "mypy.nodes.Expression", cpy_r_r340);
-        goto CPyL315;
+        goto CPyL316;
     }
     CPy_DECREF(cpy_r_r338);
     cpy_r_right_expr = cpy_r_r341;
     cpy_r_r342 = ((mypyc___irbuild___expression___transform_comparison_expr_envObject *)cpy_r_r0)->_builder;
     if (unlikely(cpy_r_r342 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/expression.py", "transform_comparison_expr", "transform_comparison_expr_env", "builder", 769, CPyStatic_expression___globals);
-        goto CPyL316;
+        goto CPyL317;
     }
     CPy_INCREF(cpy_r_r342);
 CPyL216: ;
@@ -11834,18 +11814,18 @@ CPyL216: ;
     CPy_DECREF(cpy_r_r342);
     if (unlikely(cpy_r_r343 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 769, CPyStatic_expression___globals);
-        goto CPyL316;
+        goto CPyL317;
     }
     cpy_r_r344 = CPyDef_rtypes___is_int_rprimitive(cpy_r_r343);
     CPy_DECREF(cpy_r_r343);
     if (unlikely(cpy_r_r344 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 769, CPyStatic_expression___globals);
-        goto CPyL316;
+        goto CPyL317;
     }
-    if (!cpy_r_r344) goto CPyL317;
+    if (!cpy_r_r344) goto CPyL318;
     cpy_r_r345 = CPyStatic_builder___int_borrow_friendly_op;
     if (unlikely(cpy_r_r345 == NULL)) {
-        goto CPyL318;
+        goto CPyL319;
     } else
         goto CPyL222;
 CPyL220: ;
@@ -11861,14 +11841,14 @@ CPyL222: ;
     cpy_r_r348 = cpy_r_r347 >= 0;
     if (unlikely(!cpy_r_r348)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 770, CPyStatic_expression___globals);
-        goto CPyL316;
+        goto CPyL317;
     }
     cpy_r_r349 = cpy_r_r347;
-    if (!cpy_r_r349) goto CPyL317;
+    if (!cpy_r_r349) goto CPyL318;
     cpy_r_r350 = ((mypyc___irbuild___expression___transform_comparison_expr_envObject *)cpy_r_r0)->_builder;
     if (unlikely(cpy_r_r350 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/expression.py", "transform_comparison_expr", "transform_comparison_expr_env", "builder", 771, CPyStatic_expression___globals);
-        goto CPyL316;
+        goto CPyL317;
     }
     CPy_INCREF(cpy_r_r350);
 CPyL225: ;
@@ -11876,13 +11856,13 @@ CPyL225: ;
     CPy_DECREF(cpy_r_r350);
     if (unlikely(cpy_r_r351 == 2)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 771, CPyStatic_expression___globals);
-        goto CPyL316;
+        goto CPyL317;
     }
     cpy_r_borrow_left = cpy_r_r351;
     cpy_r_r352 = ((mypyc___irbuild___expression___transform_comparison_expr_envObject *)cpy_r_r0)->_builder;
     if (unlikely(cpy_r_r352 == NULL)) {
         CPy_AttributeError("mypyc/irbuild/expression.py", "transform_comparison_expr", "transform_comparison_expr_env", "builder", 772, CPyStatic_expression___globals);
-        goto CPyL316;
+        goto CPyL317;
     }
     CPy_INCREF(cpy_r_r352);
 CPyL227: ;
@@ -11891,13 +11871,13 @@ CPyL227: ;
     CPy_DECREF(cpy_r_r352);
     if (unlikely(cpy_r_r353 == NULL)) {
         CPy_AddTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 772, CPyStatic_expression___globals);
-        goto CPyL319;
+        goto CPyL309;
     }
     if (likely(cpy_r_r353 != Py_None))
         cpy_r_r354 = cpy_r_r353;
     else {
         CPy_TypeErrorTraceback("mypyc/irbuild/expression.py", "transform_comparison_expr", 772, CPyStatic_expression___globals, "mypyc.ir.ops.Value", cpy_r_r353);
-        goto CPyL319;
+        goto CPyL309;
     }
     cpy_r_left = cpy_r_r354;
     cpy_r_r355 = ((mypyc___irbuild___expression___transform_comparison_expr_envObject *)cpy_r_r0)->_builder;
@@ -12402,60 +12382,60 @@ CPyL308: ;
     CPy_DECREF(cpy_r_right_expr);
     goto CPyL205;
 CPyL309: ;
+    CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_first_op);
-    CPy_DecRef(cpy_r_r318);
+    CPy_DecRef(cpy_r_right_expr);
     goto CPyL253;
 CPyL310: ;
     CPy_DecRef(cpy_r_first_op);
     CPy_DecRef(cpy_r_r318);
-    CPy_DecRef(cpy_r_r319);
     goto CPyL253;
 CPyL311: ;
+    CPy_DecRef(cpy_r_first_op);
     CPy_DecRef(cpy_r_r318);
-    CPy_DecRef(cpy_r_r322);
+    CPy_DecRef(cpy_r_r319);
     goto CPyL253;
 CPyL312: ;
-    CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_first_op);
-    CPy_DecRef(cpy_r_r331);
+    CPy_DecRef(cpy_r_r318);
+    CPy_DecRef(cpy_r_r322);
     goto CPyL253;
 CPyL313: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_first_op);
-    CPy_DecRef(cpy_r_left_expr);
+    CPy_DecRef(cpy_r_r331);
     goto CPyL253;
 CPyL314: ;
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_first_op);
+    CPy_DecRef(cpy_r_left_expr);
+    goto CPyL253;
+CPyL315: ;
     CPy_DECREF(cpy_r_first_op);
     CPy_DECREF(cpy_r_left_expr);
     goto CPyL236;
-CPyL315: ;
+CPyL316: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_first_op);
     CPy_DecRef(cpy_r_left_expr);
     CPy_DecRef(cpy_r_r338);
     goto CPyL253;
-CPyL316: ;
+CPyL317: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_first_op);
     CPy_DecRef(cpy_r_right_expr);
     CPy_DecRef(cpy_r_left_expr);
     goto CPyL253;
-CPyL317: ;
+CPyL318: ;
     CPy_DECREF(cpy_r_first_op);
     CPy_DECREF(cpy_r_right_expr);
     CPy_DECREF(cpy_r_left_expr);
     goto CPyL236;
-CPyL318: ;
+CPyL319: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_first_op);
     CPy_DecRef(cpy_r_right_expr);
     CPy_DecRef(cpy_r_left_expr);
     goto CPyL220;
-CPyL319: ;
-    CPy_DecRef(cpy_r_r0);
-    CPy_DecRef(cpy_r_first_op);
-    CPy_DecRef(cpy_r_right_expr);
-    goto CPyL253;
 CPyL320: ;
     CPy_DecRef(cpy_r_r0);
     CPy_DecRef(cpy_r_first_op);
@@ -13214,7 +13194,7 @@ CPyL88: ;
     cpy_r_negate = cpy_r_r101;
     goto CPyL95;
 CPyL90: ;
-    cpy_r_r102 = CPyStatics[866]; /* 'not in' */
+    cpy_r_r102 = CPyStatics[867]; /* 'not in' */
     cpy_r_r103 = PyUnicode_Compare(cpy_r_op, cpy_r_r102);
     cpy_r_r104 = cpy_r_r103 == -1;
     if (!cpy_r_r104) goto CPyL93;
@@ -13229,7 +13209,7 @@ CPyL90: ;
 CPyL93: ;
     cpy_r_r108 = cpy_r_r103 == 0;
     if (!cpy_r_r108) goto CPyL106;
-    cpy_r_r109 = CPyStatics[867]; /* 'in' */
+    cpy_r_r109 = CPyStatics[866]; /* 'in' */
     CPy_INCREF(cpy_r_r109);
     cpy_r_r110 = cpy_r_r109;
     cpy_r_r111 = 1;

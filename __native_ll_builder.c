@@ -20037,7 +20037,7 @@ CPyL101: ;
     cpy_r_r124 = *(PyObject * *)cpy_r_r123;
     cpy_r_r125 = cpy_r_r124 == cpy_r_r122;
     if (!cpy_r_r125) goto CPyL114;
-    cpy_r_r126 = CPyStatics[867]; /* 'in' */
+    cpy_r_r126 = CPyStatics[866]; /* 'in' */
     cpy_r_r127 = PyUnicode_Compare(cpy_r_op, cpy_r_r126);
     cpy_r_r128 = cpy_r_r127 == -1;
     if (!cpy_r_r128) goto CPyL105;
@@ -20055,7 +20055,7 @@ CPyL105: ;
     cpy_r_r133 = cpy_r_r132;
     goto CPyL111;
 CPyL107: ;
-    cpy_r_r134 = CPyStatics[866]; /* 'not in' */
+    cpy_r_r134 = CPyStatics[867]; /* 'not in' */
     cpy_r_r135 = PyUnicode_Compare(cpy_r_op, cpy_r_r134);
     cpy_r_r136 = cpy_r_r135 == -1;
     if (!cpy_r_r136) goto CPyL110;
@@ -25421,7 +25421,7 @@ PyObject *CPyDef_ll_builder___LowLevelIRBuilder___translate_instance_contains(Py
     }
     cpy_r_res = cpy_r_r19;
 CPyL9: ;
-    cpy_r_r20 = CPyStatics[866]; /* 'not in' */
+    cpy_r_r20 = CPyStatics[867]; /* 'not in' */
     cpy_r_r21 = PyUnicode_Compare(cpy_r_op, cpy_r_r20);
     cpy_r_r22 = cpy_r_r21 == -1;
     if (!cpy_r_r22) goto CPyL12;
